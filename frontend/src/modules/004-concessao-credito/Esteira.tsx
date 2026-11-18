@@ -10,7 +10,7 @@ import type { Carteira } from '@/lib/base/carteira';
 import { linhas } from '@/lib/mitra-api';
 import { fmtData } from '@/lib/formato';
 import {
-  Alert, Button, Dialog, DialogBody, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, GradeKpi, Kpi,
+  Alert, AreaQuadro, Button, Dialog, DialogBody, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, GradeKpi, Kpi,
   LabelledField, Pagination, Panel, PanelHeader, RowMeta, RowTitle, Status, Table, Td, TextLink, Textarea, Th, Tr,
 } from '@/components/page';
 import { ehVolta, rotuloFase } from '@/lib/concessao-credito/regras';
@@ -75,17 +75,19 @@ export default function Esteira({ carteira }: { carteira: Carteira }) {
         </PanelHeader>
         <FilaTabela linhas={agenda ?? []} onAbrir={abrirDaFila} vazio="Nada aguardando você agora." />
       </Panel>
-      <KanbanBoard
-        key={quadro}
-        slug={slug}
-        cardId={cardId}
-        onCardChange={abrir}
-        novoCard={{ rotulo: 'Nova solicitação', onClick: () => setNova(true) }}
-        atualizarACadaMs={60000}
-        antesDeMover={antesDeMover}
-        podeExcluir={() => false}
-        {...extensoesDoQuadro(slug)}
-      />
+      <AreaQuadro>
+        <KanbanBoard
+          key={quadro}
+          slug={slug}
+          cardId={cardId}
+          onCardChange={abrir}
+          novoCard={{ rotulo: 'Nova solicitação', onClick: () => setNova(true) }}
+          atualizarACadaMs={60000}
+          antesDeMover={antesDeMover}
+          podeExcluir={() => false}
+          {...extensoesDoQuadro(slug)}
+        />
+      </AreaQuadro>
       {nova ? (
         <NovaSolicitacao
           carteira={carteira}

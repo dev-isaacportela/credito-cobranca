@@ -31,5 +31,5 @@ for (const slug of ['cobranca-privada', 'cobranca-estetica', 'cobranca-publica']
       return motivoDeDestino(ficha, { chave: chave(de), final: de.tipo !== 'comum' }, { chave: chave(fase), final: fase.tipo !== 'comum' },
         [...chaves.values()].includes('negociacao'));
     },
-  });
+  }, '002');
 }

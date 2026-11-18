@@ -175,6 +175,9 @@ test('C-014, C-023: pontos de atenção e funil dos resumos', () => {
     ['NFS_ABERTAS', 'SEM_ATESTO', 'AGUARDANDO_LIQUIDACAO', 'LIQUIDADAS_SEM_PAGAMENTO', 'PAGAMENTO_VENCIDO', 'RECEBIDO_MES']);
   assert.deepEqual([f.publico.etapas[1].quantidade, f.publico.etapas[1].valor], [22, 519000]);
   assert.deepEqual([f.publico.etapas[5].quantidade, f.publico.etapas[5].valor], [null, 7000]);
+  // O valor do mês vai para os números do rodapé: no gráfico só as etapas da carteira (barra de R$ 0 sem sentido).
+  assert.deepEqual(f.juridico.etapas.filter((e) => e.noGrafico).map((e) => e.chave), ['AJUIZAR', 'ATIVOS', 'ACORDOS_A_RECEBER', 'ACORDOS_PARCELA_VENCIDA']);
+  assert.deepEqual(f.publico.etapas.filter((e) => !e.noGrafico).map((e) => e.chave), ['RECEBIDO_MES']);
   assert.equal(funilJuridicoPublico(null, pub).juridico, null);
   assert.equal(funilJuridicoPublico(jur, null).publico, null);
 });

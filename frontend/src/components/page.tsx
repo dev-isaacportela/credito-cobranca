@@ -123,7 +123,7 @@ export function PageHeader({ module, title, description, actions, meta }: PageHe
  */
 export function Panel({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
-    <section className={cn('rounded-2xl border border-rule-table bg-card', className)}>
+    <section className={cn('flex flex-col rounded-2xl border border-rule-table bg-card', className)}>
       {children}
     </section>
   );
@@ -697,15 +697,27 @@ const BOARD_HEIGHT = {
   alto: '[--board-column-h:40rem]',
 } as const;
 
+/**
+ * `faixa` = todas as colunas numa linha só, rolando para o lado (a semana da agenda, oito colunas): sem ela, a
+ * grade de quatro quebra a semana em duas linhas e o quadro dobra de altura.
+ */
 export function Board({
   height = 'padrao',
+  faixa,
   children,
 }: {
   height?: keyof typeof BOARD_HEIGHT;
+  faixa?: boolean;
   children: React.ReactNode;
 }) {
   return (
-    <div className={cn('grid gap-3 p-4 sm:grid-cols-2 xl:grid-cols-4', BOARD_HEIGHT[height])}>
+    <div
+      className={cn(
+        'grid gap-3 p-4',
+        faixa ? 'auto-cols-[minmax(232px,1fr)] grid-flow-col overflow-x-auto' : 'sm:grid-cols-2 xl:grid-cols-4',
+        BOARD_HEIGHT[height],
+      )}
+    >
       {children}
     </div>
   );
@@ -746,11 +758,126 @@ export function BoardColumn({
   );
 }
 
-export function BoardCard({ children }: { children: React.ReactNode }) {
+/**
+ * Moldura do quadro da lib (`KanbanBoard`) quando há números e listas acima dele: o quadro da lib preenche a
+ * altura do pai (`h-full`), e sem esta moldura sobrava para ele só o piso de 22rem, abaixo da dobra. Aqui ele
+ * ganha a altura da janela; a tela rola até o quadro e o quadro ocupa a tela inteira.
+ */
+export function AreaQuadro({ children }: { children: React.ReactNode }) {
+  return <div className="flex h-[calc(100dvh-2rem)] min-h-[30rem] flex-col sm:h-[calc(100dvh-3rem)] lg:h-[calc(100dvh-4rem)]">{children}</div>;
+}
+
+// Calendário (agenda): grade de segunda a domingo, nas visões Semana e Mês.
+
+const SEMANA_CURTA = ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'];
+
+/**
+ * A grade do calendário. `semana` = uma linha de dias altos, cada um rolando por dentro (como a coluna do
+ * quadro); `mes` = as semanas do mês em linhas de dias baixos. Abaixo de `md` a semana vira lista de dias.
+ */
+export function Calendario({ visao, children }: { visao: 'semana' | 'mes'; children: React.ReactNode }) {
   return (
-    <article className="flex flex-col gap-2 rounded-xl border border-rule-table bg-card p-3 text-[13px]">
+    <div className="flex min-w-0 flex-col gap-1 p-4">
+      {visao === 'mes' ? (
+        <div className="grid grid-cols-7 gap-1" aria-hidden>
+          {SEMANA_CURTA.map((d) => (
+            <span key={d} className="px-2 text-[11px] font-semibold tracking-wide text-ink-muted uppercase">{d}</span>
+          ))}
+        </div>
+      ) : null}
+      {/* Na semana, sábado e domingo ficam mais estreitos: a agenda é de dias úteis. */}
+      <div role="grid" className={cn('grid gap-1', visao === 'mes' ? 'grid-cols-7' : 'md:grid-cols-[repeat(5,minmax(0,1fr))_repeat(2,minmax(0,0.6fr))]')}>{children}</div>
+    </div>
+  );
+}
+
+/**
+ * Um dia do calendário. `naoUtil` = fim de semana ou feriado (fundo rebaixado, motivo escrito quando é
+ * feriado); `fora` = dia de outro mês na visão Mês; `hoje` ganha o anel verde.
+ */
+export function DiaCalendario({
+  visao, semana, data, numero, hoje, fora, naoUtil, feriado, total, children,
+}: {
+  visao: 'semana' | 'mes';
+  semana: string;
+  data: string;
+  numero: number;
+  hoje?: boolean;
+  fora?: boolean;
+  naoUtil?: boolean;
+  feriado?: string;
+  total: number;
+  children?: React.ReactNode;
+}) {
+  return (
+    <section
+      role="gridcell"
+      aria-label={`${semana} ${data}${feriado ? `, ${feriado}` : ''}: ${total} ${total === 1 ? 'item' : 'itens'}`}
+      className={cn(
+        'flex min-w-0 flex-col gap-1.5 rounded-xl border p-1.5',
+        visao === 'semana' ? 'md:h-[30rem]' : 'h-[8.5rem]',
+        naoUtil ? 'border-transparent bg-paper-sunken' : 'border-rule-row bg-card',
+        hoje && 'border-primary ring-1 ring-primary',
+        fora && 'opacity-50',
+      )}
+    >
+      <header className="flex shrink-0 items-center justify-between gap-1 px-1">
+        <span className={cn('flex items-baseline gap-1.5 text-[12px]', hoje ? 'font-bold text-primary' : 'font-semibold text-ink')}>
+          {visao === 'semana' ? <span className="capitalize">{semana}</span> : null}
+          <span className={cn(visao === 'mes' && 'text-[13px]')}>{visao === 'semana' ? data : numero}</span>
+          {hoje ? <span className="text-[11px] font-semibold">hoje</span> : null}
+        </span>
+        {total ? <span className="text-[11px] font-semibold text-ink-secondary">{total}</span> : null}
+      </header>
+      {feriado ? <span className="truncate px-1 text-[11px] text-ink-secondary">{feriado}</span> : null}
+      <div className="flex min-h-0 flex-1 flex-col gap-1 overflow-y-auto">{children}</div>
+    </section>
+  );
+}
+
+/** Um compromisso no dia: botão que abre o item. `atrasado` = barra vermelha à esquerda. */
+export function EventoCalendario({
+  titulo, texto, meta, atrasado, compacto, onClick,
+}: {
+  titulo: string;
+  texto?: React.ReactNode;
+  meta?: React.ReactNode;
+  atrasado?: boolean;
+  compacto?: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      title={compacto ? `${titulo}${typeof texto === 'string' ? ` · ${texto}` : ''}` : undefined}
+      className={cn(
+        'flex w-full min-w-0 shrink-0 flex-col gap-0.5 rounded-lg border-l-[3px] bg-paper-sunken px-2 text-left text-[12px] transition-colors hover:bg-accent',
+        'focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:outline-none',
+        compacto ? 'py-0.5' : 'py-1.5',
+        atrasado ? 'border-l-destructive' : 'border-l-primary',
+      )}
+    >
+      <span className="truncate font-semibold text-ink">{titulo}</span>
+      {!compacto && texto ? <span className="line-clamp-2 text-ink">{texto}</span> : null}
+      {!compacto && meta ? <span className="truncate text-[11px] text-ink-secondary">{meta}</span> : null}
+    </button>
+  );
+}
+
+/** `onClick` = o cartão inteiro abre o item (não só o nome). */
+export function BoardCard({ onClick, rotulo, children }: { onClick?: () => void; rotulo?: string; children: React.ReactNode }) {
+  const classe = 'flex shrink-0 flex-col gap-2 rounded-xl border border-rule-table bg-card p-3 text-left text-[13px]';
+  if (!onClick) return <article className={classe}>{children}</article>;
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label={rotulo}
+      className={cn(classe, 'transition-colors hover:border-primary/50 hover:bg-accent focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:outline-none')}
+    >
       {children}
-    </article>
+    </button>
   );
 }
 
@@ -1005,6 +1132,7 @@ export function PainelGrafico({
   acoes,
   altura = 'padrao',
   largura = 'padrao',
+  topo,
   rodape,
   children,
 }: {
@@ -1013,6 +1141,8 @@ export function PainelGrafico({
   acoes?: React.ReactNode;
   altura?: 'padrao' | 'alta';
   largura?: 'padrao' | 'total';
+  /** Acima do desenho e fora da altura dele (seletor de indicador, números). */
+  topo?: React.ReactNode;
   rodape?: React.ReactNode;
   children: React.ReactNode;
 }) {
@@ -1027,10 +1157,11 @@ export function PainelGrafico({
         </div>
         {acoes ? <div className="flex items-center gap-2">{acoes}</div> : null}
       </div>
+      {topo ? <div className="flex min-w-0 flex-col gap-3">{topo}</div> : null}
       <div className={cn('w-full min-w-0', altura === 'alta' ? 'h-[320px]' : 'h-[220px]')}>
         {children}
       </div>
-      {rodape}
+      {rodape ? <div className="mt-auto flex min-w-0 flex-col gap-2">{rodape}</div> : null}
     </Panel>
   );
 }
@@ -1160,7 +1291,7 @@ export function Grade({ colunas = 2, children }: { colunas?: 2 | 3 | 'estreita' 
   return (
     <div
       className={cn(
-        'grid min-w-0 items-start gap-4 [&>*]:min-w-0',
+        'grid min-w-0 gap-4 [&>*]:min-w-0',
         colunas === 2 && 'lg:grid-cols-2',
         colunas === 3 && 'md:grid-cols-2 xl:grid-cols-3',
         colunas === 'estreita' && 'lg:grid-cols-[300px_minmax(0,1fr)]',
@@ -1429,7 +1560,7 @@ export function ItemBloco({ children }: { children: React.ReactNode }) {
 
 /** Linha final da lista com uma ação ("Ver os N clientes"). */
 export function RodapeLista({ children }: { children: React.ReactNode }) {
-  return <div className="border-t border-rule-row px-4 py-2.5">{children}</div>;
+  return <div className="mt-auto border-t border-rule-row px-4 py-2.5">{children}</div>;
 }
 
 // Pessoas
@@ -1703,6 +1834,27 @@ export function BarraPontos({ rotulo, valor, maximo }: { rotulo: string; valor: 
       <span className="text-right font-semibold text-ink">
         {valor} de {maximo}
       </span>
+    </div>
+  );
+}
+
+/**
+ * Etapas de um funil em barras horizontais de HTML: rótulo, barra e valor em colunas fixas, então as barras de
+ * painéis vizinhos começam no mesmo ponto e cada linha tem a mesma altura, com 2 ou com 5 etapas.
+ */
+export function BarrasEtapas({ rotulo, itens }: { rotulo: string; itens: { rotulo: string; valor: number; texto: React.ReactNode }[] }) {
+  const max = Math.max(0, ...itens.map((i) => i.valor));
+  return (
+    <div role="list" aria-label={rotulo} className="grid grid-cols-[minmax(96px,170px)_minmax(0,1fr)_auto] content-start items-center gap-3 text-[13px]">
+      {itens.map((i) => (
+        <div role="listitem" key={i.rotulo} className="contents">
+          <span className="text-ink-secondary">{i.rotulo}</span>
+          <span className="h-3 overflow-hidden rounded bg-muted" aria-hidden>
+            <span className="block h-full rounded bg-data-seq-3" style={{ width: `${max > 0 ? Math.max(0, (i.valor / max) * 100) : 0}%` }} />
+          </span>
+          <span className="text-right font-semibold whitespace-nowrap text-ink">{i.texto}</span>
+        </div>
+      ))}
     </div>
   );
 }
@@ -2004,6 +2156,7 @@ export function GraficoOuTabela({
   rodape,
   semGrafico,
   alturaLivre,
+  alinhado,
 }: {
   titulo: string;
   hint?: React.ReactNode;
@@ -2018,6 +2171,12 @@ export function GraficoOuTabela({
   semGrafico?: React.ReactNode;
   /** Desenho que não é recharts (mapa de calor): sem a altura fixa do PainelGrafico. */
   alturaLivre?: boolean;
+  /**
+   * Com `alturaLivre`: cabeçalho, desenho e rodapé dividem as linhas da `GradeGraficos` com o painel vizinho
+   * (subgrid), então os dois começam o desenho e o rodapé na mesma altura, com títulos e etapas de tamanhos
+   * diferentes (os funis do Jurídico e do setor público).
+   */
+  alinhado?: boolean;
 }) {
   const [visao, setVisao] = React.useState<'grafico' | 'tabela'>('grafico');
   const alterna = (
@@ -2032,6 +2191,28 @@ export function GraficoOuTabela({
     />
   );
   const total = largura === 'total' && 'lg:col-span-2';
+  if (alturaLivre && alinhado) {
+    const naTabela = visao === 'tabela' || Boolean(semGrafico);
+    return (
+      <Panel className={cn('min-w-0 lg:row-span-3 lg:grid lg:grid-rows-subgrid lg:gap-y-0', total)}>
+        <PanelHeader title={titulo} hint={hint}>
+          {semGrafico ? null : alterna}
+        </PanelHeader>
+        {naTabela ? (
+          <div className="min-w-0">
+            {topo || semGrafico ? <CorpoPainel>{topo}{semGrafico ? <Nota>{semGrafico}</Nota> : null}</CorpoPainel> : null}
+            {tabela}
+          </div>
+        ) : (
+          <div className="flex min-w-0 flex-col gap-3 p-4">
+            {topo}
+            {grafico}
+          </div>
+        )}
+        <div className="flex min-w-0 flex-col gap-2 border-t border-rule-row p-4">{rodape}</div>
+      </Panel>
+    );
+  }
   if (visao === 'tabela' || semGrafico) {
     return (
       <Panel className={cn('min-w-0', total)}>
@@ -2045,7 +2226,7 @@ export function GraficoOuTabela({
           </CorpoPainel>
         ) : null}
         {tabela}
-        {rodape ? <CorpoPainel>{rodape}</CorpoPainel> : null}
+        {rodape ? <div className="mt-auto flex min-w-0 flex-col gap-2 p-4">{rodape}</div> : null}
       </Panel>
     );
   }
@@ -2055,24 +2236,17 @@ export function GraficoOuTabela({
         <PanelHeader title={titulo} hint={hint}>
           {alterna}
         </PanelHeader>
-        <CorpoPainel>
+        <div className="flex min-w-0 flex-1 flex-col gap-3 p-4">
           {topo}
           {grafico}
-          {rodape}
-        </CorpoPainel>
+          {rodape ? <div className="mt-auto flex min-w-0 flex-col gap-2">{rodape}</div> : null}
+        </div>
       </Panel>
     );
   }
   return (
-    <PainelGrafico titulo={titulo} hint={hint} acoes={alterna} largura={largura} altura={altura} rodape={rodape}>
-      {topo ? (
-        <div className="flex h-full flex-col gap-3">
-          <div className="shrink-0">{topo}</div>
-          <div className="min-h-0 flex-1">{grafico}</div>
-        </div>
-      ) : (
-        grafico
-      )}
+    <PainelGrafico titulo={titulo} hint={hint} acoes={alterna} largura={largura} altura={altura} topo={topo} rodape={rodape}>
+      {grafico}
     </PainelGrafico>
   );
 }

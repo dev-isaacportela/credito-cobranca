@@ -430,3 +430,16 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Abas do card aberto (lib de quadros): com as abas das extensões (Histórico de crédito, Posição, Análise…)
+   o espaço entre elas encolhe para caberem numa linha; se ainda não couberem, quebram para a linha de baixo
+   (altura automática) em vez de ficarem cortadas pela borda do diálogo. */
+[data-slot="dialog-content"] [data-slot="tabs-list"][data-variant="line"] {
+  height: auto;
+  flex-wrap: wrap;
+  column-gap: 0.875rem;
+  row-gap: 0;
+}
+[data-slot="dialog-content"] [data-slot="tabs-list"][data-variant="line"] > [data-slot="tabs-trigger"] {
+  height: auto;
+}

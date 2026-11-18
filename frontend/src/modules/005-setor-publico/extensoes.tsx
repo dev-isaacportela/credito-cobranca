@@ -21,7 +21,7 @@ registrarExtensao('concessao-publica', {
     const analise = analiseDoCard(card.id);
     return analise === undefined ? null : motivoAnaliseIncompleta(analise);
   },
-});
+}, '005');
 
 registrarExtensao('cobranca-publica', {
   conteudoDaFase: (ctx) => <ReguaNf ctx={ctx} />,
@@ -30,4 +30,4 @@ registrarExtensao('cobranca-publica', {
     { id: 'regra-ente', rotulo: 'Regra do ente', render: (ctx) => <AbaRegraEnte ctx={ctx} /> },
   ],
   acoesExtras: [(ctx) => <AcoesNf ctx={ctx} />],
-});
+}, '005');

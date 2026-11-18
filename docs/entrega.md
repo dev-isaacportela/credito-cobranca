@@ -60,7 +60,6 @@ Dos 64 itens do artefato: **49 cobertos, 12 mudados por decisão ou pendência, 
 ## 4. Ajustes pequenos que ficaram listados
 
 Nenhum impede o uso; ficaram para depois da primeira subida:
-- agenda: só o nome do cliente é clicável, não o card inteiro;
 - concessão: "Prazo (meses)" precisa de definição do gestor; "Parecer do agente" fica na fase de análise;
   a capa do card parece editável;
 - "Nada pendente" aparece com o checklist ainda sem resposta; falta confirmação visível depois de
@@ -71,6 +70,19 @@ Nenhum impede o uso; ficaram para depois da primeira subida:
 - a Júlia (Jurídico) vê no menu "Minha agenda", "Regras de cobrança" e "Notas fiscais públicas";
 - no gráfico de saúde da concessão a série "Risco" sai em verde (cor da paleta de dados);
 - o pacote principal do app tem 1,2 MB (o build só avisa).
+
+### Ajustes de tela de 18/11 (pedido do usuário)
+
+- Minha agenda virou calendário de verdade, com visões **Mês** e **Semana** (segunda a domingo, ‹ Hoje ›): cada
+  compromisso no dia dele, atrasado em vermelho, feriado escrito no dia; o compromisso inteiro abre o caso. As
+  aprovações saíram do calendário e ficam só na aba Aprovações (lotavam o dia de hoje da diretoria).
+- Componentes na mesma linha com a mesma altura (`Grade` sem `items-start`; rodapé do painel no fim).
+- Painel: indicador da evolução num seletor (os botões quebravam em linhas e empurravam o gráfico); funis do
+  Jurídico e do setor público em barras alinhadas entre si (subgrid), com o valor do mês nos números do rodapé.
+- Análise de crédito: o quadro ganha a altura da janela (`AreaQuadro`) em vez do piso de 22rem abaixo da dobra.
+- Card aberto: as abas das extensões quebram de linha em vez de cortar, e não se repetem mais quando o Vite
+  recarrega um módulo (`registrarExtensao` com dono).
+- Simulador de limite: dados à esquerda, resultado à direita com o limite em destaque e o porquê do cálculo.
 
 ## 5. Pendências do gestor (contrato 00 §4)
 

@@ -20,10 +20,10 @@ for (const slug of ['concessao-privada', 'concessao-estetica', 'concessao-public
     ],
     acoesExtras: [(ctx) => <AcoesSolicitacao ctx={ctx} />],
     podeMover: podeMoverConcessao,
-  });
+  }, '004');
 }
 
 registrarExtensao('pedidos-limite', {
   conteudoDaFase: (ctx) => <ConteudoPedido ctx={ctx} />,
   podeMover: podeMoverPedido,
-});
+}, '004');

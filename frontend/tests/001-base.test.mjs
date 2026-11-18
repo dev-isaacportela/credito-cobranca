@@ -152,6 +152,12 @@ test('Extensões: registros do mesmo quadro combinados', () => {
   assert.deepEqual(blocos, ['bloco-dona', 'bloco-terceiro']);
   assert.equal(ext.podeMover({}, {}, {}), 'Falta a nota do órgão.');
 
+  // Registrar de novo com o mesmo dono (o Vite reexecutando um extensoes.tsx) substitui: nada em dobro no card.
+  registrarExtensao('teste-hmr', { abasExtras: [aba('historico'), aba('posicao')] }, '004');
+  registrarExtensao('teste-hmr', { abasExtras: [aba('orgao')] }, '005');
+  registrarExtensao('teste-hmr', { abasExtras: [aba('historico'), aba('posicao')] }, '004');
+  assert.deepEqual(extensoesDe('teste-hmr').abasExtras.map((a) => a.id), ['historico', 'posicao', 'orgao']);
+
   const vazio = extensoesDe('sem-registro');
   assert.deepEqual([vazio.abasExtras, vazio.acoesExtras], [[], []]);
   assert.equal(vazio.conteudoDaFase({}), null);

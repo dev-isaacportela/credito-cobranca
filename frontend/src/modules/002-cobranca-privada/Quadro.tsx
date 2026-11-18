@@ -8,7 +8,7 @@ import { KanbanBoard } from '@benenutri/mitra-kanban';
 import { extensoesDoQuadro } from '@/lib/base/extensoes';
 import { CARTEIRAS, type Carteira } from '@/lib/base/carteira';
 import { linhas } from '@/lib/mitra-api';
-import { Alert, Dash, GradeKpi, Kpi, Tabs, TabsList, TabsTrigger } from '@/components/page';
+import { Alert, AreaQuadro, MetaDot, PageHeader, Stat, Tabs, TabsList, TabsTrigger } from '@/components/page';
 import { brl, num, useDados } from './comum';
 import { guardarChaves, useFicha } from './ficha';
 import './extensoes';
@@ -37,28 +37,42 @@ export default function Quadro() {
 
   if (!valida) return <Navigate to="/cobranca/privada" replace />;
 
+  // Mesmo padrão da Análise de crédito: cabeçalho da página com as carteiras à direita e os números numa linha,
+  // e o quadro com a altura da janela logo abaixo (antes, quatro cartões empurravam o quadro e ele ficava curto).
   return (
-    <Tabs value={carteira} onValueChange={(c) => navigate(`/cobranca/${c}`)}>
-      <TabsList>
-        {CARTEIRAS.map((c) => <TabsTrigger key={c.codigo} value={c.codigo.toLowerCase()}>{c.nome}</TabsTrigger>)}
-      </TabsList>
-      {resumo.erro ? <Alert tone="error">{resumo.erro}</Alert> : null}
-      <GradeKpi>
-        <Kpi rotulo="Casos em cobrança" valor={resumo.dados ? totais.casos : <Dash />} />
-        <Kpi rotulo="Saldo vencido" valor={totais.vencido > 0 ? brl(totais.vencido) : <Dash />} />
-        <Kpi rotulo="A vencer nas preventivas" valor={totais.aVencer > 0 ? brl(totais.aVencer) : <Dash />} />
-        <Kpi rotulo="Encerrados no mês" valor={resumo.dados ? totais.encerrados : <Dash />} hint="regularizados, pagos no vencimento e baixados" />
-      </GradeKpi>
-      <KanbanBoard
-        key={slug}
-        slug={slug}
-        cardId={cardId}
-        onCardChange={(id) => setParams(id ? { card: String(id) } : {})}
-        novoCard={false}
-        atualizarACadaMs={60000}
-        podeExcluir={() => false}
-        {...extensoes}
+    <>
+      <PageHeader
+        module="Cobrança"
+        title="Quadro de cobrança"
+        actions={
+          <Tabs value={carteira} onValueChange={(c) => navigate(`/cobranca/${c}`)}>
+            <TabsList aria-label="Carteira">
+              {CARTEIRAS.map((c) => <TabsTrigger key={c.codigo} value={c.codigo.toLowerCase()}>{c.nome}</TabsTrigger>)}
+            </TabsList>
+          </Tabs>
+        }
+        meta={resumo.dados ? (
+          <>
+            <Stat>{totais.casos}</Stat> casos em cobrança<MetaDot />
+            <Stat>{totais.vencido > 0 ? brl(totais.vencido) : 'R$ 0'}</Stat> vencidos<MetaDot />
+            <Stat>{totais.aVencer > 0 ? brl(totais.aVencer) : 'R$ 0'}</Stat> a vencer nas preventivas<MetaDot />
+            <Stat>{totais.encerrados}</Stat> encerrados no mês (regularizados, pagos no vencimento e baixados)
+          </>
+        ) : undefined}
       />
-    </Tabs>
+      {resumo.erro ? <Alert tone="error">{resumo.erro}</Alert> : null}
+      <AreaQuadro>
+        <KanbanBoard
+          key={slug}
+          slug={slug}
+          cardId={cardId}
+          onCardChange={(id) => setParams(id ? { card: String(id) } : {})}
+          novoCard={false}
+          atualizarACadaMs={60000}
+          podeExcluir={() => false}
+          {...extensoes}
+        />
+      </AreaQuadro>
+    </>
   );
 }

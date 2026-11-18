@@ -20,10 +20,16 @@ export interface Extensao {
   podeMover?: (card: Card, fase: Fase, estrutura: Estrutura) => string | null;
 }
 
-const registros = new Map<string, Extensao[]>();
+const registros = new Map<string, (Extensao & { dono?: string })[]>();
 
-export function registrarExtensao(slugDoQuadro: string, ext: Extensao): void {
-  registros.set(slugDoQuadro, [...(registros.get(slugDoQuadro) ?? []), ext]);
+/**
+ * `dono` = quem registra (o módulo). Registrar de novo com o mesmo dono SUBSTITUI o registro anterior: quando o
+ * Vite reexecuta um `extensoes.tsx` (HMR), as abas e os blocos não aparecem em dobro no card aberto.
+ */
+export function registrarExtensao(slugDoQuadro: string, ext: Extensao, dono?: string): void {
+  const lista = registros.get(slugDoQuadro) ?? [];
+  const i = dono ? lista.findIndex((e) => e.dono === dono) : -1;
+  registros.set(slugDoQuadro, i >= 0 ? lista.map((e, j) => (j === i ? { ...ext, dono } : e)) : [...lista, { ...ext, dono }]);
 }
 
 const emBlocos = (nos: ReactNode[]) =>

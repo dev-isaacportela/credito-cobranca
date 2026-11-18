@@ -2,22 +2,23 @@
 // clientes por farol. Só Privado e Estética (E-4). "Registrar revisão" só para quem administra (a recusa
 // de verdade é do servidor). Abrir: ccCredCalibracaoRevisaoListar + ccCredFarolCarteira + parâmetros farol = 3.
 
-import { useState, type ChangeEvent } from 'react';
+import { useState, type ChangeEvent, type FormEvent } from 'react';
 import type { Carteira } from '@/lib/base/carteira';
 import { podeAdministrar } from '@/lib/base/menu';
 import { acao, linha, linhas } from '@/lib/mitra-api';
 import { moeda } from '@/lib/formato';
 import {
-  Alert, BarrasPainel, Button, Dialog, DialogBody, DialogContent, DialogDescription, DialogFooter, DialogHeader,
-  DialogTitle, EmptyState, Field, GradeKpi, Input, Kpi, LabelledField, PageHeader, Pagination, Panel,
-  PanelHeader, Pilha, RowMeta, RowTitle, SelectMenu, Status, Table, Tabs, TabsList, TabsTrigger, Td, Textarea,
+  Alert, BarrasPainel, Button, CorpoPainel, Dialog, DialogBody, DialogContent, DialogDescription, DialogFooter, DialogHeader,
+  DialogTitle, EmptyState, Ficha, Field, Grade, GradeCampos, GradeKpi, Input, ItemFicha, Kpi, LabelledField, Linha as LinhaUi, Nota,
+  NumeroGrande, PageHeader, Pagination, Panel,
+  PanelHeader, Pilha, RowMeta, Segmentos, RowTitle, SelectMenu, Status, Table, Tabs, TabsList, TabsTrigger, Td, Textarea,
   Th, Toolbar, Tr,
 } from '@/components/page';
 import { faixasDoFarol } from '@/lib/concessao-credito/regras';
 import { executar, inteiro, lerTodas, n, nivel2, pct, useLeitura, useMembro, type Linha } from './dados';
-import { Pares, Rating, Reais, Txt } from './pecas';
+import { Rating, Reais, Txt } from './pecas';
 
-const CARTEIRAS_MOTOR = [{ value: 'PRIVADA', label: 'Privado' }, { value: 'ESTETICA', label: 'Estética' }];
+const CARTEIRAS_MOTOR: { value: Carteira; label: string }[] = [{ value: 'PRIVADA', label: 'Privado' }, { value: 'ESTETICA', label: 'Estética' }];
 const ABAS = [
   { id: 'faixas', rotulo: 'Faixas do semáforo' }, { id: 'simulador', rotulo: 'Simulador de limite' }, { id: 'carteira', rotulo: 'Carteira por faixa' },
   { id: 'validacao', rotulo: 'Validação do farol' }, { id: 'clientes', rotulo: 'Clientes por farol' },
@@ -63,10 +64,14 @@ function SemaforoN2() {
         title="Semáforo de crédito"
         description="Classificação de risco por score para clientes privados e da Estética. Limite sugerido = cálculo da política × percentual da faixa, com teto sobre o faturamento."
         actions={
-          <Button variant="primary" onClick={() => setRevisar(true)} disabled={!administra}
-            title={administra ? undefined : 'Só quem administra a política registra a revisão do semáforo.'}>
-            Registrar revisão
-          </Button>
+          <>
+            {/* Duas carteiras só: o seletor mora no cabeçalho em vez de um painel inteiro para um campo. */}
+            <Segmentos rotulo="Carteira" valor={carteira} onChange={(v) => setCarteira(v as Carteira)} opcoes={CARTEIRAS_MOTOR} />
+            <Button variant="primary" onClick={() => setRevisar(true)} disabled={!administra}
+              title={administra ? undefined : 'Só quem administra a política registra a revisão do semáforo.'}>
+              Registrar revisão
+            </Button>
+          </>
         }
       />
       <Tabs value={aba} onValueChange={setAba}>
@@ -82,13 +87,6 @@ function SemaforoN2() {
         ) : (
           <RowMeta>Última revisão em {data(ultima.REVISADO_EM)} por {ultima.POR_NOME || '—'} · próxima até {data(ultima.PROXIMA)}.</RowMeta>
         )}
-        <Panel>
-          <Toolbar>
-            <Field label="Carteira">
-              <SelectMenu label="Carteira" value={carteira} onChange={(v) => setCarteira(v as Carteira)} options={CARTEIRAS_MOTOR} />
-            </Field>
-          </Toolbar>
-        </Panel>
         <GradeKpi>
           <Kpi rotulo="Clientes no semáforo" valor={inteiro(clientes)} hint="com limite ativo" />
           <Kpi rotulo="Em AA e A" valor={inteiro(bons.reduce((s, l) => s + n(l.CLIENTES), 0))}
@@ -194,15 +192,23 @@ function AbaFaixas({ carteira }: { carteira: Carteira }) {
 
 const ALERTAS_SIM: [string, string][] = [['NEGATIVACAO', 'Negativação'], ['DADOS', 'Dados inconsistentes'], ['PEDIDO', 'Pedido fora da realidade'], ['PROTESTO', 'Protesto'], ['PROCESSO', 'Processo relevante']];
 
+const SIM_INICIAL = { scoreSerasa: '700', diasAtraso: '0', prazoMedio: '30', compraMedia: '20000', fatMensal: '200000' };
+const TOM_CODIGO: Record<string, 'live' | 'attention' | 'alert' | 'off'> = {
+  APROVAR: 'live', APROVAR_LIMITE: 'attention', EXCECAO_GARANTIA: 'attention', COMITE_CONCENTRACAO: 'attention', NEGAR: 'alert', DADOS_INSUFICIENTES: 'off',
+};
+
 function AbaSimulador({ carteira }: { carteira: Carteira }) {
-  const [f, setF] = useState({ scoreSerasa: '700', diasAtraso: '0', prazoMedio: '30', compraMedia: '20000', fatMensal: '200000' });
+  const [f, setF] = useState(SIM_INICIAL);
   const [alertas, setAlertas] = useState<string[]>([]);
   const [r, setR] = useState<Linha | null>(null);
   const [erro, setErro] = useState('');
+  const [simulando, setSimulando] = useState(false);
   const campo = (k: keyof typeof f) => (e: ChangeEvent<HTMLInputElement>) => setF((x) => ({ ...x, [k]: e.target.value }));
-  const num = (v: string) => (v.trim() === '' ? null : Number(v.replace(',', '.')));
-  const simular = async () => {
+  const num = (v: string) => (v.trim() === '' ? null : Number(v.replace(/\./g, '').replace(',', '.')));
+  const simular = async (ev?: FormEvent) => {
+    ev?.preventDefault();
     setErro('');
+    setSimulando(true);
     const entradas = {
       carteira, scoreSerasa: num(f.scoreSerasa), diasAtraso: num(f.diasAtraso) ?? 0, prazoMedio: num(f.prazoMedio) ?? 0, compraMedia: num(f.compraMedia) ?? 0,
       fatMensal: num(f.fatMensal), alertas: alertas.filter((a) => a !== 'PROTESTO' && a !== 'PROCESSO'),
@@ -213,53 +219,76 @@ function AbaSimulador({ carteira }: { carteira: Carteira }) {
       if (res.ok === false) { setErro(String(res.error ?? 'O motor recusou.')); setR(null); } else setR(res);
     } catch (e) {
       setErro((e as Error).message);
+    } finally {
+      setSimulando(false);
     }
   };
+  const restaurar = () => { setF(SIM_INICIAL); setAlertas([]); setR(null); setErro(''); };
   const d = (r?.detalhes ?? {}) as Linha;
+  const lim = (d.limite ?? {}) as Linha;
+  const faixa = n(lim.minimo) > 0 && n(lim.minimo) !== n(r?.limiteSugerido) ? `faixa da política de ${moeda(n(lim.minimo))} a ${moeda(n(lim.maximo))}` : undefined;
+  const alertasRes = (r?.alertas ?? []) as string[];
+  // O motor acrescenta ao "Aprovar" os documentos que faltam; na simulação não há documento: vira nota à parte.
+  const faltam = ((d.docs ?? []) as Linha[]).filter((x) => !x.atendido).map((x) => String(x.nome));
   return (
-    <>
+    <Grade>
       <Panel>
-        <PanelHeader title="Simulador de limite" hint="Simulação: nada é gravado." />
-        <Toolbar>
-          <LabelledField label="Score Serasa (0 a 1000)"><Input inputMode="numeric" value={f.scoreSerasa} onChange={campo('scoreSerasa')} /></LabelledField>
-          <LabelledField label="Dias de atraso"><Input inputMode="numeric" value={f.diasAtraso} onChange={campo('diasAtraso')} /></LabelledField>
-          <LabelledField label="Prazo médio (dias)"><Input inputMode="numeric" value={f.prazoMedio} onChange={campo('prazoMedio')} /></LabelledField>
-          <LabelledField label="Compra média mensal (R$)"><Input inputMode="decimal" value={f.compraMedia} onChange={campo('compraMedia')} /></LabelledField>
-          <LabelledField label="Faturamento mensal (R$)"><Input inputMode="decimal" value={f.fatMensal} onChange={campo('fatMensal')} /></LabelledField>
-        </Toolbar>
-        <Toolbar>
-          <Field label="Alertas para simular">
-            <Toolbar>
-              {ALERTAS_SIM.map(([k, rotulo]) => {
-                const ligado = alertas.includes(k);
-                return (
-                  <Button key={k} size="sm" variant={ligado ? 'primary' : 'secondary'} aria-pressed={ligado}
-                    onClick={() => setAlertas((a) => (ligado ? a.filter((x) => x !== k) : [...a, k]))}>{rotulo}</Button>
-                );
-              })}
-            </Toolbar>
-          </Field>
-          <Button variant="primary" onClick={simular}>Simular</Button>
-        </Toolbar>
+        <PanelHeader title="Dados do cliente" hint="Valores de exemplo; mude e simule quantas vezes quiser. Nada é gravado." />
+        <form onSubmit={simular}>
+          <CorpoPainel>
+            <GradeCampos>
+              <LabelledField label="Score Serasa" hint="de 0 a 1000"><Input inputMode="numeric" value={f.scoreSerasa} onChange={campo('scoreSerasa')} /></LabelledField>
+              <LabelledField label="Dias de atraso" hint="maior atraso atual"><Input inputMode="numeric" value={f.diasAtraso} onChange={campo('diasAtraso')} /></LabelledField>
+              <LabelledField label="Prazo médio (dias)" hint="prazo pedido nas compras"><Input inputMode="numeric" value={f.prazoMedio} onChange={campo('prazoMedio')} /></LabelledField>
+              <LabelledField label="Compra média mensal (R$)" hint="base do limite"><Input inputMode="decimal" value={f.compraMedia} onChange={campo('compraMedia')} /></LabelledField>
+              <LabelledField label="Faturamento mensal (R$)" hint="teto do limite"><Input inputMode="decimal" value={f.fatMensal} onChange={campo('fatMensal')} /></LabelledField>
+            </GradeCampos>
+            <Field label="Alertas do cliente">
+              <LinhaUi>
+                {ALERTAS_SIM.map(([k, rotulo]) => {
+                  const ligado = alertas.includes(k);
+                  return (
+                    <Button key={k} size="sm" variant={ligado ? 'primary' : 'secondary'} aria-pressed={ligado}
+                      onClick={() => setAlertas((a) => (ligado ? a.filter((x) => x !== k) : [...a, k]))}>{rotulo}</Button>
+                  );
+                })}
+              </LinhaUi>
+            </Field>
+            <Nota>Marque os alertas que o cliente teria: cada um pode rebaixar a faixa ou exigir comitê.</Nota>
+            <LinhaUi>
+              <Button type="submit" variant="primary" disabled={simulando}>{simulando ? 'Simulando…' : 'Simular'}</Button>
+              <Button type="button" onClick={restaurar} disabled={simulando}>Restaurar exemplo</Button>
+            </LinhaUi>
+          </CorpoPainel>
+        </form>
       </Panel>
-      {erro ? <Alert tone="error">{erro}</Alert> : null}
-      {r ? (
-        <Panel>
-          <PanelHeader title="Resultado" hint="Simulação: nada é gravado."><Rating r={r.rating} /></PanelHeader>
-          <Pares itens={[
-            ['Limite sugerido', <Reais v={r.limiteSugerido} zeroEhDado />],
-            ['Resultado', <Txt v={r.resultado} />],
-            ['Score final', <Txt v={r.score === null || r.score === undefined ? '' : inteiro(r.score)} />],
-            ['Faixa pelo score', <Rating r={d.faixaScore} />],
-            ['Faixa pelo atraso', <Rating r={d.faixaAtraso} />],
-            ['Rebaixamento por alerta', d.rebaixado ? 'Sim' : 'Não'],
-            ['Cálculo do limite', <Txt v={(d.limite as Linha | undefined)?.como} />],
-            ['Alertas', <Txt v={((r.alertas ?? []) as string[]).join(' · ')} />],
-          ]} />
-          {((d.avisos ?? []) as string[]).map((a) => <Alert key={a} tone="info">{a}</Alert>)}
-        </Panel>
-      ) : null}
-    </>
+      <Panel>
+        <PanelHeader title="Resultado do motor" hint={r ? 'Calculado com a política em vigor desta carteira.' : undefined}>
+          {r ? <Rating r={r.rating} /> : null}
+        </PanelHeader>
+        {erro ? <CorpoPainel><Alert tone="error">{erro}</Alert></CorpoPainel> : null}
+        {r ? (
+          <CorpoPainel>
+            <ItemFicha rotulo="Limite sugerido">
+              <NumeroGrande dica={faixa}><Reais v={r.limiteSugerido} zeroEhDado /></NumeroGrande>
+            </ItemFicha>
+            <Status tone={TOM_CODIGO[String(r.codigo)] ?? 'off'}>{faltam.length ? String(r.resultado ?? '').replace(/ \(faltam documentos:.*\)$/, '') : String(r.resultado ?? '')}</Status>
+            {faltam.length ? <Nota>Numa solicitação de verdade, a aprovação ainda pede: {faltam.join(', ')}.</Nota> : null}
+            <Ficha colunas={2}>
+              <ItemFicha rotulo="Score final"><Txt v={r.score === null || r.score === undefined ? '' : inteiro(r.score)} /></ItemFicha>
+              <ItemFicha rotulo="Faixa pelo score"><Rating r={d.faixaScore} /></ItemFicha>
+              <ItemFicha rotulo="Faixa pelo atraso"><Rating r={d.faixaAtraso} /></ItemFicha>
+              <ItemFicha rotulo="Rebaixado por alerta">{d.rebaixado ? 'Sim' : 'Não'}</ItemFicha>
+            </Ficha>
+            <ItemFicha rotulo="Como o limite foi calculado"><Txt v={lim.como as string | undefined} /></ItemFicha>
+            <ItemFicha rotulo="Alertas considerados">{alertasRes.length ? alertasRes.join(' · ') : 'Nenhum'}</ItemFicha>
+            {((d.avisos ?? []) as string[]).map((a) => <Alert key={a} tone="info">{a}</Alert>)}
+          </CorpoPainel>
+        ) : erro ? null : (
+          <EmptyState title="Ajuste os dados ao lado e clique em Simular." hint="O resultado mostra o limite, o rating e por que o motor chegou nele." />
+        )}
+      </Panel>
+    </Grade>
   );
 }
 

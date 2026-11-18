@@ -7,8 +7,8 @@
 import type { ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
-  Alert, Bar, BarChart, Button, CartesianGrid, ChartTooltip, ChartTooltipContent, Dash, Esqueleto, GradeGraficos,
-  Grafico, GraficoOuTabela, LabelList, Linha as LinhaUi, Nota, Numeros, Secao, Status, Table, Td, Th, Tr, XAxis, YAxis,
+  Alert, BarrasEtapas, Button, Dash, Esqueleto, GradeGraficos, GraficoOuTabela, Linha as LinhaUi, Nota, Numeros, Secao,
+  Status, Table, Td, Th, Tr,
 } from '@/components/page';
 import { moedaCurta, moedaInteira, rotuloNum } from '@/lib/painel-consolidado/calculo';
 import { estadoDoBloco, funilJuridicoPublico, mesBarra, type Etapa } from '@/lib/painel-consolidado/visao';
@@ -18,6 +18,7 @@ import {
 import { AvisoDoBloco } from '../pecas';
 
 const n = (v: unknown) => Number(v) || 0;
+const plural = (q: number, um: string, varios: string) => `${rotuloNum(q)} ${q === 1 ? um : varios}`;
 
 export function JuridicoPublico({ f }: PropsBloco) {
   const navigate = useNavigate();
@@ -45,20 +46,18 @@ export function JuridicoPublico({ f }: PropsBloco) {
       <GradeGraficos>
         {jurEstado || !funil.juridico ? <AvisoDoBloco estado={jurEstado ?? { tipo: 'NAO_INSTALADO', texto: 'Módulo não instalado.' }} hint="Jurídico" /> : (
           <Funil
-            titulo="Jurídico: do ajuizamento à recuperação"
-            hint={`R$ em cada etapa · quantidade ao lado${f.buId >= 0 ? ' · clientes com saldo na BU' : ''}`}
+            titulo="Jurídico"
+            hint={`Do ajuizamento à recuperação · R$ e quantidade por etapa${f.buId >= 0 ? ' · clientes com saldo na BU' : ''}`}
             etapas={funil.juridico.etapas}
             rodape={(
               <>
-                <LinhaUi entre>
-                  <Numeros itens={[
-                    ...funil.juridico.etapas.filter((e) => !e.noGrafico).map((e) => ({ rotulo: e.rotulo, valor: moedaCurta(e.valor) })),
-                    ...(acordos ? [{ rotulo: 'Acordos aguardando aprovação', valor: `${rotuloNum(n(acordos.AGUARDANDO))} · ${moedaCurta(n(acordos.VALOR_AGUARDANDO))}` }] : []),
-                  ]} />
-                  <Status tone={funil.juridico.criticos ? 'alert' : funil.juridico.desvios ? 'attention' : 'off'}>
-                    {funil.juridico.desvios} desvios de prazo · {funil.juridico.criticos} críticos
-                  </Status>
-                </LinhaUi>
+                <Numeros itens={[
+                  ...funil.juridico.etapas.filter((e) => !e.noGrafico).map((e) => ({ rotulo: e.rotulo, valor: moedaCurta(e.valor) })),
+                  ...(acordos ? [{ rotulo: 'Acordos aguardando aprovação', valor: `${rotuloNum(n(acordos.AGUARDANDO))} · ${moedaCurta(n(acordos.VALOR_AGUARDANDO))}` }] : []),
+                ]} />
+                <Status tone={funil.juridico.criticos ? 'alert' : funil.juridico.desvios ? 'attention' : 'off'}>
+                  {plural(funil.juridico.desvios, 'desvio de prazo', 'desvios de prazo')} · {plural(funil.juridico.criticos, 'crítico', 'críticos')}
+                </Status>
                 {acordos ? <Nota>Acordos aguardando aprovação não somam no "a receber" (posição de hoje{f.buId >= 0 ? '; o filtro de BU não se aplica' : ''}).</Nota> : null}
               </>
             )}
@@ -66,13 +65,14 @@ export function JuridicoPublico({ f }: PropsBloco) {
         )}
         {pubEstado || !funil.publico ? <AvisoDoBloco estado={pubEstado ?? { tipo: 'NAO_INSTALADO', texto: 'Módulo não instalado.' }} hint="Setor público" /> : (
           <Funil
-            titulo="Setor público: do empenho ao pagamento"
-            hint={`R$ em cada etapa · quantidade de notas ao lado${f.buId >= 0 ? ' · órgãos com saldo na BU' : ''}`}
+            titulo="Setor público"
+            hint={`Do empenho ao pagamento · R$ e notas por etapa${f.buId >= 0 ? ' · órgãos com saldo na BU' : ''}`}
             etapas={funil.publico.etapas}
             rodape={(
-              <LinhaUi>
-                <Status tone={funil.publico.pagamentoVencido ? 'alert' : 'off'}>{rotuloNum(funil.publico.pagamentoVencido)} notas com pagamento vencido</Status>
-              </LinhaUi>
+              <>
+                <Numeros itens={funil.publico.etapas.filter((e) => !e.noGrafico).map((e) => ({ rotulo: e.rotulo, valor: moedaCurta(e.valor) }))} />
+                <Status tone={funil.publico.pagamentoVencido ? 'alert' : 'off'}>{plural(funil.publico.pagamentoVencido, 'nota com pagamento vencido', 'notas com pagamento vencido')}</Status>
+              </>
             )}
           />
         )}
@@ -96,19 +96,9 @@ function Funil({ titulo, hint, etapas, rodape }: { titulo: string; hint: string;
     <GraficoOuTabela
       titulo={titulo}
       hint={hint}
-      grafico={(
-        <Grafico config={{ valor: { label: 'Valor', color: 'var(--data-seq-3)' } }}>
-          <BarChart data={dados} layout="vertical" margin={{ left: 8, right: 96 }}>
-            <CartesianGrid horizontal={false} />
-            <XAxis type="number" tickLine={false} axisLine={false} hide />
-            <YAxis type="category" dataKey="rotulo" width={150} tickLine={false} axisLine={false} />
-            <ChartTooltip content={<ChartTooltipContent />} />
-            <Bar dataKey="valor" fill="var(--color-valor)" radius={4}>
-              <LabelList dataKey="texto" position="right" fontSize={11} fill="var(--foreground)" />
-            </Bar>
-          </BarChart>
-        </Grafico>
-      )}
+      alturaLivre
+      alinhado
+      grafico={<BarrasEtapas rotulo={titulo} itens={dados} />}
       rodape={rodape}
       tabela={(
         <Table>

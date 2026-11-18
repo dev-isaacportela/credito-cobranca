@@ -11,7 +11,7 @@ import {
   Alert, Bar, BarChart, Button, CartesianGrid, Cell, ChartTooltip, ChartTooltipContent, corDeSerie, CorpoPainel,
   Dash, Esqueleto, Grade, GradeCampos, GradeGraficos, Grafico, GraficoOuTabela, IconButton, Input, LabelledField,
   LabelList, Legenda, Linha as LinhaUi, Nota, Numeros, Pagination, Recolhivel, ReferenceLine, RowMeta, RowTitle, Secao,
-  Segmentos, Status, Table, Td, Th, Tr, XAxis, YAxis,
+  SelectMenu, Status, Table, Td, Th, Tr, XAxis, YAxis,
 } from '@/components/page';
 import { acao } from '@/lib/mitra-api';
 import { fmtData } from '@/lib/formato';
@@ -112,15 +112,16 @@ function GraficoDaSerie({
       altura="alta"
       topo={(
         <>
-          <Segmentos rotulo="Indicador" valor={chave} onChange={setChave} opcoes={chaves.map((k) => ({ value: k, label: ROTULOS_MENSAIS[k].rotulo }))} />
+          {/* Seletor e não botões: com 4 a 6 indicadores os botões quebravam em linhas e empurravam o gráfico. */}
           <LinhaUi entre>
-            <Numeros itens={[
-              { rotulo: 'Último valor', valor: rotuloDoValor(resumo.ultimo, def.unidade) },
-              { rotulo: 'Média no ano', valor: rotuloDoValor(resumo.media, def.unidade) },
-              { rotulo: 'Meses na meta', valor: resumo.naMeta === null ? '—' : `${resumo.naMeta} de ${resumo.meses}` },
-            ]} />
+            <SelectMenu label="Indicador" value={chave} onChange={(v) => setChave(v as ChaveMensal)} options={chaves.map((k) => ({ value: k, label: ROTULOS_MENSAIS[k].rotulo }))} />
             {resumo.ultimoNaMeta === null ? <Status tone="off">Sem meta</Status> : <Status tone={resumo.ultimoNaMeta ? 'live' : 'alert'}>{resumo.ultimoNaMeta ? 'Na meta' : 'Fora da meta'}</Status>}
           </LinhaUi>
+          <Numeros itens={[
+            { rotulo: 'Último valor', valor: rotuloDoValor(resumo.ultimo, def.unidade) },
+            { rotulo: 'Média no ano', valor: rotuloDoValor(resumo.media, def.unidade) },
+            { rotulo: 'Meses na meta', valor: resumo.naMeta === null ? '—' : `${resumo.naMeta} de ${resumo.meses}` },
+          ]} />
         </>
       )}
       grafico={(

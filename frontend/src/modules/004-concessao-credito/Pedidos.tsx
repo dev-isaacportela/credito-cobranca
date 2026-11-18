@@ -7,7 +7,7 @@ import { KanbanBoard } from '@benenutri/mitra-kanban';
 import { extensoesDoQuadro } from '@/lib/base/extensoes';
 import type { Carteira } from '@/lib/base/carteira';
 import { linha } from '@/lib/mitra-api';
-import { Alert, GradeKpi, Kpi } from '@/components/page';
+import { Alert, AreaQuadro, GradeKpi, Kpi } from '@/components/page';
 import { CARTEIRA_URL, inteiro, useLeitura } from './dados';
 import NovaSolicitacao from './NovaSolicitacao';
 
@@ -28,16 +28,18 @@ export default function Pedidos({ carteira }: { carteira: Carteira }) {
         <Kpi rotulo="Pedidos" valor={total.dados ? inteiro(total.dados.TOTAL) : '…'} hint="retidos e decididos no quadro" />
         <Kpi rotulo="Fora do SLA" valor={total.dados ? inteiro(total.dados.ATRASADOS) : '…'} hint="vendas paradas além do prazo da etapa" />
       </GradeKpi>
-      <KanbanBoard
-        key={quadro}
-        slug={SLUG}
-        cardId={cardId}
-        onCardChange={abrir}
-        novoCard={{ rotulo: 'Pedido acima do limite', onClick: () => setNovo(true) }}
-        atualizarACadaMs={60000}
-        podeExcluir={() => false}
-        {...extensoesDoQuadro(SLUG)}
-      />
+      <AreaQuadro>
+        <KanbanBoard
+          key={quadro}
+          slug={SLUG}
+          cardId={cardId}
+          onCardChange={abrir}
+          novoCard={{ rotulo: 'Pedido acima do limite', onClick: () => setNovo(true) }}
+          atualizarACadaMs={60000}
+          podeExcluir={() => false}
+          {...extensoesDoQuadro(SLUG)}
+        />
+      </AreaQuadro>
       {novo ? (
         <NovaSolicitacao carteira={carteira} tipoInicial="pedido" onFechar={() => setNovo(false)}
           onCriada={(cid, tipo) => {

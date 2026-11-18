@@ -28,4 +28,4 @@ registrarExtensao('juridico', {
     if (!ficha || !membro || !de) return 'Carregando a situação do processo…';
     return motivoDeDestino(membro, ficha.processo, chaveDaFase(de.nome), chaveDaFase(fase.nome));
   },
-});
+}, '003');

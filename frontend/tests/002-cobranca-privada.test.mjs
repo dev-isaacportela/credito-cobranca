@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { nomeDaFase } from '../src/lib/cobranca-privada/fases.ts';
 import { motivoDeDestino } from '../src/lib/cobranca-privada/mover.ts';
-import { semanaUteis, colunaDoEvento, limitePromessa, agruparPorDia, abaDoBloqueio, abasDoAcordo } from '../src/lib/cobranca-privada/agenda.ts';
+import { semanaUteis, diasDaSemana, semanasDoMes, periodoDaVisao, andarPeriodo, rotuloDoPeriodo, cabecalhoDoDia, eventosPorDia, limitePromessa, agruparPorDia, abaDoBloqueio, abasDoAcordo } from '../src/lib/cobranca-privada/agenda.ts';
 import { cenariosAcordo, simularParcelas } from '../src/lib/cobranca-privada/acordo.ts';
 import { corChance, situacaoFila, emLotes, retornosDa } from '../src/lib/cobranca-privada/listas.ts';
 import { agruparPorSupervisor, resumoGerencial } from '../src/lib/cobranca-privada/gerencial.ts';
@@ -45,13 +45,31 @@ test('C-007: motivoDeDestino libera da negociação só a fase devida e recusa c
   assert.equal(motivoDeDestino(ficha, fase('oficio'), fase('requerimento'), false), 'A etapa do órgão acompanha as notas fiscais.');
 });
 
-test('C-022: semanaUteis pula o feriado e o atrasado vai para a primeira coluna', () => {
+test('C-022: semanaUteis pula o feriado (os 7 dias úteis dos números da agenda)', () => {
   const semana = semanaUteis('2026-11-19', FERIADO_20);
   assert.deepEqual(semana, ['2026-11-19', '2026-11-23', '2026-11-24', '2026-11-25', '2026-11-26', '2026-11-27', '2026-11-30']);
-  assert.equal(colunaDoEvento('2026-11-21', '2026-11-19', semana), '2026-11-23');
-  assert.equal(colunaDoEvento('2026-11-17', '2026-11-19', semana), 'atrasadas');
-  assert.equal(colunaDoEvento('2026-11-19', '2026-11-19', semana), '2026-11-19');
-  assert.equal(colunaDoEvento('2026-12-01', '2026-11-19', semana), null);
+});
+
+test('C-022: calendário da agenda — semana de segunda a domingo, mês em semanas inteiras, navegação', () => {
+  assert.deepEqual(diasDaSemana('2026-11-19'), ['2026-11-16', '2026-11-17', '2026-11-18', '2026-11-19', '2026-11-20', '2026-11-21', '2026-11-22']);
+  assert.deepEqual(diasDaSemana('2026-11-22')[0], '2026-11-16'); // domingo fecha a semana, não abre
+  const mes = semanasDoMes('2026-11-19'); // 1/11/2026 é domingo
+  assert.equal(mes.length, 6);
+  assert.deepEqual([mes[0][0], mes[0][6], mes[5][6]], ['2026-10-26', '2026-11-01', '2026-12-06']);
+  assert.equal(semanasDoMes('2027-02-10').length, 4); // fevereiro de 2027 começa na segunda e tem 28 dias
+  assert.deepEqual(periodoDaVisao('semana', '2026-11-19'), { de: '2026-11-16', ate: '2026-11-22' });
+  assert.deepEqual(periodoDaVisao('mes', '2026-11-19'), { de: '2026-10-26', ate: '2026-12-06' });
+  assert.equal(andarPeriodo('semana', '2026-12-28', 1), '2027-01-04');
+  assert.equal(andarPeriodo('mes', '2026-12-15', 1), '2027-01-01');
+  assert.equal(andarPeriodo('mes', '2026-01-31', -1), '2025-12-01');
+  assert.equal(rotuloDoPeriodo('semana', '2026-11-19'), '16/11 a 22/11/2026');
+  assert.equal(rotuloDoPeriodo('mes', '2026-11-19'), 'Novembro de 2026');
+  assert.deepEqual(cabecalhoDoDia('2026-11-20', FERIADO_20), { semana: 'sex', data: '20/11', numero: 20, naoUtil: 'Feriado' });
+  assert.equal(cabecalhoDoDia('2026-11-21', FERIADO_20).naoUtil, 'sábado');
+  assert.equal(cabecalhoDoDia('2026-11-19', FERIADO_20).naoUtil, '');
+  const por = eventosPorDia([{ DATA: '2026-11-19 10:00', ID: 1 }, { DATA: '2026-11-17', ID: 2 }, { DATA: '2026-11-19', ID: 3 }, { DATA: '' }]);
+  assert.deepEqual([...por.keys()], ['2026-11-19', '2026-11-17']);
+  assert.deepEqual(por.get('2026-11-19').map((e) => e.ID), [1, 3]);
 });
 
 test('RN-007: limitePromessa em dias úteis; 0 = sem limite', () => {
