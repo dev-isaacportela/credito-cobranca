@@ -1,0 +1,29 @@
+{
+  "name": "credito-cobranca-backend",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "setup": "node setup-backend.mjs",
+    "publish:001": "node add-001-kanban.mjs",
+    "publish:002": "node add-002-jdbc-winthor.mjs",
+    "publish:090": "node add-090-perfil-acesso.mjs",
+    "sync:function-map": "node sync-server-function-map.mjs",
+    "sim": "node simulator/server.mjs",
+    "sim:seed": "node simulator/seed-cli.mjs",
+    "sim:check": "node simulator/check.mjs",
+    "sim:smoke": "node simulator/smoke.mjs",
+    "test:lib": "node --test \"tests/**/*.test.mjs\"",
+    "test": "npm run test:lib && npm run sim:check && npm run sim:smoke"
+  },
+  "dependencies": {
+    "@benenutri/mitra-kanban": "^1.14.0",
+    "dotenv": "^16.4.7",
+    "mitra-sdk": "^1.0.62"
+  },
+  "devDependencies": {
+    "oracledb": "^6.9.0"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}

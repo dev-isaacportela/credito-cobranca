@@ -1,0 +1,609 @@
+<section data-tela="regras-vigor" data-grupo="Apoio" data-titulo="Regras de negócio em vigor"
+         data-desc="Para todos os perfis: consultar, sem editar, os parâmetros que valem hoje em cada segmento (régua, criticidade, alçadas, encargos, PDD, metas e política de limite).">
+
+  <template data-opcao="A" data-nome="Índice e página corrida" data-resumo="Escolhe-se o segmento, o índice fica à esquerda e todos os grupos descem numa página só, cada regra com valor, origem e vigência. Completo e bom para imprimir ou procurar; não compara um segmento com outro.">
+    <div class="page-header">
+      <div>
+        <div class="module">Histórico e apoio</div>
+        <h3>Regras de negócio em vigor</h3>
+        <div class="desc">Os parâmetros que valem hoje, por segmento, num só lugar. Somente consulta.</div>
+        <div class="meta"><span><span class="stat">61</span> regras para Estética</span><span class="dot">·</span><span><span class="stat">1</span> própria do segmento</span><span class="dot">·</span><span><span class="stat">7</span> grupos</span></div>
+      </div>
+    </div>
+    <div class="entre"><div class="segment" role="group" aria-label="Segmento"><button type="button" aria-pressed="false">Geral</button><button type="button" aria-pressed="false">Privado</button><button type="button" aria-pressed="true">Estética</button><button type="button" aria-pressed="false">Público</button></div><span class="sub">Valores em vigor em 14/11/2026</span></div>
+    <div class="alert alert-default"><svg><use href="#i-info"/></svg><b>Somente leitura.</b><p>Os valores vêm dos parâmetros em vigor em 14/11/2026; valor com vigência futura não aparece. Para alterar, o Administrador usa a área de Parâmetros.</p></div>
+    <div class="lado estreito">
+      <div class="panel">
+        <div class="faixa"><span class="titulo-painel">Índice</span></div>
+        <div class="lista-itens">
+          <div class="item ativo"><div class="ha-cresce"><div class="row-title">Régua de cobrança</div></div><span class="sub">9</span></div>
+          <div class="item"><div class="ha-cresce"><div class="row-title">Criticidade</div></div><span class="sub">9</span></div>
+          <div class="item"><div class="ha-cresce"><div class="row-title">Alçadas</div></div><span class="sub">11</span></div>
+          <div class="item"><div class="ha-cresce"><div class="row-title">Encargos</div></div><span class="sub">3</span></div>
+          <div class="item"><div class="ha-cresce"><div class="row-title">PDD</div></div><span class="sub">6</span></div>
+          <div class="item"><div class="ha-cresce"><div class="row-title">Metas</div></div><span class="sub">9</span></div>
+          <div class="item"><div class="ha-cresce"><div class="row-title">Política de limite</div></div><span class="sub">14</span></div>
+        </div>
+      </div>
+      <div class="pilha-v">
+        <div class="panel">
+          <div class="faixa entre"><span class="titulo-painel">Régua de cobrança</span><span class="sub">Dias corridos após o vencimento do título.</span></div>
+          <div class="tabela-wrap">
+            <table class="ha-regras">
+              <thead><tr><th>Regra</th><th class="num">Valor</th><th>Origem</th><th>Vigente desde</th></tr></thead>
+              <tbody>
+              <tr><td>Pagamento não identificado</td><td class="num forte">D+1</td><td>Fixo do sistema</td><td><span class="dash">—</span></td></tr>
+              <tr><td>Ligação de cobrança e bloqueio de novos pedidos</td><td class="num forte">D+4</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Notificação formal com aviso de protesto</td><td class="num forte">D+5</td><td><span class="status status-live"><i></i>Próprio do segmento</span><div class="row-meta">geral: D+7</div></td><td>01/11/2026</td></tr>
+              <tr><td>Envio ao cartório, negativação e bloqueio total</td><td class="num forte">D+10</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Negociação pós-protesto</td><td class="num forte">D+20</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Cobrança extrajudicial (assessoria)</td><td class="num forte">D+30</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Dossiê ao Jurídico (cobrança judicial)</td><td class="num forte">D+45</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Prazo máximo para ajuizar a ação</td><td class="num forte">D+60</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Quebra de acordo por atraso de parcela</td><td class="num forte">5 dias</td><td>Geral</td><td>01/01/2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="faixa entre"><span class="titulo-painel">Criticidade</span><span class="sub">Quando um indicador põe o cliente em alerta ou em crítico.</span></div>
+          <div class="tabela-wrap">
+            <table class="ha-regras">
+              <thead><tr><th>Regra</th><th class="num">Valor</th><th>Origem</th><th>Vigente desde</th></tr></thead>
+              <tbody>
+              <tr><td>Dias de atraso (alerta / crítico)</td><td class="num forte">1 / 30 dias</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Pontualidade das vendas (alerta / crítico)</td><td class="num forte">abaixo de 90% / 80%</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Score Serasa (alerta / crítico)</td><td class="num forte">abaixo de 600 / 400</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Uso do limite (alerta / crítico)</td><td class="num forte">a partir de 90% / 100%</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Prazo médio do cliente (alerta / crítico)</td><td class="num forte">acima de 60 / 90 dias</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Rating de risco (alerta / crítico)</td><td class="num forte">D / E</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Alertas que, juntos, viram crítico</td><td class="num forte">3</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Inadimplente a partir de</td><td class="num forte">1 dia de atraso</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Cadastro obsoleto</td><td class="num forte">90 dias sem compra</td><td>Geral</td><td>01/01/2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="faixa entre"><span class="titulo-painel">Alçadas</span><span class="sub">Quem aprova cada decisão, conforme o valor.</span></div>
+          <div class="tabela-wrap">
+            <table class="ha-regras">
+              <thead><tr><th>Regra</th><th class="num">Valor</th><th>Origem</th><th>Vigente desde</th></tr></thead>
+              <tbody>
+              <tr><td>Proposta de crédito: Supervisor aprova até</td><td class="num forte">R$ 50.000,00</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Proposta de crédito: Gerente aprova até</td><td class="num forte">R$ 500.000,00</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Proposta de crédito: Comitê regional aprova até</td><td class="num forte">R$ 2.000.000,00</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Proposta de crédito: acima disso</td><td class="num forte">Comitê executivo</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Pedido acima do limite: Supervisor libera excesso de até</td><td class="num forte">10% e R$ 20.000,00</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Pedido acima do limite: Gerente libera excesso de até</td><td class="num forte">25%</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Pedido acima do limite: Diretor financeiro libera excesso de até</td><td class="num forte">50%</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Pedido acima do limite: vai ao Comitê de crédito</td><td class="num forte">acima de 50% ou atraso maior que 15 dias</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Baixa como perda: Gerente financeiro aprova até</td><td class="num forte">R$ 10.000,00</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Baixa como perda: Diretor financeiro aprova até</td><td class="num forte">R$ 100.000,00</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Baixa como perda: acima disso</td><td class="num forte">Diretoria ou Comitê</td><td>Geral</td><td>01/01/2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="faixa entre"><span class="titulo-painel">Encargos</span><span class="sub">Aplicados sobre o saldo vencido.</span></div>
+          <div class="tabela-wrap">
+            <table class="ha-regras">
+              <thead><tr><th>Regra</th><th class="num">Valor</th><th>Origem</th><th>Vigente desde</th></tr></thead>
+              <tbody>
+              <tr><td>Multa sobre o saldo vencido</td><td class="num forte">2%</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Juros de mora</td><td class="num forte">1% ao mês</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Correção monetária</td><td class="num forte">0,4% ao mês</td><td>Geral</td><td>01/01/2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="faixa entre"><span class="titulo-painel">PDD</span><span class="sub">Percentual provisionado sobre o saldo de cada faixa de atraso.</span></div>
+          <div class="tabela-wrap">
+            <table class="ha-regras">
+              <thead><tr><th>Regra</th><th class="num">Valor</th><th>Origem</th><th>Vigente desde</th></tr></thead>
+              <tbody>
+              <tr><td>Saldo a vencer</td><td class="num forte">0,5%</td><td>Geral</td><td>01/07/2026</td></tr>
+              <tr><td>Vencido de 1 a 30 dias</td><td class="num forte">3%</td><td>Geral</td><td>01/07/2026</td></tr>
+              <tr><td>Vencido de 31 a 60 dias</td><td class="num forte">10%</td><td>Geral</td><td>01/07/2026</td></tr>
+              <tr><td>Vencido de 61 a 90 dias</td><td class="num forte">30%</td><td>Geral</td><td>01/07/2026</td></tr>
+              <tr><td>Vencido de 91 a 180 dias</td><td class="num forte">50%</td><td>Geral</td><td>01/07/2026</td></tr>
+              <tr><td>Vencido há mais de 180 dias</td><td class="num forte">100%</td><td>Geral</td><td>01/07/2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="faixa entre"><span class="titulo-painel">Metas</span><span class="sub">Metas do ano de 2026.</span></div>
+          <div class="tabela-wrap">
+            <table class="ha-regras">
+              <thead><tr><th>Regra</th><th class="num">Valor</th><th>Origem</th><th>Vigente desde</th></tr></thead>
+              <tbody>
+              <tr><td>Tempo médio de análise</td><td class="num forte">até 9 dias</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Prazo de análise cumprido</td><td class="num forte">85% ou mais</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Taxa de aprovação</td><td class="num forte">entre 60% e 85%</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Índice de inadimplência</td><td class="num forte">até 5%</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Vencido há mais de 90 dias</td><td class="num forte">até 2% da carteira</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>PDD</td><td class="num forte">até 3% da carteira</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Recuperado sobre gerado</td><td class="num forte">80% ou mais</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Recebido sobre cobrado, por agente</td><td class="num forte">60% ou mais</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Promessas cumpridas</td><td class="num forte">70% ou mais</td><td>Geral</td><td>01/01/2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="faixa entre"><span class="titulo-painel">Política de limite</span><span class="sub">Como o limite sugerido é calculado e o que se exige em cada faixa.</span></div>
+          <div class="tabela-wrap">
+            <table class="ha-regras">
+              <thead><tr><th>Regra</th><th class="num">Valor</th><th>Origem</th><th>Vigente desde</th></tr></thead>
+              <tbody>
+              <tr><td>Folga sobre a compra média mensal</td><td class="num forte">fator 1,2</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Cliente sem histórico</td><td class="num forte">10% do faturamento mensal</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Teto para cliente sem score</td><td class="num forte">30% do faturamento mensal</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Teto pelo patrimônio líquido</td><td class="num forte">10% do patrimônio</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Peso do Serasa no score interno</td><td class="num forte">60%</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Concentração máxima por cliente ou grupo</td><td class="num forte">10% da carteira</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Documentos: cadastro, consultas e score bastam até</td><td class="num forte">R$ 100.000,00</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Documentos: mais faturamento comprovado até</td><td class="num forte">R$ 500.000,00</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Validade das consultas obrigatórias</td><td class="num forte">30 dias</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Validade da ficha de contatos</td><td class="num forte">180 dias</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Sinal de fraude: CNPJ aberto há menos de</td><td class="num forte">12 meses</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Sinal de fraude: pedido acima de</td><td class="num forte">50% do faturamento mensal</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Flexibilização com risco mínimo</td><td class="num forte">até 20% acima do limite</td><td>Geral</td><td>01/01/2026</td></tr>
+              <tr><td>Flexibilização com risco baixo</td><td class="num forte">até 10% acima do limite</td><td>Geral</td><td>01/01/2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="B" data-nome="Comparar segmentos" data-resumo="Uma aba por grupo e, em cada regra, as colunas Geral, Privado, Estética e Público lado a lado, com o valor próprio do segmento em destaque. Mostra na hora onde um segmento foge do geral; a tabela é larga e a vigência só aparece nos valores próprios.">
+    <div class="page-header">
+      <div>
+        <div class="module">Histórico e apoio</div>
+        <h3>Regras de negócio em vigor</h3>
+        <div class="desc">Os parâmetros que valem hoje, por segmento, num só lugar. Somente consulta.</div>
+        <div class="meta"><span><span class="stat">66</span> regras</span><span class="dot">·</span><span><span class="stat">11</span> valores próprios de segmento</span></div>
+      </div>
+    </div>
+    <div class="alert alert-default"><svg><use href="#i-info"/></svg><b>Somente leitura.</b><p>Os valores vêm dos parâmetros em vigor em 14/11/2026; valor com vigência futura não aparece. Para alterar, o Administrador usa a área de Parâmetros.</p></div>
+    <div class="panel com-abas">
+      <div class="abas" role="tablist">
+        <button data-aba="regua" aria-selected="true">Régua de cobrança</button>
+        <button data-aba="criticidade" aria-selected="false">Criticidade</button>
+        <button data-aba="alcadas" aria-selected="false">Alçadas</button>
+        <button data-aba="encargos" aria-selected="false">Encargos</button>
+        <button data-aba="pdd" aria-selected="false">PDD</button>
+        <button data-aba="metas" aria-selected="false">Metas</button>
+        <button data-aba="limite" aria-selected="false">Política de limite</button>
+      </div>
+      <div data-painel="regua">
+        <div class="faixa entre"><span class="sub">Dias corridos após o vencimento do título.</span><span class="sub"><b class="ha-proprio">Em destaque</b>: valor próprio do segmento · <span class="ha-herda">esmaecido</span>: segue o geral · —: não se aplica</span></div>
+        <div class="tabela-wrap">
+          <table class="ha-matriz">
+            <thead><tr><th>Regra</th><th class="num">Geral</th><th class="num">Privado</th><th class="num">Estética</th><th class="num">Público</th></tr></thead>
+            <tbody>
+              <tr><td>Pagamento não identificado<div class="row-meta">Fixo do sistema</div></td><td class="num forte">D+1</td><td class="num ha-herda">D+1</td><td class="num ha-herda">D+1</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Ligação de cobrança e bloqueio de novos pedidos<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">D+4</td><td class="num ha-herda">D+4</td><td class="num ha-herda">D+4</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Notificação formal com aviso de protesto<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">D+7</td><td class="num ha-herda">D+7</td><td class="num"><b class="ha-proprio">D+5</b><div class="row-meta">desde 01/11/2026</div></td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Envio ao cartório, negativação e bloqueio total<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">D+10</td><td class="num ha-herda">D+10</td><td class="num ha-herda">D+10</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Negociação pós-protesto<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">D+20</td><td class="num ha-herda">D+20</td><td class="num ha-herda">D+20</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Cobrança extrajudicial (assessoria)<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">D+30</td><td class="num ha-herda">D+30</td><td class="num ha-herda">D+30</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Dossiê ao Jurídico (cobrança judicial)<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">D+45</td><td class="num ha-herda">D+45</td><td class="num ha-herda">D+45</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Prazo máximo para ajuizar a ação<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">D+60</td><td class="num ha-herda">D+60</td><td class="num ha-herda">D+60</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Quebra de acordo por atraso de parcela<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">5 dias</td><td class="num ha-herda">5 dias</td><td class="num ha-herda">5 dias</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Nota fiscal pública: confirmar recebimento e atesto após o protocolo</td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num"><b class="ha-proprio">3 dias úteis</b><div class="row-meta">desde 01/01/2026</div></td></tr>
+              <tr><td>Nota fiscal pública: liquidação vencida (e-mail, ligação, ofício)</td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num"><b class="ha-proprio">D+1, D+5 e D+10 úteis</b><div class="row-meta">desde 01/01/2026</div></td></tr>
+              <tr><td>Nota fiscal pública: pagamento vencido (e-mail, pedido pela LAI, ligação, ofício)</td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num"><b class="ha-proprio">D+1, D+5, D+15 e D+30 úteis</b><div class="row-meta">desde 01/01/2026</div></td></tr>
+              <tr><td>Nota fiscal pública: Jurídico avalia ação</td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num"><b class="ha-proprio">D+90 úteis</b><div class="row-meta">desde 01/01/2026</div></td></tr>
+              <tr><td>Nota fiscal pública: pequeno valor, com prazos pela metade</td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num"><b class="ha-proprio">R$ 65.492,11</b><div class="row-meta">desde 01/01/2026</div></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div data-painel="criticidade" hidden>
+        <div class="faixa entre"><span class="sub">Quando um indicador põe o cliente em alerta ou em crítico.</span><span class="sub"><b class="ha-proprio">Em destaque</b>: valor próprio do segmento · <span class="ha-herda">esmaecido</span>: segue o geral · —: não se aplica</span></div>
+        <div class="tabela-wrap">
+          <table class="ha-matriz">
+            <thead><tr><th>Regra</th><th class="num">Geral</th><th class="num">Privado</th><th class="num">Estética</th><th class="num">Público</th></tr></thead>
+            <tbody>
+              <tr><td>Dias de atraso (alerta / crítico)<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">1 / 30 dias</td><td class="num ha-herda">1 / 30 dias</td><td class="num ha-herda">1 / 30 dias</td><td class="num ha-herda">1 / 30 dias</td></tr>
+              <tr><td>Pontualidade das vendas (alerta / crítico)<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">abaixo de 90% / 80%</td><td class="num ha-herda">abaixo de 90% / 80%</td><td class="num ha-herda">abaixo de 90% / 80%</td><td class="num ha-herda">abaixo de 90% / 80%</td></tr>
+              <tr><td>Score Serasa (alerta / crítico)<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">abaixo de 600 / 400</td><td class="num ha-herda">abaixo de 600 / 400</td><td class="num ha-herda">abaixo de 600 / 400</td><td class="num ha-herda">abaixo de 600 / 400</td></tr>
+              <tr><td>Uso do limite (alerta / crítico)<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">a partir de 90% / 100%</td><td class="num ha-herda">a partir de 90% / 100%</td><td class="num ha-herda">a partir de 90% / 100%</td><td class="num ha-herda">a partir de 90% / 100%</td></tr>
+              <tr><td>Prazo médio do cliente (alerta / crítico)<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">acima de 60 / 90 dias</td><td class="num ha-herda">acima de 60 / 90 dias</td><td class="num ha-herda">acima de 60 / 90 dias</td><td class="num ha-herda">acima de 60 / 90 dias</td></tr>
+              <tr><td>Rating de risco (alerta / crítico)<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">D / E</td><td class="num ha-herda">D / E</td><td class="num ha-herda">D / E</td><td class="num ha-herda">D / E</td></tr>
+              <tr><td>Alertas que, juntos, viram crítico<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">3</td><td class="num ha-herda">3</td><td class="num ha-herda">3</td><td class="num ha-herda">3</td></tr>
+              <tr><td>Inadimplente a partir de<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">1 dia de atraso</td><td class="num ha-herda">1 dia de atraso</td><td class="num ha-herda">1 dia de atraso</td><td class="num ha-herda">1 dia de atraso</td></tr>
+              <tr><td>Cadastro obsoleto<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">90 dias sem compra</td><td class="num ha-herda">90 dias sem compra</td><td class="num ha-herda">90 dias sem compra</td><td class="num ha-herda">90 dias sem compra</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div data-painel="alcadas" hidden>
+        <div class="faixa entre"><span class="sub">Quem aprova cada decisão, conforme o valor.</span><span class="sub"><b class="ha-proprio">Em destaque</b>: valor próprio do segmento · <span class="ha-herda">esmaecido</span>: segue o geral · —: não se aplica</span></div>
+        <div class="tabela-wrap">
+          <table class="ha-matriz">
+            <thead><tr><th>Regra</th><th class="num">Geral</th><th class="num">Privado</th><th class="num">Estética</th><th class="num">Público</th></tr></thead>
+            <tbody>
+              <tr><td>Proposta de crédito: Supervisor aprova até<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">R$ 50.000,00</td><td class="num ha-herda">R$ 50.000,00</td><td class="num ha-herda">R$ 50.000,00</td><td class="num"><b class="ha-proprio">R$ 100.000,00</b><div class="row-meta">desde 01/01/2026</div></td></tr>
+              <tr><td>Proposta de crédito: Gerente aprova até<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">R$ 500.000,00</td><td class="num ha-herda">R$ 500.000,00</td><td class="num ha-herda">R$ 500.000,00</td><td class="num"><b class="ha-proprio">R$ 1.000.000,00</b><div class="row-meta">desde 01/01/2026</div></td></tr>
+              <tr><td>Proposta de crédito: Comitê regional aprova até<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">R$ 2.000.000,00</td><td class="num ha-herda">R$ 2.000.000,00</td><td class="num ha-herda">R$ 2.000.000,00</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Proposta de crédito: acima disso<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">Comitê executivo</td><td class="num ha-herda">Comitê executivo</td><td class="num ha-herda">Comitê executivo</td><td class="num"><b class="ha-proprio">Diretoria</b><div class="row-meta">desde 01/01/2026</div></td></tr>
+              <tr><td>Pedido acima do limite: Supervisor libera excesso de até<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">10% e R$ 20.000,00</td><td class="num ha-herda">10% e R$ 20.000,00</td><td class="num ha-herda">10% e R$ 20.000,00</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Pedido acima do limite: Gerente libera excesso de até<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">25%</td><td class="num ha-herda">25%</td><td class="num ha-herda">25%</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Pedido acima do limite: Diretor financeiro libera excesso de até<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">50%</td><td class="num ha-herda">50%</td><td class="num ha-herda">50%</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Pedido acima do limite: vai ao Comitê de crédito<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">acima de 50% ou atraso maior que 15 dias</td><td class="num ha-herda">acima de 50% ou atraso maior que 15 dias</td><td class="num ha-herda">acima de 50% ou atraso maior que 15 dias</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Baixa como perda: Gerente financeiro aprova até<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">R$ 10.000,00</td><td class="num ha-herda">R$ 10.000,00</td><td class="num ha-herda">R$ 10.000,00</td><td class="num ha-herda">R$ 10.000,00</td></tr>
+              <tr><td>Baixa como perda: Diretor financeiro aprova até<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">R$ 100.000,00</td><td class="num ha-herda">R$ 100.000,00</td><td class="num ha-herda">R$ 100.000,00</td><td class="num ha-herda">R$ 100.000,00</td></tr>
+              <tr><td>Baixa como perda: acima disso<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">Diretoria ou Comitê</td><td class="num ha-herda">Diretoria ou Comitê</td><td class="num ha-herda">Diretoria ou Comitê</td><td class="num ha-herda">Diretoria ou Comitê</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div data-painel="encargos" hidden>
+        <div class="faixa entre"><span class="sub">Aplicados sobre o saldo vencido.</span><span class="sub"><b class="ha-proprio">Em destaque</b>: valor próprio do segmento · <span class="ha-herda">esmaecido</span>: segue o geral · —: não se aplica</span></div>
+        <div class="tabela-wrap">
+          <table class="ha-matriz">
+            <thead><tr><th>Regra</th><th class="num">Geral</th><th class="num">Privado</th><th class="num">Estética</th><th class="num">Público</th></tr></thead>
+            <tbody>
+              <tr><td>Multa sobre o saldo vencido<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">2%</td><td class="num ha-herda">2%</td><td class="num ha-herda">2%</td><td class="num"><b class="ha-proprio">Sem multa</b><div class="row-meta">desde 01/01/2026</div></td></tr>
+              <tr><td>Juros de mora<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">1% ao mês</td><td class="num ha-herda">1% ao mês</td><td class="num ha-herda">1% ao mês</td><td class="num"><b class="ha-proprio">0,5% ao mês</b><div class="row-meta">desde 01/01/2026</div></td></tr>
+              <tr><td>Correção monetária<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">0,4% ao mês</td><td class="num ha-herda">0,4% ao mês</td><td class="num ha-herda">0,4% ao mês</td><td class="num ha-herda">0,4% ao mês</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div data-painel="pdd" hidden>
+        <div class="faixa entre"><span class="sub">Percentual provisionado sobre o saldo de cada faixa de atraso.</span><span class="sub"><b class="ha-proprio">Em destaque</b>: valor próprio do segmento · <span class="ha-herda">esmaecido</span>: segue o geral · —: não se aplica</span></div>
+        <div class="tabela-wrap">
+          <table class="ha-matriz">
+            <thead><tr><th>Regra</th><th class="num">Geral</th><th class="num">Privado</th><th class="num">Estética</th><th class="num">Público</th></tr></thead>
+            <tbody>
+              <tr><td>Saldo a vencer<div class="row-meta">geral desde 01/07/2026</div></td><td class="num forte">0,5%</td><td class="num ha-herda">0,5%</td><td class="num ha-herda">0,5%</td><td class="num ha-herda">0,5%</td></tr>
+              <tr><td>Vencido de 1 a 30 dias<div class="row-meta">geral desde 01/07/2026</div></td><td class="num forte">3%</td><td class="num ha-herda">3%</td><td class="num ha-herda">3%</td><td class="num ha-herda">3%</td></tr>
+              <tr><td>Vencido de 31 a 60 dias<div class="row-meta">geral desde 01/07/2026</div></td><td class="num forte">10%</td><td class="num ha-herda">10%</td><td class="num ha-herda">10%</td><td class="num ha-herda">10%</td></tr>
+              <tr><td>Vencido de 61 a 90 dias<div class="row-meta">geral desde 01/07/2026</div></td><td class="num forte">30%</td><td class="num ha-herda">30%</td><td class="num ha-herda">30%</td><td class="num ha-herda">30%</td></tr>
+              <tr><td>Vencido de 91 a 180 dias<div class="row-meta">geral desde 01/07/2026</div></td><td class="num forte">50%</td><td class="num ha-herda">50%</td><td class="num ha-herda">50%</td><td class="num ha-herda">50%</td></tr>
+              <tr><td>Vencido há mais de 180 dias<div class="row-meta">geral desde 01/07/2026</div></td><td class="num forte">100%</td><td class="num ha-herda">100%</td><td class="num ha-herda">100%</td><td class="num ha-herda">100%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div data-painel="metas" hidden>
+        <div class="faixa entre"><span class="sub">Metas do ano de 2026.</span><span class="sub"><b class="ha-proprio">Em destaque</b>: valor próprio do segmento · <span class="ha-herda">esmaecido</span>: segue o geral · —: não se aplica</span></div>
+        <div class="tabela-wrap">
+          <table class="ha-matriz">
+            <thead><tr><th>Regra</th><th class="num">Geral</th><th class="num">Privado</th><th class="num">Estética</th><th class="num">Público</th></tr></thead>
+            <tbody>
+              <tr><td>Tempo médio de análise<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">até 9 dias</td><td class="num ha-herda">até 9 dias</td><td class="num ha-herda">até 9 dias</td><td class="num ha-herda">até 9 dias</td></tr>
+              <tr><td>Prazo de análise cumprido<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">85% ou mais</td><td class="num ha-herda">85% ou mais</td><td class="num ha-herda">85% ou mais</td><td class="num ha-herda">85% ou mais</td></tr>
+              <tr><td>Taxa de aprovação<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">entre 60% e 85%</td><td class="num ha-herda">entre 60% e 85%</td><td class="num ha-herda">entre 60% e 85%</td><td class="num ha-herda">entre 60% e 85%</td></tr>
+              <tr><td>Índice de inadimplência<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">até 5%</td><td class="num ha-herda">até 5%</td><td class="num ha-herda">até 5%</td><td class="num ha-herda">até 5%</td></tr>
+              <tr><td>Vencido há mais de 90 dias<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">até 2% da carteira</td><td class="num ha-herda">até 2% da carteira</td><td class="num ha-herda">até 2% da carteira</td><td class="num ha-herda">até 2% da carteira</td></tr>
+              <tr><td>PDD<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">até 3% da carteira</td><td class="num ha-herda">até 3% da carteira</td><td class="num ha-herda">até 3% da carteira</td><td class="num ha-herda">até 3% da carteira</td></tr>
+              <tr><td>Recuperado sobre gerado<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">80% ou mais</td><td class="num ha-herda">80% ou mais</td><td class="num ha-herda">80% ou mais</td><td class="num ha-herda">80% ou mais</td></tr>
+              <tr><td>Recebido sobre cobrado, por agente<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">60% ou mais</td><td class="num ha-herda">60% ou mais</td><td class="num ha-herda">60% ou mais</td><td class="num ha-herda">60% ou mais</td></tr>
+              <tr><td>Promessas cumpridas<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">70% ou mais</td><td class="num ha-herda">70% ou mais</td><td class="num ha-herda">70% ou mais</td><td class="num ha-herda">70% ou mais</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div data-painel="limite" hidden>
+        <div class="faixa entre"><span class="sub">Como o limite sugerido é calculado e o que se exige em cada faixa.</span><span class="sub"><b class="ha-proprio">Em destaque</b>: valor próprio do segmento · <span class="ha-herda">esmaecido</span>: segue o geral · —: não se aplica</span></div>
+        <div class="tabela-wrap">
+          <table class="ha-matriz">
+            <thead><tr><th>Regra</th><th class="num">Geral</th><th class="num">Privado</th><th class="num">Estética</th><th class="num">Público</th></tr></thead>
+            <tbody>
+              <tr><td>Folga sobre a compra média mensal<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">fator 1,2</td><td class="num ha-herda">fator 1,2</td><td class="num ha-herda">fator 1,2</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Cliente sem histórico<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">10% do faturamento mensal</td><td class="num ha-herda">10% do faturamento mensal</td><td class="num ha-herda">10% do faturamento mensal</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Teto para cliente sem score<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">30% do faturamento mensal</td><td class="num ha-herda">30% do faturamento mensal</td><td class="num ha-herda">30% do faturamento mensal</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Teto pelo patrimônio líquido<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">10% do patrimônio</td><td class="num ha-herda">10% do patrimônio</td><td class="num ha-herda">10% do patrimônio</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Peso do Serasa no score interno<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">60%</td><td class="num ha-herda">60%</td><td class="num ha-herda">60%</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Concentração máxima por cliente ou grupo<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">10% da carteira</td><td class="num ha-herda">10% da carteira</td><td class="num ha-herda">10% da carteira</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Documentos: cadastro, consultas e score bastam até<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">R$ 100.000,00</td><td class="num ha-herda">R$ 100.000,00</td><td class="num ha-herda">R$ 100.000,00</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Documentos: mais faturamento comprovado até<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">R$ 500.000,00</td><td class="num ha-herda">R$ 500.000,00</td><td class="num ha-herda">R$ 500.000,00</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Validade das consultas obrigatórias<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">30 dias</td><td class="num ha-herda">30 dias</td><td class="num ha-herda">30 dias</td><td class="num ha-herda">30 dias</td></tr>
+              <tr><td>Validade da ficha de contatos<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">180 dias</td><td class="num ha-herda">180 dias</td><td class="num ha-herda">180 dias</td><td class="num ha-herda">180 dias</td></tr>
+              <tr><td>Sinal de fraude: CNPJ aberto há menos de<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">12 meses</td><td class="num ha-herda">12 meses</td><td class="num ha-herda">12 meses</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Sinal de fraude: pedido acima de<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">50% do faturamento mensal</td><td class="num ha-herda">50% do faturamento mensal</td><td class="num ha-herda">50% do faturamento mensal</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Flexibilização com risco mínimo<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">até 20% acima do limite</td><td class="num ha-herda">até 20% acima do limite</td><td class="num ha-herda">até 20% acima do limite</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td>Flexibilização com risco baixo<div class="row-meta">geral desde 01/01/2026</div></td><td class="num forte">até 10% acima do limite</td><td class="num ha-herda">até 10% acima do limite</td><td class="num ha-herda">até 10% acima do limite</td><td class="num"><span class="dash">—</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="C" data-nome="Painéis por tema" data-resumo="Cada tema ganha um painel no formato do seu dado: a régua como trilha de dias, as alçadas em degraus, a PDD em barras, a criticidade em alerta e crítico. Entende-se de relance e serve para treinar a equipe; ocupa mais tela e a vigência fica a um clique.">
+    <div class="page-header">
+      <div>
+        <div class="module">Histórico e apoio</div>
+        <h3>Regras de negócio em vigor</h3>
+        <div class="desc">Os parâmetros que valem hoje, por segmento, num só lugar. Somente consulta.</div>
+        
+      </div>
+    </div>
+    <div class="entre"><div class="segment" role="group" aria-label="Segmento"><button type="button" aria-pressed="false">Geral</button><button type="button" aria-pressed="false">Privado</button><button type="button" aria-pressed="true">Estética</button><button type="button" aria-pressed="false">Público</button></div><span class="sub">Valores em vigor em 14/11/2026 · 1 valor próprio do segmento</span></div>
+    <div class="alert alert-default"><svg><use href="#i-info"/></svg><b>Somente leitura.</b><p>Os valores vêm dos parâmetros em vigor em 14/11/2026; valor com vigência futura não aparece. Para alterar, o Administrador usa a área de Parâmetros.</p></div>
+
+    <div class="panel">
+      <div class="faixa entre"><span class="titulo-painel">Régua de cobrança</span><span class="sub">Dias corridos após o vencimento do título</span></div>
+      <div class="corpo-painel">
+        <div class="ha-trilha">
+          <div class="ha-passo"><b>D+1</b><span>Pagamento não identificado</span></div>
+          <div class="ha-passo"><b>D+4</b><span>Ligação de cobrança e bloqueio de novos pedidos</span></div>
+          <div class="ha-passo ha-do-seg"><b>D+5</b><span>Notificação formal com aviso de protesto</span><span class="badge badge-accent">Próprio do segmento</span><span>geral: D+7</span></div>
+          <div class="ha-passo"><b>D+10</b><span>Cartório, negativação e bloqueio total</span></div>
+          <div class="ha-passo"><b>D+20</b><span>Negociação pós-protesto</span></div>
+          <div class="ha-passo"><b>D+30</b><span>Cobrança extrajudicial</span></div>
+          <div class="ha-passo"><b>D+45</b><span>Dossiê ao Jurídico</span></div>
+          <div class="ha-passo"><b>D+60</b><span>Prazo máximo para ajuizar</span></div>
+        </div>
+        <p>Acordo quebra quando uma parcela atrasa <b>5 dias</b>.</p>
+        <details class="ha-det"><summary>Origem e vigência</summary><div class="rebaixado">Notificação formal: valor próprio da Estética desde 01/11/2026 (geral: D+7). D+1 é fixo do sistema. Os demais são gerais, vigentes desde 01/01/2026.</div></details>
+      </div>
+    </div>
+
+    <div class="grade-2">
+      <div class="panel">
+        <div class="faixa entre"><span class="titulo-painel">Criticidade</span><span class="sub">Quando o cliente entra em alerta ou em crítico</span></div>
+        <div class="tabela-wrap">
+          <table>
+            <thead><tr><th>Indicador</th><th>Alerta</th><th>Crítico</th></tr></thead>
+            <tbody>
+              <tr><td>Dias de atraso</td><td><span class="status status-attention"><i></i>a partir de 1 dia</span></td><td><span class="status status-alert"><i></i>a partir de 30 dias</span></td></tr>
+              <tr><td>Pontualidade das vendas</td><td><span class="status status-attention"><i></i>abaixo de 90%</span></td><td><span class="status status-alert"><i></i>abaixo de 80%</span></td></tr>
+              <tr><td>Score Serasa</td><td><span class="status status-attention"><i></i>abaixo de 600</span></td><td><span class="status status-alert"><i></i>abaixo de 400</span></td></tr>
+              <tr><td>Uso do limite</td><td><span class="status status-attention"><i></i>a partir de 90%</span></td><td><span class="status status-alert"><i></i>a partir de 100%</span></td></tr>
+              <tr><td>Prazo médio do cliente</td><td><span class="status status-attention"><i></i>acima de 60 dias</span></td><td><span class="status status-alert"><i></i>acima de 90 dias</span></td></tr>
+              <tr><td>Rating de risco</td><td><span class="status status-attention"><i></i>D ou pior</span></td><td><span class="status status-alert"><i></i>E</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="corpo-painel">
+          <p><b>3 alertas</b> juntos viram crítico. Inadimplente a partir de <b>1 dia</b> de atraso. Cadastro obsoleto com <b>90 dias</b> sem compra.</p>
+          <details class="ha-det"><summary>Origem e vigência</summary><div class="rebaixado">Todos os valores são gerais, vigentes desde 01/01/2026.</div></details>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="faixa entre"><span class="titulo-painel">Alçadas</span><span class="sub">Quem aprova, conforme o valor</span></div>
+        <div class="corpo-painel">
+          <div class="sub forte">Proposta de crédito</div>
+          <div class="ha-degraus">
+            <div><span>até R$ 50.000,00</span><b>Supervisor</b></div>
+            <div><span>até R$ 500.000,00</span><b>Gerente</b></div>
+            <div><span>até R$ 2.000.000,00</span><b>Comitê regional</b></div>
+            <div><span>acima disso</span><b>Comitê executivo</b></div>
+          </div>
+          <div class="sub forte">Pedido acima do limite</div>
+          <div class="ha-degraus">
+            <div><span>excesso de até 10% e R$ 20.000,00</span><b>Supervisor</b></div>
+            <div><span>excesso de até 25%</span><b>Gerente</b></div>
+            <div><span>excesso de até 50%</span><b>Diretor financeiro</b></div>
+            <div><span>acima de 50% ou atraso maior que 15 dias</span><b>Comitê de crédito</b></div>
+          </div>
+          <div class="sub forte">Baixa como perda</div>
+          <div class="ha-degraus">
+            <div><span>até R$ 10.000,00</span><b>Gerente financeiro</b></div>
+            <div><span>até R$ 100.000,00</span><b>Diretor financeiro</b></div>
+            <div><span>acima disso</span><b>Diretoria ou Comitê</b></div>
+          </div>
+          <details class="ha-det"><summary>Origem e vigência</summary><div class="rebaixado">Todos os valores são gerais, vigentes desde 01/01/2026.</div></details>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="faixa entre"><span class="titulo-painel">Encargos</span><span class="sub">Sobre o saldo vencido</span></div>
+        <div class="corpo-painel">
+          <div class="grade-3">
+            <div class="resumo"><span class="sub">Multa</span><b class="ha-numero">2%</b><span class="sub">uma vez</span></div>
+            <div class="resumo"><span class="sub">Juros de mora</span><b class="ha-numero">1%</b><span class="sub">ao mês</span></div>
+            <div class="resumo"><span class="sub">Correção</span><b class="ha-numero">0,4%</b><span class="sub">ao mês</span></div>
+          </div>
+          <details class="ha-det"><summary>Origem e vigência</summary><div class="rebaixado">Todos os valores são gerais, vigentes desde 01/01/2026.</div></details>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="faixa entre"><span class="titulo-painel">PDD</span><span class="sub">Provisão sobre o saldo de cada faixa de atraso</span></div>
+        <div class="corpo-painel">
+          <div class="barras">
+            <div class="barra"><span>A vencer</span><div class="trilho"><i style="width:0.5%"></i></div><span class="valor">0,5%</span></div>
+            <div class="barra"><span>1 a 30 dias</span><div class="trilho"><i style="width:3%"></i></div><span class="valor">3%</span></div>
+            <div class="barra"><span>31 a 60 dias</span><div class="trilho"><i style="width:10%"></i></div><span class="valor">10%</span></div>
+            <div class="barra"><span>61 a 90 dias</span><div class="trilho"><i style="width:30%"></i></div><span class="valor">30%</span></div>
+            <div class="barra"><span>91 a 180 dias</span><div class="trilho"><i style="width:50%"></i></div><span class="valor">50%</span></div>
+            <div class="barra"><span>Mais de 180 dias</span><div class="trilho"><i style="width:100%"></i></div><span class="valor">100%</span></div>
+          </div>
+          <details class="ha-det"><summary>Origem e vigência</summary><div class="rebaixado">Todos os valores são gerais, vigentes desde 01/07/2026.</div></details>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="faixa entre"><span class="titulo-painel">Metas</span><span class="sub">Ano de 2026</span></div>
+        <dl class="ha-pares">
+          <div><dt>Tempo médio de análise</dt><dd>até 9 dias</dd></div>
+          <div><dt>Prazo de análise cumprido</dt><dd>85% ou mais</dd></div>
+          <div><dt>Taxa de aprovação</dt><dd>entre 60% e 85%</dd></div>
+          <div><dt>Índice de inadimplência</dt><dd>até 5%</dd></div>
+          <div><dt>Vencido há mais de 90 dias</dt><dd>até 2% da carteira</dd></div>
+          <div><dt>PDD</dt><dd>até 3% da carteira</dd></div>
+          <div><dt>Recuperado sobre gerado</dt><dd>80% ou mais</dd></div>
+          <div><dt>Recebido sobre cobrado, por agente</dt><dd>60% ou mais</dd></div>
+          <div><dt>Promessas cumpridas</dt><dd>70% ou mais</dd></div>
+        </dl>
+        <div class="corpo-painel"><details class="ha-det"><summary>Origem e vigência</summary><div class="rebaixado">Todos os valores são gerais, vigentes desde 01/01/2026.</div></details></div>
+      </div>
+
+      <div class="panel">
+        <div class="faixa entre"><span class="titulo-painel">Política de limite</span><span class="sub">Cálculo do limite sugerido e exigências</span></div>
+        <dl class="ha-pares">
+          <div><dt>Folga sobre a compra média mensal</dt><dd>fator 1,2</dd></div>
+          <div><dt>Cliente sem histórico</dt><dd>10% do faturamento mensal</dd></div>
+          <div><dt>Teto para cliente sem score</dt><dd>30% do faturamento mensal</dd></div>
+          <div><dt>Teto pelo patrimônio líquido</dt><dd>10% do patrimônio</dd></div>
+          <div><dt>Peso do Serasa no score interno</dt><dd>60%</dd></div>
+          <div><dt>Concentração máxima por cliente ou grupo</dt><dd>10% da carteira</dd></div>
+          <div><dt>Documentos: cadastro, consultas e score bastam até</dt><dd>R$ 100.000,00</dd></div>
+          <div><dt>Documentos: mais faturamento comprovado até</dt><dd>R$ 500.000,00</dd></div>
+          <div><dt>Validade das consultas obrigatórias</dt><dd>30 dias</dd></div>
+          <div><dt>Validade da ficha de contatos</dt><dd>180 dias</dd></div>
+          <div><dt>Sinal de fraude: CNPJ aberto há menos de</dt><dd>12 meses</dd></div>
+          <div><dt>Sinal de fraude: pedido acima de</dt><dd>50% do faturamento mensal</dd></div>
+          <div><dt>Flexibilização com risco mínimo</dt><dd>até 20% acima do limite</dd></div>
+          <div><dt>Flexibilização com risco baixo</dt><dd>até 10% acima do limite</dd></div>
+        </dl>
+        <div class="corpo-painel"><details class="ha-det"><summary>Origem e vigência</summary><div class="rebaixado">Todos os valores são gerais, vigentes desde 01/01/2026. Acima de R$ 500.000,00 pedem-se também balanço e DRE.</div></details></div>
+      </div>
+    </div>
+  </template>
+</section>
+<style>
+/* 007 · Histórico e apoio (prefixo ha-). Só tokens. */
+/* Categoria do histórico: 8 cores da rampa de dados x 2 formas (cheio e vazado) = até 16 distintas. */
+.ha-c1 { --c: var(--data-1); } .ha-c2 { --c: var(--data-2); } .ha-c3 { --c: var(--data-3); } .ha-c4 { --c: var(--data-4); }
+.ha-c5 { --c: var(--data-5); } .ha-c6 { --c: var(--data-6); } .ha-c7 { --c: var(--data-7); } .ha-c8 { --c: var(--data-8); }
+.ha-cat { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.ha-cat > i { flex: none; width: 10px; height: 10px; border-radius: 3px; border: 2px solid var(--c); background: var(--c); }
+.ha-cat.ha-oco > i { background: transparent; }
+.linha-tempo .ha-ev > i { width: 10px; height: 10px; margin: 4px 0 0 1px; border-radius: 3px; border: 2px solid var(--c); background: var(--c); }
+.linha-tempo .ha-ev.ha-oco > i { background: var(--card); }
+.linha-tempo .ha-ev.ha-futuro::before { background: repeating-linear-gradient(to bottom, var(--border) 0 4px, transparent 4px 8px); }
+.ha-reg { display: grid; gap: 3px; min-width: 0; }
+.ha-reg-topo { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-size: 12px; color: var(--muted-foreground); }
+.ha-reg-topo b { font-weight: 600; color: var(--foreground); }
+.ha-feedback { font-style: italic; color: var(--muted-foreground); }
+.ha-det > summary { cursor: pointer; font-size: 12px; font-weight: 600; color: var(--primary); width: fit-content; }
+.ha-det > .rebaixado { margin-top: 6px; font-size: 12px; }
+.ha-pills { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 16px; border-bottom: 1px solid var(--row-border); }
+.ha-pills.ha-solta { padding: 0; border: 0; }
+.ha-pill { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px; border-radius: 999px; border: 1px solid var(--border); background: var(--card); font: inherit; font-size: 12px; color: var(--foreground); cursor: pointer; }
+.ha-pill b { font-weight: 600; }
+.ha-pill[aria-pressed="true"] { background: var(--accent); border-color: var(--brand-300); color: var(--accent-foreground); }
+.ha-pill[disabled] { color: var(--muted-foreground); border-style: dashed; cursor: default; }
+.ha-pares { margin: 0; display: grid; }
+.ha-pares > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 10px; padding: 8px 16px; border-top: 1px solid var(--row-border); }
+.ha-pares dt { font-size: 12px; color: var(--muted-foreground); }
+.ha-pares dd { margin: 0; text-align: right; font-weight: 600; overflow-wrap: anywhere; }
+.ha-fl { display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%; padding: 7px 16px; border: 0; background: transparent; font: inherit; color: inherit; cursor: pointer; text-align: left; }
+.ha-fl:hover, .ha-fl[aria-pressed="true"] { background: var(--accent); }
+.ha-fl[disabled] { color: var(--muted-foreground); cursor: default; background: transparent; }
+.ha-fl b { font-weight: 600; }
+.ha-busca-cab { min-width: 260px; }
+.kpis.ha-sem-margem { margin-top: 0; }
+.ha-secao + .ha-secao { border-top: 1px solid var(--row-border); }
+.ha-secao > summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; padding: 12px 16px; cursor: pointer; list-style: none; font-family: var(--font-title); font-weight: 700; font-size: 14px; }
+.ha-secao > summary::-webkit-details-marker { display: none; }
+.ha-secao > summary::before { content: ""; align-self: center; width: 7px; height: 7px; margin-right: 4px; border-right: 2px solid var(--muted-foreground); border-bottom: 2px solid var(--muted-foreground); transform: rotate(-45deg); transition: transform 120ms; }
+.ha-secao[open] > summary::before { transform: rotate(45deg); }
+.ha-secao > summary .sub { font-family: var(--font-sans); font-weight: 400; }
+.ha-secao[open] > summary { border-bottom: 1px solid var(--row-border); }
+.ha-dia { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 6px 16px; padding: 14px 16px; border-bottom: 1px solid var(--row-border); }
+.ha-dia-futuro { background: var(--muted); }
+.ha-dia > h4 { font-size: 13px; font-weight: 700; }
+.ha-dia > h4 small { display: block; font-family: var(--font-sans); font-weight: 400; font-size: 12px; color: var(--muted-foreground); }
+.ha-itens { display: grid; gap: 12px; min-width: 0; }
+.ha-item { display: grid; grid-template-columns: 44px 170px minmax(0, 1fr); gap: 4px 12px; align-items: start; }
+.ha-hora { color: var(--muted-foreground); font-size: 12px; }
+@media (max-width: 900px) { .ha-dia { grid-template-columns: 1fr; } .ha-item { grid-template-columns: 44px minmax(0, 1fr); } .ha-item > .ha-reg { grid-column: 1 / -1; } }
+
+/* Prévia do PDF */
+.ha-palco-pdf { display: grid; grid-template-columns: minmax(0, 1fr); overflow-x: auto; gap: 20px; justify-items: center; padding: 24px 16px; border-radius: 1rem; background: var(--muted); border: 1px solid var(--border); }
+.ha-folha { position: relative; width: 100%; min-width: 0; max-width: 760px; aspect-ratio: 210 / 297; display: flex; flex-direction: column; gap: 10px; padding: 40px 44px 64px 96px; background: var(--card); border: 1px solid var(--border); box-shadow: 0 6px 20px color-mix(in srgb, var(--foreground) 10%, transparent); font-size: 11.5px; line-height: 1.45; }
+.ha-folha::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 56px; background: var(--brand-50); border-right: 3px solid var(--mark-on-accent); }
+.ha-folha h4 { font-size: 16px; font-weight: 800; }
+.ha-folha h4.ha-pdf-titulo { font-size: 20px; }
+.ha-folha h5 { margin: 6px 0 0; padding-bottom: 3px; font-family: var(--font-title); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--primary); border-bottom: 1px solid var(--border); }
+.ha-folha .sub { font-size: 10.5px; }
+.ha-pdf-cab { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--mark-on-accent); }
+.ha-pdf-dir { text-align: right; }
+.ha-logo { font-family: var(--font-title); font-weight: 800; font-size: 20px; letter-spacing: -.02em; }
+.ha-pdf-cliente { font-family: var(--font-title); font-size: 13.5px; }
+.ha-pdf-2col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; margin: 0; }
+.ha-pdf-2col > div { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; border-bottom: 1px dotted var(--border); }
+.ha-pdf-2col dt, .ha-pdf-4col dt { color: var(--muted-foreground); }
+.ha-pdf-2col dd { margin: 0; font-weight: 600; text-align: right; }
+.ha-pdf-4col { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px 14px; margin: 0; padding: 8px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.ha-pdf-4col dt { font-size: 9.5px; text-transform: uppercase; letter-spacing: .06em; }
+.ha-pdf-4col dd { margin: 0; font-weight: 600; }
+.ha-pdf-4col.ha-pdf-cont { border: 0; padding: 0; gap: 4px 14px; }
+.ha-pdf-cont > div { display: flex; justify-content: space-between; gap: 6px; }
+.ha-pdf-cont dt { font-size: 10.5px; text-transform: none; letter-spacing: 0; color: var(--foreground); }
+.ha-pdf-nums { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.ha-pdf-nums > div { display: grid; gap: 1px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px; }
+.ha-pdf-nums span, .ha-pdf-nums small { font-size: 9.5px; color: var(--muted-foreground); }
+.ha-pdf-nums b { font-family: var(--font-title); font-size: 14px; }
+.ha-pdf-reg { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 2px 10px; padding: 6px 0; border-bottom: 1px solid var(--row-border); }
+.ha-pdf-reg > span { color: var(--muted-foreground); }
+.ha-folha .ha-cat { font-weight: 600; }
+.ha-folha .ha-cat > i { width: 8px; height: 8px; }
+.ha-folha table { font-size: 10.5px; }
+.ha-folha th { font-size: 9px; padding: 5px 6px; letter-spacing: .08em; }
+.ha-folha td { padding: 5px 6px; }
+.ha-folha tbody tr:hover td { background: transparent; }
+.ha-pdf-rodape { position: absolute; left: 96px; right: 44px; bottom: 24px; display: flex; justify-content: space-between; gap: 12px; padding-top: 6px; border-top: 1px solid var(--border); font-size: 10px; color: var(--muted-foreground); }
+@media (max-width: 700px) { .ha-folha { padding: 28px 18px 56px 46px; aspect-ratio: auto; } .ha-folha::before { width: 26px; } .ha-pdf-rodape { left: 46px; right: 18px; } .ha-pdf-4col, .ha-pdf-nums, .ha-pdf-2col { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Fontes e links */
+.ha-link { color: var(--primary); font-weight: 600; cursor: pointer; }
+.ha-link:hover { text-decoration: underline; }
+.ha-fontes th:nth-child(1) { width: 26%; } .ha-fontes th:nth-child(2) { width: 16%; } .ha-fontes th:nth-child(4) { width: 17%; } .ha-fontes th:nth-child(5) { width: 110px; }
+.ha-tres { display: grid; grid-template-columns: 240px minmax(0, 1fr) 330px; gap: 14px; align-items: start; }
+@media (max-width: 1150px) { .ha-tres { grid-template-columns: 1fr; } }
+.ha-cresce { flex: 1; min-width: 0; }
+.ha-topo { border-top: 1px solid var(--row-border); }
+.ha-borda { border: 1px solid var(--row-border); border-radius: .75rem; }
+tbody tr.ha-sel td { background: var(--accent); }
+.ha-mini { margin-top: 6px; font-size: 12px; }
+.ha-bloco { border: 1px solid var(--row-border); border-radius: .75rem; align-self: start; }
+.ha-bloco-cab { padding: 12px 14px; border-bottom: 1px solid var(--row-border); }
+.ha-fonte { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 6px 10px; padding: 9px 14px; border-bottom: 1px solid var(--row-border); }
+.ha-fonte:last-child { border-bottom: 0; }
+
+/* Material de apoio */
+.ha-grupo-linha td, tbody tr.ha-grupo-linha:hover td { background: var(--muted); padding: 8px 16px; font-family: var(--font-title); font-weight: 700; }
+.ha-grupo-linha .sub { font-family: var(--font-sans); font-weight: 400; margin-left: 6px; }
+.ha-soltar { display: grid; gap: 6px; justify-items: center; text-align: center; padding: 18px; border: 1px dashed var(--border); border-radius: .75rem; background: var(--muted); }
+.ha-doc { display: flex; flex-direction: column; gap: 8px; padding: 14px; border: 1px solid var(--border); border-radius: 1rem; background: var(--card); }
+.ha-doc.ha-pendente { border-style: dashed; }
+.ha-doc-topo { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.ha-doc-pe { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; margin-top: auto; padding-top: 10px; border-top: 1px solid var(--row-border); }
+.ha-tipo { flex: none; display: inline-flex; align-items: center; justify-content: center; min-width: 38px; height: 22px; padding: 0 6px; border-radius: 6px; background: var(--accent); color: var(--accent-foreground); font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.ha-pendente .ha-tipo, .ha-tipo.ha-sem { background: var(--muted); color: var(--muted-foreground); }
+.ha-rot-grupo { padding: 12px 16px 6px; font-size: 11px; text-transform: uppercase; letter-spacing: .12em; font-weight: 600; color: var(--muted-foreground); }
+.ha-apagado { opacity: .6; }
+.ha-previa { display: flex; flex-direction: column; gap: 8px; aspect-ratio: 210 / 297; padding: 22px 18px 14px 30px; border: 1px solid var(--border); border-left: 12px solid var(--brand-100); background: var(--card); box-shadow: 0 4px 14px color-mix(in srgb, var(--foreground) 8%, transparent); }
+.ha-previa > i { display: block; height: 7px; border-radius: 4px; background: var(--muted); }
+.ha-previa > i.ha-curta { width: 60%; }
+.ha-previa > span:last-child { margin-top: auto; }
+
+.form-grade { align-items: start; }
+.form-grade .select { width: 100%; min-width: 0; }
+.form-grade .select span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Regras em vigor */
+.ha-regras th:nth-child(1) { width: 44%; } .ha-regras th:nth-child(3) { width: 22%; } .ha-regras th:nth-child(4) { width: 14%; }
+.ha-matriz th:nth-child(1) { width: 34%; }
+.ha-proprio { color: var(--primary); font-weight: 700; }
+.ha-herda { color: var(--muted-foreground); }
+.ha-trilha { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 8px; }
+.ha-passo { display: grid; gap: 4px; align-content: start; padding: 10px; border-radius: .75rem; background: var(--muted); border-top: 3px solid var(--brand-300); }
+.ha-passo b { font-family: var(--font-title); font-size: 16px; }
+.ha-passo span { font-size: 12px; color: var(--muted-foreground); }
+.ha-passo .badge { white-space: normal; color: var(--accent-foreground); background: var(--card); }
+.ha-passo.ha-do-seg { border-top-color: var(--primary); background: var(--accent); }
+@media (max-width: 1150px) { .ha-trilha { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .ha-trilha { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.ha-degraus { display: grid; gap: 4px; }
+.ha-degraus > div { display: flex; justify-content: space-between; gap: 12px; padding: 6px 10px; border-radius: .5rem; background: var(--muted); }
+.ha-degraus > div:nth-child(2) { margin-left: 12px; } .ha-degraus > div:nth-child(3) { margin-left: 24px; } .ha-degraus > div:nth-child(4) { margin-left: 36px; }
+.ha-degraus b { text-align: right; }
+.ha-numero { font-family: var(--font-title); font-size: 22px; font-weight: 800; }
+</style>

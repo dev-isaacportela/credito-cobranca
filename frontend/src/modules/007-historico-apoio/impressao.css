@@ -1,0 +1,18 @@
+/*
+ * Impressão do documento do histórico (D-001, T-207): a prévia desenha a folha na tela e uma cópia, por portal,
+ * direto no <body>. Na tela a cópia some; na impressão some o app inteiro (#root: menu, cabeçalho, botões) e
+ * só a cópia sai. O `@page` (A4, rodapé com cliente e "Página i de n") é criado pela tela com `cssDaPagina()`.
+ * O tema escuro sai antes de imprimir (beforeprint): papel é sempre claro, com os mesmos tokens.
+ * Sem camada: vence as utilidades do Tailwind (que moram em @layer).
+ */
+.ha-copia-impressao { display: none; }
+
+@media print {
+  #root { display: none !important; }
+  body { background: none; }
+  .ha-copia-impressao { display: block; }
+  .ha-copia-impressao .ha-folha { max-width: none; border: 0; border-radius: 0; box-shadow: none; padding: 0; }
+  .ha-registro { break-inside: avoid; }
+  .ha-titulo-secao { break-after: avoid; }
+  .ha-so-tela { display: none !important; }
+}

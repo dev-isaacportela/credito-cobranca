@@ -1,0 +1,540 @@
+<section data-tela="regras-ente" data-grupo="Regras e apoio" data-titulo="Regras de pagamento por ente" data-desc="Para o Administrador, que mantém as regras, e para a Gerência Financeira, que as valida: prazos por esfera e UF, base legal, link da norma e situação.">
+<template data-opcao="A" data-nome="Tabela de regras" data-resumo="Todas as regras numa tabela com prazos, contagem, base legal, situação e uso. Compara os entes numa passada; a base legal fica truncada e a edição abre em diálogo.">
+<div class="pub-tela"><div class="page-header"><div><div class="module">Setor público</div>
+<h3>Regras de pagamento por ente</h3><div class="desc">Prazos legais de liquidação e de pagamento usados no cálculo de cada nota. O prazo do contrato, quando informado, prevalece.</div>
+<div class="meta"><span><span class="stat">5</span> regras ativas</span><span class="dot">·</span><span><span class="stat">1</span> verificada</span><span class="dot">·</span><span><span class="stat">4</span> a confirmar</span><span class="dot">·</span><span><span class="stat">6</span> notas calculadas com regra a confirmar</span></div>
+</div>
+<div class="row"><button class="btn btn-primary" type="button"><svg><use href="#i-plus"/></svg>Nova regra</button></div>
+</div>
+<div class="alert alert-warn"><svg><use href="#i-alert"/></svg><b>Quatro regras ainda estão a confirmar</b><p>A nota e a análise que usam essas regras mostram o aviso. Só Gerente ou Diretoria marca como Verificado, e só com o link da norma. Mudar prazo, contagem, esfera ou UF devolve a regra para A confirmar.</p></div>
+<div class="panel"><div class="toolbar"><div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar por nome, UF ou norma"></div>
+<span class="select"><span>Todas as esferas</span><svg><use href="#i-chevron"/></svg></span><span class="select"><span>Situação: todas</span><svg><use href="#i-chevron"/></svg></span></div>
+    <div class="tabela-wrap"><table><thead><tr><th>Regra</th><th>Esfera · UF</th><th class="num">Liquidar</th><th class="num">Pagar</th><th>Contagem</th><th>Base legal</th><th>Norma</th><th>Situação</th><th>Em uso</th><th></th></tr>
+</thead>
+<tbody><tr><td><div class="row-title">Federal</div>
+</td><td>Federal</td><td class="num">10</td><td class="num">10</td><td>Dias úteis</td><td>Lei 14.133/2021, art. 141; IN SEGES/ME 77/2022, arts. 5º, 7º e 11</td><td><span class="textlink">in.gov.br · IN SEGES/ME 77/2022</span></td><td><span class="status status-live"><i></i>Verificado</span><div class="row-meta">validado por Diego Furtado em 17/11/2026</div>
+</td><td>1 nota</td><td><span class="acoes"><span class="iconbtn" title="Marcar como Verificado"><svg><use href="#i-check"/></svg></span><span class="iconbtn" title="Editar"><svg><use href="#i-pencil"/></svg></span><span class="iconbtn" title="Inativar"><svg><use href="#i-trash"/></svg></span></span></td></tr>
+<tr><td><div class="row-title">Distrito Federal</div>
+</td><td>Estadual · DF</td><td class="num">10</td><td class="num">10</td><td>Dias úteis</td><td>Decreto DF 44.330/2023; pagamento não fixado, vale o contrato</td><td><span class="sub">sem link da norma</span></td><td><span class="status status-attention"><i></i>A confirmar</span></td><td>3 notas</td><td><span class="acoes"><span class="iconbtn" title="Marcar como Verificado"><svg><use href="#i-check"/></svg></span><span class="iconbtn" title="Editar"><svg><use href="#i-pencil"/></svg></span><span class="iconbtn" title="Inativar"><svg><use href="#i-trash"/></svg></span></span></td></tr>
+<tr><td><div class="row-title">Estado de Goiás</div>
+</td><td>Estadual · GO</td><td class="num">10</td><td class="num">10</td><td>Dias úteis</td><td>Decretos GO 9.561/2019 e 10.240/2023 (ordem cronológica por fonte)</td><td><span class="sub">sem link da norma</span></td><td><span class="status status-attention"><i></i>A confirmar</span></td><td>2 notas</td><td><span class="acoes"><span class="iconbtn" title="Marcar como Verificado"><svg><use href="#i-check"/></svg></span><span class="iconbtn" title="Editar"><svg><use href="#i-pencil"/></svg></span><span class="iconbtn" title="Inativar"><svg><use href="#i-trash"/></svg></span></span></td></tr>
+<tr><td><div class="row-title">Estado do Tocantins</div>
+</td><td>Estadual · TO</td><td class="num">10</td><td class="num">10</td><td>Dias úteis</td><td>IN TCE/TO 1/2023</td><td><span class="sub">sem link da norma</span></td><td><span class="status status-attention"><i></i>A confirmar</span></td><td><span class="dash">—</span></td><td><span class="acoes"><span class="iconbtn" title="Marcar como Verificado"><svg><use href="#i-check"/></svg></span><span class="iconbtn" title="Editar"><svg><use href="#i-pencil"/></svg></span><span class="iconbtn" title="Inativar"><svg><use href="#i-trash"/></svg></span></span></td></tr>
+<tr><td><div class="row-title">Municípios (regra local)</div>
+</td><td>Municipal</td><td class="num">10</td><td class="num">10</td><td>Dias úteis</td><td>Decreto do município; Resolução Atricon 03/2022</td><td><span class="sub">sem link da norma</span></td><td><span class="status status-attention"><i></i>A confirmar</span></td><td>1 nota</td><td><span class="acoes"><span class="iconbtn" title="Marcar como Verificado"><svg><use href="#i-check"/></svg></span><span class="iconbtn" title="Editar"><svg><use href="#i-pencil"/></svg></span><span class="iconbtn" title="Inativar"><svg><use href="#i-trash"/></svg></span></span></td></tr>
+</tbody></table>
+</div>
+    <div class="pagination"><span>5 regras</span><span class="btns"><button class="btn btn-secondary btn-sm" type="button" disabled>Anterior</button><button class="btn btn-secondary btn-sm" type="button" disabled>Próxima</button></span></div>
+</div>
+<div class="resumo"><div class="entre"><div><span class="pub-rot">Contratação de pequeno valor</span><div class="forte">Até R$ 65.492,11 · prazos pela metade nas regras em dias úteis</div>
+<span class="sub">Decreto 12.807/2025, vigente desde 01/01/2026 (antes, R$ 62.725,59). A Gerência Financeira atualiza todo janeiro.</span></div>
+<button class="btn btn-secondary btn-sm" type="button">Atualizar o limite</button></div>
+</div>
+</div>
+</template>
+<template data-opcao="B" data-nome="Cartões por ente" data-resumo="Um cartão por regra, com o prazo em destaque, a base legal por extenso e o botão de validar. Fácil de ler a norma inteira; com dezenas de regras a tela fica longa.">
+<div class="pub-tela"><div class="page-header"><div><div class="module">Setor público</div>
+<h3>Regras de pagamento por ente</h3><div class="desc">Prazos legais de liquidação e de pagamento usados no cálculo de cada nota. O prazo do contrato, quando informado, prevalece.</div>
+<div class="meta"><span><span class="stat">5</span> regras ativas</span><span class="dot">·</span><span><span class="stat">1</span> verificada</span><span class="dot">·</span><span><span class="stat">4</span> a confirmar</span><span class="dot">·</span><span><span class="stat">6</span> notas calculadas com regra a confirmar</span></div>
+</div>
+<div class="row"><button class="btn btn-primary" type="button"><svg><use href="#i-plus"/></svg>Nova regra</button></div>
+</div>
+<div class="alert alert-warn"><svg><use href="#i-alert"/></svg><b>Quatro regras ainda estão a confirmar</b><p>A nota e a análise que usam essas regras mostram o aviso. Só Gerente ou Diretoria marca como Verificado, e só com o link da norma. Mudar prazo, contagem, esfera ou UF devolve a regra para A confirmar.</p></div>
+<div class="grade-3"><div class="card"><div class="entre"><h3>Federal</h3><span class="status status-live"><i></i>Verificado</span></div>
+<div><span class="pub-nota" style="font-size:28px">10 + 10</span> <span class="sub">dias úteis · liquidar + pagar</span></div>
+      <dl class="ficha"><div><dt>Esfera · UF</dt><dd>Federal</dd></div>
+<div><dt>Em uso</dt><dd>1 nota</dd></div>
+</dl>
+<div><span class="pub-rot">Base legal</span><div>Lei 14.133/2021, art. 141; IN SEGES/ME 77/2022, arts. 5º, 7º e 11</div>
+<div><span class="textlink">in.gov.br · IN SEGES/ME 77/2022</span></div>
+</div>
+      <span class="sub">Validado por Diego Furtado em 17/11/2026</span><div class="row"><button class="btn btn-secondary btn-sm" type="button">Editar</button><button class="btn btn-ghost btn-sm" type="button">Inativar</button></div>
+</div>
+<div class="card"><div class="entre"><h3>Distrito Federal</h3><span class="status status-attention"><i></i>A confirmar</span></div>
+<div><span class="pub-nota" style="font-size:28px">10 + 10</span> <span class="sub">dias úteis · liquidar + pagar</span></div>
+      <dl class="ficha"><div><dt>Esfera · UF</dt><dd>Estadual · DF</dd></div>
+<div><dt>Em uso</dt><dd>3 notas</dd></div>
+</dl>
+<div><span class="pub-rot">Base legal</span><div>Decreto DF 44.330/2023; pagamento não fixado, vale o contrato</div>
+<div><span class="sub">sem link da norma</span></div>
+</div>
+      <div class="row"><button class="btn btn-secondary btn-sm" type="button">Marcar como Verificado</button><button class="btn btn-secondary btn-sm" type="button">Editar</button><button class="btn btn-ghost btn-sm" type="button">Inativar</button></div>
+</div>
+<div class="card"><div class="entre"><h3>Estado de Goiás</h3><span class="status status-attention"><i></i>A confirmar</span></div>
+<div><span class="pub-nota" style="font-size:28px">10 + 10</span> <span class="sub">dias úteis · liquidar + pagar</span></div>
+      <dl class="ficha"><div><dt>Esfera · UF</dt><dd>Estadual · GO</dd></div>
+<div><dt>Em uso</dt><dd>2 notas</dd></div>
+</dl>
+<div><span class="pub-rot">Base legal</span><div>Decretos GO 9.561/2019 e 10.240/2023 (ordem cronológica por fonte)</div>
+<div><span class="sub">sem link da norma</span></div>
+</div>
+      <div class="row"><button class="btn btn-secondary btn-sm" type="button">Marcar como Verificado</button><button class="btn btn-secondary btn-sm" type="button">Editar</button><button class="btn btn-ghost btn-sm" type="button">Inativar</button></div>
+</div>
+<div class="card"><div class="entre"><h3>Estado do Tocantins</h3><span class="status status-attention"><i></i>A confirmar</span></div>
+<div><span class="pub-nota" style="font-size:28px">10 + 10</span> <span class="sub">dias úteis · liquidar + pagar</span></div>
+      <dl class="ficha"><div><dt>Esfera · UF</dt><dd>Estadual · TO</dd></div>
+<div><dt>Em uso</dt><dd><span class="dash">—</span></dd></div>
+</dl>
+<div><span class="pub-rot">Base legal</span><div>IN TCE/TO 1/2023</div>
+<div><span class="sub">sem link da norma</span></div>
+</div>
+      <div class="row"><button class="btn btn-secondary btn-sm" type="button">Marcar como Verificado</button><button class="btn btn-secondary btn-sm" type="button">Editar</button><button class="btn btn-ghost btn-sm" type="button">Inativar</button></div>
+</div>
+<div class="card"><div class="entre"><h3>Municípios (regra local)</h3><span class="status status-attention"><i></i>A confirmar</span></div>
+<div><span class="pub-nota" style="font-size:28px">10 + 10</span> <span class="sub">dias úteis · liquidar + pagar</span></div>
+      <dl class="ficha"><div><dt>Esfera · UF</dt><dd>Municipal</dd></div>
+<div><dt>Em uso</dt><dd>1 nota</dd></div>
+</dl>
+<div><span class="pub-rot">Base legal</span><div>Decreto do município; Resolução Atricon 03/2022</div>
+<div><span class="sub">sem link da norma</span></div>
+</div>
+      <div class="row"><button class="btn btn-secondary btn-sm" type="button">Marcar como Verificado</button><button class="btn btn-secondary btn-sm" type="button">Editar</button><button class="btn btn-ghost btn-sm" type="button">Inativar</button></div>
+</div>
+      <div class="card"><div class="pilha-v"><div class="entre"><div><span class="pub-rot">Contratação de pequeno valor</span><div class="forte">Até R$ 65.492,11 · prazos pela metade nas regras em dias úteis</div>
+<span class="sub">Decreto 12.807/2025, vigente desde 01/01/2026 (antes, R$ 62.725,59). A Gerência Financeira atualiza todo janeiro.</span></div>
+<button class="btn btn-secondary btn-sm" type="button">Atualizar o limite</button></div>
+</div>
+</div>
+</div>
+</div>
+</template>
+<template data-opcao="C" data-nome="Lista e edição" data-resumo="Lista à esquerda e a regra aberta à direita, com a validação, as notas que a usam e o histórico. Quem valida vê o impacto antes de marcar; só uma regra é lida por vez.">
+<div class="pub-tela"><div class="page-header"><div><div class="module">Setor público</div>
+<h3>Regras de pagamento por ente</h3><div class="desc">Prazos legais de liquidação e de pagamento usados no cálculo de cada nota. O prazo do contrato, quando informado, prevalece.</div>
+<div class="meta"><span><span class="stat">5</span> regras ativas</span><span class="dot">·</span><span><span class="stat">1</span> verificada</span><span class="dot">·</span><span><span class="stat">4</span> a confirmar</span><span class="dot">·</span><span><span class="stat">6</span> notas calculadas com regra a confirmar</span></div>
+</div>
+<div class="row"><button class="btn btn-primary" type="button"><svg><use href="#i-plus"/></svg>Nova regra</button></div>
+</div>
+<div class="lado estreito"><div class="panel"><div class="lista-itens"><div class="item"><div style="flex:1"><div class="row-title">Federal</div>
+<div class="row-meta">Federal · 10 + 10 dias úteis</div>
+</div>
+<span class="status status-live"><i></i>Verificado</span></div>
+<div class="item"><div style="flex:1"><div class="row-title">Distrito Federal</div>
+<div class="row-meta">Estadual · DF · 10 + 10 dias úteis</div>
+</div>
+<span class="status status-attention"><i></i>A confirmar</span></div>
+<div class="item ativo"><div style="flex:1"><div class="row-title">Estado de Goiás</div>
+<div class="row-meta">Estadual · GO · 10 + 10 dias úteis</div>
+</div>
+<span class="status status-attention"><i></i>A confirmar</span></div>
+<div class="item"><div style="flex:1"><div class="row-title">Estado do Tocantins</div>
+<div class="row-meta">Estadual · TO · 10 + 10 dias úteis</div>
+</div>
+<span class="status status-attention"><i></i>A confirmar</span></div>
+<div class="item"><div style="flex:1"><div class="row-title">Municípios (regra local)</div>
+<div class="row-meta">Municipal · 10 + 10 dias úteis</div>
+</div>
+<span class="status status-attention"><i></i>A confirmar</span></div>
+</div>
+</div>
+    <div class="pilha-v"><div class="panel"><div class="corpo-painel"><div class="entre"><div class="titulo-painel">Estado de Goiás</div>
+<span class="status status-attention"><i></i>A confirmar</span></div>
+      <div class="form-grade"><div class="field"><label>Nome</label><input class="input" value="Estado de Goiás"></div>
+<div class="field"><label>Esfera</label><span class="select"><span>Estadual</span><svg><use href="#i-chevron"/></svg></span></div>
+<div class="field"><label>UF</label><span class="select"><span>GO</span><svg><use href="#i-chevron"/></svg></span></div>
+<div class="field"><label>Prazo de liquidação</label><input class="input" value="10"></div>
+<div class="field"><label>Prazo de pagamento</label><input class="input" value="10"></div>
+<div class="field"><label>Contagem</label><span class="select"><span>Dias úteis</span><svg><use href="#i-chevron"/></svg></span></div>
+</div>
+      <div class="field"><label>Base legal</label><textarea class="input">Decretos GO 9.561/2019 e 10.240/2023: ordem cronológica por fonte de recurso; Cadin estadual.</textarea></div>
+      <div class="field"><label>Link da norma</label><input class="input" value=""><span class="sub">Obrigatório para marcar como Verificado</span></div>
+      <div class="rebaixado entre"><span><b>Validação da Gerência Financeira</b><br><span class="sub">Só Gerente ou Diretoria. Grava quem validou e quando.</span></span><button class="btn btn-secondary" type="button" disabled title="Informe o link da norma">Marcar como Verificado</button></div>
+      <div class="row"><button class="btn btn-secondary" type="button">Salvar alterações</button><button class="btn btn-ghost" type="button">Inativar regra</button></div>
+</div>
+</div>
+    <div class="panel"><div class="corpo-painel"><div class="titulo-painel">Notas que usam esta regra</div>
+</div>
+<div class="tabela-wrap"><table><thead><tr><th>NF</th><th>Órgão</th><th class="num">Valor</th><th>Pagar até</th><th>Situação</th></tr>
+</thead>
+<tbody><tr><td>NF 1009</td><td>Secretaria de Estado da Saúde de Goiás</td><td class="num">R$ 20.000</td><td>24/06/2026</td><td><span class="status status-alert"><i></i>Pagamento vencido desde 24/06</span></td></tr>
+<tr><td>NF 1002</td><td>Secretaria de Estado da Saúde de Goiás</td><td class="num">R$ 40.000</td><td>04/11/2026</td><td><span class="status status-alert"><i></i>Pagamento vencido desde 04/11</span></td></tr>
+</tbody></table>
+</div>
+</div>
+<div class="resumo"><div class="entre"><div><span class="pub-rot">Contratação de pequeno valor</span><div class="forte">Até R$ 65.492,11 · prazos pela metade nas regras em dias úteis</div>
+<span class="sub">Decreto 12.807/2025, vigente desde 01/01/2026 (antes, R$ 62.725,59). A Gerência Financeira atualiza todo janeiro.</span></div>
+<button class="btn btn-secondary btn-sm" type="button">Atualizar o limite</button></div>
+</div>
+</div>
+</div>
+</div>
+</template>
+</section>
+<section data-tela="comunicacao-orgao" data-grupo="Regras e apoio" data-titulo="Comunicação com o órgão" data-desc="Para o Administrador, que edita os modelos, e para o agente, que confere o texto: modelos por etapa da nota, quem valida e a prévia preenchida com uma nota real.">
+<template data-opcao="A" data-nome="Lista e prévia" data-resumo="Os sete modelos à esquerda e a mensagem preenchida à direita. Vê-se o texto final como o órgão recebe; a relação com os passos da régua fica só no subtítulo.">
+<div class="pub-tela"><div class="page-header"><div><div class="module">Setor público</div>
+<h3>Comunicação com o órgão</h3><div class="desc">Sete modelos de mensagem, um para cada situação da nota. No card do órgão eles já saem preenchidos com órgão, NF, empenho, valor e prazos.</div>
+<div class="meta"><span><span class="stat">7</span> modelos</span><span class="dot">·</span><span><span class="stat">2</span> exigem validação do Jurídico</span><span class="dot">·</span><span><span class="stat">1</span> aguardando validação</span></div>
+</div>
+</div>
+<div class="lado estreito"><div class="panel"><div class="lista-itens"><div class="item"><div style="flex:1"><div class="row-title">Análise</div>
+<div class="row-meta">Na análise de crédito</div>
+</div>
+<span class="sub">v2</span></div>
+<div class="item"><div style="flex:1"><div class="row-title">Protocolo</div>
+<div class="row-meta">NF entregue ou protocolada no prazo</div>
+</div>
+<span class="sub">v1</span></div>
+<div class="item ativo"><div style="flex:1"><div class="row-title">Liquidação vencida</div>
+<div class="row-meta">Passo L1 · liquidar até + 1 dia útil</div>
+</div>
+<span class="sub">v3</span></div>
+<div class="item"><div style="flex:1"><div class="row-title">Pagamento vencido</div>
+<div class="row-meta">Passo G1 · pagar até + 1 dia útil</div>
+</div>
+<span class="sub">v2</span></div>
+<div class="item"><div style="flex:1"><div class="row-title">Posição na fila (LAI)</div>
+<div class="row-meta">Passo G2 · pagar até + 5 dias úteis</div>
+</div>
+<span class="sub">v2</span></div>
+<div class="item"><div style="flex:1"><div class="row-title">Ofício</div>
+<div class="row-meta">Passos L3 e G4</div>
+</div>
+<span class="sub">v3</span><div style="flex-basis:100%"><span class="status status-attention"><i></i>Aguardando validação do Jurídico</span></div>
+</div>
+<div class="item"><div style="flex:1"><div class="row-title">Requerimento</div>
+<div class="row-meta">Passo M2 · mais de 2 meses da emissão</div>
+</div>
+<span class="sub">v2</span><div style="flex-basis:100%"><span class="status status-live"><i></i>Validado pelo Jurídico em 12/11/2026</span></div>
+</div>
+</div>
+</div>
+    <div class="panel"><div class="corpo-painel"><div class="entre"><div><div class="titulo-painel">Liquidação vencida</div>
+<div class="sub">Passo L1 · e-mail ao fiscal e ao financeiro · versão v3 · não exige validação</div>
+</div>
+<div class="row"><button class="btn btn-secondary" type="button">Editar modelo</button><button class="btn btn-ghost" type="button">Copiar texto</button></div>
+</div>
+<div class="entre"><span><span class="pub-rot">Assunto</span> NF 1001 · liquidação pendente</span><span class="select"><span>Prévia com a NF 1001 · HU Federal de Goiás</span><svg><use href="#i-chevron"/></svg></span></div>
+<div class="pub-msg">Prezado Sr. <span class="pub-cm">Otávio Brandão</span>,
+
+Registramos que o prazo de liquidação da NF <span class="pub-cm">1001</span>, emitida em <span class="pub-cm">01/10/2026</span>, no valor de <span class="pub-cm">R$ 80.000,00</span> (empenho <span class="pub-cm">2026NE000812</span>, contrato <span class="pub-cm">052/2026</span>), protocolada em <span class="pub-cm">01/10/2026</span>, venceu em <span class="pub-cm">16/10/2026</span>.
+
+Pedimos que nos informe as pendências para o atesto e a previsão de liquidação.
+
+<span class="pub-cm">Ana Ribeiro</span>
+Núcleo Financeiro · Grupo Benenutri</div>
+<span class="sub">Os trechos destacados são preenchidos pelo sistema com os dados da nota e do agente.</span></div>
+</div>
+</div>
+</div>
+</template>
+<template data-opcao="B" data-nome="Pela etapa da nota" data-resumo="Uma tabela na ordem do fluxo: situação da nota, passo da régua, modelo, canal e validação; a prévia abre sob a linha. Mostra quando cada mensagem sai; o texto aparece um por vez.">
+<div class="pub-tela"><div class="page-header"><div><div class="module">Setor público</div>
+<h3>Comunicação com o órgão</h3><div class="desc">Sete modelos de mensagem, um para cada situação da nota. No card do órgão eles já saem preenchidos com órgão, NF, empenho, valor e prazos.</div>
+<div class="meta"><span><span class="stat">7</span> modelos</span><span class="dot">·</span><span><span class="stat">2</span> exigem validação do Jurídico</span><span class="dot">·</span><span><span class="stat">1</span> aguardando validação</span></div>
+</div>
+</div>
+<div class="alert alert-warn"><svg><use href="#i-alert"/></svg><b>O modelo de ofício está sem validação do Jurídico</b><p>Enquanto a versão v3 não for validada, o ofício dos passos L3 e G4 não pode ser enviado.</p></div>
+<div class="panel">
+    <div class="tabela-wrap"><table><thead><tr><th>Situação da nota</th><th>Passo da régua</th><th>Modelo</th><th>Canal</th><th>Assunto</th><th>Versão</th><th>Validação</th><th></th></tr>
+</thead>
+<tbody><tr><td>Análise de crédito</td><td><span class="dash">—</span></td><td><div class="row-title">Análise</div>
+</td><td>E-mail</td><td>Fluxo de pagamento · [ÓRGÃO]</td><td>v2</td><td><span class="sub">não exige validação</span></td><td><button class="btn btn-ghost btn-sm" type="button">Ver prévia</button></td></tr>
+<tr><td>Entregue ou protocolada no prazo</td><td><span class="code">Confirmar</span></td><td><div class="row-title">Protocolo</div>
+</td><td>E-mail</td><td>NF [NF] · confirmação de protocolo</td><td>v1</td><td><span class="sub">não exige validação</span></td><td><button class="btn btn-ghost btn-sm" type="button">Ver prévia</button></td></tr>
+<tr><td>Protocolada ou atestada, liquidação vencida</td><td><span class="code">L1</span></td><td><div class="row-title">Liquidação vencida</div>
+</td><td>E-mail</td><td>NF [NF] · liquidação pendente</td><td>v3</td><td><span class="sub">não exige validação</span></td><td><button class="btn btn-ghost btn-sm" type="button">Fechar prévia</button></td></tr>
+<tr><td colspan="8"><div class="rebaixado pilha-v" style="gap:10px"><div class="entre"><span><span class="pub-rot">Assunto</span> NF 1001 · liquidação pendente</span><span class="select"><span>Prévia com a NF 1001 · HU Federal de Goiás</span><svg><use href="#i-chevron"/></svg></span></div>
+<div class="pub-msg">Prezado Sr. <span class="pub-cm">Otávio Brandão</span>,
+
+Registramos que o prazo de liquidação da NF <span class="pub-cm">1001</span>, emitida em <span class="pub-cm">01/10/2026</span>, no valor de <span class="pub-cm">R$ 80.000,00</span> (empenho <span class="pub-cm">2026NE000812</span>, contrato <span class="pub-cm">052/2026</span>), protocolada em <span class="pub-cm">01/10/2026</span>, venceu em <span class="pub-cm">16/10/2026</span>.
+
+Pedimos que nos informe as pendências para o atesto e a previsão de liquidação.
+
+<span class="pub-cm">Ana Ribeiro</span>
+Núcleo Financeiro · Grupo Benenutri</div>
+<div class="row"><button class="btn btn-secondary btn-sm" type="button">Editar modelo</button><button class="btn btn-ghost btn-sm" type="button">Copiar texto</button></div>
+</div>
+</td></tr>
+<tr><td>Liquidação vencida há 10 dias úteis</td><td><span class="code">L3</span></td><td><div class="row-title">Ofício</div>
+</td><td>Ofício</td><td>Ofício · cobrança da NF [NF]</td><td>v3</td><td><span class="status status-attention"><i></i>Aguardando validação do Jurídico</span></td><td><button class="btn btn-ghost btn-sm" type="button">Ver prévia</button></td></tr>
+<tr><td>Liquidada, pagamento vencido</td><td><span class="code">G1</span></td><td><div class="row-title">Pagamento vencido</div>
+</td><td>E-mail</td><td>NF [NF] · pagamento vencido</td><td>v2</td><td><span class="sub">não exige validação</span></td><td><button class="btn btn-ghost btn-sm" type="button">Ver prévia</button></td></tr>
+<tr><td>Liquidada, sem posição na fila</td><td><span class="code">G2</span></td><td><div class="row-title">Posição na fila (LAI)</div>
+</td><td>E-mail / protocolo</td><td>Pedido de informação · NF [NF]</td><td>v2</td><td><span class="sub">não exige validação</span></td><td><button class="btn btn-ghost btn-sm" type="button">Ver prévia</button></td></tr>
+<tr><td>Pagamento vencido há 30 dias úteis</td><td><span class="code">G4</span></td><td><div class="row-title">Ofício</div>
+</td><td>Ofício</td><td>Ofício · cobrança da NF [NF]</td><td>v3</td><td><span class="status status-attention"><i></i>Aguardando validação do Jurídico</span></td><td><button class="btn btn-ghost btn-sm" type="button">Ver prévia</button></td></tr>
+<tr><td>Mais de 2 meses da emissão</td><td><span class="code">M2</span></td><td><div class="row-title">Requerimento</div>
+</td><td>Requerimento</td><td>Requerimento administrativo · NF [NF]</td><td>v2</td><td><span class="status status-live"><i></i>Validado pelo Jurídico em 12/11/2026</span></td><td><button class="btn btn-ghost btn-sm" type="button">Ver prévia</button></td></tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</template>
+<template data-opcao="C" data-nome="Editor com campos" data-resumo="Abre o modelo em edição: prévia, texto com os campos e versões em abas, e ao lado os campos disponíveis e a validação do Jurídico. É a tela de quem mantém os textos; para só consultar tem informação demais.">
+<div class="pub-tela"><div class="page-header"><div><div class="module">Setor público</div>
+<h3>Comunicação com o órgão</h3><div class="desc">Sete modelos de mensagem, um para cada situação da nota. No card do órgão eles já saem preenchidos com órgão, NF, empenho, valor e prazos.</div>
+<div class="meta"><span><span class="stat">7</span> modelos</span><span class="dot">·</span><span><span class="stat">2</span> exigem validação do Jurídico</span><span class="dot">·</span><span><span class="stat">1</span> aguardando validação</span></div>
+</div>
+</div>
+<div class="panel"><div class="toolbar"><span class="select"><span>Modelo: Liquidação vencida</span><svg><use href="#i-chevron"/></svg></span><span class="sub">Passo L1 · e-mail ao fiscal e ao financeiro</span><span class="direita row"><button class="btn btn-ghost" type="button">Descartar</button><button class="btn btn-primary" type="button">Salvar nova versão</button></span></div>
+    <div class="lado"><div class="com-abas"><div class="abas"><button type="button" data-aba="previa" aria-selected="true">Prévia preenchida</button><button type="button" data-aba="texto" aria-selected="false">Texto do modelo</button><button type="button" data-aba="versoes" aria-selected="false">Versões <span class="badge badge-neutral">3</span></button></div>
+<div data-painel="previa"><div class="corpo-painel"><div class="entre"><span><span class="pub-rot">Assunto</span> NF 1001 · liquidação pendente</span><span class="select"><span>Prévia com a NF 1001 · HU Federal de Goiás</span><svg><use href="#i-chevron"/></svg></span></div>
+<div class="pub-msg">Prezado Sr. <span class="pub-cm">Otávio Brandão</span>,
+
+Registramos que o prazo de liquidação da NF <span class="pub-cm">1001</span>, emitida em <span class="pub-cm">01/10/2026</span>, no valor de <span class="pub-cm">R$ 80.000,00</span> (empenho <span class="pub-cm">2026NE000812</span>, contrato <span class="pub-cm">052/2026</span>), protocolada em <span class="pub-cm">01/10/2026</span>, venceu em <span class="pub-cm">16/10/2026</span>.
+
+Pedimos que nos informe as pendências para o atesto e a previsão de liquidação.
+
+<span class="pub-cm">Ana Ribeiro</span>
+Núcleo Financeiro · Grupo Benenutri</div>
+</div>
+</div>
+<div data-painel="texto" hidden><div class="corpo-painel"><div class="field"><label>Assunto</label><input class="input" value="NF [NF] · liquidação pendente"></div>
+<div class="pub-msg">Prezado(a) <span class="pub-cm">[CONTATO]</span>,
+
+Registramos que o prazo de liquidação da NF <span class="pub-cm">[NF]</span>, emitida em <span class="pub-cm">[EMISSÃO]</span>, no valor de <span class="pub-cm">[VALOR]</span> (empenho <span class="pub-cm">[EMPENHO]</span>, contrato <span class="pub-cm">[CONTRATO]</span>), protocolada em <span class="pub-cm">[PROTOCOLO]</span>, venceu em <span class="pub-cm">[LIQUIDAR_ATÉ]</span>.
+
+Pedimos que nos informe as pendências para o atesto e a previsão de liquidação.
+
+<span class="pub-cm">[AGENTE]</span>
+Núcleo Financeiro · Grupo Benenutri</div>
+<div class="row"><span class="sub">Campos disponíveis:</span><span class="badge badge-outline">[ÓRGÃO]</span><span class="badge badge-outline">[NF]</span><span class="badge badge-outline">[EMISSÃO]</span><span class="badge badge-outline">[VALOR]</span><span class="badge badge-outline">[EMPENHO]</span><span class="badge badge-outline">[CONTRATO]</span><span class="badge badge-outline">[PROTOCOLO]</span><span class="badge badge-outline">[LIQUIDAR_ATÉ]</span><span class="badge badge-outline">[PAGAR_ATÉ]</span><span class="badge badge-outline">[DIAS_ATRASO]</span><span class="badge badge-outline">[CONTATO]</span><span class="badge badge-outline">[AGENTE]</span></div>
+</div>
+</div>
+<div data-painel="versoes" hidden><div class="corpo-painel"><div class="linha-tempo"><div class="evento"><i></i><div><div class="forte">v3 · 04/11/2026 · Helena Duarte</div>
+<div class="sub">Inclui o contrato na identificação da nota · versão em uso</div>
+</div>
+</div>
+<div class="evento off"><i></i><div><div class="forte">v2 · 12/08/2026 · Helena Duarte</div>
+<div class="sub">Pede a previsão de liquidação</div>
+</div>
+</div>
+<div class="evento off"><i></i><div><div class="forte">v1 · 03/06/2026 · carga inicial</div>
+<div class="sub">Texto do artefato do gestor</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+    <div class="corpo-painel"><div class="resumo"><span class="pub-rot">Validação do Jurídico</span><span><span class="sub">não exige validação</span></span><span class="sub">Ofício e Requerimento só saem com a versão atual validada. Salvar uma versão nova desses dois modelos pede nova validação.</span></div>
+    <div class="resumo"><span class="pub-rot">Os sete modelos</span><div class="pub-lin"><div><span class="forte">Análise</span><span class="sub">v2</span></div>
+<div><span class="forte">Protocolo</span><span class="sub">v1</span></div>
+<div><span class="forte">Liquidação vencida</span><span class="sub">v3</span></div>
+<div><span class="forte">Pagamento vencido</span><span class="sub">v2</span></div>
+<div><span class="forte">Posição na fila (LAI)</span><span class="sub">v2</span></div>
+<div><span class="forte">Ofício</span><span class="sub">v3 · aguardando o Jurídico</span></div>
+<div><span class="forte">Requerimento</span><span class="sub">v2 · validado</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</template>
+</section>
+<section data-tela="certidoes" data-grupo="Regras e apoio" data-titulo="Certidões da empresa" data-desc="Para o Administrador e o supervisor: saber qual certidão vence, qual venceu e qual falta, e renovar antes que o órgão retenha um pagamento.">
+<template data-opcao="A" data-nome="Tabela por validade" data-resumo="Uma linha por certidão, a mais urgente primeiro, com CNPJ, abrangência, validade, situação e arquivo. Direta e completa; o tempo que falta aparece só como texto.">
+<div class="pub-tela"><div class="page-header"><div><div class="module">Setor público</div>
+<h3>Certidões da empresa</h3><div class="desc">Certidões de regularidade da Benenutri que o órgão exige para pagar. O sistema guarda e avisa 15 dias antes; a emissão é no site de cada órgão.</div>
+<div class="meta"><span><span class="stat">1</span> vencida</span><span class="dot">·</span><span><span class="stat">2</span> vencem em até 15 dias</span><span class="dot">·</span><span><span class="stat">1</span> não cadastrada</span><span class="dot">·</span><span><span class="stat">1</span> válida</span></div>
+</div>
+<div class="row"><button class="btn btn-primary" type="button"><svg><use href="#i-plus"/></svg>Cadastrar certidão</button></div>
+</div>
+<div class="alert alert-error"><svg><use href="#i-alert"/></svg><b>CRF do FGTS vencido desde 28/11/2026</b><p>Com certidão vencida o órgão pode reter o pagamento das notas em tramitação (R$ 222.000 em aberto).</p></div>
+<div class="panel"><div class="tabela-wrap"><table><thead><tr><th>Certidão</th><th>CNPJ</th><th>Abrangência</th><th>Validade</th><th>Situação</th><th>Arquivo</th><th></th></tr>
+</thead>
+<tbody><tr><td><div class="row-title">CRF do FGTS</div>
+</td><td>12.345.678/0001-90</td><td>Federal</td><td>28/11/2026</td><td><span class="status status-alert"><i></i>Vencida há 3 dias</span></td><td>CRF FGTS 2026-10.pdf</td><td><span class="row"><button class="btn btn-secondary btn-sm" type="button">Renovar</button><span class="iconbtn" title="Histórico de renovações"><svg><use href="#i-list"/></svg></span></span></td></tr>
+<tr><td><div class="row-title">CND federal (RFB / PGFN)</div>
+</td><td>12.345.678/0001-90</td><td>Federal</td><td>10/12/2026</td><td><span class="status status-attention"><i></i>Vence em 9 dias</span></td><td>CND federal 2026-06.pdf</td><td><span class="row"><button class="btn btn-secondary btn-sm" type="button">Renovar</button><span class="iconbtn" title="Histórico de renovações"><svg><use href="#i-list"/></svg></span></span></td></tr>
+<tr><td><div class="row-title">CND estadual</div>
+</td><td>12.345.678/0001-90</td><td>Goiás</td><td>16/12/2026</td><td><span class="status status-attention"><i></i>Vence em 15 dias</span></td><td>CND GO 2026-10.pdf</td><td><span class="row"><button class="btn btn-secondary btn-sm" type="button">Renovar</button><span class="iconbtn" title="Histórico de renovações"><svg><use href="#i-list"/></svg></span></span></td></tr>
+<tr><td><div class="row-title">CNDT (débitos trabalhistas)</div>
+</td><td>12.345.678/0001-90</td><td>Federal</td><td>20/12/2026</td><td><span class="status status-live"><i></i>Válida · 19 dias</span></td><td>CNDT 2026-06.pdf</td><td><span class="row"><button class="btn btn-secondary btn-sm" type="button">Renovar</button><span class="iconbtn" title="Histórico de renovações"><svg><use href="#i-list"/></svg></span></span></td></tr>
+<tr><td><div class="row-title">CND municipal</div>
+</td><td>12.345.678/0001-90</td><td>Goiânia</td><td><span class="dash">—</span></td><td><span class="status status-off"><i></i>Não cadastrada</span></td><td><span class="dash">—</span></td><td><span class="row"><button class="btn btn-secondary btn-sm" type="button">Cadastrar</button></span></td></tr>
+</tbody></table>
+</div>
+    <div class="pagination"><span>5 tipos de certidão · alerta a partir de 15 dias antes da validade</span><span class="btns"><button class="btn btn-secondary btn-sm" type="button" disabled>Anterior</button><button class="btn btn-secondary btn-sm" type="button" disabled>Próxima</button></span></div>
+</div>
+</div>
+</template>
+<template data-opcao="B" data-nome="Cartões de prazo" data-resumo="Cinco cartões com os dias restantes em destaque e uma barra do prazo, do mais urgente ao mais folgado. Bate-se o olho e sabe-se o que renovar; dados como CNPJ e arquivo ficam menores.">
+<div class="pub-tela"><div class="page-header"><div><div class="module">Setor público</div>
+<h3>Certidões da empresa</h3><div class="desc">Certidões de regularidade da Benenutri que o órgão exige para pagar. O sistema guarda e avisa 15 dias antes; a emissão é no site de cada órgão.</div>
+<div class="meta"><span><span class="stat">1</span> vencida</span><span class="dot">·</span><span><span class="stat">2</span> vencem em até 15 dias</span><span class="dot">·</span><span><span class="stat">1</span> não cadastrada</span><span class="dot">·</span><span><span class="stat">1</span> válida</span></div>
+</div>
+<div class="row"><button class="btn btn-primary" type="button"><svg><use href="#i-plus"/></svg>Cadastrar certidão</button></div>
+</div>
+<div class="alert alert-error"><svg><use href="#i-alert"/></svg><b>CRF do FGTS vencido desde 28/11/2026</b><p>Com certidão vencida o órgão pode reter o pagamento das notas em tramitação (R$ 222.000 em aberto).</p></div>
+<div class="grade-3"><div class="card"><div class="entre"><h3>CRF do FGTS</h3><span class="status status-alert"><i></i>Vencida há 3 dias</span></div>
+<div><span class="pub-nota" style="font-size:32px">3</span> <span class="sub">dias de vencida</span></div>
+      <div class="progresso alerta"><i style="width:100%"></i></div>
+      <dl class="ficha"><div><dt>Abrangência</dt><dd>Federal</dd></div>
+<div><dt>Validade</dt><dd>28/11/2026</dd></div>
+<div><dt>CNPJ</dt><dd>12.345.678/0001-90</dd></div>
+<div><dt>Arquivo</dt><dd>CRF FGTS 2026-10.pdf</dd></div>
+</dl>
+<div class="row"><button class="btn btn-secondary btn-sm" type="button">Renovar</button><button class="btn btn-ghost btn-sm" type="button">Histórico</button></div>
+</div>
+<div class="card"><div class="entre"><h3>CND federal (RFB / PGFN)</h3><span class="status status-attention"><i></i>Vence em 9 dias</span></div>
+<div><span class="pub-nota" style="font-size:32px">9</span> <span class="sub">dias de validade</span></div>
+      <div class="progresso atencao"><i style="width:64%"></i></div>
+      <dl class="ficha"><div><dt>Abrangência</dt><dd>Federal</dd></div>
+<div><dt>Validade</dt><dd>10/12/2026</dd></div>
+<div><dt>CNPJ</dt><dd>12.345.678/0001-90</dd></div>
+<div><dt>Arquivo</dt><dd>CND federal 2026-06.pdf</dd></div>
+</dl>
+<div class="row"><button class="btn btn-secondary btn-sm" type="button">Renovar</button><button class="btn btn-ghost btn-sm" type="button">Histórico</button></div>
+</div>
+<div class="card"><div class="entre"><h3>CND estadual</h3><span class="status status-attention"><i></i>Vence em 15 dias</span></div>
+<div><span class="pub-nota" style="font-size:32px">15</span> <span class="sub">dias de validade</span></div>
+      <div class="progresso atencao"><i style="width:40%"></i></div>
+      <dl class="ficha"><div><dt>Abrangência</dt><dd>Goiás</dd></div>
+<div><dt>Validade</dt><dd>16/12/2026</dd></div>
+<div><dt>CNPJ</dt><dd>12.345.678/0001-90</dd></div>
+<div><dt>Arquivo</dt><dd>CND GO 2026-10.pdf</dd></div>
+</dl>
+<div class="row"><button class="btn btn-secondary btn-sm" type="button">Renovar</button><button class="btn btn-ghost btn-sm" type="button">Histórico</button></div>
+</div>
+<div class="card"><div class="entre"><h3>CNDT (débitos trabalhistas)</h3><span class="status status-live"><i></i>Válida · 19 dias</span></div>
+<div><span class="pub-nota" style="font-size:32px">19</span> <span class="sub">dias de validade</span></div>
+      <div class="progresso"><i style="width:24%"></i></div>
+      <dl class="ficha"><div><dt>Abrangência</dt><dd>Federal</dd></div>
+<div><dt>Validade</dt><dd>20/12/2026</dd></div>
+<div><dt>CNPJ</dt><dd>12.345.678/0001-90</dd></div>
+<div><dt>Arquivo</dt><dd>CNDT 2026-06.pdf</dd></div>
+</dl>
+<div class="row"><button class="btn btn-secondary btn-sm" type="button">Renovar</button><button class="btn btn-ghost btn-sm" type="button">Histórico</button></div>
+</div>
+<div class="card"><div class="entre"><h3>CND municipal</h3><span class="status status-off"><i></i>Não cadastrada</span></div>
+<div><span class="pub-nota" style="font-size:32px">—</span> <span class="sub">sem certidão cadastrada</span></div>
+      
+      <dl class="ficha"><div><dt>Abrangência</dt><dd>Goiânia</dd></div>
+<div><dt>Validade</dt><dd><span class="dash">—</span></dd></div>
+<div><dt>CNPJ</dt><dd>12.345.678/0001-90</dd></div>
+<div><dt>Arquivo</dt><dd><span class="dash">—</span></dd></div>
+</dl>
+<div class="row"><button class="btn btn-secondary btn-sm" type="button">Cadastrar</button></div>
+</div>
+</div>
+</div>
+</template>
+<template data-opcao="C" data-nome="Calendário de vencimentos" data-resumo="Os próximos dias numa régua de datas com o vencimento de cada certidão marcado, e a lista embaixo com o histórico de renovações. Ajuda a programar as renovações; é a que mais ocupa tela para cinco itens.">
+<div class="pub-tela"><div class="page-header"><div><div class="module">Setor público</div>
+<h3>Certidões da empresa</h3><div class="desc">Certidões de regularidade da Benenutri que o órgão exige para pagar. O sistema guarda e avisa 15 dias antes; a emissão é no site de cada órgão.</div>
+<div class="meta"><span><span class="stat">1</span> vencida</span><span class="dot">·</span><span><span class="stat">2</span> vencem em até 15 dias</span><span class="dot">·</span><span><span class="stat">1</span> não cadastrada</span><span class="dot">·</span><span><span class="stat">1</span> válida</span></div>
+</div>
+<div class="row"><button class="btn btn-primary" type="button"><svg><use href="#i-plus"/></svg>Cadastrar certidão</button></div>
+</div>
+<div class="alert alert-error"><svg><use href="#i-alert"/></svg><b>CRF do FGTS vencido desde 28/11/2026</b><p>Com certidão vencida o órgão pode reter o pagamento das notas em tramitação (R$ 222.000 em aberto).</p></div>
+<div class="panel"><div class="corpo-painel"><div class="entre"><div class="titulo-painel">Vencimentos de 28/11 a 22/12/2026</div>
+<span class="sub">alerta começa 15 dias antes</span></div>
+    <div class="pub-dias"><span>28/11<span class="badge badge-alert">CRF do FGTS venceu</span></span><span class="hoje">01/12<b>hoje</b></span><span>04/12</span><span>07/12</span><span>10/12<span class="badge badge-attention">CND federal</span></span><span>13/12</span><span>16/12<span class="badge badge-attention">CND estadual GO</span></span><span>19/12</span><span>20/12<span class="badge badge-accent">CNDT</span></span></div>
+    <span class="sub">CND municipal (Goiânia): não cadastrada, não entra no calendário.</span></div>
+    <div class="tabela-wrap"><table><thead><tr><th>Certidão</th><th>Abrangência</th><th>Validade</th><th>Situação</th><th>Última renovação</th><th></th></tr>
+</thead>
+<tbody><tr><td><div class="row-title">CRF do FGTS</div>
+<div class="row-meta">CNPJ 12.345.678/0001-90</div>
+</td><td>Federal</td><td>28/11/2026</td><td><span class="status status-alert"><i></i>Vencida há 3 dias</span></td><td>CRF FGTS 2026-10.pdf<div class="row-meta">a anterior fica no histórico</div>
+</td><td><button class="btn btn-secondary btn-sm" type="button">Renovar</button></td></tr>
+<tr><td><div class="row-title">CND federal (RFB / PGFN)</div>
+<div class="row-meta">CNPJ 12.345.678/0001-90</div>
+</td><td>Federal</td><td>10/12/2026</td><td><span class="status status-attention"><i></i>Vence em 9 dias</span></td><td>CND federal 2026-06.pdf<div class="row-meta">a anterior fica no histórico</div>
+</td><td><button class="btn btn-secondary btn-sm" type="button">Renovar</button></td></tr>
+<tr><td><div class="row-title">CND estadual</div>
+<div class="row-meta">CNPJ 12.345.678/0001-90</div>
+</td><td>Goiás</td><td>16/12/2026</td><td><span class="status status-attention"><i></i>Vence em 15 dias</span></td><td>CND GO 2026-10.pdf<div class="row-meta">a anterior fica no histórico</div>
+</td><td><button class="btn btn-secondary btn-sm" type="button">Renovar</button></td></tr>
+<tr><td><div class="row-title">CNDT (débitos trabalhistas)</div>
+<div class="row-meta">CNPJ 12.345.678/0001-90</div>
+</td><td>Federal</td><td>20/12/2026</td><td><span class="status status-live"><i></i>Válida · 19 dias</span></td><td>CNDT 2026-06.pdf<div class="row-meta">a anterior fica no histórico</div>
+</td><td><button class="btn btn-secondary btn-sm" type="button">Renovar</button></td></tr>
+<tr><td><div class="row-title">CND municipal</div>
+<div class="row-meta">CNPJ 12.345.678/0001-90</div>
+</td><td>Goiânia</td><td><span class="dash">—</span></td><td><span class="status status-off"><i></i>Não cadastrada</span></td><td><span class="dash">—</span></td><td><button class="btn btn-secondary btn-sm" type="button">Cadastrar</button></td></tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</template>
+</section>
+<style>
+/* Classes próprias do módulo 005 (prefixo pub-). Só tokens. */
+/* A casca empilha os filhos numa grade sem largura mínima: sem isto, quadro e tabela largos esticam a tela em vez de rolar. */
+.pub-tela { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; min-width: 0; }
+.pub-tela td .status, .pub-tela .cartao .status { white-space: normal; }
+.pub-tela .quadro.largo { grid-auto-columns: minmax(264px, 1fr); }
+.pub-tela .pilha-v { grid-template-columns: minmax(0, 1fr); }
+.pub-tela .field { align-content: start; min-width: 0; }
+.pub-tela .field .select { min-width: 0; }
+.pub-tela .select span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pub-h { font-family: var(--font-title); font-size: 20px; font-weight: 700; }
+.pub-rot { font-size: 11px; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; color: var(--ink-muted); }
+.pub-bloco { display: grid; gap: 6px; align-content: start; min-width: 0; }
+.pub-tarde { color: var(--attention); font-weight: 600; }
+/* Quadro da lib: barra na cor da fase, prazo da fase, capa do cartão e os três tempos */
+.pub-barra { flex: none; height: 4px; border-radius: 999px; background: var(--cor, var(--data-1)); }
+.pub-fase > header { letter-spacing: .06em; gap: 8px; }
+.pub-sla { flex: none; font-size: 11px; color: var(--muted-foreground); padding: 0 6px; margin-top: -4px; }
+.pub-vazio { padding: 6px; }
+.pub-campo { display: flex; justify-content: space-between; gap: 8px; font-size: 12px; color: var(--muted-foreground); }
+.pub-campo b { color: var(--foreground); font-weight: 600; text-align: right; }
+.pub-tempos { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 11px; color: var(--muted-foreground); border-top: 1px solid var(--row-border); padding-top: 6px; }
+.pub-tempos span { display: inline-flex; align-items: center; gap: 3px; }
+.pub-tempos svg { width: 11px; height: 11px; }
+.pub-prog { display: grid; gap: 3px; font-size: 11.5px; color: var(--muted-foreground); }
+.pub-prog b { color: var(--foreground); font-weight: 600; }
+.pub-acao { display: grid; gap: 2px; padding: 8px; border-radius: .5rem; background: var(--muted); font-size: 12px; }
+/* Card aberto da lib: três colunas */
+.pub-gaveta-corpo { display: grid; grid-template-columns: 250px minmax(0, 1fr) 210px; }
+.pub-gaveta-corpo > aside { padding: 14px; display: grid; gap: 16px; align-content: start; min-width: 0; }
+.pub-gaveta-corpo > aside:first-child { border-right: 1px solid var(--row-border); }
+.pub-gaveta-corpo > aside:last-child { border-left: 1px solid var(--row-border); }
+.pub-meio { min-width: 0; }
+.pub-meio > [data-painel] { padding: 14px; display: grid; gap: 14px; align-content: start; }
+.pub-meio > [data-painel][hidden] { display: none; }
+.pub-botoes { display: grid; gap: 6px; }
+.pub-botoes .btn { width: 100%; justify-content: flex-start; white-space: normal; height: auto; min-height: 32px; padding-block: 6px; text-align: left; }
+.pub-lin { display: grid; }
+.pub-lin > div { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; padding: 8px 0; border-bottom: 1px solid var(--row-border); }
+.pub-lin > div:last-child { border-bottom: 0; }
+@media (max-width: 1000px) {
+  .pub-gaveta-corpo { grid-template-columns: 1fr; }
+  .pub-gaveta-corpo > aside:first-child, .pub-gaveta-corpo > aside:last-child { border: 0; border-bottom: 1px solid var(--row-border); }
+}
+/* Trilho de etapas (fluxo da NF) */
+.pub-trilho { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); }
+.pub-passo { position: relative; padding: 0 6px; text-align: center; display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; justify-items: center; align-content: start; font-size: 12px; min-width: 0; }
+.pub-passo::before { content: ""; position: absolute; top: 11px; left: -50%; width: 100%; height: 2px; background: var(--border); }
+.pub-passo:first-child::before { display: none; }
+.pub-passo > i { position: relative; z-index: 1; width: 24px; height: 24px; border-radius: 999px; background: var(--card); border: 2px solid var(--border); display: grid; place-items: center; font-style: normal; font-size: 11px; font-weight: 700; color: var(--muted-foreground); }
+.pub-passo > b { font-weight: 600; }
+.pub-passo.feito > i { background: var(--primary); border-color: var(--primary); color: var(--primary-foreground); }
+.pub-passo.feito::before { background: var(--primary); }
+.pub-passo.atraso > i { border-color: var(--destructive); color: var(--destructive); }
+.pub-passo.atraso > .sub { color: var(--destructive); }
+.pub-passo.agora > i { border-color: var(--attention); color: var(--attention); }
+.pub-passo .input { height: 32px; padding: 0 8px; font-size: 12px; min-width: 0; }
+.pub-trilho.mini .pub-passo { font-size: 11px; }
+.pub-trilho.mini .pub-passo > i { width: 18px; height: 18px; font-size: 10px; }
+.pub-trilho.mini .pub-passo::before { top: 8px; }
+@media (max-width: 760px) {
+  .pub-trilho { grid-auto-flow: row; gap: 10px; }
+  .pub-passo { grid-template-columns: 24px 1fr; text-align: left; justify-items: start; column-gap: 10px; }
+  .pub-passo::before { display: none; }
+  .pub-passo > .sub, .pub-passo > .input { grid-column: 2; }
+}
+.pub-nf { display: grid; grid-template-columns: minmax(180px, 1fr) minmax(0, 2.4fr) minmax(170px, 1fr); gap: 12px 20px; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--row-border); }
+.pub-nf:last-child { border-bottom: 0; }
+@media (max-width: 1000px) { .pub-nf { grid-template-columns: 1fr; } }
+/* Motor do órgão */
+.pub-nota { font-family: var(--font-title); font-size: 44px; font-weight: 800; line-height: 1; }
+.pub-escala { display: grid; grid-template-columns: 40fr 20fr 20fr 21fr; gap: 3px; font-size: 11px; text-align: center; }
+.pub-escala span { padding: 5px 0; border-radius: 6px; background: var(--muted); color: var(--muted-foreground); font-weight: 600; }
+.pub-escala span.aqui { background: var(--accent); color: var(--accent-foreground); box-shadow: inset 0 0 0 1px var(--primary); }
+/* Mensagem ao órgão */
+.pub-msg { white-space: pre-line; line-height: 1.55; border: 1px solid var(--row-border); border-radius: .75rem; padding: 14px 16px; background: var(--card); }
+.pub-cm { background: var(--accent); color: var(--accent-foreground); border-radius: 4px; padding: 0 3px; font-weight: 600; }
+.pub-grupo td { background: var(--muted); }
+details.pub-det { border: 1px solid var(--row-border); border-radius: .75rem; background: var(--card); }
+details.pub-det > summary { cursor: pointer; padding: 10px 14px; font-weight: 600; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; }
+details.pub-det > div { padding: 4px 14px 14px; display: grid; gap: 12px; }
+.pub-dias { display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 3px; font-size: 11px; }
+.pub-dias > span { background: var(--muted); border-radius: 6px; padding: 6px 4px; min-height: 64px; display: grid; gap: 4px; align-content: start; color: var(--muted-foreground); min-width: 0; }
+.pub-dias > span.hoje { box-shadow: inset 0 0 0 1px var(--primary); }
+.pub-dias .badge { white-space: normal; font-size: 10.5px; padding: 1px 5px; }
+@media (max-width: 900px) { .pub-dias { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+</style>

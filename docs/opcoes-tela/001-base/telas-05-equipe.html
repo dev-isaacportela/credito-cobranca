@@ -1,0 +1,375 @@
+<section data-tela="equipe-organograma" data-grupo="Equipe" data-titulo="Equipe · Organograma"
+         data-desc="Aba aberta a todos os perfis: mostra quem reporta a quem (Diretoria, Gerente, Supervisores, Agentes) e, com isso, a carteira que cada um enxerga. Dez pessoas, quatro níveis, um inativo.">
+
+  <template data-opcao="A" data-nome="Árvore em caixas" data-resumo="O organograma clássico, em caixas por nível. Lê-se a hierarquia num relance; custa largura (no celular rola para o lado) e pouco espaço para números por pessoa.">
+    <div class="page-header">
+      <div>
+        <div class="module">Equipe</div>
+        <h3>Equipe</h3>
+        <div class="desc">A hierarquia define a carteira que cada um enxerga: o agente vê a própria; o supervisor, a sua e a da equipe; gerente e diretoria, todas.</div>
+        <div class="meta"><span><span class="stat">9</span> ativos</span><span class="dot">·</span><span><span class="stat">1</span> inativo</span><span class="dot">·</span><span><span class="stat">4</span> níveis</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="abas" role="tablist"><button class="aba" type="button" aria-selected="true">Organograma</button><button class="aba" type="button" aria-selected="false">Cadastro da equipe</button></div>
+      <div class="corpo-painel" style="overflow-x:auto">
+        <div class="organograma" style="min-width:820px">
+          <div class="nivel"><div class="no"><div class="forte">Diana Prado</div><div class="sub">Diretoria · topo</div></div></div>
+          <div class="nivel"><div class="no"><div class="forte">Gustavo Menezes</div><div class="sub">Gerente financeiro</div></div></div>
+          <div class="nivel" style="align-items:flex-start;gap:16px">
+            <div class="bas-ramo">
+              <div class="no"><div class="forte">Sérgio Tavares</div><div class="sub">Supervisor · 1 cliente · vê 6</div></div>
+              <div class="bas-filhos">
+                <div class="no"><div class="forte">Ana Costa</div><div class="sub">Agente · 3 clientes</div></div>
+                <div class="no"><div class="forte">Bruno Leal</div><div class="sub">Agente · 2 clientes</div></div>
+                <div class="no"><div class="forte">Otávio Reis</div><div class="sub"><span class="status status-off"><i></i>Inativo</span></div></div>
+              </div>
+            </div>
+            <div class="bas-ramo">
+              <div class="no"><div class="forte">Silvia Rocha</div><div class="sub">Supervisora · vê 2</div></div>
+              <div class="bas-filhos">
+                <div class="no"><div class="forte">Carlos Nunes</div><div class="sub">Agente · 2 clientes</div></div>
+              </div>
+            </div>
+            <div class="bas-ramo"><div class="no"><div class="forte">Júlia Farias</div><div class="sub">Jurídico</div></div></div>
+            <div class="bas-ramo"><div class="no"><div class="forte">Nara Duarte</div><div class="sub">Agente · <span class="badge badge-accent">Administradora</span></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="B" data-nome="Lista em níveis" data-resumo="A mesma árvore em linhas recuadas, com colunas para cargo, carteira própria e quantos clientes cada um enxerga. Funciona no celular e cabe número; custa a leitura visual de organograma.">
+    <div class="page-header">
+      <div>
+        <div class="module">Equipe</div>
+        <h3>Equipe</h3>
+        <div class="desc">A hierarquia define a carteira que cada um enxerga: o agente vê a própria; o supervisor, a sua e a da equipe; gerente e diretoria, todas.</div>
+        <div class="meta"><span><span class="stat">9</span> ativos</span><span class="dot">·</span><span><span class="stat">1</span> inativo</span><span class="dot">·</span><span><span class="stat">4</span> níveis</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="abas" role="tablist"><button class="aba" type="button" aria-selected="true">Organograma</button><button class="aba" type="button" aria-selected="false">Cadastro da equipe</button></div>
+      <div class="tabela-wrap"><table class="bas-t">
+        <thead><tr><th>Pessoa</th><th>Cargo</th><th class="num">Subordinados ativos</th><th class="num">Carteira própria</th><th class="num">Clientes que enxerga</th><th>Situação</th></tr></thead>
+        <tbody>
+          <tr><td><div class="row" style="flex-wrap:nowrap"><span class="avatar">DP</span><span class="row-title">Diana Prado</span></div></td><td>Diretoria · topo</td><td class="num">1</td><td class="num"><span class="dash">—</span></td><td class="num">10</td><td><span class="status status-live"><i></i>Ativa</span></td></tr>
+          <tr><td style="padding-left:44px"><div class="row" style="flex-wrap:nowrap"><span class="avatar">GM</span><span class="row-title">Gustavo Menezes</span></div></td><td>Gerente financeiro</td><td class="num">4</td><td class="num"><span class="dash">—</span></td><td class="num">10</td><td><span class="status status-live"><i></i>Ativo</span></td></tr>
+          <tr><td style="padding-left:72px"><div class="row" style="flex-wrap:nowrap"><span class="avatar">ST</span><span class="row-title">Sérgio Tavares</span></div></td><td>Supervisor</td><td class="num">2</td><td class="num">1</td><td class="num">6</td><td><span class="status status-live"><i></i>Ativo</span></td></tr>
+          <tr><td style="padding-left:100px"><div class="row" style="flex-wrap:nowrap"><span class="avatar">AC</span><span class="row-title">Ana Costa</span></div></td><td>Agente de cobrança</td><td class="num"><span class="dash">—</span></td><td class="num">3</td><td class="num">3</td><td><span class="status status-live"><i></i>Ativa</span></td></tr>
+          <tr><td style="padding-left:100px"><div class="row" style="flex-wrap:nowrap"><span class="avatar">BL</span><span class="row-title">Bruno Leal</span></div></td><td>Agente de cobrança</td><td class="num"><span class="dash">—</span></td><td class="num">2</td><td class="num">2</td><td><span class="status status-live"><i></i>Ativo</span></td></tr>
+          <tr><td style="padding-left:100px"><div class="row" style="flex-wrap:nowrap"><span class="avatar">OR</span><span class="row-title">Otávio Reis</span></div></td><td>Agente de cobrança</td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td><span class="status status-off"><i></i>Inativo</span></td></tr>
+          <tr><td style="padding-left:72px"><div class="row" style="flex-wrap:nowrap"><span class="avatar">SR</span><span class="row-title">Silvia Rocha</span></div></td><td>Supervisora</td><td class="num">1</td><td class="num"><span class="dash">—</span></td><td class="num">2</td><td><span class="status status-live"><i></i>Ativa</span></td></tr>
+          <tr><td style="padding-left:100px"><div class="row" style="flex-wrap:nowrap"><span class="avatar">CN</span><span class="row-title">Carlos Nunes</span></div></td><td>Agente de cobrança</td><td class="num"><span class="dash">—</span></td><td class="num">2</td><td class="num">2</td><td><span class="status status-live"><i></i>Ativo</span></td></tr>
+          <tr><td style="padding-left:72px"><div class="row" style="flex-wrap:nowrap"><span class="avatar">JF</span><span class="row-title">Júlia Farias</span></div></td><td>Jurídico</td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td><span class="status status-live"><i></i>Ativa</span></td></tr>
+          <tr><td style="padding-left:72px"><div class="row" style="flex-wrap:nowrap"><span class="avatar">ND</span><span class="row-title">Nara Duarte</span></div></td><td>Agente de cobrança · Administradora</td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num">10</td><td><span class="status status-live"><i></i>Ativa</span></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </template>
+
+  <template data-opcao="C" data-nome="Equipes lado a lado" data-resumo="A direção numa faixa no topo e uma coluna por supervisor, com os agentes em cartões e o total da equipe no cabeçalho. Compara as equipes num relance; custa mostrar bem só três níveis abaixo da direção.">
+    <div class="page-header">
+      <div>
+        <div class="module">Equipe</div>
+        <h3>Equipe</h3>
+        <div class="desc">A hierarquia define a carteira que cada um enxerga: o agente vê a própria; o supervisor, a sua e a da equipe; gerente e diretoria, todas.</div>
+        <div class="meta"><span><span class="stat">9</span> ativos</span><span class="dot">·</span><span><span class="stat">1</span> inativo</span><span class="dot">·</span><span><span class="stat">4</span> níveis</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="abas" role="tablist"><button class="aba" type="button" aria-selected="true">Organograma</button><button class="aba" type="button" aria-selected="false">Cadastro da equipe</button></div>
+      <div class="faixa">
+        <span class="sub forte">Direção</span>
+        <span class="row"><span class="avatar">DP</span><span><span class="forte">Diana Prado</span> <span class="sub">Diretoria · topo</span></span></span>
+        <span class="sub">›</span>
+        <span class="row"><span class="avatar">GM</span><span><span class="forte">Gustavo Menezes</span> <span class="sub">Gerente financeiro · vê os 10 clientes</span></span></span>
+      </div>
+      <div class="corpo-painel">
+        <div class="grade-3">
+          <div class="bas-coluna">
+            <header><span>Equipe de Sérgio Tavares</span><span>6 clientes</span></header>
+            <div class="resumo"><div class="row"><span class="avatar">ST</span><div><div class="forte">Sérgio Tavares</div><div class="sub">Supervisor · 1 cliente próprio</div></div></div></div>
+            <div class="resumo"><div class="row"><span class="avatar">AC</span><div><div class="forte">Ana Costa</div><div class="sub">Agente · 3 clientes</div></div></div></div>
+            <div class="resumo"><div class="row"><span class="avatar">BL</span><div><div class="forte">Bruno Leal</div><div class="sub">Agente · 2 clientes</div></div></div></div>
+            <div class="resumo"><div class="row"><span class="avatar">OR</span><div><div class="forte">Otávio Reis</div><div class="sub"><span class="status status-off"><i></i>Inativo</span></div></div></div></div>
+          </div>
+          <div class="bas-coluna">
+            <header><span>Equipe de Silvia Rocha</span><span>2 clientes</span></header>
+            <div class="resumo"><div class="row"><span class="avatar">SR</span><div><div class="forte">Silvia Rocha</div><div class="sub">Supervisora · sem carteira própria</div></div></div></div>
+            <div class="resumo"><div class="row"><span class="avatar">CN</span><div><div class="forte">Carlos Nunes</div><div class="sub">Agente · 2 clientes</div></div></div></div>
+          </div>
+          <div class="bas-coluna">
+            <header><span>Direto com Gustavo Menezes</span><span>sem carteira</span></header>
+            <div class="resumo"><div class="row"><span class="avatar">JF</span><div><div class="forte">Júlia Farias</div><div class="sub">Jurídico</div></div></div></div>
+            <div class="resumo"><div class="row"><span class="avatar">ND</span><div><div class="forte">Nara Duarte</div><div class="sub">Agente · <span class="badge badge-accent">Administradora</span></div></div></div></div>
+          </div>
+        </div>
+        <span class="sub">2 clientes ainda sem agente não aparecem em nenhuma equipe.</span>
+      </div>
+    </div>
+  </template>
+</section>
+
+<section data-tela="equipe-cadastro" data-grupo="Equipe" data-titulo="Equipe · Cadastro da equipe"
+         data-desc="Aba do Administrador: cadastra cada pessoa com e-mail de login, cargo, superior e a marca de Administrador, e inativa quem saiu. Exemplo: Nara tenta inativar Bruno Leal, que ainda tem 2 clientes na carteira.">
+
+  <template data-opcao="A" data-nome="Tabela e diálogo" data-resumo="Tabela com todos os membros e um diálogo para incluir ou editar uma pessoa por vez. O caminho mais seguro e conhecido; custa um diálogo por alteração, mesmo para trocar só o superior.">
+    <div class="page-header">
+      <div>
+        <div class="module">Equipe</div>
+        <h3>Equipe</h3>
+        <div class="desc">Defina o cargo e a quem cada pessoa reporta. Ninguém é apagado: quem sai é inativado.</div>
+      </div>
+    </div>
+    <div class="alert alert-warn"><svg><use href="#i-alert"/></svg><b>1 login entrou sem vínculo com a equipe</b><p>visitante@benenutri.local tentou entrar em 13/11/2026 às 08:02 e viu "Seu acesso ainda não foi liberado". Cadastre a pessoa com esse e-mail para liberar.</p></div>
+    <div class="panel">
+      <div class="abas" role="tablist"><button class="aba" type="button" aria-selected="false">Organograma</button><button class="aba" type="button" aria-selected="true">Cadastro da equipe</button></div>
+      <div class="toolbar">
+        <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar por nome ou e-mail"></div>
+        <span class="select"><span>Todos os cargos</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select"><span>Ativos e inativos</span><svg><use href="#i-chevron"/></svg></span>
+        <button class="btn btn-secondary"><svg><use href="#i-plus"/></svg>Novo membro</button>
+      </div>
+      <div class="tabela-wrap"><table class="bas-t">
+        <thead><tr><th>Pessoa</th><th>Cargo</th><th>Reporta a</th><th>Login</th><th class="num">Clientes</th><th>Situação</th><th></th></tr></thead>
+        <tbody>
+          <tr><td><div class="row-title">Diana Prado</div><div class="row-meta">diana.prado@benenutri.com</div></td><td>Diretoria</td><td>Topo da hierarquia</td><td><span class="status status-live"><i></i>Vinculado</span></td><td class="num"><span class="dash">—</span></td><td><span class="status status-live"><i></i>Ativa</span></td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">Gustavo Menezes</div><div class="row-meta">gustavo.menezes@benenutri.com</div></td><td>Gerente financeiro</td><td>Diana Prado</td><td><span class="status status-live"><i></i>Vinculado</span></td><td class="num"><span class="dash">—</span></td><td><span class="status status-live"><i></i>Ativo</span></td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">Sérgio Tavares</div><div class="row-meta">sergio.tavares@benenutri.com</div></td><td>Supervisor</td><td>Gustavo Menezes</td><td><span class="status status-live"><i></i>Vinculado</span></td><td class="num">1</td><td><span class="status status-live"><i></i>Ativo</span></td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">Ana Costa</div><div class="row-meta">ana.costa@benenutri.com</div></td><td>Agente de cobrança</td><td>Sérgio Tavares</td><td><span class="status status-live"><i></i>Vinculado</span></td><td class="num">3</td><td><span class="status status-live"><i></i>Ativa</span></td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr style="background:var(--accent)"><td><div class="row-title">Bruno Leal</div><div class="row-meta">bruno.leal@benenutri.com</div></td><td>Agente de cobrança</td><td>Sérgio Tavares</td><td><span class="status status-live"><i></i>Vinculado</span></td><td class="num">2</td><td><span class="status status-live"><i></i>Ativo</span></td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">Otávio Reis</div><div class="row-meta">otavio.reis@benenutri.com</div></td><td>Agente de cobrança</td><td>Sérgio Tavares</td><td><span class="status status-live"><i></i>Vinculado</span></td><td class="num"><span class="dash">—</span></td><td><span class="status status-off"><i></i>Inativo</span></td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">Silvia Rocha</div><div class="row-meta">silvia.rocha@benenutri.com</div></td><td>Supervisora</td><td>Gustavo Menezes</td><td><span class="status status-live"><i></i>Vinculado</span></td><td class="num"><span class="dash">—</span></td><td><span class="status status-live"><i></i>Ativa</span></td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">Carlos Nunes</div><div class="row-meta">carlos.nunes@benenutri.com</div></td><td>Agente de cobrança</td><td>Silvia Rocha</td><td><span class="status status-off"><i></i>Nunca entrou</span></td><td class="num">2</td><td><span class="status status-live"><i></i>Ativo</span></td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">Júlia Farias</div><div class="row-meta">julia.farias@benenutri.com</div></td><td>Jurídico</td><td>Gustavo Menezes</td><td><span class="status status-live"><i></i>Vinculado</span></td><td class="num"><span class="dash">—</span></td><td><span class="status status-live"><i></i>Ativa</span></td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">Nara Duarte</div><div class="row-meta">nara.duarte@benenutri.com · Administradora</div></td><td>Agente de cobrança</td><td>Gustavo Menezes</td><td><span class="status status-live"><i></i>Vinculado</span></td><td class="num"><span class="dash">—</span></td><td><span class="status status-live"><i></i>Ativa</span></td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="dialogo">
+      <header><div><div class="titulo-painel">Editar membro</div><div class="sub">O vínculo com o login é o e-mail: a pessoa entra com ele e passa a ver a carteira que lhe cabe.</div></div><button class="iconbtn" title="Fechar" aria-label="Fechar"><svg><use href="#i-x"/></svg></button></header>
+      <div class="corpo-painel">
+        <div class="alert alert-error"><svg><use href="#i-alert"/></svg><b>Não é possível inativar Bruno Leal</b><p>Ele ainda tem 2 clientes na carteira. Redistribua os clientes e tente de novo.</p></div>
+        <div class="form-grade">
+          <div class="field"><label>Nome</label><input class="input" value="Bruno Leal"></div>
+          <div class="field"><label>E-mail de login</label><input class="input" value="bruno.leal@benenutri.com"></div>
+          <div class="field"><label>Cargo</label><span class="select" style="width:100%"><span>Agente de cobrança</span><svg><use href="#i-chevron"/></svg></span></div>
+          <div class="field"><label>Reporta a</label><span class="select" style="width:100%"><span>Sérgio Tavares · Supervisor</span><svg><use href="#i-chevron"/></svg></span></div>
+          <div class="field"><label>Situação</label><span class="select" style="width:100%"><span>Inativo</span><svg><use href="#i-chevron"/></svg></span></div>
+          <div class="field"><label>Permissão</label><label class="check"><i></i><span>Administrador (parâmetros, equipe, BUs, feriados e modelos)</span></label></div>
+        </div>
+      </div>
+      <footer><button class="btn btn-ghost">Cancelar</button><button class="btn btn-secondary">Redistribuir clientes</button><button class="btn btn-primary">Salvar</button></footer>
+    </div>
+  </template>
+
+  <template data-opcao="B" data-nome="Linhas editáveis" data-resumo="Como no painel atual: cada pessoa é uma linha com cargo, superior e permissão editáveis ali mesmo, e um só Salvar grava tudo. O mais rápido para arrumar a equipe inteira; custa uma tela carregada e erro mostrado na linha.">
+    <div class="page-header">
+      <div>
+        <div class="module">Equipe</div>
+        <h3>Equipe</h3>
+        <div class="desc">Defina o cargo e a quem cada pessoa reporta. Ninguém é apagado: quem sai é inativado.</div>
+      </div>
+    </div>
+    <div class="alert alert-warn"><svg><use href="#i-alert"/></svg><b>1 login entrou sem vínculo com a equipe</b><p>visitante@benenutri.local tentou entrar em 13/11/2026 às 08:02 e viu "Seu acesso ainda não foi liberado". Cadastre a pessoa com esse e-mail para liberar.</p></div>
+    <div class="panel">
+      <div class="abas" role="tablist"><button class="aba" type="button" aria-selected="false">Organograma</button><button class="aba" type="button" aria-selected="true">Cadastro da equipe</button></div>
+      <div class="faixa entre"><span class="sub"><span class="forte">1 alteração pendente</span> · Bruno Leal: situação Ativo → Inativo</span><span class="row"><button class="btn btn-ghost btn-sm">Descartar</button><button class="btn btn-secondary btn-sm"><svg><use href="#i-plus"/></svg>Nova linha</button><button class="btn btn-primary btn-sm">Salvar alterações</button></span></div>
+      <div class="tabela-wrap"><table class="bas-t">
+        <thead><tr><th>Nome</th><th>E-mail de login</th><th>Cargo</th><th>Reporta a</th><th>Adm.</th><th>Ativo</th><th class="num">Clientes</th></tr></thead>
+        <tbody>
+          <tr><td><input class="input" value="Diana Prado" style="min-width:150px"></td><td><input class="input" value="diana.prado@benenutri.com" style="min-width:210px"></td><td><span class="select" style="min-width:150px"><span>Diretoria</span><svg><use href="#i-chevron"/></svg></span></td><td><span class="select" style="min-width:150px"><span>Topo</span><svg><use href="#i-chevron"/></svg></span></td><td><label class="check"><i></i></label></td><td><label class="check feito"><i></i></label></td><td class="num"><span class="dash">—</span></td></tr>
+          <tr><td><input class="input" value="Gustavo Menezes"></td><td><input class="input" value="gustavo.menezes@benenutri.com"></td><td><span class="select" style="min-width:150px"><span>Gerente financeiro</span><svg><use href="#i-chevron"/></svg></span></td><td><span class="select" style="min-width:150px"><span>Diana Prado</span><svg><use href="#i-chevron"/></svg></span></td><td><label class="check"><i></i></label></td><td><label class="check feito"><i></i></label></td><td class="num"><span class="dash">—</span></td></tr>
+          <tr><td><input class="input" value="Sérgio Tavares"></td><td><input class="input" value="sergio.tavares@benenutri.com"></td><td><span class="select" style="min-width:150px"><span>Supervisor</span><svg><use href="#i-chevron"/></svg></span></td><td><span class="select" style="min-width:150px"><span>Gustavo Menezes</span><svg><use href="#i-chevron"/></svg></span></td><td><label class="check"><i></i></label></td><td><label class="check feito"><i></i></label></td><td class="num">1</td></tr>
+          <tr><td><input class="input" value="Ana Costa"></td><td><input class="input" value="ana.costa@benenutri.com"></td><td><span class="select" style="min-width:150px"><span>Agente de cobrança</span><svg><use href="#i-chevron"/></svg></span></td><td><span class="select" style="min-width:150px"><span>Sérgio Tavares</span><svg><use href="#i-chevron"/></svg></span></td><td><label class="check"><i></i></label></td><td><label class="check feito"><i></i></label></td><td class="num">3</td></tr>
+          <tr><td><input class="input" value="Bruno Leal"><div class="row-meta" style="color:var(--destructive)">Não dá para inativar: 2 clientes na carteira. Redistribua antes.</div></td><td><input class="input" value="bruno.leal@benenutri.com"></td><td><span class="select" style="min-width:150px"><span>Agente de cobrança</span><svg><use href="#i-chevron"/></svg></span></td><td><span class="select" style="min-width:150px"><span>Sérgio Tavares</span><svg><use href="#i-chevron"/></svg></span></td><td><label class="check"><i></i></label></td><td><label class="check"><i></i></label></td><td class="num">2</td></tr>
+          <tr><td><input class="input" value="Otávio Reis" disabled></td><td><input class="input" value="otavio.reis@benenutri.com" disabled></td><td><span class="select" style="min-width:150px"><span>Agente de cobrança</span><svg><use href="#i-chevron"/></svg></span></td><td><span class="select" style="min-width:150px"><span>Sérgio Tavares</span><svg><use href="#i-chevron"/></svg></span></td><td><label class="check"><i></i></label></td><td><label class="check"><i></i></label></td><td class="num"><span class="dash">—</span></td></tr>
+          <tr><td><input class="input" value="Silvia Rocha"></td><td><input class="input" value="silvia.rocha@benenutri.com"></td><td><span class="select" style="min-width:150px"><span>Supervisor</span><svg><use href="#i-chevron"/></svg></span></td><td><span class="select" style="min-width:150px"><span>Gustavo Menezes</span><svg><use href="#i-chevron"/></svg></span></td><td><label class="check"><i></i></label></td><td><label class="check feito"><i></i></label></td><td class="num"><span class="dash">—</span></td></tr>
+          <tr><td><input class="input" value="Carlos Nunes"><div class="row-meta">Login ainda não usado</div></td><td><input class="input" value="carlos.nunes@benenutri.com"></td><td><span class="select" style="min-width:150px"><span>Agente de cobrança</span><svg><use href="#i-chevron"/></svg></span></td><td><span class="select" style="min-width:150px"><span>Silvia Rocha</span><svg><use href="#i-chevron"/></svg></span></td><td><label class="check"><i></i></label></td><td><label class="check feito"><i></i></label></td><td class="num">2</td></tr>
+          <tr><td><input class="input" value="Júlia Farias"></td><td><input class="input" value="julia.farias@benenutri.com"></td><td><span class="select" style="min-width:150px"><span>Jurídico</span><svg><use href="#i-chevron"/></svg></span></td><td><span class="select" style="min-width:150px"><span>Gustavo Menezes</span><svg><use href="#i-chevron"/></svg></span></td><td><label class="check"><i></i></label></td><td><label class="check feito"><i></i></label></td><td class="num"><span class="dash">—</span></td></tr>
+          <tr><td><input class="input" value="Nara Duarte"></td><td><input class="input" value="nara.duarte@benenutri.com"></td><td><span class="select" style="min-width:150px"><span>Agente de cobrança</span><svg><use href="#i-chevron"/></svg></span></td><td><span class="select" style="min-width:150px"><span>Gustavo Menezes</span><svg><use href="#i-chevron"/></svg></span></td><td><label class="check feito"><i></i></label></td><td><label class="check feito"><i></i></label></td><td class="num"><span class="dash">—</span></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </template>
+
+  <template data-opcao="C" data-nome="Lista com ficha" data-resumo="A lista de pessoas à esquerda e a ficha da pessoa marcada ao lado, com login, hierarquia, carteira e o que impede a inativação. Explica cada recusa onde ela nasce; custa ver menos gente de uma vez.">
+    <div class="page-header">
+      <div>
+        <div class="module">Equipe</div>
+        <h3>Equipe</h3>
+        <div class="desc">Defina o cargo e a quem cada pessoa reporta. Ninguém é apagado: quem sai é inativado.</div>
+      </div>
+    </div>
+    <div class="alert alert-warn"><svg><use href="#i-alert"/></svg><b>1 login entrou sem vínculo com a equipe</b><p>visitante@benenutri.local tentou entrar em 13/11/2026 às 08:02 e viu "Seu acesso ainda não foi liberado". Cadastre a pessoa com esse e-mail para liberar.</p></div>
+    <div class="panel">
+      <div class="abas" role="tablist"><button class="aba" type="button" aria-selected="false">Organograma</button><button class="aba" type="button" aria-selected="true">Cadastro da equipe</button></div>
+      <div class="lado invertido" style="gap:0">
+        <div style="border-right:1px solid var(--row-border)">
+          <div class="toolbar"><div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar por nome ou e-mail"></div><button class="btn btn-secondary"><svg><use href="#i-plus"/></svg>Novo</button></div>
+          <div class="lista-itens">
+            <div class="item"><span class="avatar">DP</span><div style="flex:1;min-width:0"><div class="row-title">Diana Prado</div><div class="row-meta">Diretoria · topo</div></div></div>
+            <div class="item"><span class="avatar">GM</span><div style="flex:1;min-width:0"><div class="row-title">Gustavo Menezes</div><div class="row-meta">Gerente financeiro</div></div></div>
+            <div class="item"><span class="avatar">ST</span><div style="flex:1;min-width:0"><div class="row-title">Sérgio Tavares</div><div class="row-meta">Supervisor · 1 cliente</div></div></div>
+            <div class="item"><span class="avatar">AC</span><div style="flex:1;min-width:0"><div class="row-title">Ana Costa</div><div class="row-meta">Agente · 3 clientes</div></div></div>
+            <div class="item ativo"><span class="avatar">BL</span><div style="flex:1;min-width:0"><div class="row-title">Bruno Leal</div><div class="row-meta">Agente · 2 clientes</div></div></div>
+            <div class="item"><span class="avatar">OR</span><div style="flex:1;min-width:0"><div class="row-title">Otávio Reis</div><div class="row-meta">Agente</div></div><span class="status status-off"><i></i>Inativo</span></div>
+            <div class="item"><span class="avatar">SR</span><div style="flex:1;min-width:0"><div class="row-title">Silvia Rocha</div><div class="row-meta">Supervisora</div></div></div>
+            <div class="item"><span class="avatar">CN</span><div style="flex:1;min-width:0"><div class="row-title">Carlos Nunes</div><div class="row-meta">Agente · 2 clientes · nunca entrou</div></div></div>
+            <div class="item"><span class="avatar">JF</span><div style="flex:1;min-width:0"><div class="row-title">Júlia Farias</div><div class="row-meta">Jurídico</div></div></div>
+            <div class="item"><span class="avatar">ND</span><div style="flex:1;min-width:0"><div class="row-title">Nara Duarte</div><div class="row-meta">Agente · Administradora</div></div></div>
+          </div>
+        </div>
+        <div class="corpo-painel">
+          <div class="entre"><div><div class="titulo-painel">Bruno Leal</div><div class="sub">Agente de cobrança · reporta a Sérgio Tavares</div></div><span class="status status-live"><i></i>Ativo</span></div>
+          <div class="alert alert-error"><svg><use href="#i-alert"/></svg><b>Não é possível inativar Bruno Leal</b><p>Ele ainda tem 2 clientes na carteira. Redistribua os clientes e tente de novo.</p></div>
+          <span class="sub forte">Login</span>
+          <div class="form-grade">
+            <div class="field"><label>Nome</label><input class="input" value="Bruno Leal"></div>
+            <div class="field"><label>E-mail de login</label><input class="input" value="bruno.leal@benenutri.com"></div>
+          </div>
+          <span class="sub"><span class="status status-live"><i></i>Vinculado</span> · último acesso em 13/11/2026 às 17:48</span>
+          <span class="sub forte">Hierarquia e permissão</span>
+          <div class="form-grade">
+            <div class="field"><label>Cargo</label><span class="select" style="width:100%"><span>Agente de cobrança</span><svg><use href="#i-chevron"/></svg></span></div>
+            <div class="field"><label>Reporta a</label><span class="select" style="width:100%"><span>Sérgio Tavares · Supervisor</span><svg><use href="#i-chevron"/></svg></span></div>
+            <div class="field"><label>Permissão</label><label class="check"><i></i><span>Administrador</span></label></div>
+          </div>
+          <span class="sub forte">Carteira e equipe</span>
+          <div class="grade-2">
+            <div class="resumo"><span class="sub">Clientes na carteira</span><b class="titulo-painel">2</b><span class="sub">Drogaria Santa Clara · Instituto de Nefrologia do Planalto</span></div>
+            <div class="resumo"><span class="sub">Subordinados ativos</span><b class="titulo-painel"><span class="dash">—</span></b><span class="sub">agente não tem equipe</span></div>
+          </div>
+          <div class="entre"><span class="row"><button class="btn btn-secondary">Redistribuir clientes</button><button class="btn btn-secondary" disabled title="Tem 2 clientes na carteira">Inativar</button></span><button class="btn btn-primary">Salvar</button></div>
+        </div>
+      </div>
+    </div>
+  </template>
+</section>
+
+<section data-tela="equipe-redistribuicao" data-grupo="Equipe" data-titulo="Redistribuição de clientes"
+         data-desc="Onde supervisor, gerente, diretoria e Administrador atribuem os clientes sem agente e movem clientes de um agente para outro, dentro do que enxergam. Exemplo: Gustavo (gerente) passa os 2 clientes de Bruno Leal para Ana Costa.">
+
+  <template data-opcao="A" data-nome="Selecionar e mover" data-resumo="Uma tabela com caixas de seleção e uma faixa de ação: marca os clientes, escolhe o destino e move em lote. Simples e serve a qualquer combinação; custa não mostrar como fica a carga de quem recebe.">
+    <div class="page-header">
+      <div>
+        <div class="module">Equipe</div>
+        <h3>Redistribuição de clientes</h3>
+        <div class="desc">Cada cliente movido fica registrado na auditoria, com o agente de antes e o de depois.</div>
+        <div class="meta"><span><span class="stat">10</span> clientes</span><span class="dot">·</span><span><span class="stat">2</span> sem agente</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="toolbar">
+        <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar cliente"></div>
+        <span class="select"><span>Agente atual: todos</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select"><span>Todas as BUs</span><svg><use href="#i-chevron"/></svg></span>
+      </div>
+      <div class="faixa" style="background:var(--accent)">
+        <span class="forte">2 clientes selecionados</span>
+        <span class="sub">de Bruno Leal</span>
+        <span class="direita row"><span class="sub">Mover para</span><span class="select"><span>Ana Costa · 3 clientes</span><svg><use href="#i-chevron"/></svg></span><button class="btn btn-primary">Mover clientes</button></span>
+      </div>
+      <div class="tabela-wrap"><table class="bas-t">
+        <thead><tr><th></th><th>Cliente</th><th>Agente atual</th><th>BUs com saldo</th><th class="num">Vencido</th><th class="num">Atraso</th></tr></thead>
+        <tbody>
+          <tr><td><label class="check"><i></i></label></td><td><div class="row-title">HOME CARE BRASILIA ASSISTENCIA DOMICILIAR LTDA</div><div class="row-meta"><span class="code">1003</span> · Brasília/DF</div></td><td><span class="status status-attention"><i></i>Sem agente</span></td><td>Enfermagem</td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td></tr>
+          <tr><td><label class="check"><i></i></label></td><td><div class="row-title">CLINICA DERMA ESTETICA AVANCADA LTDA</div><div class="row-meta"><span class="code">1009</span> · Brasília/DF</div></td><td><span class="status status-attention"><i></i>Sem agente</span></td><td>Estética</td><td class="num">R$ 9.450,00</td><td class="num">16 dias</td></tr>
+          <tr><td><label class="check"><i></i></label></td><td><div class="row-title">HOSPITAL SAO LUCAS LTDA</div><div class="row-meta"><span class="code">1001</span> · Brasília/DF</div></td><td>Ana Costa</td><td>Nutrição · Enfermagem · Medicamento</td><td class="num">R$ 1.500,00</td><td class="num">12 dias</td></tr>
+          <tr><td><label class="check"><i></i></label></td><td><div class="row-title">CLINICA VIDA PLENA NUTRICAO LTDA</div><div class="row-meta"><span class="code">1002</span> · Goiânia/GO</div></td><td>Ana Costa</td><td>Nutrição</td><td class="num">R$ 2.500,00</td><td class="num">8 dias</td></tr>
+          <tr><td><label class="check"><i></i></label></td><td><div class="row-title">SPA E ESTETICA BELLA FORMA LTDA</div><div class="row-meta"><span class="code">1010</span> · Palmas/TO</div></td><td>Ana Costa</td><td>Estética</td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td></tr>
+          <tr style="background:var(--accent)"><td><label class="check feito"><i></i></label></td><td><div class="row-title">DROGARIA SANTA CLARA LTDA</div><div class="row-meta"><span class="code">1004</span> · Anápolis/GO</div></td><td>Bruno Leal</td><td>Medicamento</td><td class="num">R$ 3.920,50</td><td class="num">5 dias</td></tr>
+          <tr style="background:var(--accent)"><td><label class="check feito"><i></i></label></td><td><div class="row-title">INSTITUTO DE NEFROLOGIA DO PLANALTO LTDA</div><div class="row-meta"><span class="code">1005</span> · Brasília/DF</div></td><td>Bruno Leal</td><td>Nutrição</td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td></tr>
+          <tr><td><label class="check"><i></i></label></td><td><div class="row-title">CASA DE REPOUSO BOM PASTOR LTDA</div><div class="row-meta"><span class="code">1006</span> · Goiânia/GO</div></td><td>Carlos Nunes</td><td>Nutrição · Enfermagem</td><td class="num">R$ 7.840,00</td><td class="num">21 dias</td></tr>
+          <tr><td><label class="check"><i></i></label></td><td><div class="row-title">SECRETARIA MUNICIPAL DE SAUDE DE GOIANIA</div><div class="row-meta"><span class="code">1007</span> · Goiânia/GO · Público</div></td><td>Carlos Nunes</td><td>Nutrição</td><td class="num">R$ 126.480,00</td><td class="num">47 dias</td></tr>
+          <tr><td><label class="check"><i></i></label></td><td><div class="row-title">HOSPITAL SANTA HELENA S/A</div><div class="row-meta"><span class="code">1008</span> · Brasília/DF</div></td><td>Sérgio Tavares</td><td>Nutrição · Enfermagem · Medicamento</td><td class="num">R$ 48.730,40</td><td class="num">31 dias</td></tr>
+        </tbody>
+      </table></div>
+      <div class="pagination"><span>Página 1 de 1 · 10 clientes</span><span class="btns"><button class="btn btn-secondary btn-sm" disabled>Anterior</button><button class="btn btn-secondary btn-sm" disabled>Próxima</button></span></div>
+    </div>
+    <p class="nota">O destino só lista agentes, supervisores e gerentes ativos que a pessoa enxerga. Supervisor não vê os clientes sem agente: só quem enxerga toda a carteira os atribui.</p>
+  </template>
+
+  <template data-opcao="B" data-nome="Duas carteiras" data-resumo="Escolhe-se a origem e o destino e as duas carteiras aparecem lado a lado, com o total de cada uma antes e depois da mudança. Feita para passar a carteira de quem sai; custa trabalhar só um par de agentes por vez.">
+    <div class="page-header">
+      <div>
+        <div class="module">Equipe</div>
+        <h3>Redistribuição de clientes</h3>
+        <div class="desc">Cada cliente movido fica registrado na auditoria, com o agente de antes e o de depois.</div>
+      </div>
+    </div>
+    <div class="grade-2">
+      <div class="panel">
+        <div class="faixa entre"><div class="field"><label>De</label><span class="select"><span>Bruno Leal · 2 clientes</span><svg><use href="#i-chevron"/></svg></span></div><div class="num"><div class="sub">Vencido da carteira</div><div class="forte">R$ 3.920,50</div></div></div>
+        <div class="lista-itens">
+          <div class="item ativo"><label class="check feito"><i></i></label><div style="flex:1;min-width:0"><div class="row-title">DROGARIA SANTA CLARA LTDA</div><div class="row-meta"><span class="code">1004</span> · Medicamento · 5 dias de atraso</div></div><span class="forte">R$ 3.920,50</span></div>
+          <div class="item ativo"><label class="check feito"><i></i></label><div style="flex:1;min-width:0"><div class="row-title">INSTITUTO DE NEFROLOGIA DO PLANALTO LTDA</div><div class="row-meta"><span class="code">1005</span> · Nutrição · em dia</div></div><span class="dash">—</span></div>
+        </div>
+        <div class="faixa entre" style="border-bottom:0;border-top:1px solid var(--row-border)"><span class="sub">Depois da mudança: nenhum cliente. Bruno Leal poderá ser inativado.</span><button class="btn btn-primary">Mover 2 clientes para Ana Costa</button></div>
+      </div>
+      <div class="panel">
+        <div class="faixa entre"><div class="field"><label>Para</label><span class="select"><span>Ana Costa · 3 clientes</span><svg><use href="#i-chevron"/></svg></span></div><div class="num"><div class="sub">Vencido da carteira</div><div class="forte">R$ 4.000,00</div></div></div>
+        <div class="lista-itens">
+          <div class="item"><div style="flex:1;min-width:0"><div class="row-title">HOSPITAL SAO LUCAS LTDA</div><div class="row-meta"><span class="code">1001</span> · Nutrição · Enfermagem · Medicamento · 12 dias de atraso</div></div><span class="forte">R$ 1.500,00</span></div>
+          <div class="item"><div style="flex:1;min-width:0"><div class="row-title">CLINICA VIDA PLENA NUTRICAO LTDA</div><div class="row-meta"><span class="code">1002</span> · Nutrição · 8 dias de atraso</div></div><span class="forte">R$ 2.500,00</span></div>
+          <div class="item"><div style="flex:1;min-width:0"><div class="row-title">SPA E ESTETICA BELLA FORMA LTDA</div><div class="row-meta"><span class="code">1010</span> · Estética · em dia</div></div><span class="dash">—</span></div>
+        </div>
+        <div class="faixa" style="border-bottom:0;border-top:1px solid var(--row-border)"><span class="sub">Depois da mudança: <span class="forte">5 clientes · R$ 7.920,50 vencido</span></span></div>
+      </div>
+    </div>
+    <p class="nota">Em "De" também se escolhe "Sem agente · 2 clientes" (só para quem enxerga toda a carteira). O destino só lista agentes, supervisores e gerentes ativos que a pessoa enxerga.</p>
+  </template>
+
+  <template data-opcao="C" data-nome="Carga por agente" data-resumo="Mostra primeiro quanto cada agente carrega (clientes e vencido) e a fila sem agente; o cliente muda de dono na própria linha. Ajuda a equilibrar a carga; custa não ter movimentação em lote.">
+    <div class="page-header">
+      <div>
+        <div class="module">Equipe</div>
+        <h3>Redistribuição de clientes</h3>
+        <div class="desc">Cada cliente movido fica registrado na auditoria, com o agente de antes e o de depois.</div>
+      </div>
+    </div>
+    <div class="lado invertido">
+      <div class="panel">
+        <div class="faixa"><span class="titulo-painel">Carga por agente</span></div>
+        <div class="corpo-painel">
+          <div class="barras">
+            <div class="barra"><span>Carlos Nunes · 2</span><span class="trilho"><i style="width:100%"></i></span><span class="valor">R$ 134.320,00</span></div>
+            <div class="barra"><span>Sérgio Tavares · 1</span><span class="trilho"><i style="width:36%"></i></span><span class="valor">R$ 48.730,40</span></div>
+            <div class="barra"><span>Sem agente · 2</span><span class="trilho"><i style="width:7%"></i></span><span class="valor">R$ 9.450,00</span></div>
+            <div class="barra"><span>Ana Costa · 3</span><span class="trilho"><i style="width:3%"></i></span><span class="valor">R$ 4.000,00</span></div>
+            <div class="barra"><span>Bruno Leal · 2</span><span class="trilho"><i style="width:3%"></i></span><span class="valor">R$ 3.920,50</span></div>
+            <div class="barra"><span>Nara Duarte · 0</span><span class="trilho"></span><span class="valor"><span class="dash">—</span></span></div>
+          </div>
+          <span class="sub">Nome · clientes na carteira. A barra é o saldo vencido que cada um cobra.</span>
+        </div>
+      </div>
+      <div class="panel">
+        <details class="bas-sanfona" open>
+          <summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Sem agente</span><span class="badge badge-attention">2 clientes</span></summary>
+          <div class="tabela-wrap"><table class="bas-t"><tbody>
+            <tr><td><div class="row-title">HOME CARE BRASILIA ASSISTENCIA DOMICILIAR LTDA</div><div class="row-meta"><span class="code">1003</span> · Enfermagem · em dia</div></td><td class="num"><span class="dash">—</span></td><td><span class="select"><span>Atribuir a</span><svg><use href="#i-chevron"/></svg></span></td></tr>
+            <tr><td><div class="row-title">CLINICA DERMA ESTETICA AVANCADA LTDA</div><div class="row-meta"><span class="code">1009</span> · Estética · 16 dias de atraso</div></td><td class="num">R$ 9.450,00</td><td><span class="select"><span>Atribuir a</span><svg><use href="#i-chevron"/></svg></span></td></tr>
+          </tbody></table></div>
+        </details>
+        <details class="bas-sanfona" open>
+          <summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Bruno Leal</span><span class="sub">2 clientes · R$ 3.920,50 vencido</span></summary>
+          <div class="tabela-wrap"><table class="bas-t"><tbody>
+            <tr><td><div class="row-title">DROGARIA SANTA CLARA LTDA</div><div class="row-meta"><span class="code">1004</span> · Medicamento · 5 dias de atraso</div></td><td class="num">R$ 3.920,50</td><td><span class="select"><span>Mover para Ana Costa</span><svg><use href="#i-chevron"/></svg></span></td></tr>
+            <tr><td><div class="row-title">INSTITUTO DE NEFROLOGIA DO PLANALTO LTDA</div><div class="row-meta"><span class="code">1005</span> · Nutrição · em dia</div></td><td class="num"><span class="dash">—</span></td><td><span class="select"><span>Mover para</span><svg><use href="#i-chevron"/></svg></span></td></tr>
+          </tbody></table></div>
+          <div class="faixa entre" style="border-bottom:0;border-top:1px solid var(--row-border)"><span class="sub">1 mudança pronta: Drogaria Santa Clara passa a Ana Costa</span><button class="btn btn-primary btn-sm">Confirmar mudança</button></div>
+        </details>
+        <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Ana Costa</span><span class="sub">3 clientes · R$ 4.000,00 vencido</span></summary></details>
+        <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Carlos Nunes</span><span class="sub">2 clientes · R$ 134.320,00 vencido</span></summary></details>
+        <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Sérgio Tavares</span><span class="sub">1 cliente · R$ 48.730,40 vencido</span></summary></details>
+      </div>
+    </div>
+  </template>
+</section>
+
+<style>
+.bas-ramo { display: grid; gap: 10px; justify-items: center; align-content: start; }
+.bas-filhos { display: flex; gap: 8px; padding-top: 10px; border-top: 1px solid var(--border); }
+.bas-filhos .no { min-width: 124px; }
+</style>

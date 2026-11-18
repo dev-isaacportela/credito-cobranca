@@ -1,0 +1,217 @@
+<section data-tela="juridico-alertas" data-grupo="Jurídico"
+         data-titulo="Jurídico · Alertas de desvios"
+         data-desc="Para a gerência e o Jurídico: os 13 tipos de desvio (prazo vencido, parcela vencida, acordo fora da política, cliente sem dossiê e os demais), com severidade, detalhe e a ação sugerida; clicar abre o processo ou o dossiê.">
+
+  <template data-opcao="A" data-nome="Lista por severidade" data-resumo="Uma tabela só, críticos primeiro, com fichas de tipo para filtrar; privilegia varrer tudo de cima a baixo, ao custo de repetir a ação sugerida em cada linha.">
+    <div class="page-header">
+      <div>
+        <div class="module">Jurídico</div>
+        <h3>Alertas de desvios</h3>
+        <div class="desc">Calculados na hora a partir dos processos e da cobrança. Posição em 19/11/2026.</div>
+        <div class="meta"><span><span class="stat">13</span> alertas</span><span class="dot">·</span><span><span class="stat">4</span> críticos</span><span class="dot">·</span><span><span class="stat">9</span> de atenção</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="abas" role="tablist" aria-label="Abas do Jurídico">
+        <span class="aba">Visão gerencial</span>
+        <span class="aba">Processos <span class="badge badge-alert" title="Prazos vencidos">1</span></span>
+        <span class="aba">Acordos judiciais <span class="badge badge-alert" title="Acordos com parcela vencida">1</span></span>
+        <span class="aba">Custos dos processos <span class="badge badge-attention" title="Custas sem lançamento">1</span></span>
+        <span class="aba" aria-selected="true">Alertas de desvios <span class="badge badge-alert" title="Desvios críticos">4</span></span>
+      </div>
+      <div class="toolbar">
+        <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar cliente"></div>
+        <span class="select"><span>Todas as severidades</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select"><span>Todas as filiais</span><svg><use href="#i-chevron"/></svg></span>
+      </div>
+      <div class="chips">
+        <span class="sub">Tipo</span>
+        <button class="btn btn-secondary btn-sm jur-ativo">Todos 13</button>
+        <button class="btn btn-secondary btn-sm">Prazo vencido 1</button>
+        <button class="btn btn-secondary btn-sm">Parcela vencida 1</button>
+        <button class="btn btn-secondary btn-sm">Fora da política 1</button>
+        <button class="btn btn-secondary btn-sm">Sem dossiê 1</button>
+        <button class="btn btn-secondary btn-sm">Sem andamento 1</button>
+        <button class="btn btn-secondary btn-sm">Custo acima da meta 1</button>
+        <button class="btn btn-secondary btn-sm">Custas sem lançamento 1</button>
+        <button class="btn btn-secondary btn-sm">Divergência na carga 1</button>
+        <button class="btn btn-secondary btn-sm">Substabelecimento 1</button>
+        <button class="btn btn-secondary btn-sm">Suspenso ou RJ 1</button>
+        <button class="btn btn-secondary btn-sm">Dossiê parado 1</button>
+        <button class="btn btn-secondary btn-sm">Encerrado com saldo 1</button>
+        <button class="btn btn-secondary btn-sm">Ativo regularizado 1</button>
+      </div>
+      <div class="tabela-wrap"><table>
+        <thead><tr><th>Severidade</th><th>Desvio</th><th>Cliente</th><th>Detalhe</th><th>O que fazer</th><th></th></tr></thead>
+        <tbody>
+          <tr><td><span class="status status-alert"><i></i>Crítico</span></td><td class="row-title">Prazo processual vencido</td><td>Farmácia Alfa</td><td>Prazo de 10/11 (9 dias)</td><td>Confirmar com o Jurídico se o prazo foi cumprido e registrar o andamento</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+          <tr><td><span class="status status-alert"><i></i>Crítico</span></td><td class="row-title">Parcela de acordo vencida</td><td>Clínica Beta</td><td>Entrada de R$ 12.000,00 vencida em 05/11 (14 dias)</td><td>Cobrar a parcela; vencida a tolerância, pedir o prosseguimento pelo saldo com os encargos do termo</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+          <tr><td><span class="status status-alert"><i></i>Crítico</span></td><td class="row-title">Acordo fora da política</td><td>Clínica Beta</td><td>Acordo de R$ 60.000,00 acima de R$ 50.000,00, sem aprovação</td><td>Registrar a aprovação na alçada ou renegociar (entrada de 20%, até 5 parcelas)</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+          <tr><td><span class="status status-alert"><i></i>Crítico</span></td><td class="row-title">Cliente no judicial sem dossiê</td><td>Iota Farma</td><td>R$ 33.000,00 vencidos há 52 dias; cobrança na etapa Jurídico</td><td>Montar o dossiê de cobrança jurídica</td><td><button class="btn btn-secondary btn-sm">Abrir dossiê</button></td></tr>
+          <tr><td><span class="status status-attention"><i></i>Atenção</span></td><td class="row-title">Processo sem andamento</td><td>Distribuidora Gama</td><td>50 dias sem andamento (último em 30/09)</td><td>Pedir atualização ao Jurídico e registrar o andamento</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+          <tr><td><span class="status status-attention"><i></i>Atenção</span></td><td class="row-title">Custo acima de 10% do valor</td><td>Distribuidora Gama</td><td>R$ 3.000,00 de custo: 12,0% do valor</td><td>Reavaliar a viabilidade da cobrança judicial</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+          <tr><td><span class="status status-attention"><i></i>Atenção</span></td><td class="row-title">Custas sem lançamento</td><td>Hospital Delta</td><td>Em Custas e protocolo sem custo de custas processuais</td><td>Lançar a guia em Custos dos processos</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+          <tr><td><span class="status status-attention"><i></i>Atenção</span></td><td class="row-title">Divergência na carga</td><td>Teta Nutrição</td><td>Situação diferente entre as abas da planilha; pendência não conferida</td><td>Conferir a pendência na ficha e marcar como conferida</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+          <tr><td><span class="status status-attention"><i></i>Atenção</span></td><td class="row-title">Substabelecimento pendente</td><td>Hospital Delta</td><td>Procuração aguardando substabelecimento</td><td>Providenciar o substabelecimento</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+          <tr><td><span class="status status-attention"><i></i>Atenção</span></td><td class="row-title">Suspenso ou em recuperação judicial</td><td>Épsilon Comércio</td><td>Recuperação judicial · R$ 150.000,00</td><td>Avaliar a habilitação do crédito ou a baixa como perda na alçada</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+          <tr><td><span class="status status-attention"><i></i>Atenção</span></td><td class="row-title">Dossiê incompleto há mais de 10 dias</td><td>Ômega Drogarias</td><td>Aberto em 02/11 (17 dias) · 7 de 10</td><td>Completar os documentos obrigatórios e enviar ao Jurídico</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+          <tr><td><span class="status status-attention"><i></i>Atenção</span></td><td class="row-title">Encerrado com saldo na cobrança</td><td>Zeta Hospitalar</td><td>Encerrado como quitado; cliente com R$ 5.000,00 vencidos</td><td>Conferir a baixa no Winthor e regularizar o caso de cobrança</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+          <tr><td><span class="status status-attention"><i></i>Atenção</span></td><td class="row-title">Processo ativo com cliente regularizado</td><td>Eta Saúde</td><td>Cobrança regularizada, saldo vencido zero</td><td>Confirmar o pagamento e pedir a extinção do processo</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+        </tbody>
+      </table></div>
+      <div class="pagination"><span aria-live="polite">13 alertas · críticos primeiro, depois na ordem dos tipos</span><span>Limiares em parâmetro: 7 dias, 30 e 60 dias, 10%, 10 dias, R$ 50.000,00</span></div>
+    </div>
+  </template>
+
+  <template data-opcao="B" data-nome="Agrupado por tipo" data-resumo="Os 13 tipos viram blocos com a regra e a ação sugerida ditas uma vez e os casos dentro; privilegia entender e atacar um tipo de desvio por vez, ao custo de espalhar um mesmo cliente em vários blocos.">
+    <div class="page-header">
+      <div>
+        <div class="module">Jurídico</div>
+        <h3>Alertas de desvios</h3>
+        <div class="desc">Cada tipo de desvio com a sua regra, a ação sugerida e os casos. Posição em 19/11/2026.</div>
+        <div class="meta"><span><span class="stat">13</span> tipos com caso</span><span class="dot">·</span><span><span class="stat">4</span> críticos</span><span class="dot">·</span><span><span class="stat">9</span> de atenção</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="abas" role="tablist" aria-label="Abas do Jurídico">
+        <span class="aba">Visão gerencial</span>
+        <span class="aba">Processos <span class="badge badge-alert" title="Prazos vencidos">1</span></span>
+        <span class="aba">Acordos judiciais <span class="badge badge-alert" title="Acordos com parcela vencida">1</span></span>
+        <span class="aba">Custos dos processos <span class="badge badge-attention" title="Custas sem lançamento">1</span></span>
+        <span class="aba" aria-selected="true">Alertas de desvios <span class="badge badge-alert" title="Desvios críticos">4</span></span>
+      </div>
+      <div class="toolbar">
+        <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar cliente"></div>
+        <span class="select"><span>Todos os tipos</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select"><span>Todas as filiais</span><svg><use href="#i-chevron"/></svg></span>
+      </div>
+    </div>
+    <div class="entre"><span class="titulo-painel">Críticos</span><span class="sub">4 tipos · 4 casos</span></div>
+    <div class="grade-2">
+      <details class="panel jur-recolhe" open>
+        <summary class="faixa"><span class="status status-alert"><i></i>Prazo processual vencido</span><span class="badge badge-alert">1</span></summary>
+        <div class="corpo-painel"><p class="sub">Processo ativo com prazo anterior a hoje; crítico quando vencido há mais de 7 dias. <b>Ação:</b> confirmar com o Jurídico se o prazo foi cumprido e registrar o andamento.</p>
+          <div class="entre"><span><b>Farmácia Alfa</b> · prazo de 10/11 (9 dias)</span><button class="btn btn-ghost btn-sm">Abrir processo</button></div></div>
+      </details>
+      <details class="panel jur-recolhe" open>
+        <summary class="faixa"><span class="status status-alert"><i></i>Parcela de acordo vencida</span><span class="badge badge-alert">1</span></summary>
+        <div class="corpo-painel"><p class="sub">Acordo não quitado com parcela aberta vencida. <b>Ação:</b> cobrar a parcela; vencida a tolerância, pedir o prosseguimento pelo saldo com os encargos do termo.</p>
+          <div class="entre"><span><b>Clínica Beta</b> · entrada de R$ 12.000,00 vencida em 05/11 (14 dias)</span><button class="btn btn-ghost btn-sm">Abrir processo</button></div></div>
+      </details>
+      <details class="panel jur-recolhe" open>
+        <summary class="faixa"><span class="status status-alert"><i></i>Acordo fora da política</span><span class="badge badge-alert">1</span></summary>
+        <div class="corpo-painel"><p class="sub">Acordo aguardando aprovação; crítico acima de R$ 50.000,00. <b>Ação:</b> registrar a aprovação na alçada ou renegociar (entrada de 20%, até 5 parcelas).</p>
+          <div class="entre"><span><b>Clínica Beta</b> · R$ 60.000,00, sem aprovação</span><button class="btn btn-ghost btn-sm">Abrir processo</button></div></div>
+      </details>
+      <details class="panel jur-recolhe" open>
+        <summary class="faixa"><span class="status status-alert"><i></i>Cliente no judicial sem dossiê</span><span class="badge badge-alert">1</span></summary>
+        <div class="corpo-painel"><p class="sub">Caso de cobrança na etapa Jurídico, com saldo vencido e sem processo ativo. <b>Ação:</b> montar o dossiê de cobrança jurídica.</p>
+          <div class="entre"><span><b>Iota Farma</b> · R$ 33.000,00 vencidos há 52 dias</span><button class="btn btn-secondary btn-sm">Abrir dossiê</button></div></div>
+      </details>
+    </div>
+    <div class="entre"><span class="titulo-painel">Atenção</span><span class="sub">9 tipos · 9 casos</span></div>
+    <div class="grade-3">
+      <details class="panel jur-recolhe" open>
+        <summary class="faixa"><span class="status status-attention"><i></i>Processo sem andamento</span><span class="badge badge-attention">1</span></summary>
+        <div class="corpo-painel"><p class="sub">Mais de 30 dias sem andamento (crítico acima de 60). <b>Ação:</b> pedir atualização ao Jurídico.</p><div class="entre"><span><b>Distribuidora Gama</b> · 50 dias</span><button class="btn btn-ghost btn-sm">Abrir</button></div></div>
+      </details>
+      <details class="panel jur-recolhe" open>
+        <summary class="faixa"><span class="status status-attention"><i></i>Custo acima de 10% do valor</span><span class="badge badge-attention">1</span></summary>
+        <div class="corpo-painel"><p class="sub">Custo ÷ valor acima da meta. <b>Ação:</b> reavaliar a viabilidade da cobrança judicial.</p><div class="entre"><span><b>Distribuidora Gama</b> · 12,0%</span><button class="btn btn-ghost btn-sm">Abrir</button></div></div>
+      </details>
+      <details class="panel jur-recolhe" open>
+        <summary class="faixa"><span class="status status-attention"><i></i>Custas sem lançamento</span><span class="badge badge-attention">1</span></summary>
+        <div class="corpo-painel"><p class="sub">Em Custas e protocolo sem custo de custas processuais. <b>Ação:</b> lançar a guia.</p><div class="entre"><span><b>Hospital Delta</b></span><button class="btn btn-ghost btn-sm">Abrir</button></div></div>
+      </details>
+      <details class="panel jur-recolhe" open>
+        <summary class="faixa"><span class="status status-attention"><i></i>Divergência na carga</span><span class="badge badge-attention">1</span></summary>
+        <div class="corpo-painel"><p class="sub">Pendência da carga inicial não conferida. <b>Ação:</b> conferir na ficha e marcar como conferida.</p><div class="entre"><span><b>Teta Nutrição</b> · situação diferente entre abas</span><button class="btn btn-ghost btn-sm">Abrir</button></div></div>
+      </details>
+      <details class="panel jur-recolhe" open>
+        <summary class="faixa"><span class="status status-attention"><i></i>Substabelecimento pendente</span><span class="badge badge-attention">1</span></summary>
+        <div class="corpo-painel"><p class="sub">Processo ativo com substabelecimento marcado. <b>Ação:</b> providenciar o substabelecimento.</p><div class="entre"><span><b>Hospital Delta</b></span><button class="btn btn-ghost btn-sm">Abrir</button></div></div>
+      </details>
+      <details class="panel jur-recolhe" open>
+        <summary class="faixa"><span class="status status-attention"><i></i>Suspenso ou em recuperação judicial</span><span class="badge badge-attention">1</span></summary>
+        <div class="corpo-painel"><p class="sub">Etapa Suspenso. <b>Ação:</b> avaliar a habilitação do crédito ou a baixa como perda.</p><div class="entre"><span><b>Épsilon Comércio</b> · R$ 150.000,00</span><button class="btn btn-ghost btn-sm">Abrir</button></div></div>
+      </details>
+      <details class="panel jur-recolhe" open>
+        <summary class="faixa"><span class="status status-attention"><i></i>Dossiê incompleto há mais de 10 dias</span><span class="badge badge-attention">1</span></summary>
+        <div class="corpo-painel"><p class="sub">Em Dossiê em montagem há mais de 10 dias. <b>Ação:</b> completar os obrigatórios e enviar.</p><div class="entre"><span><b>Ômega Drogarias</b> · 17 dias · 7 de 10</span><button class="btn btn-ghost btn-sm">Abrir</button></div></div>
+      </details>
+      <details class="panel jur-recolhe" open>
+        <summary class="faixa"><span class="status status-attention"><i></i>Encerrado com saldo na cobrança</span><span class="badge badge-attention">1</span></summary>
+        <div class="corpo-painel"><p class="sub">Encerrado como quitado, cliente com saldo vencido. <b>Ação:</b> conferir a baixa no Winthor.</p><div class="entre"><span><b>Zeta Hospitalar</b> · R$ 5.000,00 vencidos</span><button class="btn btn-ghost btn-sm">Abrir</button></div></div>
+      </details>
+      <details class="panel jur-recolhe" open>
+        <summary class="faixa"><span class="status status-attention"><i></i>Ativo com cliente regularizado</span><span class="badge badge-attention">1</span></summary>
+        <div class="corpo-painel"><p class="sub">Processo ativo, cliente sem saldo vencido. <b>Ação:</b> confirmar o pagamento e pedir a extinção.</p><div class="entre"><span><b>Eta Saúde</b></span><button class="btn btn-ghost btn-sm">Abrir</button></div></div>
+      </details>
+    </div>
+  </template>
+
+  <template data-opcao="C" data-nome="Por processo" data-resumo="Os alertas são agrupados por cliente, o de pior severidade primeiro, com um só Abrir processo por linha; privilegia resolver tudo de um caso de uma vez, ao custo de não ver quantos casos cada tipo tem sem usar o filtro.">
+    <div class="page-header">
+      <div>
+        <div class="module">Jurídico</div>
+        <h3>Alertas de desvios</h3>
+        <div class="desc">Os desvios de cada cliente juntos, para resolver numa visita só. Posição em 19/11/2026.</div>
+        <div class="meta"><span><span class="stat">10</span> clientes com desvio</span><span class="dot">·</span><span><span class="stat">13</span> alertas</span><span class="dot">·</span><span><span class="stat">4</span> críticos</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="abas" role="tablist" aria-label="Abas do Jurídico">
+        <span class="aba">Visão gerencial</span>
+        <span class="aba">Processos <span class="badge badge-alert" title="Prazos vencidos">1</span></span>
+        <span class="aba">Acordos judiciais <span class="badge badge-alert" title="Acordos com parcela vencida">1</span></span>
+        <span class="aba">Custos dos processos <span class="badge badge-attention" title="Custas sem lançamento">1</span></span>
+        <span class="aba" aria-selected="true">Alertas de desvios <span class="badge badge-alert" title="Desvios críticos">4</span></span>
+      </div>
+    </div>
+    <div class="lado estreito">
+      <div class="panel"><div class="corpo-painel">
+        <span class="jur-rot">Severidade</span>
+        <div class="lista-itens jur-borda">
+          <div class="item ativo"><span class="jur-cresce">Todas</span><b>13</b></div>
+          <div class="item"><span class="jur-cresce"><span class="status status-alert"><i></i>Crítico</span></span><b>4</b></div>
+          <div class="item"><span class="jur-cresce"><span class="status status-attention"><i></i>Atenção</span></span><b>9</b></div>
+        </div>
+        <span class="jur-rot">Tipo de desvio</span>
+        <div class="lista-itens jur-borda">
+          <div class="item"><span class="jur-cresce">Prazo processual vencido</span><b>1</b></div>
+          <div class="item"><span class="jur-cresce">Parcela de acordo vencida</span><b>1</b></div>
+          <div class="item"><span class="jur-cresce">Acordo fora da política</span><b>1</b></div>
+          <div class="item"><span class="jur-cresce">Cliente no judicial sem dossiê</span><b>1</b></div>
+          <div class="item"><span class="jur-cresce">Processo sem andamento</span><b>1</b></div>
+          <div class="item"><span class="jur-cresce">Custo acima de 10% do valor</span><b>1</b></div>
+          <div class="item"><span class="jur-cresce">Custas sem lançamento</span><b>1</b></div>
+          <div class="item"><span class="jur-cresce">Divergência na carga</span><b>1</b></div>
+          <div class="item"><span class="jur-cresce">Substabelecimento pendente</span><b>1</b></div>
+          <div class="item"><span class="jur-cresce">Suspenso ou em recuperação judicial</span><b>1</b></div>
+          <div class="item"><span class="jur-cresce">Dossiê incompleto há mais de 10 dias</span><b>1</b></div>
+          <div class="item"><span class="jur-cresce">Encerrado com saldo na cobrança</span><b>1</b></div>
+          <div class="item"><span class="jur-cresce">Ativo com cliente regularizado</span><b>1</b></div>
+        </div>
+      </div></div>
+      <div class="panel">
+        <div class="toolbar"><div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar cliente"></div><span class="select"><span>Todas as filiais</span><svg><use href="#i-chevron"/></svg></span></div>
+        <div class="tabela-wrap"><table>
+          <thead><tr><th>Cliente e processo</th><th>Desvios</th><th>O que fazer</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><div class="row-title">Clínica Beta</div><div class="row-meta">09 Acordo judicial · R$ 60.000,00 · BNGO</div></td><td><div><span class="status status-alert"><i></i>Parcela de acordo vencida</span><div class="row-meta">entrada de R$ 12.000,00, 05/11 (14 dias)</div></div><div><span class="status status-alert"><i></i>Acordo fora da política</span><div class="row-meta">acima de R$ 50.000,00, sem aprovação</div></div></td><td>Cobrar a parcela. Registrar a aprovação na alçada ou renegociar.</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+            <tr><td><div class="row-title">Farmácia Alfa</div><div class="row-meta">05 Citação · R$ 40.000,00 · BNDF</div></td><td><span class="status status-alert"><i></i>Prazo processual vencido</span><div class="row-meta">prazo de 10/11 (9 dias)</div></td><td>Confirmar se o prazo foi cumprido e registrar o andamento.</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+            <tr><td><div class="row-title">Iota Farma</div><div class="row-meta">sem processo · cobrança na etapa Jurídico</div></td><td><span class="status status-alert"><i></i>Cliente no judicial sem dossiê</span><div class="row-meta">R$ 33.000,00 vencidos há 52 dias</div></td><td>Montar o dossiê de cobrança jurídica.</td><td><button class="btn btn-secondary btn-sm">Abrir dossiê</button></td></tr>
+            <tr><td><div class="row-title">Distribuidora Gama</div><div class="row-meta">08 Cumprimento · R$ 25.000,00 · BNRS</div></td><td><div><span class="status status-attention"><i></i>Processo sem andamento</span><div class="row-meta">50 dias (último em 30/09)</div></div><div><span class="status status-attention"><i></i>Custo acima de 10% do valor</span><div class="row-meta">R$ 3.000,00: 12,0%</div></div></td><td>Pedir atualização ao Jurídico. Reavaliar a viabilidade da cobrança judicial.</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+            <tr><td><div class="row-title">Hospital Delta</div><div class="row-meta">04 Custas e protocolo · R$ 80.000,00 · BNDF</div></td><td><div><span class="status status-attention"><i></i>Custas sem lançamento</span></div><div><span class="status status-attention"><i></i>Substabelecimento pendente</span></div></td><td>Lançar a guia em Custos dos processos. Providenciar o substabelecimento.</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+            <tr><td><div class="row-title">Épsilon Comércio</div><div class="row-meta">10 Suspenso · R$ 150.000,00 · BNGO</div></td><td><span class="status status-attention"><i></i>Suspenso ou em recuperação judicial</span></td><td>Avaliar a habilitação do crédito ou a baixa como perda na alçada.</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+            <tr><td><div class="row-title">Ômega Drogarias</div><div class="row-meta">01 Dossiê em montagem · R$ 30.000,00 · BNDF</div></td><td><span class="status status-attention"><i></i>Dossiê incompleto há mais de 10 dias</span><div class="row-meta">aberto em 02/11 (17 dias) · 7 de 10</div></td><td>Completar os documentos obrigatórios e enviar ao Jurídico.</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+            <tr><td><div class="row-title">Teta Nutrição</div><div class="row-meta">02 Recebido · R$ 15.000,00 · BNGO</div></td><td><span class="status status-attention"><i></i>Divergência na carga</span><div class="row-meta">situação diferente entre as abas da planilha</div></td><td>Conferir a pendência na ficha e marcar como conferida.</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+            <tr><td><div class="row-title">Zeta Hospitalar</div><div class="row-meta">Encerrado (quitado) · R$ 20.000,00 · BNDF</div></td><td><span class="status status-attention"><i></i>Encerrado com saldo na cobrança</span><div class="row-meta">cliente com R$ 5.000,00 vencidos</div></td><td>Conferir a baixa no Winthor e regularizar o caso de cobrança.</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+            <tr><td><div class="row-title">Eta Saúde</div><div class="row-meta">06 Defesa e instrução · R$ 45.000,00 · BNEXDF</div></td><td><span class="status status-attention"><i></i>Processo ativo com cliente regularizado</span><div class="row-meta">saldo vencido zero</div></td><td>Confirmar o pagamento e pedir a extinção do processo.</td><td><button class="btn btn-ghost btn-sm">Abrir processo</button></td></tr>
+          </tbody>
+        </table></div>
+        <div class="pagination"><span aria-live="polite">10 clientes · 13 alertas · pior severidade primeiro</span></div>
+      </div>
+    </div>
+  </template>
+</section>

@@ -1,0 +1,202 @@
+<section data-tela="casca" data-grupo="Casca do sistema" data-titulo="Navegação e carteiras"
+         data-desc="O layout que envolve todas as telas: onde ficam as 4 carteiras (Privado, Estética, Público, Jurídico), os menus gerais e a administração. Exemplo com a tela de Clientes aberta por Nara (agente e Administradora); quem não é Administrador não vê o grupo Administração, e item de módulo ainda não entregue não aparece.">
+
+  <template data-opcao="A" data-nome="Menu por carteira" data-resumo="Cada carteira é um grupo do menu com as suas telas; tudo a um clique e com contador. Custa um menu comprido, que rola, e Crédito e Cobrança repetidos três vezes.">
+    <div class="layout-sample bas-casca">
+      <nav class="nav" aria-label="Menu">
+        <span class="bas-wordmark" role="img" aria-label="Benenutri" style="margin:4px 10px 8px"></span>
+        <div class="grupo">Privado</div>
+        <a href="#casca">Análise de crédito<span class="badge badge-neutral direita">12</span></a>
+        <a href="#casca">Cobrança<span class="badge badge-neutral direita">38</span></a>
+        <div class="grupo">Estética</div>
+        <a href="#casca">Análise de crédito<span class="badge badge-neutral direita">3</span></a>
+        <a href="#casca">Cobrança<span class="badge badge-neutral direita">9</span></a>
+        <div class="grupo">Público</div>
+        <a href="#casca">Análise de crédito<span class="badge badge-neutral direita">2</span></a>
+        <a href="#casca">Cobrança<span class="badge badge-neutral direita">14</span></a>
+        <a href="#casca">Notas fiscais</a>
+        <div class="grupo">Jurídico</div>
+        <a href="#casca">Processos<span class="badge badge-neutral direita">7</span></a>
+        <div class="grupo">Geral</div>
+        <a href="#casca">Painel consolidado</a>
+        <a href="#casca"><svg><use href="#i-cal"/></svg>Minha agenda</a>
+        <a href="#casca" class="ativo"><svg><use href="#i-list"/></svg>Clientes</a>
+        <a href="#casca">Contatos</a>
+        <a href="#casca"><svg><use href="#i-users"/></svg>Equipe</a>
+        <div class="grupo">Administração</div>
+        <a href="#casca"><svg><use href="#i-sliders"/></svg>Parâmetros</a>
+        <a href="#casca">BUs e segmentos</a>
+        <a href="#casca">Feriados</a>
+        <a href="#casca">Modelos de mensagem</a>
+        <a href="#casca">Sincronização</a>
+        <a href="#casca">Auditoria</a>
+        <div class="rodape">
+          <div class="iniciais">ND</div>
+          <div class="quem"><div>Nara Duarte</div><div>nara.duarte@benenutri.com</div></div>
+          <span class="iconbtn" title="Tema escuro" aria-label="Tema escuro"><svg><use href="#i-moon"/></svg></span>
+          <span class="iconbtn danger" title="Sair" aria-label="Sair"><svg><use href="#i-logout"/></svg></span>
+        </div>
+      </nav>
+      <div class="conteudo">
+        <div class="bas-miolo">
+          <div class="page-header" style="margin-bottom:0">
+            <div>
+              <div class="module">Geral</div>
+              <h3>Clientes</h3>
+              <div class="meta"><span><span class="stat">10</span> clientes</span><span class="dot">·</span><span><span class="stat">7</span> em atraso</span><span class="dot">·</span><span>posição do Winthor de 14/11/2026 às 10:45</span></div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="toolbar">
+              <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar por nome, CPF/CNPJ ou código"></div>
+              <span class="select"><span>Privado</span><svg><use href="#i-chevron"/></svg></span>
+              <span class="select"><span>Todos os agentes</span><svg><use href="#i-chevron"/></svg></span>
+            </div>
+            <div class="chips"><span class="chip">Segmento: <b>Privado</b><button type="button" aria-label="Remover filtro"><svg><use href="#i-x"/></svg></button></span></div>
+            <div class="tabela-wrap"><table class="bas-t">
+              <thead><tr><th>Cliente</th><th>Agente</th><th class="num">Vencido</th><th class="num">Atraso</th></tr></thead>
+              <tbody>
+                <tr><td><div class="row-title">HOSPITAL SAO LUCAS LTDA</div><div class="row-meta"><span class="code">1001</span> · 12.345.678/0001-90 · Brasília/DF</div></td><td>Ana Costa</td><td class="num">R$ 1.500,00</td><td class="num">12 dias</td></tr>
+                <tr><td><div class="row-title">CLINICA VIDA PLENA NUTRICAO LTDA</div><div class="row-meta"><span class="code">1002</span> · 23.456.789/0001-12 · Goiânia/GO</div></td><td>Ana Costa</td><td class="num">R$ 2.500,00</td><td class="num">8 dias</td></tr>
+                <tr><td><div class="row-title">CASA DE REPOUSO BOM PASTOR LTDA</div><div class="row-meta"><span class="code">1006</span> · 67.890.123/0001-34 · Goiânia/GO</div></td><td>Carlos Nunes</td><td class="num">R$ 7.840,00</td><td class="num">21 dias</td></tr>
+                <tr><td><div class="row-title">HOSPITAL SANTA HELENA S/A</div><div class="row-meta"><span class="code">1008</span> · 89.012.345/0001-90 · Brasília/DF</div></td><td>Sérgio Tavares</td><td class="num">R$ 48.730,40</td><td class="num">31 dias</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="nota">A carteira é o primeiro nível do menu: quem trabalha só no Público abre direto "Público · Cobrança". Nas telas gerais (Clientes, Contatos, Painel), a carteira vira um filtro de segmento na barra da própria tela.</p>
+  </template>
+
+  <template data-opcao="B" data-nome="Carteira como contexto" data-resumo="Um seletor de carteira fica fixo no topo e vale para o sistema inteiro; o menu mostra só as telas da carteira escolhida e fica curto. Custa um clique a mais para trocar de carteira e o risco de esquecer em qual está.">
+    <div class="layout-sample bas-casca">
+      <nav class="nav" aria-label="Menu">
+        <span class="bas-wordmark" role="img" aria-label="Benenutri" style="margin:4px 10px 8px"></span>
+        <div class="grupo">Carteira Privado</div>
+        <a href="#casca">Análise de crédito<span class="badge badge-neutral direita">12</span></a>
+        <a href="#casca">Cobrança<span class="badge badge-neutral direita">38</span></a>
+        <a href="#casca" class="ativo"><svg><use href="#i-list"/></svg>Clientes</a>
+        <a href="#casca">Contatos</a>
+        <div class="grupo">Todas as carteiras</div>
+        <a href="#casca">Painel consolidado</a>
+        <a href="#casca"><svg><use href="#i-cal"/></svg>Minha agenda</a>
+        <a href="#casca"><svg><use href="#i-users"/></svg>Equipe</a>
+        <div class="grupo">Administração</div>
+        <a href="#casca"><svg><use href="#i-sliders"/></svg>Parâmetros</a>
+        <a href="#casca">BUs e segmentos</a>
+        <a href="#casca">Feriados</a>
+        <a href="#casca">Modelos de mensagem</a>
+        <a href="#casca">Sincronização</a>
+        <a href="#casca">Auditoria</a>
+        <div class="rodape">
+          <div class="iniciais">ND</div>
+          <div class="quem"><div>Nara Duarte</div><div>nara.duarte@benenutri.com</div></div>
+          <span class="iconbtn" title="Tema escuro" aria-label="Tema escuro"><svg><use href="#i-moon"/></svg></span>
+          <span class="iconbtn danger" title="Sair" aria-label="Sair"><svg><use href="#i-logout"/></svg></span>
+        </div>
+      </nav>
+      <div class="conteudo">
+        <div class="bas-contexto">
+          <span class="sub forte">Carteira</span>
+          <div class="segment" role="group" aria-label="Carteira">
+            <button type="button" aria-pressed="true">Privado</button>
+            <button type="button" aria-pressed="false">Estética</button>
+            <button type="button" aria-pressed="false">Público</button>
+            <button type="button" aria-pressed="false">Jurídico</button>
+          </div>
+          <span class="status status-live direita"><i></i>Winthor lido às 10:45</span>
+        </div>
+        <div class="bas-miolo">
+          <div class="page-header" style="margin-bottom:0">
+            <div>
+              <div class="module">Privado</div>
+              <h3>Clientes</h3>
+              <div class="meta"><span><span class="stat">7</span> clientes na carteira Privado</span><span class="dot">·</span><span><span class="stat">5</span> em atraso</span></div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="toolbar">
+              <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar por nome, CPF/CNPJ ou código"></div>
+              <span class="select"><span>Todos os agentes</span><svg><use href="#i-chevron"/></svg></span>
+            </div>
+            <div class="tabela-wrap"><table class="bas-t">
+              <thead><tr><th>Cliente</th><th>Agente</th><th class="num">Vencido</th><th class="num">Atraso</th></tr></thead>
+              <tbody>
+                <tr><td><div class="row-title">HOSPITAL SAO LUCAS LTDA</div><div class="row-meta"><span class="code">1001</span> · 12.345.678/0001-90 · Brasília/DF</div></td><td>Ana Costa</td><td class="num">R$ 1.500,00</td><td class="num">12 dias</td></tr>
+                <tr><td><div class="row-title">CLINICA VIDA PLENA NUTRICAO LTDA</div><div class="row-meta"><span class="code">1002</span> · 23.456.789/0001-12 · Goiânia/GO</div></td><td>Ana Costa</td><td class="num">R$ 2.500,00</td><td class="num">8 dias</td></tr>
+                <tr><td><div class="row-title">CASA DE REPOUSO BOM PASTOR LTDA</div><div class="row-meta"><span class="code">1006</span> · 67.890.123/0001-34 · Goiânia/GO</div></td><td>Carlos Nunes</td><td class="num">R$ 7.840,00</td><td class="num">21 dias</td></tr>
+                <tr><td><div class="row-title">HOSPITAL SANTA HELENA S/A</div><div class="row-meta"><span class="code">1008</span> · 89.012.345/0001-90 · Brasília/DF</div></td><td>Sérgio Tavares</td><td class="num">R$ 48.730,40</td><td class="num">31 dias</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="nota">A carteira escolhida fica guardada entre as sessões e filtra Crédito, Cobrança, Clientes e Contatos de uma vez. Com "Jurídico" escolhido, o primeiro grupo do menu troca para Processos, Acordos e Custos. Painel, Agenda e Equipe ignoram o seletor.</p>
+  </template>
+
+  <template data-opcao="C" data-nome="Menu por função" data-resumo="O menu lista o que se faz (Crédito, Cobrança, Jurídico, Clientes) e a carteira é uma aba dentro de cada tela. Menu mais curto e comparação entre carteiras a um clique; custa a carteira deixar de ser um lugar com endereço próprio no menu.">
+    <div class="layout-sample bas-casca">
+      <nav class="nav" aria-label="Menu">
+        <span class="bas-wordmark" role="img" aria-label="Benenutri" style="margin:4px 10px 8px"></span>
+        <div class="grupo">Operação</div>
+        <a href="#casca">Painel consolidado</a>
+        <a href="#casca"><svg><use href="#i-cal"/></svg>Minha agenda</a>
+        <a href="#casca">Análise de crédito<span class="badge badge-neutral direita">17</span></a>
+        <a href="#casca">Cobrança<span class="badge badge-neutral direita">61</span></a>
+        <a href="#casca">Jurídico<span class="badge badge-neutral direita">7</span></a>
+        <div class="grupo">Cadastros</div>
+        <a href="#casca" class="ativo"><svg><use href="#i-list"/></svg>Clientes</a>
+        <a href="#casca">Contatos</a>
+        <a href="#casca"><svg><use href="#i-users"/></svg>Equipe</a>
+        <div class="grupo">Administração</div>
+        <a href="#casca"><svg><use href="#i-sliders"/></svg>Parâmetros</a>
+        <a href="#casca">BUs e segmentos</a>
+        <a href="#casca">Feriados</a>
+        <a href="#casca">Modelos de mensagem</a>
+        <a href="#casca">Sincronização</a>
+        <a href="#casca">Auditoria</a>
+        <div class="rodape">
+          <div class="iniciais">ND</div>
+          <div class="quem"><div>Nara Duarte</div><div>nara.duarte@benenutri.com</div></div>
+          <span class="iconbtn" title="Tema escuro" aria-label="Tema escuro"><svg><use href="#i-moon"/></svg></span>
+          <span class="iconbtn danger" title="Sair" aria-label="Sair"><svg><use href="#i-logout"/></svg></span>
+        </div>
+      </nav>
+      <div class="conteudo">
+        <div class="bas-miolo">
+          <div class="page-header" style="margin-bottom:0">
+            <div>
+              <div class="module">Cadastros</div>
+              <h3>Clientes</h3>
+              <div class="meta"><span><span class="stat">10</span> clientes</span><span class="dot">·</span><span><span class="stat">7</span> em atraso</span><span class="dot">·</span><span>posição do Winthor de 14/11/2026 às 10:45</span></div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="abas" role="tablist" aria-label="Carteira">
+              <button class="aba" type="button" aria-selected="false">Todas <span class="badge badge-neutral">10</span></button>
+              <button class="aba" type="button" aria-selected="true">Privado <span class="badge badge-accent">7</span></button>
+              <button class="aba" type="button" aria-selected="false">Estética <span class="badge badge-neutral">2</span></button>
+              <button class="aba" type="button" aria-selected="false">Público <span class="badge badge-neutral">1</span></button>
+            </div>
+            <div class="toolbar">
+              <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar por nome, CPF/CNPJ ou código"></div>
+              <span class="select"><span>Todos os agentes</span><svg><use href="#i-chevron"/></svg></span>
+            </div>
+            <div class="tabela-wrap"><table class="bas-t">
+              <thead><tr><th>Cliente</th><th>Agente</th><th class="num">Vencido</th><th class="num">Atraso</th></tr></thead>
+              <tbody>
+                <tr><td><div class="row-title">HOSPITAL SAO LUCAS LTDA</div><div class="row-meta"><span class="code">1001</span> · 12.345.678/0001-90 · Brasília/DF</div></td><td>Ana Costa</td><td class="num">R$ 1.500,00</td><td class="num">12 dias</td></tr>
+                <tr><td><div class="row-title">CLINICA VIDA PLENA NUTRICAO LTDA</div><div class="row-meta"><span class="code">1002</span> · 23.456.789/0001-12 · Goiânia/GO</div></td><td>Ana Costa</td><td class="num">R$ 2.500,00</td><td class="num">8 dias</td></tr>
+                <tr><td><div class="row-title">CASA DE REPOUSO BOM PASTOR LTDA</div><div class="row-meta"><span class="code">1006</span> · 67.890.123/0001-34 · Goiânia/GO</div></td><td>Carlos Nunes</td><td class="num">R$ 7.840,00</td><td class="num">21 dias</td></tr>
+                <tr><td><div class="row-title">HOSPITAL SANTA HELENA S/A</div><div class="row-meta"><span class="code">1008</span> · 89.012.345/0001-90 · Brasília/DF</div></td><td>Sérgio Tavares</td><td class="num">R$ 48.730,40</td><td class="num">31 dias</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="nota">Crédito e Cobrança abrem com as abas Privado, Estética e Público (cada uma é o seu quadro); o Jurídico é um item próprio, sem aba. A aba escolhida fica guardada por tela.</p>
+  </template>
+</section>

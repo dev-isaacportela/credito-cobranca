@@ -1,0 +1,460 @@
+<section data-tela="clientes-busca" data-grupo="Clientes" data-titulo="Busca de clientes"
+         data-desc="Onde cada pessoa acha os clientes da carteira que lhe cabe (aqui, Gustavo, gerente, vê os 10) por nome, CPF/CNPJ ou código, filtra por setor, BU com saldo, agente e situação da ficha de contatos, e abre a ficha.">
+
+  <template data-opcao="A" data-nome="Tabela com filtros" data-resumo="Listagem clássica: filtros colados na tabela e todas as colunas à vista para comparar e ordenar. É a mais densa; para ver a posição por BU ou o contato é preciso abrir a ficha.">
+    <div class="page-header">
+      <div>
+        <div class="module">Clientes</div>
+        <h3>Clientes</h3>
+        <div class="desc">Carteira que você enxerga pela hierarquia. Posição lida do Winthor em 14/11/2026 às 10:45.</div>
+        <div class="meta"><span><span class="stat">10</span> clientes</span><span class="dot">·</span><span><span class="stat">7</span> em atraso</span><span class="dot">·</span><span><span class="stat">2</span> sem agente</span><span class="dot">·</span><span><span class="stat">R$ 200.420,90</span> vencido</span></div>
+      </div>
+      <button class="btn btn-secondary"><svg><use href="#i-search"/></svg>Buscar no Winthor</button>
+    </div>
+    <div class="panel">
+      <div class="toolbar">
+        <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar por nome, fantasia, CPF/CNPJ ou código do Winthor"></div>
+        <span class="select"><span>Todos os setores</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select"><span>Todas as BUs</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select"><span>Todos os agentes</span><svg><use href="#i-chevron"/></svg></span>
+        <button class="btn btn-secondary"><svg><use href="#i-sliders"/></svg>Mais filtros <span class="badge badge-accent">1</span></button>
+      </div>
+      <div class="chips">
+        <span class="chip">Ficha de contatos: <b>todas</b><button type="button" aria-label="Remover filtro"><svg><use href="#i-x"/></svg></button></span>
+        <span class="sub">Em "Mais filtros": sem agente, situação da ficha de contatos, só em atraso</span>
+        <button class="btn btn-ghost btn-sm limpar">Limpar tudo</button>
+      </div>
+      <div class="tabela-wrap"><table class="bas-t">
+        <thead><tr><th>Cliente</th><th>Setor</th><th>BUs com saldo</th><th>Agente</th><th class="num">Vencido</th><th class="num">A vencer</th><th class="num">Atraso</th><th>Ficha de contatos</th><th></th></tr></thead>
+        <tbody>
+          <tr><td><div class="row-title">HOSPITAL SAO LUCAS LTDA</div><div class="row-meta"><span class="code">1001</span> · 12.345.678/0001-90 · Brasília/DF</div></td><td>Privado</td><td>Nutrição · Enfermagem · Medicamento</td><td>Ana Costa</td><td class="num">R$ 1.500,00</td><td class="num">R$ 3.100,00</td><td class="num">12 dias</td><td><span class="status status-live"><i></i>Em dia</span></td><td><span class="acoes"><button class="iconbtn" title="Abrir ficha" aria-label="Abrir ficha"><svg><use href="#i-list"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">CLINICA VIDA PLENA NUTRICAO LTDA</div><div class="row-meta"><span class="code">1002</span> · 23.456.789/0001-12 · Goiânia/GO</div></td><td>Privado</td><td>Nutrição</td><td>Ana Costa</td><td class="num">R$ 2.500,00</td><td class="num"><span class="dash">—</span></td><td class="num">8 dias</td><td><span class="status status-attention"><i></i>Vencida há 1 dia</span></td><td><span class="acoes"><button class="iconbtn" title="Abrir ficha" aria-label="Abrir ficha"><svg><use href="#i-list"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">HOME CARE BRASILIA ASSISTENCIA DOMICILIAR LTDA</div><div class="row-meta"><span class="code">1003</span> · 34.567.890/0001-45 · Brasília/DF · novo no Winthor</div></td><td>Privado</td><td>Enfermagem</td><td><span class="status status-attention"><i></i>Sem agente</span></td><td class="num"><span class="dash">—</span></td><td class="num">R$ 4.260,00</td><td class="num"><span class="dash">—</span></td><td><span class="status status-alert"><i></i>Nunca atualizada</span></td><td><span class="acoes"><button class="iconbtn" title="Abrir ficha" aria-label="Abrir ficha"><svg><use href="#i-list"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">DROGARIA SANTA CLARA LTDA</div><div class="row-meta"><span class="code">1004</span> · 45.678.901/0001-78 · Anápolis/GO</div></td><td>Privado</td><td>Medicamento</td><td>Bruno Leal</td><td class="num">R$ 3.920,50</td><td class="num">R$ 6.115,00</td><td class="num">5 dias</td><td><span class="status status-alert"><i></i>Nunca atualizada</span></td><td><span class="acoes"><button class="iconbtn" title="Abrir ficha" aria-label="Abrir ficha"><svg><use href="#i-list"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">INSTITUTO DE NEFROLOGIA DO PLANALTO LTDA</div><div class="row-meta"><span class="code">1005</span> · 56.789.012/0001-01 · Brasília/DF</div></td><td>Privado</td><td>Nutrição</td><td>Bruno Leal</td><td class="num"><span class="dash">—</span></td><td class="num">R$ 600,00</td><td class="num"><span class="dash">—</span></td><td><span class="status status-live"><i></i>Em dia</span></td><td><span class="acoes"><button class="iconbtn" title="Abrir ficha" aria-label="Abrir ficha"><svg><use href="#i-list"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">CASA DE REPOUSO BOM PASTOR LTDA</div><div class="row-meta"><span class="code">1006</span> · 67.890.123/0001-34 · Goiânia/GO</div></td><td>Privado</td><td>Nutrição · Enfermagem</td><td>Carlos Nunes</td><td class="num">R$ 7.840,00</td><td class="num">R$ 2.300,00</td><td class="num">21 dias</td><td><span class="status status-live"><i></i>Em dia</span></td><td><span class="acoes"><button class="iconbtn" title="Abrir ficha" aria-label="Abrir ficha"><svg><use href="#i-list"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">SECRETARIA MUNICIPAL DE SAUDE DE GOIANIA</div><div class="row-meta"><span class="code">1007</span> · 78.901.234/0001-67 · Goiânia/GO</div></td><td>Público · municipal</td><td>Nutrição</td><td>Carlos Nunes</td><td class="num">R$ 126.480,00</td><td class="num">R$ 84.200,00</td><td class="num">47 dias</td><td><span class="status status-live"><i></i>Em dia</span></td><td><span class="acoes"><button class="iconbtn" title="Abrir ficha" aria-label="Abrir ficha"><svg><use href="#i-list"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">HOSPITAL SANTA HELENA S/A</div><div class="row-meta"><span class="code">1008</span> · 89.012.345/0001-90 · Brasília/DF</div></td><td>Privado</td><td>Nutrição · Enfermagem · Medicamento</td><td>Sérgio Tavares</td><td class="num">R$ 48.730,40</td><td class="num">R$ 112.964,75</td><td class="num">31 dias</td><td><span class="status status-live"><i></i>Em dia</span></td><td><span class="acoes"><button class="iconbtn" title="Abrir ficha" aria-label="Abrir ficha"><svg><use href="#i-list"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">CLINICA DERMA ESTETICA AVANCADA LTDA</div><div class="row-meta"><span class="code">1009</span> · 90.123.456/0001-23 · Brasília/DF</div></td><td>Privado</td><td>Estética</td><td><span class="status status-attention"><i></i>Sem agente</span></td><td class="num">R$ 9.450,00</td><td class="num">R$ 18.900,00</td><td class="num">16 dias</td><td><span class="status status-alert"><i></i>Nunca atualizada</span></td><td><span class="acoes"><button class="iconbtn" title="Abrir ficha" aria-label="Abrir ficha"><svg><use href="#i-list"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">SPA E ESTETICA BELLA FORMA LTDA</div><div class="row-meta"><span class="code">1010</span> · 11.222.333/0001-44 · Palmas/TO</div></td><td>Privado</td><td>Estética</td><td>Ana Costa</td><td class="num"><span class="dash">—</span></td><td class="num">R$ 12.380,00</td><td class="num"><span class="dash">—</span></td><td><span class="status status-live"><i></i>Em dia</span></td><td><span class="acoes"><button class="iconbtn" title="Abrir ficha" aria-label="Abrir ficha"><svg><use href="#i-list"/></svg></button></span></td></tr>
+        </tbody>
+      </table></div>
+      <div class="pagination"><span aria-live="polite">Página 1 de 1 · 10 clientes</span><span class="btns"><button class="btn btn-secondary btn-sm" disabled>Anterior</button><button class="btn btn-secondary btn-sm" disabled>Próxima</button></span></div>
+    </div>
+    <p class="nota">"Buscar no Winthor" (gerente, diretoria e Administrador) procura um cliente que ainda não está no sistema e abre a ficha ao vivo dele com a marca "fora da carteira". Clicar na linha abre a ficha.</p>
+  </template>
+
+  <template data-opcao="B" data-nome="Lista com prévia" data-resumo="A lista fica estreita e o cliente marcado abre ao lado com posição total, por BU e contato principal, sem sair da busca. Bom para quem atende telefone; custa ver menos clientes e menos colunas de uma vez.">
+    <div class="page-header">
+      <div>
+        <div class="module">Clientes</div>
+        <h3>Clientes</h3>
+        <div class="meta"><span><span class="stat">10</span> clientes</span><span class="dot">·</span><span><span class="stat">7</span> em atraso</span><span class="dot">·</span><span><span class="stat">2</span> sem agente</span><span class="dot">·</span><span>posição do Winthor de 14/11/2026 às 10:45</span></div>
+      </div>
+      <button class="btn btn-secondary"><svg><use href="#i-search"/></svg>Buscar no Winthor</button>
+    </div>
+    <div class="lado invertido">
+      <div class="panel">
+        <div class="toolbar">
+          <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Nome, CPF/CNPJ ou código" value="sao lucas"></div>
+          <button class="btn btn-secondary"><svg><use href="#i-sliders"/></svg>Filtros</button>
+        </div>
+        <div class="lista-itens">
+          <div class="item ativo"><div style="flex:1;min-width:0"><div class="row-title">HOSPITAL SAO LUCAS LTDA</div><div class="row-meta"><span class="code">1001</span> · Ana Costa</div></div><div class="num"><div class="forte">R$ 1.500,00</div><div class="row-meta">12 dias</div></div></div>
+          <div class="item"><div style="flex:1;min-width:0"><div class="row-title">CLINICA VIDA PLENA NUTRICAO LTDA</div><div class="row-meta"><span class="code">1002</span> · Ana Costa</div></div><div class="num"><div class="forte">R$ 2.500,00</div><div class="row-meta">8 dias</div></div></div>
+          <div class="item"><div style="flex:1;min-width:0"><div class="row-title">HOME CARE BRASILIA ASSISTENCIA DOMICILIAR LTDA</div><div class="row-meta"><span class="code">1003</span> · <span class="status status-attention"><i></i>Sem agente</span></div></div><div class="num"><div class="dash">—</div><div class="row-meta">em dia</div></div></div>
+          <div class="item"><div style="flex:1;min-width:0"><div class="row-title">DROGARIA SANTA CLARA LTDA</div><div class="row-meta"><span class="code">1004</span> · Bruno Leal</div></div><div class="num"><div class="forte">R$ 3.920,50</div><div class="row-meta">5 dias</div></div></div>
+          <div class="item"><div style="flex:1;min-width:0"><div class="row-title">INSTITUTO DE NEFROLOGIA DO PLANALTO LTDA</div><div class="row-meta"><span class="code">1005</span> · Bruno Leal</div></div><div class="num"><div class="dash">—</div><div class="row-meta">em dia</div></div></div>
+          <div class="item"><div style="flex:1;min-width:0"><div class="row-title">CASA DE REPOUSO BOM PASTOR LTDA</div><div class="row-meta"><span class="code">1006</span> · Carlos Nunes</div></div><div class="num"><div class="forte">R$ 7.840,00</div><div class="row-meta">21 dias</div></div></div>
+          <div class="item"><div style="flex:1;min-width:0"><div class="row-title">SECRETARIA MUNICIPAL DE SAUDE DE GOIANIA</div><div class="row-meta"><span class="code">1007</span> · Carlos Nunes · Público</div></div><div class="num"><div class="forte">R$ 126.480,00</div><div class="row-meta">47 dias</div></div></div>
+          <div class="item"><div style="flex:1;min-width:0"><div class="row-title">HOSPITAL SANTA HELENA S/A</div><div class="row-meta"><span class="code">1008</span> · Sérgio Tavares</div></div><div class="num"><div class="forte">R$ 48.730,40</div><div class="row-meta">31 dias</div></div></div>
+          <div class="item"><div style="flex:1;min-width:0"><div class="row-title">CLINICA DERMA ESTETICA AVANCADA LTDA</div><div class="row-meta"><span class="code">1009</span> · <span class="status status-attention"><i></i>Sem agente</span></div></div><div class="num"><div class="forte">R$ 9.450,00</div><div class="row-meta">16 dias</div></div></div>
+          <div class="item"><div style="flex:1;min-width:0"><div class="row-title">SPA E ESTETICA BELLA FORMA LTDA</div><div class="row-meta"><span class="code">1010</span> · Ana Costa</div></div><div class="num"><div class="dash">—</div><div class="row-meta">em dia</div></div></div>
+        </div>
+        <div class="pagination"><span>10 clientes</span><span class="btns"><button class="btn btn-secondary btn-sm" disabled>Anterior</button><button class="btn btn-secondary btn-sm" disabled>Próxima</button></span></div>
+      </div>
+      <div class="panel">
+        <div class="faixa entre">
+          <div><div class="titulo-painel">HOSPITAL SAO LUCAS LTDA</div><div class="sub"><span class="code">1001</span> · 12.345.678/0001-90 · Brasília/DF · Privado</div></div>
+          <button class="btn btn-primary">Abrir ficha</button>
+        </div>
+        <div class="corpo-painel">
+          <div class="grade-4">
+            <div class="resumo"><span class="sub">Vencido</span><b class="titulo-painel">R$ 1.500,00</b><span class="sub">2 títulos</span></div>
+            <div class="resumo"><span class="sub">Atraso</span><b class="titulo-painel">12 dias</b><span class="sub">desde 02/11/2026</span></div>
+            <div class="resumo"><span class="sub">A vencer</span><b class="titulo-painel">R$ 3.100,00</b><span class="sub">próximo em 19/11</span></div>
+            <div class="resumo"><span class="sub">Disponível</span><b class="titulo-painel">R$ 5.400,00</b><span class="sub">limite R$ 10.000,00</span></div>
+          </div>
+          <div class="tabela-wrap"><table class="bas-t">
+            <thead><tr><th>BU</th><th class="num">Vencido</th><th class="num">A vencer</th><th class="num">Atraso</th></tr></thead>
+            <tbody>
+              <tr><td>Nutrição</td><td class="num">R$ 1.000,00</td><td class="num">R$ 2.000,00</td><td class="num">12 dias</td></tr>
+              <tr><td>Enfermagem</td><td class="num">R$ 500,00</td><td class="num">R$ 300,00</td><td class="num">3 dias</td></tr>
+              <tr><td>Medicamento</td><td class="num"><span class="dash">—</span></td><td class="num">R$ 800,00</td><td class="num"><span class="dash">—</span></td></tr>
+            </tbody>
+          </table></div>
+          <dl class="ficha">
+            <div><dt>Contato principal</dt><dd>Marta Ribeiro · Financeiro</dd></div>
+            <div><dt>Telefone e e-mail</dt><dd>(61) 3333-0101 · marta@hsl.com.br</dd></div>
+            <div><dt>Agente de cobrança</dt><dd>Ana Costa</dd></div>
+            <div><dt>Ficha de contatos</dt><dd><span class="status status-live"><i></i>Em dia</span></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="C" data-nome="Filas prontas" data-resumo="Números da carteira no topo e abas com as filas que pedem ação: em atraso, sem agente, ficha de contatos a revisar e busca no Winthor. Boa para o gerente; custa um clique para chegar à lista completa com filtros livres.">
+    <div class="page-header">
+      <div>
+        <div class="module">Clientes</div>
+        <h3>Clientes</h3>
+        <div class="desc">Posição lida do Winthor em 14/11/2026 às 10:45.</div>
+      </div>
+    </div>
+    <div class="kpis" style="margin-top:0">
+      <div class="kpi"><span class="rot">Clientes na carteira</span><span class="valor">10</span><span class="hint">7 em atraso</span></div>
+      <div class="kpi"><span class="rot">Vencido</span><span class="valor">R$ 200.420,90</span><span class="hint">maior atraso: 47 dias</span></div>
+      <div class="kpi"><span class="rot">A vencer</span><span class="valor">R$ 244.819,75</span><span class="hint">9 clientes</span></div>
+      <div class="kpi"><span class="rot">Sem agente</span><span class="valor">2</span><span class="hint">1 novo desde a última leitura</span></div>
+    </div>
+    <div class="panel com-abas">
+      <div class="abas" role="tablist">
+        <button data-aba="atraso" aria-selected="true" type="button">Em atraso <span class="badge badge-neutral">7</span></button>
+        <button data-aba="semagente" aria-selected="false" type="button">Sem agente <span class="badge badge-attention">2</span></button>
+        <button data-aba="ficha" aria-selected="false" type="button">Ficha de contatos a revisar <span class="badge badge-attention">4</span></button>
+        <button data-aba="todos" aria-selected="false" type="button">Todos <span class="badge badge-neutral">10</span></button>
+        <button data-aba="winthor" aria-selected="false" type="button">Buscar no Winthor</button>
+      </div>
+      <div class="toolbar">
+        <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar por nome, fantasia, CPF/CNPJ ou código do Winthor"></div>
+        <span class="select"><span>Todas as BUs</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select"><span>Todos os agentes</span><svg><use href="#i-chevron"/></svg></span>
+      </div>
+      <div data-painel="atraso">
+        <div class="tabela-wrap"><table class="bas-t">
+          <thead><tr><th>Cliente</th><th>Agente</th><th class="num">Atraso</th><th class="num">Vencido</th><th class="num">A vencer</th><th>BUs com saldo vencido</th></tr></thead>
+          <tbody>
+            <tr><td><div class="row-title">SECRETARIA MUNICIPAL DE SAUDE DE GOIANIA</div><div class="row-meta"><span class="code">1007</span> · Goiânia/GO · Público municipal</div></td><td>Carlos Nunes</td><td class="num">47 dias</td><td class="num">R$ 126.480,00</td><td class="num">R$ 84.200,00</td><td>Nutrição</td></tr>
+            <tr><td><div class="row-title">HOSPITAL SANTA HELENA S/A</div><div class="row-meta"><span class="code">1008</span> · Brasília/DF</div></td><td>Sérgio Tavares</td><td class="num">31 dias</td><td class="num">R$ 48.730,40</td><td class="num">R$ 112.964,75</td><td>Nutrição · Medicamento</td></tr>
+            <tr><td><div class="row-title">CASA DE REPOUSO BOM PASTOR LTDA</div><div class="row-meta"><span class="code">1006</span> · Goiânia/GO</div></td><td>Carlos Nunes</td><td class="num">21 dias</td><td class="num">R$ 7.840,00</td><td class="num">R$ 2.300,00</td><td>Nutrição</td></tr>
+            <tr><td><div class="row-title">CLINICA DERMA ESTETICA AVANCADA LTDA</div><div class="row-meta"><span class="code">1009</span> · Brasília/DF</div></td><td><span class="status status-attention"><i></i>Sem agente</span></td><td class="num">16 dias</td><td class="num">R$ 9.450,00</td><td class="num">R$ 18.900,00</td><td>Estética</td></tr>
+            <tr><td><div class="row-title">HOSPITAL SAO LUCAS LTDA</div><div class="row-meta"><span class="code">1001</span> · Brasília/DF</div></td><td>Ana Costa</td><td class="num">12 dias</td><td class="num">R$ 1.500,00</td><td class="num">R$ 3.100,00</td><td>Nutrição · Enfermagem</td></tr>
+            <tr><td><div class="row-title">CLINICA VIDA PLENA NUTRICAO LTDA</div><div class="row-meta"><span class="code">1002</span> · Goiânia/GO</div></td><td>Ana Costa</td><td class="num">8 dias</td><td class="num">R$ 2.500,00</td><td class="num"><span class="dash">—</span></td><td>Nutrição</td></tr>
+            <tr><td><div class="row-title">DROGARIA SANTA CLARA LTDA</div><div class="row-meta"><span class="code">1004</span> · Anápolis/GO</div></td><td>Bruno Leal</td><td class="num">5 dias</td><td class="num">R$ 3.920,50</td><td class="num">R$ 6.115,00</td><td>Medicamento</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div data-painel="semagente" hidden>
+        <div class="tabela-wrap"><table class="bas-t">
+          <thead><tr><th>Cliente</th><th>BUs com saldo</th><th class="num">Vencido</th><th class="num">A vencer</th><th>Atribuir a</th></tr></thead>
+          <tbody>
+            <tr><td><div class="row-title">HOME CARE BRASILIA ASSISTENCIA DOMICILIAR LTDA</div><div class="row-meta"><span class="code">1003</span> · Brasília/DF · novo no Winthor em 14/11/2026</div></td><td>Enfermagem</td><td class="num"><span class="dash">—</span></td><td class="num">R$ 4.260,00</td><td><span class="select"><span>Escolher agente</span><svg><use href="#i-chevron"/></svg></span></td></tr>
+            <tr><td><div class="row-title">CLINICA DERMA ESTETICA AVANCADA LTDA</div><div class="row-meta"><span class="code">1009</span> · Brasília/DF</div></td><td>Estética</td><td class="num">R$ 9.450,00</td><td class="num">R$ 18.900,00</td><td><span class="select"><span>Escolher agente</span><svg><use href="#i-chevron"/></svg></span></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div data-painel="ficha" hidden>
+        <div class="tabela-wrap"><table class="bas-t">
+          <thead><tr><th>Cliente</th><th>Agente</th><th>Ficha de contatos</th><th>Última revisão</th><th class="num">Vencido</th></tr></thead>
+          <tbody>
+            <tr><td><div class="row-title">DROGARIA SANTA CLARA LTDA</div><div class="row-meta"><span class="code">1004</span> · Anápolis/GO</div></td><td>Bruno Leal</td><td><span class="status status-alert"><i></i>Nunca atualizada</span></td><td><span class="dash">—</span></td><td class="num">R$ 3.920,50</td></tr>
+            <tr><td><div class="row-title">CLINICA DERMA ESTETICA AVANCADA LTDA</div><div class="row-meta"><span class="code">1009</span> · Brasília/DF</div></td><td><span class="status status-attention"><i></i>Sem agente</span></td><td><span class="status status-alert"><i></i>Nunca atualizada</span></td><td><span class="dash">—</span></td><td class="num">R$ 9.450,00</td></tr>
+            <tr><td><div class="row-title">HOME CARE BRASILIA ASSISTENCIA DOMICILIAR LTDA</div><div class="row-meta"><span class="code">1003</span> · Brasília/DF</div></td><td><span class="status status-attention"><i></i>Sem agente</span></td><td><span class="status status-alert"><i></i>Nunca atualizada</span></td><td><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td></tr>
+            <tr><td><div class="row-title">CLINICA VIDA PLENA NUTRICAO LTDA</div><div class="row-meta"><span class="code">1002</span> · Goiânia/GO</div></td><td>Ana Costa</td><td><span class="status status-attention"><i></i>Vencida há 1 dia</span></td><td>17/05/2026 · Ana Costa</td><td class="num">R$ 2.500,00</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div data-painel="todos" hidden>
+        <div class="tabela-wrap"><table class="bas-t">
+          <thead><tr><th>Cliente</th><th>Agente</th><th class="num">Vencido</th><th class="num">A vencer</th><th class="num">Atraso</th><th>Ficha de contatos</th></tr></thead>
+          <tbody>
+            <tr><td><div class="row-title">HOSPITAL SAO LUCAS LTDA</div><div class="row-meta"><span class="code">1001</span> · Brasília/DF</div></td><td>Ana Costa</td><td class="num">R$ 1.500,00</td><td class="num">R$ 3.100,00</td><td class="num">12 dias</td><td><span class="status status-live"><i></i>Em dia</span></td></tr>
+            <tr><td><div class="row-title">CLINICA VIDA PLENA NUTRICAO LTDA</div><div class="row-meta"><span class="code">1002</span> · Goiânia/GO</div></td><td>Ana Costa</td><td class="num">R$ 2.500,00</td><td class="num"><span class="dash">—</span></td><td class="num">8 dias</td><td><span class="status status-attention"><i></i>Vencida há 1 dia</span></td></tr>
+            <tr><td><div class="row-title">HOME CARE BRASILIA ASSISTENCIA DOMICILIAR LTDA</div><div class="row-meta"><span class="code">1003</span> · Brasília/DF</div></td><td><span class="status status-attention"><i></i>Sem agente</span></td><td class="num"><span class="dash">—</span></td><td class="num">R$ 4.260,00</td><td class="num"><span class="dash">—</span></td><td><span class="status status-alert"><i></i>Nunca atualizada</span></td></tr>
+            <tr><td><div class="row-title">DROGARIA SANTA CLARA LTDA</div><div class="row-meta"><span class="code">1004</span> · Anápolis/GO</div></td><td>Bruno Leal</td><td class="num">R$ 3.920,50</td><td class="num">R$ 6.115,00</td><td class="num">5 dias</td><td><span class="status status-alert"><i></i>Nunca atualizada</span></td></tr>
+            <tr><td><div class="row-title">INSTITUTO DE NEFROLOGIA DO PLANALTO LTDA</div><div class="row-meta"><span class="code">1005</span> · Brasília/DF</div></td><td>Bruno Leal</td><td class="num"><span class="dash">—</span></td><td class="num">R$ 600,00</td><td class="num"><span class="dash">—</span></td><td><span class="status status-live"><i></i>Em dia</span></td></tr>
+            <tr><td><div class="row-title">CASA DE REPOUSO BOM PASTOR LTDA</div><div class="row-meta"><span class="code">1006</span> · Goiânia/GO</div></td><td>Carlos Nunes</td><td class="num">R$ 7.840,00</td><td class="num">R$ 2.300,00</td><td class="num">21 dias</td><td><span class="status status-live"><i></i>Em dia</span></td></tr>
+            <tr><td><div class="row-title">SECRETARIA MUNICIPAL DE SAUDE DE GOIANIA</div><div class="row-meta"><span class="code">1007</span> · Goiânia/GO · Público municipal</div></td><td>Carlos Nunes</td><td class="num">R$ 126.480,00</td><td class="num">R$ 84.200,00</td><td class="num">47 dias</td><td><span class="status status-live"><i></i>Em dia</span></td></tr>
+            <tr><td><div class="row-title">HOSPITAL SANTA HELENA S/A</div><div class="row-meta"><span class="code">1008</span> · Brasília/DF</div></td><td>Sérgio Tavares</td><td class="num">R$ 48.730,40</td><td class="num">R$ 112.964,75</td><td class="num">31 dias</td><td><span class="status status-live"><i></i>Em dia</span></td></tr>
+            <tr><td><div class="row-title">CLINICA DERMA ESTETICA AVANCADA LTDA</div><div class="row-meta"><span class="code">1009</span> · Brasília/DF</div></td><td><span class="status status-attention"><i></i>Sem agente</span></td><td class="num">R$ 9.450,00</td><td class="num">R$ 18.900,00</td><td class="num">16 dias</td><td><span class="status status-alert"><i></i>Nunca atualizada</span></td></tr>
+            <tr><td><div class="row-title">SPA E ESTETICA BELLA FORMA LTDA</div><div class="row-meta"><span class="code">1010</span> · Palmas/TO</div></td><td>Ana Costa</td><td class="num"><span class="dash">—</span></td><td class="num">R$ 12.380,00</td><td class="num"><span class="dash">—</span></td><td><span class="status status-live"><i></i>Em dia</span></td></tr>
+          </tbody>
+        </table></div>
+        <div class="pagination"><span>Página 1 de 1 · 10 clientes</span><span class="btns"><button class="btn btn-secondary btn-sm" disabled>Anterior</button><button class="btn btn-secondary btn-sm" disabled>Próxima</button></span></div>
+      </div>
+      <div data-painel="winthor" hidden>
+        <div class="corpo-painel">
+          <div class="alert alert-default"><svg><use href="#i-info"/></svg><b>Cliente que ainda não está no sistema</b><p>Entra sozinho na carteira quem tem título em aberto ou movimento nos últimos 12 meses. Aqui a busca vai direto ao Winthor.</p></div>
+          <div class="tabela-wrap"><table class="bas-t">
+            <thead><tr><th>Cliente no Winthor</th><th>Situação</th><th>Última compra</th><th></th></tr></thead>
+            <tbody>
+              <tr><td><div class="row-title">LABORATORIO CENTRAL DE ANALISES LTDA</div><div class="row-meta"><span class="code">1011</span> · 22.333.444/0001-55 · Brasília/DF</div></td><td><span class="status status-off"><i></i>Fora da carteira</span></td><td>09/10/2024</td><td><button class="btn btn-secondary btn-sm">Abrir ficha ao vivo</button></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+    </div>
+  </template>
+</section>
+
+<section data-tela="cliente-ficha" data-grupo="Clientes" data-titulo="Ficha do cliente"
+         data-desc="O que Ana (agente) vê ao abrir o Hospital São Lucas: cadastro e títulos lidos do Winthor naquele momento, posição da última leitura no total e por BU, contatos, agente, e-mails enviados e anexos.">
+
+  <template data-opcao="A" data-nome="Página única" data-resumo="Tudo numa página que rola: números no topo, títulos e posição por BU lado a lado, depois contatos, e-mails e anexos. Nada escondido; custa rolar para chegar aos contatos.">
+    <div class="page-header">
+      <div>
+        <div class="module">Clientes · Ficha</div>
+        <h3>HOSPITAL SAO LUCAS LTDA</h3>
+        <div class="desc"><span class="code">1001</span> · 12.345.678/0001-90 · Brasília/DF · Privado · agente Ana Costa</div>
+        <div class="meta"><span class="status status-live"><i></i>Winthor consultado agora, às 10:52</span><span class="dot">·</span><span>posição da leitura de 14/11/2026 às 10:45</span></div>
+      </div>
+      <div class="row"><button class="btn btn-secondary" disabled title="Só supervisor, gerente, diretoria ou Administrador">Trocar agente</button><button class="btn btn-secondary"><svg><use href="#i-plus"/></svg>Anexar</button><button class="btn btn-primary">Enviar e-mail</button></div>
+    </div>
+    <div class="kpis" style="margin-top:0">
+      <div class="kpi"><span class="rot">Vencido</span><span class="valor">R$ 1.500,00</span><span class="hint">2 títulos · 12 dias de atraso</span></div>
+      <div class="kpi"><span class="rot">A vencer</span><span class="valor">R$ 3.100,00</span><span class="hint">próximo: 19/11/2026 · R$ 2.300,00</span></div>
+      <div class="kpi"><span class="rot">Limite disponível</span><span class="valor">R$ 5.400,00</span><span class="hint">usa R$ 4.600,00 de R$ 10.000,00</span></div>
+      <div class="kpi"><span class="rot">Compras em 90 dias</span><span class="valor">5</span><span class="hint">R$ 5.300,00 · última em 04/11/2026</span></div>
+    </div>
+    <div class="lado">
+      <div class="panel">
+        <div class="faixa entre"><span class="titulo-painel">Títulos em aberto</span><span class="sub">5 títulos · lidos do Winthor agora</span></div>
+        <div class="tabela-wrap"><table class="bas-t">
+          <thead><tr><th>Nota · parcela</th><th>BU</th><th>Emissão</th><th>Vencimento</th><th class="num">Valor</th><th class="num">Atraso</th></tr></thead>
+          <tbody>
+            <tr><td><span class="code">48213</span> · 1/1</td><td>Nutrição</td><td>05/10/2026</td><td>02/11/2026</td><td class="num">R$ 1.000,00</td><td class="num"><span class="status status-alert"><i></i>12 dias</span></td></tr>
+            <tr><td><span class="code">48390</span> · 1/1</td><td>Enfermagem</td><td>14/10/2026</td><td>11/11/2026</td><td class="num">R$ 500,00</td><td class="num"><span class="status status-alert"><i></i>3 dias</span></td></tr>
+            <tr><td><span class="code">48655</span> · 1/1</td><td>Nutrição</td><td>22/10/2026</td><td>19/11/2026</td><td class="num">R$ 2.000,00</td><td class="num"><span class="dash">—</span></td></tr>
+            <tr><td><span class="code">48671</span> · 1/1</td><td>Enfermagem</td><td>22/10/2026</td><td>19/11/2026</td><td class="num">R$ 300,00</td><td class="num"><span class="dash">—</span></td></tr>
+            <tr><td><span class="code">48902</span> · 1/1</td><td>Medicamento</td><td>04/11/2026</td><td>04/12/2026</td><td class="num">R$ 800,00</td><td class="num"><span class="dash">—</span></td></tr>
+          </tbody>
+        </table></div>
+        <details class="bas-sanfona" style="border-top:1px solid var(--row-border)">
+          <summary><svg><use href="#i-chevron"/></svg>Pagos nos últimos 90 dias <span class="badge badge-neutral">1</span></summary>
+          <div class="tabela-wrap"><table class="bas-t">
+            <thead><tr><th>Nota · parcela</th><th>BU</th><th>Vencimento</th><th>Pago em</th><th class="num">Valor pago</th><th class="num">Atraso no pagamento</th></tr></thead>
+            <tbody><tr><td><span class="code">47102</span> · 1/1</td><td>Nutrição</td><td>15/10/2026</td><td>17/10/2026</td><td class="num">R$ 700,00</td><td class="num">2 dias</td></tr></tbody>
+          </table></div>
+        </details>
+      </div>
+      <div class="pilha-v">
+        <div class="panel">
+          <div class="faixa entre"><span class="titulo-painel">Posição por BU</span><span class="sub">a BU vem do item comprado</span></div>
+          <div class="tabela-wrap"><table class="bas-t">
+            <thead><tr><th>BU</th><th class="num">Vencido</th><th class="num">A vencer</th><th class="num">Atraso</th></tr></thead>
+            <tbody>
+              <tr><td>Nutrição</td><td class="num">R$ 1.000,00</td><td class="num">R$ 2.000,00</td><td class="num">12 dias</td></tr>
+              <tr><td>Enfermagem</td><td class="num">R$ 500,00</td><td class="num">R$ 300,00</td><td class="num">3 dias</td></tr>
+              <tr><td>Medicamento</td><td class="num"><span class="dash">—</span></td><td class="num">R$ 800,00</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td class="forte">Total</td><td class="num forte">R$ 1.500,00</td><td class="num forte">R$ 3.100,00</td><td class="num forte">12 dias</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div class="panel">
+          <div class="faixa"><span class="titulo-painel">Cadastro no Winthor</span></div>
+          <div class="corpo-painel"><dl class="ficha">
+            <div><dt>Fantasia</dt><dd>HOSPITAL SÃO LUCAS</dd></div>
+            <div><dt>Ramo de atividade</dt><dd>3 · Hospitais e clínicas</dd></div>
+            <div><dt>Setor</dt><dd>Privado (pelo ramo)</dd></div>
+            <div><dt>RCA</dt><dd>10 · CARLOS LIMA</dd></div>
+            <div><dt>Plano de pagamento</dt><dd>28/35/42 DIAS</dd></div>
+            <div><dt>Limite de crédito</dt><dd>R$ 10.000,00</dd></div>
+            <div><dt>Bloqueio no Winthor</dt><dd>Não</dd></div>
+            <div><dt>Grupo econômico</dt><dd><span class="dash">—</span></dd></div>
+          </dl></div>
+        </div>
+      </div>
+    </div>
+    <div class="grade-2">
+      <div class="panel">
+        <div class="faixa entre"><div><span class="titulo-painel">Contatos</span> <span class="status status-live"><i></i>Ficha em dia</span></div><button class="btn btn-secondary btn-sm"><svg><use href="#i-pencil"/></svg>Editar ficha</button></div>
+        <div class="lista-itens">
+          <div class="item"><span class="avatar">MR</span><div style="flex:1;min-width:0"><div class="row-title">Marta Ribeiro <span class="badge badge-accent">Principal</span></div><div class="row-meta">Financeiro · Contas a pagar · (61) 3333-0101 · WhatsApp (61) 99999-0101 · marta@hsl.com.br</div></div></div>
+          <div class="item"><span class="avatar">RE</span><div style="flex:1;min-width:0"><div class="row-title">Recepção</div><div class="row-meta">Atendimento · (61) 3333-0000</div></div></div>
+        </div>
+        <div class="faixa" style="border-bottom:0;border-top:1px solid var(--row-border)"><span class="sub">Revisada por Ana Costa em 03/11/2026 · vale até 02/05/2027 (180 dias)</span></div>
+      </div>
+      <div class="panel">
+        <div class="faixa"><span class="titulo-painel">E-mails enviados e anexos</span></div>
+        <div class="lista-itens">
+          <div class="item"><div style="flex:1;min-width:0"><div class="row-title">Aviso de título vencido</div><div class="row-meta">E-mail para marta@hsl.com.br · modelo COB-D4 versão 2 · Ana Costa · 12/11/2026 09:14</div></div><span class="status status-live"><i></i>Enviado</span></div>
+          <div class="item"><div style="flex:1;min-width:0"><div class="row-title">Contrato social.pdf</div><div class="row-meta">Anexo · Contrato social · 5,0 MB · Ana Costa · 03/11/2026</div></div><span class="acoes"><button class="iconbtn danger" title="Remover anexo" aria-label="Remover anexo"><svg><use href="#i-trash"/></svg></button></span></div>
+        </div>
+      </div>
+    </div>
+    <p class="nota">Se o Winthor não responde, as partes ao vivo (títulos e cadastro) mostram "Não foi possível consultar o Winthor agora" e nenhum título; a posição da última leitura continua visível, com a data.</p>
+  </template>
+
+  <template data-opcao="B" data-nome="Cabeçalho fixo e abas" data-resumo="Identidade e os quatro números ficam sempre no topo; o resto se divide em abas (Títulos, Por BU, Contatos, E-mails e anexos, Cadastro). Tela curta e cada assunto com espaço; custa um clique para cada assunto e não ver títulos e contatos juntos.">
+    <div class="page-header">
+      <div>
+        <div class="module">Clientes · Ficha</div>
+        <h3>HOSPITAL SAO LUCAS LTDA</h3>
+        <div class="desc"><span class="code">1001</span> · 12.345.678/0001-90 · Brasília/DF · Privado · agente Ana Costa</div>
+        <div class="meta"><span class="status status-live"><i></i>Winthor consultado agora, às 10:52</span><span class="dot">·</span><span>posição da leitura de 14/11/2026 às 10:45</span></div>
+      </div>
+      <div class="row"><button class="btn btn-secondary" disabled title="Só supervisor, gerente, diretoria ou Administrador">Trocar agente</button></div>
+    </div>
+    <div class="kpis" style="margin-top:0">
+      <div class="kpi"><span class="rot">Vencido</span><span class="valor">R$ 1.500,00</span><span class="hint">2 títulos · 12 dias de atraso</span></div>
+      <div class="kpi"><span class="rot">A vencer</span><span class="valor">R$ 3.100,00</span><span class="hint">próximo: 19/11/2026 · R$ 2.300,00</span></div>
+      <div class="kpi"><span class="rot">Limite disponível</span><span class="valor">R$ 5.400,00</span><span class="hint">usa R$ 4.600,00 de R$ 10.000,00</span></div>
+      <div class="kpi"><span class="rot">Compras em 90 dias</span><span class="valor">5</span><span class="hint">R$ 5.300,00 · última em 04/11/2026</span></div>
+    </div>
+    <div class="panel com-abas">
+      <div class="abas" role="tablist">
+        <button data-aba="titulos" aria-selected="true" type="button">Títulos <span class="badge badge-neutral">5</span></button>
+        <button data-aba="bu" aria-selected="false" type="button">Posição por BU</button>
+        <button data-aba="contatos" aria-selected="false" type="button">Contatos <span class="badge badge-neutral">2</span></button>
+        <button data-aba="emails" aria-selected="false" type="button">E-mails e anexos <span class="badge badge-neutral">2</span></button>
+        <button data-aba="cadastro" aria-selected="false" type="button">Cadastro</button>
+      </div>
+      <div data-painel="titulos">
+        <div class="faixa entre"><div class="segment" role="group" aria-label="Títulos"><button type="button" aria-pressed="true">Em aberto · 5</button><button type="button" aria-pressed="false">Pagos em 90 dias · 1</button></div><span class="sub">lidos do Winthor agora</span></div>
+        <div class="tabela-wrap"><table class="bas-t">
+          <thead><tr><th>Nota · parcela</th><th>BU</th><th>Emissão</th><th>Vencimento</th><th class="num">Valor</th><th class="num">Atraso</th></tr></thead>
+          <tbody>
+            <tr><td><span class="code">48213</span> · 1/1</td><td>Nutrição</td><td>05/10/2026</td><td>02/11/2026</td><td class="num">R$ 1.000,00</td><td class="num"><span class="status status-alert"><i></i>12 dias</span></td></tr>
+            <tr><td><span class="code">48390</span> · 1/1</td><td>Enfermagem</td><td>14/10/2026</td><td>11/11/2026</td><td class="num">R$ 500,00</td><td class="num"><span class="status status-alert"><i></i>3 dias</span></td></tr>
+            <tr><td><span class="code">48655</span> · 1/1</td><td>Nutrição</td><td>22/10/2026</td><td>19/11/2026</td><td class="num">R$ 2.000,00</td><td class="num"><span class="dash">—</span></td></tr>
+            <tr><td><span class="code">48671</span> · 1/1</td><td>Enfermagem</td><td>22/10/2026</td><td>19/11/2026</td><td class="num">R$ 300,00</td><td class="num"><span class="dash">—</span></td></tr>
+            <tr><td><span class="code">48902</span> · 1/1</td><td>Medicamento</td><td>04/11/2026</td><td>04/12/2026</td><td class="num">R$ 800,00</td><td class="num"><span class="dash">—</span></td></tr>
+          </tbody>
+        </table></div>
+        <div class="pagination"><span>Página 1 de 1 · 5 títulos em aberto</span><span class="btns"><button class="btn btn-secondary btn-sm" disabled>Anterior</button><button class="btn btn-secondary btn-sm" disabled>Próxima</button></span></div>
+      </div>
+      <div data-painel="bu" hidden>
+        <div class="tabela-wrap"><table class="bas-t">
+          <thead><tr><th>BU</th><th>Segmento</th><th class="num">Vencido</th><th class="num">A vencer</th><th class="num">Atraso</th><th class="num">Títulos em aberto</th></tr></thead>
+          <tbody>
+            <tr><td>Nutrição</td><td>Privado</td><td class="num">R$ 1.000,00</td><td class="num">R$ 2.000,00</td><td class="num">12 dias</td><td class="num">2</td></tr>
+            <tr><td>Enfermagem</td><td>Privado</td><td class="num">R$ 500,00</td><td class="num">R$ 300,00</td><td class="num">3 dias</td><td class="num">2</td></tr>
+            <tr><td>Medicamento</td><td>Privado</td><td class="num"><span class="dash">—</span></td><td class="num">R$ 800,00</td><td class="num"><span class="dash">—</span></td><td class="num">1</td></tr>
+            <tr><td class="forte">Total</td><td></td><td class="num forte">R$ 1.500,00</td><td class="num forte">R$ 3.100,00</td><td class="num forte">12 dias</td><td class="num forte">5</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div data-painel="contatos" hidden>
+        <div class="faixa entre"><div><span class="status status-live"><i></i>Ficha em dia</span> <span class="sub">· revisada por Ana Costa em 03/11/2026 · vale até 02/05/2027</span></div><button class="btn btn-secondary btn-sm"><svg><use href="#i-pencil"/></svg>Editar ficha</button></div>
+        <div class="tabela-wrap"><table class="bas-t">
+          <thead><tr><th>Contato</th><th>Área · função</th><th>Telefone</th><th>WhatsApp</th><th>E-mail</th><th>Atualizado</th></tr></thead>
+          <tbody>
+            <tr><td><div class="row-title">Marta Ribeiro</div><div class="row-meta">Contato principal</div></td><td>Financeiro · Contas a pagar</td><td>(61) 3333-0101</td><td>(61) 99999-0101</td><td>marta@hsl.com.br</td><td>03/11/2026 · Ana Costa</td></tr>
+            <tr><td><div class="row-title">Recepção</div></td><td>Atendimento</td><td>(61) 3333-0000</td><td><span class="dash">—</span></td><td><span class="dash">—</span></td><td>03/11/2026 · Ana Costa</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div data-painel="emails" hidden>
+        <div class="faixa entre"><span class="sub">1 e-mail enviado · 1 anexo</span><div class="row"><button class="btn btn-secondary btn-sm"><svg><use href="#i-plus"/></svg>Anexar</button><button class="btn btn-primary btn-sm">Enviar e-mail</button></div></div>
+        <div class="tabela-wrap"><table class="bas-t">
+          <thead><tr><th>Item</th><th>Tipo</th><th>Detalhe</th><th>Quem</th><th>Quando</th><th>Situação</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><div class="row-title">Aviso de título vencido</div><div class="row-meta">para marta@hsl.com.br</div></td><td>E-mail</td><td>Modelo COB-D4 · versão 2</td><td>Ana Costa</td><td>12/11/2026 09:14</td><td><span class="status status-live"><i></i>Enviado</span></td><td></td></tr>
+            <tr><td><div class="row-title">Contrato social.pdf</div><div class="row-meta">5,0 MB</div></td><td>Anexo</td><td>Contrato social</td><td>Ana Costa</td><td>03/11/2026 15:40</td><td><span class="dash">—</span></td><td><span class="acoes"><button class="iconbtn danger" title="Remover anexo" aria-label="Remover anexo"><svg><use href="#i-trash"/></svg></button></span></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div data-painel="cadastro" hidden>
+        <div class="corpo-painel"><dl class="ficha">
+          <div><dt>Razão social</dt><dd>HOSPITAL SAO LUCAS LTDA</dd></div>
+          <div><dt>Fantasia</dt><dd>HOSPITAL SÃO LUCAS</dd></div>
+          <div><dt>CNPJ</dt><dd>12.345.678/0001-90</dd></div>
+          <div><dt>Município</dt><dd>Brasília/DF</dd></div>
+          <div><dt>Ramo de atividade</dt><dd>3 · Hospitais e clínicas</dd></div>
+          <div><dt>Setor</dt><dd>Privado (pelo ramo)</dd></div>
+          <div><dt>RCA</dt><dd>10 · CARLOS LIMA</dd></div>
+          <div><dt>Plano de pagamento</dt><dd>28/35/42 DIAS</dd></div>
+          <div><dt>Limite de crédito</dt><dd>R$ 10.000,00</dd></div>
+          <div><dt>Bloqueio no Winthor</dt><dd>Não</dd></div>
+          <div><dt>Grupo econômico</dt><dd><span class="dash">—</span></dd></div>
+          <div><dt>Agente de cobrança</dt><dd>Ana Costa · equipe de Sérgio Tavares</dd></div>
+        </dl></div>
+      </div>
+    </div>
+    <p class="nota">Se o Winthor não responde, as abas Títulos e Cadastro mostram "Não foi possível consultar o Winthor agora" e nenhum título; os números do topo continuam, com a data da leitura.</p>
+  </template>
+
+  <template data-opcao="C" data-nome="Resumo ao lado" data-resumo="Uma coluna estreita e sempre visível traz posição, saldo por BU, contato principal e agente; a coluna larga rola com títulos, contatos, e-mails e anexos. Feita para quem cobra ao telefone; custa largura para as tabelas.">
+    <div class="page-header">
+      <div>
+        <div class="module">Clientes · Ficha</div>
+        <h3>HOSPITAL SAO LUCAS LTDA</h3>
+        <div class="desc"><span class="code">1001</span> · 12.345.678/0001-90 · Brasília/DF · Privado</div>
+      </div>
+      <div class="row"><button class="btn btn-secondary" disabled title="Só supervisor, gerente, diretoria ou Administrador">Trocar agente</button><button class="btn btn-secondary"><svg><use href="#i-plus"/></svg>Anexar</button><button class="btn btn-primary">Enviar e-mail</button></div>
+    </div>
+    <div class="lado estreito">
+      <div class="panel">
+        <div class="corpo-painel">
+          <div><span class="sub">Vencido</span><div class="kpi" style="border:0;padding:0"><span class="valor">R$ 1.500,00</span></div><span class="status status-alert"><i></i>12 dias de atraso, desde 02/11/2026</span></div>
+          <dl class="ficha" style="grid-template-columns:1fr 1fr">
+            <div><dt>A vencer</dt><dd>R$ 3.100,00</dd></div>
+            <div><dt>Próximo vencimento</dt><dd>19/11 · R$ 2.300,00</dd></div>
+          </dl>
+          <div class="pilha-v" style="gap:6px"><div class="entre"><span class="sub">Limite usado</span><span class="sub forte">R$ 4.600,00 de R$ 10.000,00</span></div><div class="progresso"><i style="width:46%"></i></div><span class="sub">Disponível R$ 5.400,00</span></div>
+          <div class="rebaixado pilha-v" style="gap:8px">
+            <span class="sub forte">Saldo por BU (vencido · a vencer)</span>
+            <div class="entre"><span>Nutrição</span><span>R$ 1.000,00 · R$ 2.000,00</span></div>
+            <div class="entre"><span>Enfermagem</span><span>R$ 500,00 · R$ 300,00</span></div>
+            <div class="entre"><span>Medicamento</span><span><span class="dash">—</span> · R$ 800,00</span></div>
+          </div>
+          <dl class="ficha" style="grid-template-columns:1fr">
+            <div><dt>Contato principal</dt><dd>Marta Ribeiro · Financeiro<br>(61) 3333-0101 · marta@hsl.com.br</dd></div>
+            <div><dt>Agente de cobrança</dt><dd>Ana Costa · equipe de Sérgio Tavares</dd></div>
+            <div><dt>Plano · RCA</dt><dd>28/35/42 DIAS · CARLOS LIMA</dd></div>
+          </dl>
+          <span class="sub">Posição da leitura de 14/11/2026 às 10:45</span>
+        </div>
+      </div>
+      <div class="pilha-v">
+        <div class="panel">
+          <div class="faixa entre"><span class="titulo-painel">Títulos em aberto</span><span class="status status-live"><i></i>Winthor consultado agora, às 10:52</span></div>
+          <div class="tabela-wrap"><table class="bas-t">
+            <thead><tr><th>Nota · parcela</th><th>BU</th><th>Vencimento</th><th class="num">Valor</th><th class="num">Atraso</th></tr></thead>
+            <tbody>
+              <tr><td><span class="code">48213</span> · 1/1</td><td>Nutrição</td><td>02/11/2026</td><td class="num">R$ 1.000,00</td><td class="num"><span class="status status-alert"><i></i>12 dias</span></td></tr>
+              <tr><td><span class="code">48390</span> · 1/1</td><td>Enfermagem</td><td>11/11/2026</td><td class="num">R$ 500,00</td><td class="num"><span class="status status-alert"><i></i>3 dias</span></td></tr>
+              <tr><td><span class="code">48655</span> · 1/1</td><td>Nutrição</td><td>19/11/2026</td><td class="num">R$ 2.000,00</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td><span class="code">48671</span> · 1/1</td><td>Enfermagem</td><td>19/11/2026</td><td class="num">R$ 300,00</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td><span class="code">48902</span> · 1/1</td><td>Medicamento</td><td>04/12/2026</td><td class="num">R$ 800,00</td><td class="num"><span class="dash">—</span></td></tr>
+            </tbody>
+          </table></div>
+          <details class="bas-sanfona" style="border-top:1px solid var(--row-border)">
+            <summary><svg><use href="#i-chevron"/></svg>Pagos nos últimos 90 dias <span class="badge badge-neutral">1</span></summary>
+            <div class="tabela-wrap"><table class="bas-t">
+              <thead><tr><th>Nota · parcela</th><th>BU</th><th>Vencimento</th><th>Pago em</th><th class="num">Valor pago</th><th class="num">Atraso no pagamento</th></tr></thead>
+              <tbody><tr><td><span class="code">47102</span> · 1/1</td><td>Nutrição</td><td>15/10/2026</td><td>17/10/2026</td><td class="num">R$ 700,00</td><td class="num">2 dias</td></tr></tbody>
+            </table></div>
+          </details>
+        </div>
+        <div class="panel">
+          <div class="faixa entre"><div><span class="titulo-painel">Contatos</span> <span class="status status-live"><i></i>Ficha em dia</span> <span class="sub">· revisada em 03/11/2026 · vale até 02/05/2027</span></div><button class="btn btn-secondary btn-sm"><svg><use href="#i-pencil"/></svg>Editar ficha</button></div>
+          <div class="lista-itens">
+            <div class="item"><span class="avatar">MR</span><div style="flex:1;min-width:0"><div class="row-title">Marta Ribeiro <span class="badge badge-accent">Principal</span></div><div class="row-meta">Financeiro · Contas a pagar · (61) 3333-0101 · WhatsApp (61) 99999-0101 · marta@hsl.com.br</div></div></div>
+            <div class="item"><span class="avatar">RE</span><div style="flex:1;min-width:0"><div class="row-title">Recepção</div><div class="row-meta">Atendimento · (61) 3333-0000</div></div></div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="faixa"><span class="titulo-painel">E-mails enviados e anexos</span></div>
+          <div class="lista-itens">
+            <div class="item"><div style="flex:1;min-width:0"><div class="row-title">Aviso de título vencido</div><div class="row-meta">E-mail para marta@hsl.com.br · modelo COB-D4 versão 2 · Ana Costa · 12/11/2026 09:14</div></div><span class="status status-live"><i></i>Enviado</span></div>
+            <div class="item"><div style="flex:1;min-width:0"><div class="row-title">Contrato social.pdf</div><div class="row-meta">Anexo · Contrato social · 5,0 MB · Ana Costa · 03/11/2026</div></div><span class="acoes"><button class="iconbtn danger" title="Remover anexo" aria-label="Remover anexo"><svg><use href="#i-trash"/></svg></button></span></div>
+          </div>
+        </div>
+        <details class="panel bas-sanfona">
+          <summary><svg><use href="#i-chevron"/></svg>Cadastro completo no Winthor</summary>
+          <div class="corpo-painel"><dl class="ficha">
+            <div><dt>Fantasia</dt><dd>HOSPITAL SÃO LUCAS</dd></div>
+            <div><dt>Ramo de atividade</dt><dd>3 · Hospitais e clínicas</dd></div>
+            <div><dt>Setor</dt><dd>Privado (pelo ramo)</dd></div>
+            <div><dt>Limite de crédito</dt><dd>R$ 10.000,00</dd></div>
+            <div><dt>Bloqueio no Winthor</dt><dd>Não</dd></div>
+            <div><dt>Grupo econômico</dt><dd><span class="dash">—</span></dd></div>
+          </dl></div>
+        </details>
+      </div>
+    </div>
+    <p class="nota">Se o Winthor não responde, a coluna larga mostra "Não foi possível consultar o Winthor agora" no lugar dos títulos; a coluna do resumo continua, com a data da leitura.</p>
+  </template>
+</section>

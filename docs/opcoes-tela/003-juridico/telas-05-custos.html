@@ -1,0 +1,330 @@
+<section data-tela="juridico-custos" data-grupo="Jurídico"
+         data-titulo="Jurídico · Custos dos processos"
+         data-desc="Para o Jurídico e a gerência: quanto se gastou por processo nos 12 tipos de custo (4 grupos), o custo contra a meta de 10% do valor, o que está a pagar, o que falta documentar e as custas citadas sem lançamento.">
+
+  <template data-opcao="A" data-nome="Painel de números" data-resumo="Sete números, depois os gráficos (evolução, composição, maiores, custo × recuperado) e a tabela por processo no fim; lançar custo abre em diálogo. Privilegia a leitura gerencial, ao custo de as pendências de pagamento ficarem no meio da página.">
+    <div class="page-header">
+      <div>
+        <div class="module">Jurídico</div>
+        <h3>Custos dos processos</h3>
+        <div class="desc">Custas, honorários, diligências e outros custos lançados nos processos. Posição em 19/11/2026.</div>
+        <div class="meta"><span><span class="stat">3</span> lançamentos</span><span class="dot">·</span><span><span class="stat">2</span> processos com custo</span><span class="dot">·</span><span><span class="stat">1</span> em custas sem lançamento</span></div>
+      </div>
+      <button class="btn btn-primary"><svg><use href="#i-plus"/></svg>Lançar custo</button>
+    </div>
+    <div class="panel">
+      <div class="abas" role="tablist" aria-label="Abas do Jurídico">
+        <span class="aba">Visão gerencial</span>
+        <span class="aba">Processos <span class="badge badge-alert" title="Prazos vencidos">1</span></span>
+        <span class="aba">Acordos judiciais <span class="badge badge-alert" title="Acordos com parcela vencida">1</span></span>
+        <span class="aba" aria-selected="true">Custos dos processos <span class="badge badge-attention" title="Custas sem lançamento">1</span></span>
+        <span class="aba">Alertas de desvios <span class="badge badge-alert" title="Desvios críticos">4</span></span>
+      </div>
+      <div class="toolbar">
+        <span class="select"><span>Todas as BUs</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select"><span>Privado e público</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select"><span>Todas as linhas</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select"><span>Todas as filiais</span><svg><use href="#i-chevron"/></svg></span>
+      </div>
+      <div class="corpo-painel">
+        <div class="kpis jur-sem-margem">
+          <div class="kpi"><div class="rot">Custo total</div><div class="linha"><span class="valor">R$ 4.500,00</span></div><div class="hint">2 processos com custo</div></div>
+          <div class="kpi"><div class="rot">No mês</div><div class="linha"><span class="valor">R$ 1.200,00</span></div><div class="hint">novembro de 2026</div></div>
+          <div class="kpi"><div class="rot">A pagar</div><div class="linha"><span class="valor">R$ 300,00</span><span class="status status-attention"><i></i>1 há mais de 15 dias</span></div><div class="hint">pago: R$ 4.200,00</div></div>
+          <div class="kpi"><div class="rot">Custo ÷ valor</div><div class="linha"><span class="valor">0,9%</span><span class="status status-live"><i></i>Bom</span></div><div class="hint">meta até 10% do valor em cobrança</div></div>
+          <div class="kpi"><div class="rot">Retorno sobre o custo</div><div class="linha"><span class="valor">6,7 vezes</span></div><div class="hint">R$ 30.000,00 recuperados</div></div>
+          <div class="kpi"><div class="rot">Custo médio</div><div class="linha"><span class="valor">R$ 2.250,00</span></div><div class="hint">por processo com custo</div></div>
+          <div class="kpi"><div class="rot">Documentação</div><div class="linha"><span class="valor">66,7%</span></div><div class="hint">2 de 3 com guia ou comprovante</div></div>
+        </div>
+        <div class="alert alert-warn"><svg><use href="#i-alert"/></svg><b>Custas citadas sem lançamento</b><p>Hospital Delta está em Custas e protocolo sem nenhum custo do grupo Custas processuais. Lance a guia.</p></div>
+      </div>
+    </div>
+
+    <div class="bi">
+      <div class="painel-graf total">
+        <header><div><h3>Evolução dos últimos 12 meses</h3><div class="sub">R$ por mês, empilhado por grupo</div></div><div class="segment" role="group" aria-label="Visão"><button type="button" aria-pressed="true">Gráfico</button><button type="button" aria-pressed="false">Tabela</button></div></header>
+        <div class="jur-colunas">
+          <div class="jur-coluna"><div class="jur-pilha"></div><span>dez</span></div>
+          <div class="jur-coluna"><div class="jur-pilha"></div><span>jan</span></div>
+          <div class="jur-coluna"><div class="jur-pilha"></div><span>fev</span></div>
+          <div class="jur-coluna"><div class="jur-pilha"></div><span>mar</span></div>
+          <div class="jur-coluna"><div class="jur-pilha"></div><span>abr</span></div>
+          <div class="jur-coluna"><div class="jur-pilha"></div><span>mai</span></div>
+          <div class="jur-coluna"><div class="jur-pilha"></div><span>jun</span></div>
+          <div class="jur-coluna"><div class="jur-pilha"></div><span>jul</span></div>
+          <div class="jur-coluna"><div class="jur-pilha"><i class="cor-d2" style="height:100%" title="Honorários R$ 3.000,00"></i><b>R$ 3.000</b></div><span>ago</span></div>
+          <div class="jur-coluna"><div class="jur-pilha"></div><span>set</span></div>
+          <div class="jur-coluna"><div class="jur-pilha"><i class="cor-d3" style="height:10%" title="Diligências e pesquisas R$ 300,00"></i><b>R$ 300</b></div><span>out</span></div>
+          <div class="jur-coluna"><div class="jur-pilha"><i class="cor-d1" style="height:40%" title="Custas processuais R$ 1.200,00"></i><b>R$ 1.200</b></div><span>nov</span></div>
+        </div>
+        <div class="legenda-graf"><span><i class="cor-d1"></i>Custas processuais</span><span><i class="cor-d2"></i>Honorários</span><span><i class="cor-d3"></i>Diligências e pesquisas</span><span><i class="cor-d4"></i>Outros</span></div>
+      </div>
+      <div class="painel-graf">
+        <header><div><h3>Composição por grupo</h3><div class="sub">% do custo total</div></div><div class="segment" role="group" aria-label="Visão"><button type="button" aria-pressed="true">Gráfico</button><button type="button" aria-pressed="false">Tabela</button></div></header>
+        <div class="barras">
+          <div class="barra"><span>Honorários</span><span class="trilho"><i class="d2" style="width:100%"></i></span><span class="valor">R$ 3.000 · 66,7%</span></div>
+          <div class="barra"><span>Custas processuais</span><span class="trilho"><i class="d1" style="width:40%"></i></span><span class="valor">R$ 1.200 · 26,7%</span></div>
+          <div class="barra"><span>Diligências e pesquisas</span><span class="trilho"><i class="d3" style="width:10%"></i></span><span class="valor">R$ 300 · 6,7%</span></div>
+          <div class="barra"><span>Outros</span><span class="trilho"></span><span class="valor"><span class="dash">—</span></span></div>
+        </div>
+      </div>
+      <div class="painel-graf">
+        <header><div><h3>Maiores processos por custo</h3><div class="sub">composição por grupo e % do valor</div></div><div class="segment" role="group" aria-label="Visão"><button type="button" aria-pressed="true">Gráfico</button><button type="button" aria-pressed="false">Tabela</button></div></header>
+        <div class="barras">
+          <div class="barra"><span>Distribuidora Gama</span><span class="trilho"><i class="d2" style="width:100%"></i></span><span class="valor">R$ 3.000 · 12,0%</span></div>
+          <div class="barra"><span>Farmácia Alfa</span><span class="trilho"><i class="d1" style="width:40%"></i><i class="d3" style="width:10%"></i></span><span class="valor">R$ 1.500 · 3,8%</span></div>
+        </div>
+        <p class="sub">Distribuidora Gama está acima da meta de 10%.</p>
+      </div>
+      <div class="painel-graf">
+        <header><div><h3>Custo × recuperado</h3><div class="sub">por processo, em R$</div></div><div class="segment" role="group" aria-label="Visão"><button type="button" aria-pressed="true">Gráfico</button><button type="button" aria-pressed="false">Tabela</button></div></header>
+        <div class="barras">
+          <div class="barra"><span>Zeta Hospitalar</span><span class="trilho"><i class="d7" style="width:100%"></i></span><span class="valor">rec. R$ 20.000</span></div>
+          <div class="barra"><span>Kappa Clínica</span><span class="trilho"><i class="d7" style="width:50%"></i></span><span class="valor">rec. R$ 10.000</span></div>
+          <div class="barra"><span>Distribuidora Gama</span><span class="trilho"><i class="d8" style="width:15%"></i></span><span class="valor">custo R$ 3.000</span></div>
+          <div class="barra"><span>Farmácia Alfa</span><span class="trilho"><i class="d8" style="width:8%"></i></span><span class="valor">custo R$ 1.500</span></div>
+        </div>
+        <div class="legenda-graf"><span><i class="cor-d7"></i>Recuperado</span><span><i class="cor-d8"></i>Custo</span></div>
+      </div>
+      <div class="painel-graf">
+        <header><div><h3>Por tipo, filial, BU e etapa</h3><div class="sub">R$ lançados</div></div><div class="segment" role="group" aria-label="Visão"><button type="button" aria-pressed="true">Gráfico</button><button type="button" aria-pressed="false">Tabela</button></div></header>
+        <div class="barras">
+          <div class="barra"><span>Honorários contratuais</span><span class="trilho"><i style="width:100%"></i></span><span class="valor">R$ 3.000</span></div>
+          <div class="barra"><span>Custas iniciais</span><span class="trilho"><i style="width:40%"></i></span><span class="valor">R$ 1.200</span></div>
+          <div class="barra"><span>Diligência e oficial</span><span class="trilho"><i style="width:10%"></i></span><span class="valor">R$ 300</span></div>
+          <div class="barra"><span>Filial BNRS</span><span class="trilho"><i class="s2" style="width:100%"></i></span><span class="valor">R$ 3.000</span></div>
+          <div class="barra"><span>Filial BNDF</span><span class="trilho"><i class="s2" style="width:50%"></i></span><span class="valor">R$ 1.500</span></div>
+          <div class="barra"><span>BU Medicamentos</span><span class="trilho"><i class="s4" style="width:100%"></i></span><span class="valor">R$ 4.500</span></div>
+          <div class="barra"><span>08 Cumprimento</span><span class="trilho"><i class="s1" style="width:100%"></i></span><span class="valor">R$ 3.000</span></div>
+          <div class="barra"><span>05 Citação</span><span class="trilho"><i class="s1" style="width:50%"></i></span><span class="valor">R$ 1.500</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lado">
+      <div class="panel">
+        <div class="faixa"><span class="titulo-painel">Custo total por processo</span><span class="check"><i></i><span>Mostrar processos sem custo</span></span></div>
+        <div class="tabela-wrap"><table>
+          <thead><tr><th>Processo</th><th class="num">Custas</th><th class="num">Honorários</th><th class="num">Diligências</th><th class="num">Outros</th><th class="num">Total</th><th class="num">% do valor</th><th class="num">Recuperado</th><th class="num">Retorno</th></tr></thead>
+          <tbody>
+            <tr><td><div class="row-title">Distribuidora Gama</div><div class="row-meta">R$ 25.000,00 · 08 Cumprimento · BNRS</div></td><td class="num"><span class="dash">—</span></td><td class="num">R$ 3.000,00</td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num forte">R$ 3.000,00</td><td class="num"><span class="status status-attention"><i></i>12,0%</span></td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td></tr>
+            <tr><td><div class="row-title">Farmácia Alfa</div><div class="row-meta">R$ 40.000,00 · 05 Citação · BNDF</div></td><td class="num">R$ 1.200,00</td><td class="num"><span class="dash">—</span></td><td class="num">R$ 300,00</td><td class="num"><span class="dash">—</span></td><td class="num forte">R$ 1.500,00</td><td class="num">3,8%</td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td></tr>
+            <tr><td class="forte">Consolidado</td><td class="num forte">R$ 1.200,00</td><td class="num forte">R$ 3.000,00</td><td class="num forte">R$ 300,00</td><td class="num"><span class="dash">—</span></td><td class="num forte">R$ 4.500,00</td><td class="num forte">0,9%</td><td class="num forte">R$ 30.000,00</td><td class="num forte">6,7 vezes</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div class="pilha-v">
+        <div class="panel">
+          <div class="faixa"><span class="titulo-painel">Custos a pagar</span><span class="sub">R$ 300,00</span></div>
+          <div class="lista-itens"><div class="item"><div class="jur-cresce"><div class="row-title">Farmácia Alfa</div><div class="row-meta">Diligência e oficial de justiça · 20/10/2026 · sem guia</div></div><div class="jur-dir"><b>R$ 300,00</b><span class="status status-attention"><i></i>Há mais de 15 dias</span></div></div></div>
+        </div>
+        <div class="panel">
+          <div class="faixa"><span class="titulo-painel">Pagos sem comprovante</span></div>
+          <div class="corpo-painel"><p class="sub">Nenhum custo pago está sem comprovante.</p></div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="B" data-nome="Pendências e lançamento" data-resumo="Abre pelo que falta fazer (a pagar, custas sem lançamento, sem guia, sem comprovante) com o formulário de lançar custo sempre aberto ao lado; números em uma linha e gráficos recolhidos. Privilegia quem lança e paga, ao custo da visão gerencial.">
+    <div class="page-header">
+      <div>
+        <div class="module">Jurídico</div>
+        <h3>Custos dos processos</h3>
+        <div class="desc">O que pagar, o que lançar e o que documentar. Posição em 19/11/2026.</div>
+        <div class="meta"><span>total <span class="stat">R$ 4.500,00</span></span><span class="dot">·</span><span>no mês <span class="stat">R$ 1.200,00</span></span><span class="dot">·</span><span>a pagar <span class="stat">R$ 300,00</span></span><span class="dot">·</span><span>custo ÷ valor <span class="stat">0,9%</span></span><span class="dot">·</span><span>retorno <span class="stat">6,7 vezes</span></span><span class="dot">·</span><span>médio <span class="stat">R$ 2.250,00</span></span><span class="dot">·</span><span>documentação <span class="stat">66,7%</span></span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="abas" role="tablist" aria-label="Abas do Jurídico">
+        <span class="aba">Visão gerencial</span>
+        <span class="aba">Processos <span class="badge badge-alert" title="Prazos vencidos">1</span></span>
+        <span class="aba">Acordos judiciais <span class="badge badge-alert" title="Acordos com parcela vencida">1</span></span>
+        <span class="aba" aria-selected="true">Custos dos processos <span class="badge badge-attention" title="Custas sem lançamento">1</span></span>
+        <span class="aba">Alertas de desvios <span class="badge badge-alert" title="Desvios críticos">4</span></span>
+      </div>
+    </div>
+    <div class="lado">
+      <div class="pilha-v">
+        <div class="panel">
+          <div class="faixa"><span class="titulo-painel">Custas citadas sem lançamento</span><span class="badge badge-attention">1</span></div>
+          <div class="lista-itens"><div class="item"><div class="jur-cresce"><div class="row-title">Hospital Delta</div><div class="row-meta">04 Custas e protocolo · R$ 80.000,00 · nenhum custo do grupo Custas processuais</div></div><button class="btn btn-secondary btn-sm">Lançar a guia</button></div></div>
+        </div>
+        <div class="panel">
+          <div class="faixa"><span class="titulo-painel">Custos a pagar</span><span class="sub">1 lançamento · R$ 300,00</span></div>
+          <div class="tabela-wrap"><table>
+            <thead><tr><th>Processo</th><th>Tipo</th><th>Data</th><th class="num">Valor</th><th>Situação</th><th></th></tr></thead>
+            <tbody>
+              <tr><td class="row-title">Farmácia Alfa</td><td>Diligência e oficial de justiça</td><td>20/10/2026</td><td class="num">R$ 300,00</td><td><span class="status status-attention"><i></i>Há mais de 15 dias</span></td><td><span class="acoes"><button class="btn btn-secondary btn-sm">Anexar comprovante</button><button class="btn btn-ghost btn-sm">Marcar pago</button></span></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div class="grade-2">
+          <div class="panel">
+            <div class="faixa"><span class="titulo-painel">Sem guia</span><span class="sub">1</span></div>
+            <div class="lista-itens"><div class="item"><div class="jur-cresce"><div class="row-title">Farmácia Alfa</div><div class="row-meta">Diligência · R$ 300,00 · guia esperada em custas e diligências</div></div><button class="btn btn-ghost btn-sm">Anexar guia</button></div></div>
+          </div>
+          <div class="panel">
+            <div class="faixa"><span class="titulo-painel">Pagos sem comprovante</span></div>
+            <div class="corpo-painel"><p class="sub">Nenhum custo pago está sem comprovante.</p></div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="faixa"><span class="titulo-painel">Custo total por processo</span><span class="check"><i></i><span>Mostrar processos sem custo</span></span></div>
+          <div class="tabela-wrap"><table>
+            <thead><tr><th>Processo</th><th class="num">Custas</th><th class="num">Honorários</th><th class="num">Diligências</th><th class="num">Outros</th><th class="num">Total</th><th class="num">% do valor</th><th class="num">Recuperado</th></tr></thead>
+            <tbody>
+              <tr><td><div class="row-title">Distribuidora Gama</div><div class="row-meta">R$ 25.000,00 · BNRS</div></td><td class="num"><span class="dash">—</span></td><td class="num">R$ 3.000,00</td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num forte">R$ 3.000,00</td><td class="num"><span class="status status-attention"><i></i>12,0%</span></td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td><div class="row-title">Farmácia Alfa</div><div class="row-meta">R$ 40.000,00 · BNDF</div></td><td class="num">R$ 1.200,00</td><td class="num"><span class="dash">—</span></td><td class="num">R$ 300,00</td><td class="num"><span class="dash">—</span></td><td class="num forte">R$ 1.500,00</td><td class="num">3,8%</td><td class="num"><span class="dash">—</span></td></tr>
+              <tr><td class="forte">Consolidado</td><td class="num forte">R$ 1.200,00</td><td class="num forte">R$ 3.000,00</td><td class="num forte">R$ 300,00</td><td class="num"><span class="dash">—</span></td><td class="num forte">R$ 4.500,00</td><td class="num forte">0,9%</td><td class="num forte">R$ 30.000,00</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+      <div class="panel"><div class="corpo-painel">
+        <span class="titulo-painel">Lançar custo</span>
+        <div class="field"><label>Processo</label><span class="select jur-largo"><span>Hospital Delta · R$ 80.000,00</span><svg><use href="#i-chevron"/></svg></span></div>
+        <div class="field"><label>Tipo (12 tipos em 4 grupos)</label><span class="select jur-largo"><span>Custas iniciais · Custas processuais</span><svg><use href="#i-chevron"/></svg></span></div>
+        <div class="form-grade">
+          <div class="field"><label>Data</label><input class="input" type="date" value="2026-11-19"></div>
+          <div class="field"><label>Valor</label><input class="input" placeholder="R$ 0,00"></div>
+        </div>
+        <div class="field"><label>Observação</label><input class="input" placeholder="Opcional"></div>
+        <div class="field"><label>Situação</label><div class="segment" role="group" aria-label="Situação"><button type="button" aria-pressed="true">A pagar</button><button type="button" aria-pressed="false">Pago</button></div></div>
+        <div class="form-grade">
+          <div class="field"><label>Guia</label><button class="btn btn-secondary">Anexar guia</button></div>
+          <div class="field"><label>Comprovante</label><button class="btn btn-secondary">Anexar comprovante</button></div>
+        </div>
+        <p class="sub">Valor maior que zero. Comprovante anexado marca o custo como pago.</p>
+        <button class="btn btn-primary">Lançar custo</button>
+        <details class="jur-recolhe"><summary class="sub">Ver os 12 tipos por grupo</summary>
+          <p class="sub"><b>Custas processuais:</b> custas iniciais; custas de citação e postais; edital; recursos e preparo.</p>
+          <p class="sub"><b>Honorários:</b> advocatícios contratuais; de êxito.</p>
+          <p class="sub"><b>Diligências e pesquisas:</b> diligência e oficial de justiça; locomoção; pesquisas (SISBAJUD, RENAJUD, INFOJUD, endereço).</p>
+          <p class="sub"><b>Outros:</b> perícia; cartório e protesto; outros.</p>
+        </details>
+      </div></div>
+    </div>
+    <details class="panel jur-recolhe">
+      <summary class="faixa"><span class="titulo-painel">Gráficos</span><span class="sub">evolução de 12 meses, composição por grupo, maiores processos, custo × recuperado, por tipo, filial, BU e etapa</span></summary>
+      <div class="corpo-painel">
+        <div class="jur-colunas">
+          <div class="jur-coluna"><div class="jur-pilha"></div><span>dez</span></div><div class="jur-coluna"><div class="jur-pilha"></div><span>jan</span></div><div class="jur-coluna"><div class="jur-pilha"></div><span>fev</span></div><div class="jur-coluna"><div class="jur-pilha"></div><span>mar</span></div><div class="jur-coluna"><div class="jur-pilha"></div><span>abr</span></div><div class="jur-coluna"><div class="jur-pilha"></div><span>mai</span></div><div class="jur-coluna"><div class="jur-pilha"></div><span>jun</span></div><div class="jur-coluna"><div class="jur-pilha"></div><span>jul</span></div>
+          <div class="jur-coluna"><div class="jur-pilha"><i class="cor-d2" style="height:100%"></i><b>R$ 3.000</b></div><span>ago</span></div>
+          <div class="jur-coluna"><div class="jur-pilha"></div><span>set</span></div>
+          <div class="jur-coluna"><div class="jur-pilha"><i class="cor-d3" style="height:10%"></i><b>R$ 300</b></div><span>out</span></div>
+          <div class="jur-coluna"><div class="jur-pilha"><i class="cor-d1" style="height:40%"></i><b>R$ 1.200</b></div><span>nov</span></div>
+        </div>
+        <div class="legenda-graf"><span><i class="cor-d1"></i>Custas processuais</span><span><i class="cor-d2"></i>Honorários</span><span><i class="cor-d3"></i>Diligências e pesquisas</span><span><i class="cor-d4"></i>Outros</span></div>
+      </div>
+    </details>
+  </template>
+
+  <template data-opcao="C" data-nome="Processo a processo" data-resumo="A tabela por processo é a tela: cada linha mostra o custo contra a meta de 10% e abre os lançamentos com pagar e anexar no lugar; os cortes por grupo, tipo, filial, BU e etapa ficam em abas ao lado. Privilegia a conferência por processo, ao custo de espalhar as pendências pelas linhas.">
+    <div class="page-header">
+      <div>
+        <div class="module">Jurídico</div>
+        <h3>Custos dos processos</h3>
+        <div class="desc">Cada processo contra a meta de 10% do valor, com seus lançamentos. Posição em 19/11/2026.</div>
+      </div>
+      <button class="btn btn-primary"><svg><use href="#i-plus"/></svg>Lançar custo</button>
+    </div>
+    <div class="panel">
+      <div class="abas" role="tablist" aria-label="Abas do Jurídico">
+        <span class="aba">Visão gerencial</span>
+        <span class="aba">Processos <span class="badge badge-alert" title="Prazos vencidos">1</span></span>
+        <span class="aba">Acordos judiciais <span class="badge badge-alert" title="Acordos com parcela vencida">1</span></span>
+        <span class="aba" aria-selected="true">Custos dos processos <span class="badge badge-attention" title="Custas sem lançamento">1</span></span>
+        <span class="aba">Alertas de desvios <span class="badge badge-alert" title="Desvios críticos">4</span></span>
+      </div>
+      <div class="corpo-painel">
+        <div class="kpis jur-sem-margem">
+          <div class="kpi"><div class="rot">Custo total</div><div class="linha"><span class="valor">R$ 4.500,00</span></div><div class="hint">no mês R$ 1.200,00 · médio R$ 2.250,00</div></div>
+          <div class="kpi"><div class="rot">Custo ÷ valor</div><div class="linha"><span class="valor">0,9%</span><span class="status status-live"><i></i>Bom</span></div><div class="hint">meta até 10% · retorno de 6,7 vezes</div></div>
+          <div class="kpi"><div class="rot">A pagar</div><div class="linha"><span class="valor">R$ 300,00</span><span class="status status-attention"><i></i>1 há mais de 15 dias</span></div><div class="hint">nenhum pago sem comprovante</div></div>
+          <div class="kpi"><div class="rot">Documentação</div><div class="linha"><span class="valor">66,7%</span></div><div class="hint">2 de 3 com guia ou comprovante · 1 sem guia</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="lado">
+      <div class="panel">
+        <div class="toolbar">
+          <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar processo"></div>
+          <span class="select"><span>Todas as filiais</span><svg><use href="#i-chevron"/></svg></span>
+          <span class="check feito"><i></i><span>Mostrar processos sem custo</span></span>
+        </div>
+        <div class="tabela-wrap"><table>
+          <thead><tr><th>Processo</th><th class="num">Valor</th><th class="num">Custo</th><th>Custo ÷ valor contra a meta de 10%</th><th class="num">Recuperado</th><th>Pendência</th></tr></thead>
+          <tbody>
+            <tr><td><div class="row-title">Distribuidora Gama</div><div class="row-meta">08 Cumprimento · BNRS</div></td><td class="num">R$ 25.000,00</td><td class="num">R$ 3.000,00</td><td><div class="jur-meta"><div class="progresso alerta"><i style="width:80%"></i></div><span class="jur-marca"></span></div><div class="row-meta">12,0% · acima da meta</div></td><td class="num"><span class="dash">—</span></td><td><span class="dash">—</span></td></tr>
+            <tr class="jur-sub"><td colspan="6">
+              <table><tbody>
+                <tr><td>Honorários advocatícios contratuais<div class="row-meta">Honorários</div></td><td>10/08/2026</td><td class="num">R$ 3.000,00</td><td><span class="status status-live"><i></i>Pago</span></td><td>guia não esperada</td><td>comprovante.pdf</td></tr>
+              </tbody></table>
+            </td></tr>
+            <tr><td><div class="row-title">Farmácia Alfa</div><div class="row-meta">05 Citação · BNDF</div></td><td class="num">R$ 40.000,00</td><td class="num">R$ 1.500,00</td><td><div class="jur-meta"><div class="progresso"><i style="width:25%"></i></div><span class="jur-marca"></span></div><div class="row-meta">3,8%</div></td><td class="num"><span class="dash">—</span></td><td><span class="status status-attention"><i></i>R$ 300,00 a pagar há 30 dias</span></td></tr>
+            <tr class="jur-sub"><td colspan="6">
+              <table><tbody>
+                <tr><td>Custas iniciais<div class="row-meta">Custas processuais</div></td><td>03/11/2026</td><td class="num">R$ 1.200,00</td><td><span class="status status-live"><i></i>Pago</span></td><td>guia.pdf</td><td>comprovante.pdf</td></tr>
+                <tr><td>Diligência e oficial de justiça<div class="row-meta">Diligências e pesquisas</div></td><td>20/10/2026</td><td class="num">R$ 300,00</td><td><span class="status status-attention"><i></i>A pagar</span></td><td><button class="btn btn-ghost btn-sm">Anexar guia</button></td><td><button class="btn btn-secondary btn-sm">Anexar comprovante</button></td></tr>
+              </tbody></table>
+            </td></tr>
+            <tr><td><div class="row-title">Hospital Delta</div><div class="row-meta">04 Custas e protocolo · BNDF</div></td><td class="num">R$ 80.000,00</td><td class="num"><span class="dash">—</span></td><td><div class="jur-meta"><div class="progresso"></div><span class="jur-marca"></span></div></td><td class="num"><span class="dash">—</span></td><td><span class="status status-attention"><i></i>Custas sem lançamento</span> <button class="btn btn-secondary btn-sm">Lançar a guia</button></td></tr>
+            <tr><td><div class="row-title">Zeta Hospitalar</div><div class="row-meta">Encerrado · BNDF</div></td><td class="num">R$ 20.000,00</td><td class="num"><span class="dash">—</span></td><td><div class="jur-meta"><div class="progresso"></div><span class="jur-marca"></span></div></td><td class="num">R$ 20.000,00</td><td><span class="dash">—</span></td></tr>
+            <tr><td><div class="row-title">Kappa Clínica</div><div class="row-meta">Encerrado · BNRS</div></td><td class="num">R$ 10.000,00</td><td class="num"><span class="dash">—</span></td><td><div class="jur-meta"><div class="progresso"></div><span class="jur-marca"></span></div></td><td class="num">R$ 10.000,00</td><td><span class="dash">—</span></td></tr>
+            <tr><td class="forte">Consolidado</td><td class="num forte">R$ 495.000,00</td><td class="num forte">R$ 4.500,00</td><td class="forte">0,9% do valor ativo</td><td class="num forte">R$ 30.000,00</td><td class="forte">retorno de 6,7 vezes</td></tr>
+          </tbody>
+        </table></div>
+        <div class="pagination"><span>Mostrando 5 de 12 processos · a marca na barra é a meta de 10%</span><span class="btns"><button class="btn btn-secondary btn-sm" disabled>Anterior</button><button class="btn btn-secondary btn-sm">Próxima</button></span></div>
+      </div>
+      <div class="panel com-abas">
+        <div class="abas" role="tablist" aria-label="Cortes do custo">
+          <button type="button" data-aba="grupo" aria-selected="true">Grupo</button>
+          <button type="button" data-aba="tipo" aria-selected="false">Tipo</button>
+          <button type="button" data-aba="filial" aria-selected="false">Filial e BU</button>
+          <button type="button" data-aba="etapa" aria-selected="false">Etapa</button>
+          <button type="button" data-aba="meses" aria-selected="false">12 meses</button>
+        </div>
+        <div data-painel="grupo" class="corpo-painel">
+          <div class="barras">
+            <div class="barra"><span>Honorários</span><span class="trilho"><i class="d2" style="width:100%"></i></span><span class="valor">R$ 3.000 · 66,7%</span></div>
+            <div class="barra"><span>Custas processuais</span><span class="trilho"><i class="d1" style="width:40%"></i></span><span class="valor">R$ 1.200 · 26,7%</span></div>
+            <div class="barra"><span>Diligências e pesquisas</span><span class="trilho"><i class="d3" style="width:10%"></i></span><span class="valor">R$ 300 · 6,7%</span></div>
+            <div class="barra"><span>Outros</span><span class="trilho"></span><span class="valor"><span class="dash">—</span></span></div>
+          </div>
+        </div>
+        <div data-painel="tipo" class="corpo-painel" hidden>
+          <div class="barras">
+            <div class="barra"><span>Honorários contratuais</span><span class="trilho"><i style="width:100%"></i></span><span class="valor">R$ 3.000</span></div>
+            <div class="barra"><span>Custas iniciais</span><span class="trilho"><i style="width:40%"></i></span><span class="valor">R$ 1.200</span></div>
+            <div class="barra"><span>Diligência e oficial</span><span class="trilho"><i style="width:10%"></i></span><span class="valor">R$ 300</span></div>
+          </div>
+          <p class="sub">Os outros 9 tipos não têm lançamento.</p>
+        </div>
+        <div data-painel="filial" class="corpo-painel" hidden>
+          <div class="barras">
+            <div class="barra"><span>BNRS</span><span class="trilho"><i style="width:100%"></i></span><span class="valor">R$ 3.000</span></div>
+            <div class="barra"><span>BNDF</span><span class="trilho"><i style="width:50%"></i></span><span class="valor">R$ 1.500</span></div>
+            <div class="barra"><span>BU Medicamentos</span><span class="trilho"><i class="s4" style="width:100%"></i></span><span class="valor">R$ 4.500</span></div>
+          </div>
+        </div>
+        <div data-painel="etapa" class="corpo-painel" hidden>
+          <div class="barras">
+            <div class="barra"><span>08 Cumprimento</span><span class="trilho"><i style="width:100%"></i></span><span class="valor">R$ 3.000</span></div>
+            <div class="barra"><span>05 Citação</span><span class="trilho"><i style="width:50%"></i></span><span class="valor">R$ 1.500</span></div>
+          </div>
+        </div>
+        <div data-painel="meses" class="corpo-painel" hidden>
+          <div class="jur-colunas">
+            <div class="jur-coluna"><div class="jur-pilha"></div><span>dez</span></div><div class="jur-coluna"><div class="jur-pilha"></div><span>jan</span></div><div class="jur-coluna"><div class="jur-pilha"></div><span>fev</span></div><div class="jur-coluna"><div class="jur-pilha"></div><span>mar</span></div><div class="jur-coluna"><div class="jur-pilha"></div><span>abr</span></div><div class="jur-coluna"><div class="jur-pilha"></div><span>mai</span></div><div class="jur-coluna"><div class="jur-pilha"></div><span>jun</span></div><div class="jur-coluna"><div class="jur-pilha"></div><span>jul</span></div>
+            <div class="jur-coluna"><div class="jur-pilha"><i class="cor-d2" style="height:100%"></i></div><span>ago</span></div>
+            <div class="jur-coluna"><div class="jur-pilha"></div><span>set</span></div>
+            <div class="jur-coluna"><div class="jur-pilha"><i class="cor-d3" style="height:10%"></i></div><span>out</span></div>
+            <div class="jur-coluna"><div class="jur-pilha"><i class="cor-d1" style="height:40%"></i></div><span>nov</span></div>
+          </div>
+          <div class="legenda-graf"><span><i class="cor-d1"></i>Custas</span><span><i class="cor-d2"></i>Honorários</span><span><i class="cor-d3"></i>Diligências</span><span><i class="cor-d4"></i>Outros</span></div>
+        </div>
+      </div>
+    </div>
+  </template>
+</section>

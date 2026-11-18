@@ -1,0 +1,509 @@
+<section data-tela="adm-parametros" data-grupo="Administração" data-titulo="Parâmetros da política"
+         data-desc="Onde o Administrador mantém os 114 números da Política de Crédito e Cobrança, em 14 grupos: valor geral ou por segmento (Privado, Estética, Público), data de início da vigência, histórico e restaurar padrão. Exemplo: 'Cobrança ativa e bloqueio de novos pedidos' vale D+4 no geral e D+6 na Estética.">
+
+  <template data-opcao="A" data-nome="Grupo em grade" data-resumo="Lista dos 14 grupos à esquerda e o grupo aberto como uma grade editável, com uma coluna por segmento; um Salvar grava o grupo inteiro e valida a ordem da régua de uma vez. O mais rápido para revisar um grupo; custa uma tela carregada e a vigência valer para tudo o que foi mudado.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração</div>
+        <h3>Parâmetros da política</h3>
+        <div class="desc">Todo número da Política num só lugar, com o padrão, quem mudou e quando. Campo de segmento vazio usa o valor geral.</div>
+        <div class="meta"><span><span class="stat">114</span> parâmetros</span><span class="dot">·</span><span><span class="stat">14</span> grupos</span><span class="dot">·</span><span><span class="stat">1</span> fora do padrão</span></div>
+      </div>
+    </div>
+    <div class="lado estreito">
+      <div class="panel">
+        <div class="toolbar"><div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar parâmetro"></div></div>
+        <div class="lista-itens">
+          <div class="item"><span style="flex:1">Criticidade do cliente</span><span class="sub">15</span></div>
+          <div class="item ativo"><span style="flex:1" class="forte">Régua de cobrança privada</span><span class="badge badge-accent">1 alterado</span><span class="sub">16</span></div>
+          <div class="item"><span style="flex:1">Régua pública</span><span class="sub">12</span></div>
+          <div class="item"><span style="flex:1">PDD por faixa do aging</span><span class="sub">6</span></div>
+          <div class="item"><span style="flex:1">Encargos sobre o vencido</span><span class="sub">5</span></div>
+          <div class="item"><span style="flex:1">Política de limite e motor de crédito</span><span class="sub">11</span></div>
+          <div class="item"><span style="flex:1">Alçadas da concessão</span><span class="sub">5</span></div>
+          <div class="item"><span style="flex:1">Pedido acima do limite</span><span class="sub">5</span></div>
+          <div class="item"><span style="flex:1">Gestão do crédito</span><span class="sub">12</span></div>
+          <div class="item"><span style="flex:1">Metas do ano</span><span class="sub">11</span></div>
+          <div class="item"><span style="flex:1">Jurídico</span><span class="sub">6</span></div>
+          <div class="item"><span style="flex:1">Ficha de contatos</span><span class="sub">1</span></div>
+          <div class="item"><span style="flex:1">Comunicação</span><span class="sub">4</span></div>
+          <div class="item"><span style="flex:1">Funcionamento da base</span><span class="sub">5</span></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="faixa entre">
+          <div><div class="titulo-painel">Régua de cobrança privada</div><div class="sub">Dias corridos a partir do vencimento · usada pela Cobrança</div></div>
+          <span class="row"><div class="field"><label>Vale a partir de</label><input class="input" type="date" value="2026-11-14" style="width:150px"></div><button class="btn btn-secondary">Restaurar padrão do grupo</button><button class="btn btn-primary">Salvar grupo</button></span>
+        </div>
+        <div class="tabela-wrap"><table class="bas-t">
+          <thead><tr><th>Parâmetro</th><th class="num">Padrão</th><th class="num">Geral</th><th class="num">Privado</th><th class="num">Estética</th><th class="num">Público</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><div class="row-title">Primeiro aviso preventivo</div><div class="row-meta">dias antes do vencimento</div></td><td class="num">5</td><td class="num"><input class="input bas-mini" value="5"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td><button class="iconbtn" title="Histórico de vigências" aria-label="Histórico de vigências"><svg><use href="#i-list"/></svg></button></td></tr>
+            <tr><td><div class="row-title">Segundo aviso preventivo</div><div class="row-meta">dias antes do vencimento</div></td><td class="num">1</td><td class="num"><input class="input bas-mini" value="1"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td><button class="iconbtn" title="Histórico de vigências" aria-label="Histórico de vigências"><svg><use href="#i-list"/></svg></button></td></tr>
+            <tr><td><div class="row-title">Ligação para confirmar o pagamento</div><div class="row-meta">D+</div></td><td class="num">2</td><td class="num"><input class="input bas-mini" value="2"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td><button class="iconbtn" title="Histórico de vigências" aria-label="Histórico de vigências"><svg><use href="#i-list"/></svg></button></td></tr>
+            <tr><td><div class="row-title">Cobrança ativa e bloqueio de novos pedidos</div><div class="row-meta">D+ · Estética alterada por Nara Duarte em 14/11/2026</div></td><td class="num">4</td><td class="num"><input class="input bas-mini" value="4"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" value="6"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td><button class="iconbtn" title="Histórico de vigências" aria-label="Histórico de vigências"><svg><use href="#i-list"/></svg></button></td></tr>
+            <tr><td><div class="row-title">Notificação formal com aviso de protesto</div><div class="row-meta">D+</div></td><td class="num">7</td><td class="num"><input class="input bas-mini" value="7"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td><button class="iconbtn" title="Histórico de vigências" aria-label="Histórico de vigências"><svg><use href="#i-list"/></svg></button></td></tr>
+            <tr><td><div class="row-title">Protesto, negativação e bloqueio total</div><div class="row-meta">D+</div></td><td class="num">10</td><td class="num"><input class="input bas-mini" value="10"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td><button class="iconbtn" title="Histórico de vigências" aria-label="Histórico de vigências"><svg><use href="#i-list"/></svg></button></td></tr>
+            <tr><td><div class="row-title">Negociação pós-protesto</div><div class="row-meta">D+</div></td><td class="num">20</td><td class="num"><input class="input bas-mini" value="20"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td><button class="iconbtn" title="Histórico de vigências" aria-label="Histórico de vigências"><svg><use href="#i-list"/></svg></button></td></tr>
+            <tr><td><div class="row-title">Cobrança extrajudicial</div><div class="row-meta">D+</div></td><td class="num">30</td><td class="num"><input class="input bas-mini" value="30"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td><button class="iconbtn" title="Histórico de vigências" aria-label="Histórico de vigências"><svg><use href="#i-list"/></svg></button></td></tr>
+            <tr><td><div class="row-title">Encaminhamento ao Jurídico</div><div class="row-meta">D+</div></td><td class="num">45</td><td class="num"><input class="input bas-mini" value="45"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td><button class="iconbtn" title="Histórico de vigências" aria-label="Histórico de vigências"><svg><use href="#i-list"/></svg></button></td></tr>
+            <tr><td><div class="row-title">Prazo máximo para ajuizar</div><div class="row-meta">D+</div></td><td class="num">60</td><td class="num"><input class="input bas-mini" value="60"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td><button class="iconbtn" title="Histórico de vigências" aria-label="Histórico de vigências"><svg><use href="#i-list"/></svg></button></td></tr>
+            <tr><td><div class="row-title">Contato depois do protesto</div><div class="row-meta">dias após o protesto</div></td><td class="num">5</td><td class="num"><input class="input bas-mini" value="5"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td><button class="iconbtn" title="Histórico de vigências" aria-label="Histórico de vigências"><svg><use href="#i-list"/></svg></button></td></tr>
+            <tr><td><div class="row-title">Atraso de parcela que quebra o acordo</div><div class="row-meta">dias</div></td><td class="num">5</td><td class="num"><input class="input bas-mini" value="5"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td><button class="iconbtn" title="Histórico de vigências" aria-label="Histórico de vigências"><svg><use href="#i-list"/></svg></button></td></tr>
+            <tr><td><div class="row-title">Tolerância da promessa de pagamento</div><div class="row-meta">dias</div></td><td class="num">3</td><td class="num"><input class="input bas-mini" value="3"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td><button class="iconbtn" title="Histórico de vigências" aria-label="Histórico de vigências"><svg><use href="#i-list"/></svg></button></td></tr>
+            <tr><td><div class="row-title">Prazo para emitir a carta de anuência</div><div class="row-meta">dias úteis</div></td><td class="num">5</td><td class="num"><input class="input bas-mini" value="5"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td><button class="iconbtn" title="Histórico de vigências" aria-label="Histórico de vigências"><svg><use href="#i-list"/></svg></button></td></tr>
+            <tr><td><div class="row-title">Baixa como perda: até, Gerente financeiro</div><div class="row-meta">R$</div></td><td class="num">10.000,00</td><td class="num"><input class="input bas-mini" value="10.000,00" style="width:104px"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td><button class="iconbtn" title="Histórico de vigências" aria-label="Histórico de vigências"><svg><use href="#i-list"/></svg></button></td></tr>
+            <tr><td><div class="row-title">Baixa como perda: até, Diretor financeiro</div><div class="row-meta">R$ · acima disso, Diretoria ou Comitê</div></td><td class="num">100.000,00</td><td class="num"><input class="input bas-mini" value="100.000,00" style="width:104px"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td class="num"><input class="input bas-mini" placeholder="geral"></td><td><button class="iconbtn" title="Histórico de vigências" aria-label="Histórico de vigências"><svg><use href="#i-list"/></svg></button></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+    <p class="nota">Gravação que quebra uma regra é recusada inteira, com o motivo no topo do grupo: "os dias da régua precisam ser crescentes", "a partir do D+2", "o prazo máximo não pode ser antes do Jurídico", "valor obrigatório". Apagar o valor de um segmento faz ele voltar a usar o geral.</p>
+  </template>
+
+  <template data-opcao="B" data-nome="Página única em sanfona" data-resumo="Os 14 grupos numa página só, abrindo e fechando, com o valor em vigor de cada parâmetro para o segmento escolhido no topo e a marca do que saiu do padrão. Boa para consultar; a edição é um diálogo por parâmetro, com segmento e vigência próprios.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração</div>
+        <h3>Parâmetros da política</h3>
+        <div class="desc">Todo número da Política num só lugar, com o padrão, quem mudou e quando.</div>
+        <div class="meta"><span><span class="stat">114</span> parâmetros</span><span class="dot">·</span><span><span class="stat">14</span> grupos</span><span class="dot">·</span><span><span class="stat">1</span> fora do padrão</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="toolbar">
+        <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar parâmetro em todos os grupos"></div>
+        <span class="sub">Valor em vigor para</span>
+        <div class="segment" role="group" aria-label="Segmento"><button type="button" aria-pressed="false">Geral</button><button type="button" aria-pressed="false">Privado</button><button type="button" aria-pressed="true">Estética</button><button type="button" aria-pressed="false">Público</button></div>
+        <span class="select"><span>Em vigor hoje, 14/11/2026</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select"><span>Todos · só alterados</span><svg><use href="#i-chevron"/></svg></span>
+      </div>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Criticidade do cliente</span><span class="sub">15 parâmetros · todos no padrão</span></summary></details>
+      <details class="bas-sanfona" open>
+        <summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Régua de cobrança privada</span><span class="badge badge-accent">1 alterado</span><span class="sub">16 parâmetros</span><button class="btn btn-ghost btn-sm">Restaurar padrão do grupo</button></summary>
+        <div class="tabela-wrap"><table class="bas-t">
+          <thead><tr><th>Parâmetro</th><th class="num">Em vigor na Estética</th><th>Origem</th><th>Desde</th><th class="num">Padrão</th><th></th></tr></thead>
+          <tbody>
+            <tr><td class="row-title">Primeiro aviso preventivo</td><td class="num forte">5 dias antes</td><td>Geral</td><td>padrão</td><td class="num">5</td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+            <tr><td class="row-title">Segundo aviso preventivo</td><td class="num forte">1 dia antes</td><td>Geral</td><td>padrão</td><td class="num">1</td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+            <tr><td class="row-title">Ligação para confirmar o pagamento</td><td class="num forte">D+2</td><td>Geral</td><td>padrão</td><td class="num">D+2</td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+            <tr style="background:var(--accent)"><td class="row-title">Cobrança ativa e bloqueio de novos pedidos</td><td class="num forte">D+6</td><td><span class="status status-attention"><i></i>Valor da Estética</span></td><td>14/11/2026 · Nara Duarte</td><td class="num">D+4</td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+            <tr><td class="row-title">Notificação formal com aviso de protesto</td><td class="num forte">D+7</td><td>Geral</td><td>padrão</td><td class="num">D+7</td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+            <tr><td class="row-title">Protesto, negativação e bloqueio total</td><td class="num forte">D+10</td><td>Geral</td><td>padrão</td><td class="num">D+10</td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+            <tr><td class="row-title">Negociação pós-protesto</td><td class="num forte">D+20</td><td>Geral</td><td>padrão</td><td class="num">D+20</td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+            <tr><td class="row-title">Cobrança extrajudicial</td><td class="num forte">D+30</td><td>Geral</td><td>padrão</td><td class="num">D+30</td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+            <tr><td class="row-title">Encaminhamento ao Jurídico</td><td class="num forte">D+45</td><td>Geral</td><td>padrão</td><td class="num">D+45</td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+            <tr><td class="row-title">Prazo máximo para ajuizar</td><td class="num forte">D+60</td><td>Geral</td><td>padrão</td><td class="num">D+60</td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+            <tr><td class="row-title">Contato depois do protesto</td><td class="num forte">5 dias</td><td>Geral</td><td>padrão</td><td class="num">5</td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+            <tr><td class="row-title">Atraso de parcela que quebra o acordo</td><td class="num forte">5 dias</td><td>Geral</td><td>padrão</td><td class="num">5</td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+            <tr><td class="row-title">Tolerância da promessa de pagamento</td><td class="num forte">3 dias</td><td>Geral</td><td>padrão</td><td class="num">3</td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+            <tr><td class="row-title">Prazo para emitir a carta de anuência</td><td class="num forte">5 dias úteis</td><td>Geral</td><td>padrão</td><td class="num">5</td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+            <tr><td class="row-title">Baixa como perda: até, Gerente financeiro</td><td class="num forte">R$ 10.000,00</td><td>Geral</td><td>padrão</td><td class="num">R$ 10.000,00</td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+            <tr><td class="row-title">Baixa como perda: até, Diretor financeiro</td><td class="num forte">R$ 100.000,00</td><td>Geral</td><td>padrão</td><td class="num">R$ 100.000,00</td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          </tbody>
+        </table></div>
+      </details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Régua pública</span><span class="sub">12 parâmetros · todos no padrão</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">PDD por faixa do aging</span><span class="sub">6 parâmetros · todos no padrão</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Encargos sobre o vencido</span><span class="sub">5 parâmetros · todos no padrão</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Política de limite e motor de crédito</span><span class="sub">11 parâmetros · todos no padrão</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Alçadas da concessão</span><span class="sub">5 parâmetros · todos no padrão</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Pedido acima do limite</span><span class="sub">5 parâmetros · todos no padrão</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Gestão do crédito</span><span class="sub">12 parâmetros · todos no padrão</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Metas do ano</span><span class="sub">11 parâmetros · todos no padrão</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Jurídico</span><span class="sub">6 parâmetros · todos no padrão</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Ficha de contatos</span><span class="sub">1 parâmetro · no padrão</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Comunicação</span><span class="sub">4 parâmetros · todos no padrão</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Funcionamento da base</span><span class="sub">5 parâmetros · só valor geral · todos no padrão</span></summary></details>
+    </div>
+    <div class="dialogo">
+      <header><div><div class="titulo-painel">Cobrança ativa e bloqueio de novos pedidos</div><div class="sub">Régua de cobrança privada · padrão D+4 · precisa ser a partir do D+2 e antes da Notificação formal (D+7)</div></div><button class="iconbtn" title="Fechar" aria-label="Fechar"><svg><use href="#i-x"/></svg></button></header>
+      <div class="corpo-painel">
+        <div class="form-grade">
+          <div class="field"><label>Vale para</label><span class="select" style="width:100%"><span>Estética</span><svg><use href="#i-chevron"/></svg></span></div>
+          <div class="field"><label>Valor (D+)</label><input class="input" value="6"></div>
+          <div class="field"><label>A partir de</label><input class="input" type="date" value="2026-11-14"></div>
+        </div>
+        <details class="rebaixado"><summary class="sub forte" style="cursor:pointer">Histórico de vigências (2)</summary>
+          <div class="linha-tempo" style="margin-top:10px">
+            <div class="evento"><i></i><div><span class="forte">Estética: D+6</span> a partir de 14/11/2026<div class="sub">Nara Duarte · 14/11/2026 às 09:31</div></div></div>
+            <div class="evento off"><i></i><div><span class="forte">Geral: D+4</span> a partir de 01/09/2026<div class="sub">Padrão do catálogo</div></div></div>
+          </div>
+        </details>
+      </div>
+      <footer><button class="btn btn-ghost">Cancelar</button><button class="btn btn-secondary">Remover valor da Estética</button><button class="btn btn-secondary">Restaurar padrão</button><button class="btn btn-primary">Salvar</button></footer>
+    </div>
+  </template>
+
+  <template data-opcao="C" data-nome="Ficha do parâmetro" data-resumo="Uma lista corrida e pesquisável à esquerda e, ao lado, a ficha de um parâmetro: valor em vigor em cada segmento e de onde ele vem, nova vigência, histórico e restaurar. É a que melhor mostra vigência e origem; custa mexer em um parâmetro por vez.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração</div>
+        <h3>Parâmetros da política</h3>
+        <div class="desc">Todo número da Política num só lugar, com o padrão, quem mudou e quando.</div>
+        <div class="meta"><span><span class="stat">114</span> parâmetros</span><span class="dot">·</span><span><span class="stat">14</span> grupos</span><span class="dot">·</span><span><span class="stat">1</span> fora do padrão</span></div>
+      </div>
+    </div>
+    <div class="lado invertido">
+      <div class="panel">
+        <div class="toolbar">
+          <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar parâmetro"></div>
+          <span class="select" style="min-width:0"><span>Régua de cobrança privada</span><svg><use href="#i-chevron"/></svg></span>
+        </div>
+        <div class="lista-itens">
+          <div class="item"><span style="flex:1;min-width:0">Primeiro aviso preventivo</span><span class="forte">5 dias antes</span></div>
+          <div class="item"><span style="flex:1;min-width:0">Segundo aviso preventivo</span><span class="forte">1 dia antes</span></div>
+          <div class="item"><span style="flex:1;min-width:0">Ligação para confirmar o pagamento</span><span class="forte">D+2</span></div>
+          <div class="item ativo"><span style="flex:1;min-width:0" class="forte">Cobrança ativa e bloqueio de novos pedidos<div class="row-meta">Estética tem valor próprio</div></span><span class="forte">D+4</span></div>
+          <div class="item"><span style="flex:1;min-width:0">Notificação formal com aviso de protesto</span><span class="forte">D+7</span></div>
+          <div class="item"><span style="flex:1;min-width:0">Protesto, negativação e bloqueio total</span><span class="forte">D+10</span></div>
+          <div class="item"><span style="flex:1;min-width:0">Negociação pós-protesto</span><span class="forte">D+20</span></div>
+          <div class="item"><span style="flex:1;min-width:0">Cobrança extrajudicial</span><span class="forte">D+30</span></div>
+          <div class="item"><span style="flex:1;min-width:0">Encaminhamento ao Jurídico</span><span class="forte">D+45</span></div>
+          <div class="item"><span style="flex:1;min-width:0">Prazo máximo para ajuizar</span><span class="forte">D+60</span></div>
+          <div class="item"><span style="flex:1;min-width:0">Contato depois do protesto</span><span class="forte">5 dias</span></div>
+          <div class="item"><span style="flex:1;min-width:0">Atraso de parcela que quebra o acordo</span><span class="forte">5 dias</span></div>
+          <div class="item"><span style="flex:1;min-width:0">Tolerância da promessa de pagamento</span><span class="forte">3 dias</span></div>
+          <div class="item"><span style="flex:1;min-width:0">Prazo para emitir a carta de anuência</span><span class="forte">5 dias úteis</span></div>
+          <div class="item"><span style="flex:1;min-width:0">Baixa como perda: até, Gerente financeiro</span><span class="forte">R$ 10.000,00</span></div>
+          <div class="item"><span style="flex:1;min-width:0">Baixa como perda: até, Diretor financeiro</span><span class="forte">R$ 100.000,00</span></div>
+        </div>
+        <div class="pagination"><span>16 de 114 parâmetros · valor geral em vigor hoje</span></div>
+      </div>
+      <div class="panel">
+        <div class="faixa entre"><div><div class="titulo-painel">Cobrança ativa e bloqueio de novos pedidos</div><div class="sub">Régua de cobrança privada · dias corridos após o vencimento (D+) · usado pela Cobrança</div></div><button class="btn btn-secondary">Restaurar padrão</button></div>
+        <div class="corpo-painel">
+          <div class="tabela-wrap"><table class="bas-t">
+            <thead><tr><th>Segmento</th><th class="num">Em vigor hoje</th><th>De onde vem</th><th>Desde</th><th></th></tr></thead>
+            <tbody>
+              <tr><td>Geral</td><td class="num forte">D+4</td><td>Padrão do catálogo</td><td>01/09/2026</td><td></td></tr>
+              <tr><td>Privado</td><td class="num forte">D+4</td><td>Usa o geral</td><td><span class="dash">—</span></td><td></td></tr>
+              <tr><td>Estética</td><td class="num forte">D+6</td><td><span class="status status-attention"><i></i>Valor do segmento</span></td><td>14/11/2026</td><td><button class="btn btn-ghost btn-sm">Remover</button></td></tr>
+              <tr><td>Público</td><td class="num forte">D+4</td><td>Usa o geral</td><td><span class="dash">—</span></td><td></td></tr>
+            </tbody>
+          </table></div>
+          <div class="rebaixado pilha-v">
+            <span class="sub forte">Nova vigência</span>
+            <div class="form-grade">
+              <div class="field"><label>Vale para</label><span class="select" style="width:100%"><span>Geral</span><svg><use href="#i-chevron"/></svg></span></div>
+              <div class="field"><label>Valor (D+)</label><input class="input" value="5"></div>
+              <div class="field"><label>A partir de</label><input class="input" type="date" value="2027-01-01"></div>
+            </div>
+            <div class="entre"><span class="sub">Precisa ser a partir do D+2 e antes da Notificação formal (D+7). Mesma data de uma vigência existente substitui aquela vigência.</span><button class="btn btn-primary">Gravar vigência</button></div>
+          </div>
+          <span class="sub forte">Histórico de vigências</span>
+          <div class="linha-tempo">
+            <div class="evento"><i></i><div><span class="forte">Estética: D+6</span> a partir de 14/11/2026<div class="sub">Nara Duarte · 14/11/2026 às 09:31</div></div></div>
+            <div class="evento off"><i></i><div><span class="forte">Geral: D+4</span> a partir de 01/09/2026<div class="sub">Padrão do catálogo</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</section>
+
+<section data-tela="adm-bus" data-grupo="Administração" data-titulo="BUs e segmentos"
+         data-desc="Onde o Administrador diz a que BU pertence cada departamento de produto do Winthor e a que segmento (Privado ou Estética) pertence cada BU. A BU é do item comprado, por isso um cliente pode ter saldo em mais de uma. O setor público não vem de BU: vem do ramo de atividade do cliente.">
+
+  <template data-opcao="A" data-nome="BUs em tabela" data-resumo="A BU é a linha: segmento, departamentos ligados a ela e quantos clientes têm saldo. Os departamentos ainda sem BU ficam num painel próprio logo abaixo. Direta para manter poucas BUs; custa ver o departamento só como texto dentro da linha.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração</div>
+        <h3>BUs e segmentos</h3>
+        <div class="desc">Departamento do Winthor → BU → segmento. É pelo segmento que um parâmetro pode ter valor próprio.</div>
+        <div class="meta"><span><span class="stat">4</span> BUs</span><span class="dot">·</span><span><span class="stat">11</span> departamentos no Winthor</span><span class="dot">·</span><span><span class="stat">2</span> sem BU</span></div>
+      </div>
+      <button class="btn btn-primary"><svg><use href="#i-plus"/></svg>Nova BU</button>
+    </div>
+    <div class="panel">
+      <div class="tabela-wrap"><table class="bas-t">
+        <thead><tr><th>BU</th><th>Segmento</th><th>Departamentos do Winthor</th><th class="num">Clientes com saldo</th><th>Situação</th><th></th></tr></thead>
+        <tbody>
+          <tr><td class="row-title">Nutrição</td><td>Privado</td><td><span class="code">1</span> Nutrição enteral · <span class="code">2</span> Suplementos orais · <span class="code">3</span> Nutrição parenteral</td><td class="num">6</td><td><span class="status status-live"><i></i>Ativa</span></td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr><td class="row-title">Enfermagem</td><td>Privado</td><td><span class="code">4</span> Material de enfermagem · <span class="code">5</span> Curativos especiais</td><td class="num">4</td><td><span class="status status-live"><i></i>Ativa</span></td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr><td class="row-title">Medicamento</td><td>Privado</td><td><span class="code">6</span> Medicamentos · <span class="code">7</span> Medicamentos controlados</td><td class="num">3</td><td><span class="status status-live"><i></i>Ativa</span></td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr><td class="row-title">Estética</td><td>Estética</td><td><span class="code">8</span> Dermocosméticos · <span class="code">9</span> Injetáveis estéticos</td><td class="num">2</td><td><span class="status status-live"><i></i>Ativa</span></td><td><span class="acoes"><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="grade-2">
+      <div class="panel">
+        <div class="faixa entre"><span class="titulo-painel">Departamentos sem BU</span><span class="badge badge-attention">2</span></div>
+        <div class="tabela-wrap"><table class="bas-t">
+          <thead><tr><th>Departamento do Winthor</th><th class="num">Saldo em aberto</th><th>Ligar à BU</th></tr></thead>
+          <tbody>
+            <tr><td><span class="code">10</span> Equipamentos e bombas de infusão</td><td class="num">R$ 4.621,50</td><td><span class="select"><span>Escolher BU</span><svg><use href="#i-chevron"/></svg></span></td></tr>
+            <tr><td><span class="code">11</span> Brindes e material promocional</td><td class="num"><span class="dash">—</span></td><td><span class="select"><span>Escolher BU</span><svg><use href="#i-chevron"/></svg></span></td></tr>
+          </tbody>
+        </table></div>
+        <div class="faixa" style="border-bottom:0;border-top:1px solid var(--row-border)"><span class="sub">Saldo de departamento sem BU entra no total do cliente, mas não em nenhuma BU.</span></div>
+      </div>
+      <div class="panel">
+        <div class="faixa entre"><span class="titulo-painel">Setor público</span><button class="btn btn-secondary btn-sm"><svg><use href="#i-pencil"/></svg>Editar ramos</button></div>
+        <div class="corpo-painel">
+          <p>O cliente é do segmento <b>Público</b> quando o ramo de atividade dele no Winthor está nesta lista, qualquer que seja a BU do que compra:</p>
+          <div class="row"><span class="badge badge-outline">11</span><span class="badge badge-outline">12</span><span class="badge badge-outline">13</span><span class="badge badge-outline">14</span><span class="badge badge-outline">15</span></div>
+          <span class="sub">1 cliente hoje: Secretaria Municipal de Saúde de Goiânia (ramo 12). Pessoa física segue o fluxo privado.</span>
+        </div>
+      </div>
+    </div>
+    <p class="nota">BU com cliente não é apagada, só inativada.</p>
+  </template>
+
+  <template data-opcao="B" data-nome="Mapa por segmento" data-resumo="Uma coluna por segmento, as BUs em cartões dentro dela e os departamentos como etiquetas dentro da BU: a cadeia departamento, BU e segmento vista de uma vez, com a regra do Público ao lado. A mais clara para explicar; ocupa mais tela e não escala para muitas BUs.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração</div>
+        <h3>BUs e segmentos</h3>
+        <div class="desc">Departamento do Winthor → BU → segmento. É pelo segmento que um parâmetro pode ter valor próprio.</div>
+        <div class="meta"><span><span class="stat">4</span> BUs</span><span class="dot">·</span><span><span class="stat">11</span> departamentos no Winthor</span><span class="dot">·</span><span><span class="stat">2</span> sem BU</span></div>
+      </div>
+      <button class="btn btn-primary"><svg><use href="#i-plus"/></svg>Nova BU</button>
+    </div>
+    <div class="alert alert-warn"><svg><use href="#i-alert"/></svg><b>2 departamentos do Winthor ainda sem BU</b><p>Equipamentos e bombas de infusão (10), com R$ 4.621,50 em aberto, e Brindes e material promocional (11). Abra uma BU e inclua o departamento.</p></div>
+    <div class="grade-3">
+      <div class="bas-coluna">
+        <header><span>Segmento Privado</span><span>3 BUs</span></header>
+        <div class="resumo"><div class="entre"><b>Nutrição</b><button class="iconbtn" title="Editar BU" aria-label="Editar BU"><svg><use href="#i-pencil"/></svg></button></div><div class="row"><span class="badge badge-outline">1 · Nutrição enteral</span><span class="badge badge-outline">2 · Suplementos orais</span><span class="badge badge-outline">3 · Nutrição parenteral</span></div><span class="sub">6 clientes com saldo</span></div>
+        <div class="resumo"><div class="entre"><b>Enfermagem</b><button class="iconbtn" title="Editar BU" aria-label="Editar BU"><svg><use href="#i-pencil"/></svg></button></div><div class="row"><span class="badge badge-outline">4 · Material de enfermagem</span><span class="badge badge-outline">5 · Curativos especiais</span></div><span class="sub">4 clientes com saldo</span></div>
+        <div class="resumo"><div class="entre"><b>Medicamento</b><button class="iconbtn" title="Editar BU" aria-label="Editar BU"><svg><use href="#i-pencil"/></svg></button></div><div class="row"><span class="badge badge-outline">6 · Medicamentos</span><span class="badge badge-outline">7 · Medicamentos controlados</span></div><span class="sub">3 clientes com saldo</span></div>
+      </div>
+      <div class="bas-coluna">
+        <header><span>Segmento Estética</span><span>1 BU</span></header>
+        <div class="resumo"><div class="entre"><b>Estética</b><button class="iconbtn" title="Editar BU" aria-label="Editar BU"><svg><use href="#i-pencil"/></svg></button></div><div class="row"><span class="badge badge-outline">8 · Dermocosméticos</span><span class="badge badge-outline">9 · Injetáveis estéticos</span></div><span class="sub">2 clientes com saldo</span></div>
+        <div class="resumo"><b>Sem BU</b><div class="row"><span class="badge badge-attention">10 · Equipamentos e bombas de infusão</span><span class="badge badge-attention">11 · Brindes e material promocional</span></div><span class="sub">Fora de qualquer segmento até serem ligados a uma BU</span></div>
+      </div>
+      <div class="bas-coluna">
+        <header><span>Segmento Público</span><span>pelo ramo</span></header>
+        <div class="resumo"><div class="entre"><b>Ramos de atividade públicos</b><button class="iconbtn" title="Editar ramos" aria-label="Editar ramos"><svg><use href="#i-pencil"/></svg></button></div><div class="row"><span class="badge badge-outline">11</span><span class="badge badge-outline">12</span><span class="badge badge-outline">13</span><span class="badge badge-outline">14</span><span class="badge badge-outline">15</span></div><span class="sub">Não vem de BU: cliente com um destes ramos no Winthor é Público, qualquer que seja a BU do que compra. 1 cliente hoje.</span></div>
+      </div>
+    </div>
+    <p class="nota">BU com cliente não é apagada, só inativada.</p>
+  </template>
+
+  <template data-opcao="C" data-nome="Por departamento" data-resumo="O departamento do Winthor é a linha e a BU se escolhe ali mesmo; o segmento aparece como consequência e o saldo em aberto mostra o peso de cada um. Feita para quando o Winthor ganha departamento novo; custa a BU virar um cadastro lateral.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração</div>
+        <h3>BUs e segmentos</h3>
+        <div class="desc">Departamento do Winthor → BU → segmento. É pelo segmento que um parâmetro pode ter valor próprio.</div>
+        <div class="meta"><span><span class="stat">4</span> BUs</span><span class="dot">·</span><span><span class="stat">11</span> departamentos no Winthor</span><span class="dot">·</span><span><span class="stat">2</span> sem BU</span></div>
+      </div>
+    </div>
+    <div class="lado">
+      <div class="panel">
+        <div class="toolbar">
+          <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar departamento"></div>
+          <span class="select"><span>Todos · só sem BU</span><svg><use href="#i-chevron"/></svg></span>
+          <button class="btn btn-primary">Salvar mapeamento</button>
+        </div>
+        <div class="tabela-wrap"><table class="bas-t">
+          <thead><tr><th>Departamento do Winthor</th><th>BU</th><th>Segmento</th><th class="num">Títulos em aberto</th><th class="num">Saldo em aberto</th></tr></thead>
+          <tbody>
+            <tr><td><span class="code">10</span> Equipamentos e bombas de infusão</td><td><span class="select" style="min-width:150px"><span>Escolher BU</span><svg><use href="#i-chevron"/></svg></span></td><td><span class="status status-attention"><i></i>Sem BU</span></td><td class="num">3</td><td class="num">R$ 4.621,50</td></tr>
+            <tr><td><span class="code">11</span> Brindes e material promocional</td><td><span class="select" style="min-width:150px"><span>Escolher BU</span><svg><use href="#i-chevron"/></svg></span></td><td><span class="status status-attention"><i></i>Sem BU</span></td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td></tr>
+            <tr><td><span class="code">1</span> Nutrição enteral</td><td><span class="select" style="min-width:150px"><span>Nutrição</span><svg><use href="#i-chevron"/></svg></span></td><td>Privado</td><td class="num">18</td><td class="num">R$ 214.630,00</td></tr>
+            <tr><td><span class="code">2</span> Suplementos orais</td><td><span class="select" style="min-width:150px"><span>Nutrição</span><svg><use href="#i-chevron"/></svg></span></td><td>Privado</td><td class="num">9</td><td class="num">R$ 61.245,40</td></tr>
+            <tr><td><span class="code">3</span> Nutrição parenteral</td><td><span class="select" style="min-width:150px"><span>Nutrição</span><svg><use href="#i-chevron"/></svg></span></td><td>Privado</td><td class="num">4</td><td class="num">R$ 38.900,00</td></tr>
+            <tr><td><span class="code">4</span> Material de enfermagem</td><td><span class="select" style="min-width:150px"><span>Enfermagem</span><svg><use href="#i-chevron"/></svg></span></td><td>Privado</td><td class="num">11</td><td class="num">R$ 42.118,25</td></tr>
+            <tr><td><span class="code">5</span> Curativos especiais</td><td><span class="select" style="min-width:150px"><span>Enfermagem</span><svg><use href="#i-chevron"/></svg></span></td><td>Privado</td><td class="num">5</td><td class="num">R$ 12.760,00</td></tr>
+            <tr><td><span class="code">6</span> Medicamentos</td><td><span class="select" style="min-width:150px"><span>Medicamento</span><svg><use href="#i-chevron"/></svg></span></td><td>Privado</td><td class="num">7</td><td class="num">R$ 23.405,50</td></tr>
+            <tr><td><span class="code">7</span> Medicamentos controlados</td><td><span class="select" style="min-width:150px"><span>Medicamento</span><svg><use href="#i-chevron"/></svg></span></td><td>Privado</td><td class="num">2</td><td class="num">R$ 6.830,00</td></tr>
+            <tr><td><span class="code">8</span> Dermocosméticos</td><td><span class="select" style="min-width:150px"><span>Estética</span><svg><use href="#i-chevron"/></svg></span></td><td>Estética</td><td class="num">3</td><td class="num">R$ 12.380,00</td></tr>
+            <tr><td><span class="code">9</span> Injetáveis estéticos</td><td><span class="select" style="min-width:150px"><span>Estética</span><svg><use href="#i-chevron"/></svg></span></td><td>Estética</td><td class="num">4</td><td class="num">R$ 28.350,00</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div class="pilha-v">
+        <div class="panel">
+          <div class="faixa entre"><span class="titulo-painel">BUs</span><button class="btn btn-secondary btn-sm"><svg><use href="#i-plus"/></svg>Nova BU</button></div>
+          <div class="lista-itens">
+            <div class="item"><span style="flex:1" class="forte">Nutrição</span><span class="sub">Privado · 3 departamentos</span><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></div>
+            <div class="item"><span style="flex:1" class="forte">Enfermagem</span><span class="sub">Privado · 2 departamentos</span><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></div>
+            <div class="item"><span style="flex:1" class="forte">Medicamento</span><span class="sub">Privado · 2 departamentos</span><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></div>
+            <div class="item"><span style="flex:1" class="forte">Estética</span><span class="sub">Estética · 2 departamentos</span><button class="iconbtn" title="Editar" aria-label="Editar"><svg><use href="#i-pencil"/></svg></button></div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="faixa entre"><span class="titulo-painel">Setor público</span><button class="btn btn-secondary btn-sm"><svg><use href="#i-pencil"/></svg>Editar ramos</button></div>
+          <div class="corpo-painel">
+            <div class="row"><span class="badge badge-outline">11</span><span class="badge badge-outline">12</span><span class="badge badge-outline">13</span><span class="badge badge-outline">14</span><span class="badge badge-outline">15</span></div>
+            <span class="sub">Cliente com um destes ramos de atividade no Winthor é do segmento Público, qualquer que seja a BU do que compra. 1 cliente hoje.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="nota">BU com cliente não é apagada, só inativada.</p>
+  </template>
+</section>
+
+<section data-tela="adm-feriados" data-grupo="Administração" data-titulo="Feriados"
+         data-desc="Onde o Administrador mantém os dias não úteis: gera os 13 feriados nacionais de um ano, cadastra os estaduais e municipais e confere o cálculo de dias úteis que a régua pública e os prazos usam.">
+
+  <template data-opcao="A" data-nome="Lista do ano" data-resumo="Uma tabela com todos os feriados do ano, filtrável por abrangência e UF, e o conferidor de dia útil embaixo. Simples e completa; não mostra onde o feriado cai na semana a não ser pela coluna do dia.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração</div>
+        <h3>Feriados</h3>
+        <div class="desc">Dia útil não é sábado, domingo, feriado nacional, da UF nem do município do cliente.</div>
+        <div class="meta"><span><span class="stat">15</span> feriados em 2026</span><span class="dot">·</span><span><span class="stat">13</span> nacionais</span><span class="dot">·</span><span><span class="stat">1</span> estadual</span><span class="dot">·</span><span><span class="stat">1</span> municipal</span></div>
+      </div>
+      <div class="row"><button class="btn btn-secondary">Gerar nacionais de 2027</button><button class="btn btn-primary"><svg><use href="#i-plus"/></svg>Novo feriado</button></div>
+    </div>
+    <div class="panel">
+      <div class="toolbar">
+        <span class="select"><span>2026</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select"><span>Todas as abrangências</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select"><span>Todas as UFs</span><svg><use href="#i-chevron"/></svg></span>
+      </div>
+      <div class="tabela-wrap"><table class="bas-t">
+        <thead><tr><th>Data</th><th>Dia</th><th>Feriado</th><th>Abrangência</th><th>Origem</th><th></th></tr></thead>
+        <tbody>
+          <tr><td>01/01/2026</td><td>quinta</td><td class="row-title">Confraternização Universal</td><td>Nacional</td><td>Gerado</td><td><span class="acoes"><button class="iconbtn danger" title="Remover" aria-label="Remover"><svg><use href="#i-trash"/></svg></button></span></td></tr>
+          <tr><td>16/02/2026</td><td>segunda</td><td class="row-title">Carnaval</td><td>Nacional</td><td>Gerado</td><td><span class="acoes"><button class="iconbtn danger" title="Remover" aria-label="Remover"><svg><use href="#i-trash"/></svg></button></span></td></tr>
+          <tr><td>17/02/2026</td><td>terça</td><td class="row-title">Carnaval</td><td>Nacional</td><td>Gerado</td><td><span class="acoes"><button class="iconbtn danger" title="Remover" aria-label="Remover"><svg><use href="#i-trash"/></svg></button></span></td></tr>
+          <tr><td>03/04/2026</td><td>sexta</td><td class="row-title">Sexta-feira Santa</td><td>Nacional</td><td>Gerado</td><td><span class="acoes"><button class="iconbtn danger" title="Remover" aria-label="Remover"><svg><use href="#i-trash"/></svg></button></span></td></tr>
+          <tr><td>21/04/2026</td><td>terça</td><td class="row-title">Tiradentes</td><td>Nacional</td><td>Gerado</td><td><span class="acoes"><button class="iconbtn danger" title="Remover" aria-label="Remover"><svg><use href="#i-trash"/></svg></button></span></td></tr>
+          <tr><td>01/05/2026</td><td>sexta</td><td class="row-title">Dia do Trabalho</td><td>Nacional</td><td>Gerado</td><td><span class="acoes"><button class="iconbtn danger" title="Remover" aria-label="Remover"><svg><use href="#i-trash"/></svg></button></span></td></tr>
+          <tr><td>04/06/2026</td><td>quinta</td><td class="row-title">Corpus Christi</td><td>Nacional</td><td>Gerado</td><td><span class="acoes"><button class="iconbtn danger" title="Remover" aria-label="Remover"><svg><use href="#i-trash"/></svg></button></span></td></tr>
+          <tr><td>07/09/2026</td><td>segunda</td><td class="row-title">Independência do Brasil</td><td>Nacional</td><td>Gerado</td><td><span class="acoes"><button class="iconbtn danger" title="Remover" aria-label="Remover"><svg><use href="#i-trash"/></svg></button></span></td></tr>
+          <tr><td>12/10/2026</td><td>segunda</td><td class="row-title">Nossa Senhora Aparecida</td><td>Nacional</td><td>Gerado</td><td><span class="acoes"><button class="iconbtn danger" title="Remover" aria-label="Remover"><svg><use href="#i-trash"/></svg></button></span></td></tr>
+          <tr><td>24/10/2026</td><td>sábado</td><td class="row-title">Aniversário de Goiânia</td><td>Municipal · Goiânia/GO</td><td>Cadastrado por Nara Duarte</td><td><span class="acoes"><button class="iconbtn danger" title="Remover" aria-label="Remover"><svg><use href="#i-trash"/></svg></button></span></td></tr>
+          <tr><td>02/11/2026</td><td>segunda</td><td class="row-title">Finados</td><td>Nacional</td><td>Gerado</td><td><span class="acoes"><button class="iconbtn danger" title="Remover" aria-label="Remover"><svg><use href="#i-trash"/></svg></button></span></td></tr>
+          <tr><td>15/11/2026</td><td>domingo</td><td class="row-title">Proclamação da República</td><td>Nacional</td><td>Gerado</td><td><span class="acoes"><button class="iconbtn danger" title="Remover" aria-label="Remover"><svg><use href="#i-trash"/></svg></button></span></td></tr>
+          <tr><td>20/11/2026</td><td>sexta</td><td class="row-title">Consciência Negra</td><td>Nacional</td><td>Gerado</td><td><span class="acoes"><button class="iconbtn danger" title="Remover" aria-label="Remover"><svg><use href="#i-trash"/></svg></button></span></td></tr>
+          <tr><td>30/11/2026</td><td>segunda</td><td class="row-title">Feriado estadual de Goiás</td><td>Estadual · GO</td><td>Cadastrado por Nara Duarte</td><td><span class="acoes"><button class="iconbtn danger" title="Remover" aria-label="Remover"><svg><use href="#i-trash"/></svg></button></span></td></tr>
+          <tr><td>25/12/2026</td><td>sexta</td><td class="row-title">Natal</td><td>Nacional</td><td>Gerado</td><td><span class="acoes"><button class="iconbtn danger" title="Remover" aria-label="Remover"><svg><use href="#i-trash"/></svg></button></span></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="panel">
+      <div class="faixa"><span class="titulo-painel">Conferir dia útil</span></div>
+      <div class="corpo-painel">
+        <div class="form-grade">
+          <div class="field"><label>A partir de</label><input class="input" type="date" value="2026-11-19"></div>
+          <div class="field"><label>Dias úteis depois</label><input class="input" value="1"></div>
+          <div class="field"><label>Localidade</label><span class="select" style="width:100%"><span>DF · Brasília</span><svg><use href="#i-chevron"/></svg></span></div>
+        </div>
+        <div class="alert alert-success"><svg><use href="#i-check"/></svg><b>23/11/2026, segunda-feira</b><p>20/11 é Consciência Negra (nacional); 21 e 22/11 são fim de semana.</p></div>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="B" data-nome="Calendário do mês" data-resumo="O mês em grade, com os feriados pintados no dia em que caem, e ao lado a lista do ano e o conferidor de dia útil. Mostra de relance pontes e semanas curtas; custa ver um mês por vez.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração</div>
+        <h3>Feriados</h3>
+        <div class="desc">Dia útil não é sábado, domingo, feriado nacional, da UF nem do município do cliente.</div>
+        <div class="meta"><span><span class="stat">15</span> feriados em 2026</span><span class="dot">·</span><span><span class="stat">13</span> nacionais</span><span class="dot">·</span><span><span class="stat">1</span> estadual</span><span class="dot">·</span><span><span class="stat">1</span> municipal</span></div>
+      </div>
+      <div class="row"><button class="btn btn-secondary">Gerar nacionais de 2027</button><button class="btn btn-primary"><svg><use href="#i-plus"/></svg>Novo feriado</button></div>
+    </div>
+    <div class="lado">
+      <div class="panel">
+        <div class="faixa entre"><span class="row"><button class="btn btn-secondary btn-sm">Anterior</button><span class="titulo-painel">Novembro de 2026</span><button class="btn btn-secondary btn-sm">Próximo</button></span><span class="select"><span>Localidade: todas</span><svg><use href="#i-chevron"/></svg></span></div>
+        <div class="corpo-painel">
+          <div class="bas-mes">
+            <b>dom</b><b>seg</b><b>ter</b><b>qua</b><b>qui</b><b>sex</b><b>sáb</b>
+            <div class="d fds">1</div><div class="d fer">2<small>Finados</small></div><div class="d">3</div><div class="d">4</div><div class="d">5</div><div class="d">6</div><div class="d fds">7</div>
+            <div class="d fds">8</div><div class="d">9</div><div class="d">10</div><div class="d">11</div><div class="d">12</div><div class="d">13</div><div class="d fds">14<small>hoje</small></div>
+            <div class="d fer">15<small>Proclamação da República</small></div><div class="d">16</div><div class="d">17</div><div class="d">18</div><div class="d">19</div><div class="d fer">20<small>Consciência Negra</small></div><div class="d fds">21</div>
+            <div class="d fds">22</div><div class="d">23</div><div class="d">24</div><div class="d">25</div><div class="d">26</div><div class="d">27</div><div class="d fds">28</div>
+            <div class="d fds">29</div><div class="d fer">30<small>Estadual · GO</small></div><div class="d vazio"></div><div class="d vazio"></div><div class="d vazio"></div><div class="d vazio"></div><div class="d vazio"></div>
+          </div>
+          <span class="sub">Clique num dia para cadastrar um feriado nele; clique num feriado para editar ou remover.</span>
+        </div>
+      </div>
+      <div class="pilha-v">
+        <div class="panel">
+          <div class="faixa"><span class="titulo-painel">Conferir dia útil</span></div>
+          <div class="corpo-painel">
+            <div class="form-grade">
+              <div class="field"><label>A partir de</label><input class="input" type="date" value="2026-11-19"></div>
+              <div class="field"><label>Dias úteis depois</label><input class="input" value="1"></div>
+              <div class="field"><label>Localidade</label><span class="select" style="width:100%"><span>DF · Brasília</span><svg><use href="#i-chevron"/></svg></span></div>
+            </div>
+            <div class="alert alert-success"><svg><use href="#i-check"/></svg><b>23/11/2026, segunda-feira</b><p>20/11 é Consciência Negra (nacional); 21 e 22/11 são fim de semana.</p></div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="faixa entre"><span class="titulo-painel">Feriados de 2026</span><span class="sub">15</span></div>
+          <div class="lista-itens">
+            <div class="item"><span class="sub" style="width:44px">01/01</span><span style="flex:1">Confraternização Universal</span><span class="sub">Nacional</span></div>
+            <div class="item"><span class="sub" style="width:44px">16/02</span><span style="flex:1">Carnaval (segunda e terça, 17/02)</span><span class="sub">Nacional</span></div>
+            <div class="item"><span class="sub" style="width:44px">03/04</span><span style="flex:1">Sexta-feira Santa</span><span class="sub">Nacional</span></div>
+            <div class="item"><span class="sub" style="width:44px">21/04</span><span style="flex:1">Tiradentes</span><span class="sub">Nacional</span></div>
+            <div class="item"><span class="sub" style="width:44px">01/05</span><span style="flex:1">Dia do Trabalho</span><span class="sub">Nacional</span></div>
+            <div class="item"><span class="sub" style="width:44px">04/06</span><span style="flex:1">Corpus Christi</span><span class="sub">Nacional</span></div>
+            <div class="item"><span class="sub" style="width:44px">07/09</span><span style="flex:1">Independência do Brasil</span><span class="sub">Nacional</span></div>
+            <div class="item"><span class="sub" style="width:44px">12/10</span><span style="flex:1">Nossa Senhora Aparecida</span><span class="sub">Nacional</span></div>
+            <div class="item"><span class="sub" style="width:44px">24/10</span><span style="flex:1">Aniversário de Goiânia</span><span class="sub">Goiânia/GO</span></div>
+            <div class="item ativo"><span class="sub" style="width:44px">02/11</span><span style="flex:1">Finados</span><span class="sub">Nacional</span></div>
+            <div class="item ativo"><span class="sub" style="width:44px">15/11</span><span style="flex:1">Proclamação da República</span><span class="sub">Nacional</span></div>
+            <div class="item ativo"><span class="sub" style="width:44px">20/11</span><span style="flex:1">Consciência Negra</span><span class="sub">Nacional</span></div>
+            <div class="item ativo"><span class="sub" style="width:44px">30/11</span><span style="flex:1">Feriado estadual de Goiás</span><span class="sub">GO</span></div>
+            <div class="item"><span class="sub" style="width:44px">25/12</span><span style="flex:1">Natal</span><span class="sub">Nacional</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="C" data-nome="Por abrangência" data-resumo="Três colunas, nacionais, estaduais e municipais, com o conferidor de dia útil no topo. Deixa claro o que vale para cada localidade e onde falta cadastro; custa a ordem do calendário entre as colunas.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração</div>
+        <h3>Feriados</h3>
+        <div class="desc">Dia útil não é sábado, domingo, feriado nacional, da UF nem do município do cliente.</div>
+        <div class="meta"><span><span class="stat">15</span> feriados em 2026</span><span class="dot">·</span><span>calendário da empresa: <span class="stat">DF</span></span></div>
+      </div>
+      <div class="row"><span class="select"><span>2026</span><svg><use href="#i-chevron"/></svg></span><button class="btn btn-primary"><svg><use href="#i-plus"/></svg>Novo feriado</button></div>
+    </div>
+    <div class="panel">
+      <div class="faixa"><span class="titulo-painel">Conferir dia útil</span></div>
+      <div class="corpo-painel">
+        <div class="form-grade">
+          <div class="field"><label>A partir de</label><input class="input" type="date" value="2026-11-19"></div>
+          <div class="field"><label>Dias úteis depois</label><input class="input" value="1"></div>
+          <div class="field"><label>Localidade</label><span class="select" style="width:100%"><span>DF · Brasília</span><svg><use href="#i-chevron"/></svg></span></div>
+          <div class="alert alert-success"><svg><use href="#i-check"/></svg><b>23/11/2026, segunda-feira</b><p>20/11 é Consciência Negra; 21 e 22/11, fim de semana.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="grade-3">
+      <div class="panel">
+        <div class="faixa entre"><span class="titulo-painel">Nacionais</span><span class="row"><span class="badge badge-neutral">13</span><button class="btn btn-secondary btn-sm">Gerar 2027</button></span></div>
+        <div class="lista-itens">
+          <div class="item"><span class="sub" style="width:70px">01/01 · qui</span><span style="flex:1">Confraternização Universal</span></div>
+          <div class="item"><span class="sub" style="width:70px">16/02 · seg</span><span style="flex:1">Carnaval</span></div>
+          <div class="item"><span class="sub" style="width:70px">17/02 · ter</span><span style="flex:1">Carnaval</span></div>
+          <div class="item"><span class="sub" style="width:70px">03/04 · sex</span><span style="flex:1">Sexta-feira Santa</span></div>
+          <div class="item"><span class="sub" style="width:70px">21/04 · ter</span><span style="flex:1">Tiradentes</span></div>
+          <div class="item"><span class="sub" style="width:70px">01/05 · sex</span><span style="flex:1">Dia do Trabalho</span></div>
+          <div class="item"><span class="sub" style="width:70px">04/06 · qui</span><span style="flex:1">Corpus Christi</span></div>
+          <div class="item"><span class="sub" style="width:70px">07/09 · seg</span><span style="flex:1">Independência do Brasil</span></div>
+          <div class="item"><span class="sub" style="width:70px">12/10 · seg</span><span style="flex:1">Nossa Senhora Aparecida</span></div>
+          <div class="item"><span class="sub" style="width:70px">02/11 · seg</span><span style="flex:1">Finados</span></div>
+          <div class="item"><span class="sub" style="width:70px">15/11 · dom</span><span style="flex:1">Proclamação da República</span></div>
+          <div class="item"><span class="sub" style="width:70px">20/11 · sex</span><span style="flex:1">Consciência Negra</span></div>
+          <div class="item"><span class="sub" style="width:70px">25/12 · sex</span><span style="flex:1">Natal</span></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="faixa entre"><span class="titulo-painel">Estaduais</span><span class="badge badge-neutral">1</span></div>
+        <div class="lista-itens">
+          <div class="item"><span class="sub" style="width:70px">30/11 · seg</span><span style="flex:1">Feriado estadual de Goiás<div class="row-meta">GO</div></span><button class="iconbtn danger" title="Remover" aria-label="Remover"><svg><use href="#i-trash"/></svg></button></div>
+        </div>
+        <div class="faixa" style="border-bottom:0;border-top:1px solid var(--row-border)"><span class="sub">Nenhum feriado estadual cadastrado para DF e TO, onde há clientes.</span></div>
+      </div>
+      <div class="panel">
+        <div class="faixa entre"><span class="titulo-painel">Municipais</span><span class="badge badge-neutral">1</span></div>
+        <div class="lista-itens">
+          <div class="item"><span class="sub" style="width:70px">24/10 · sáb</span><span style="flex:1">Aniversário de Goiânia<div class="row-meta">Goiânia/GO</div></span><button class="iconbtn danger" title="Remover" aria-label="Remover"><svg><use href="#i-trash"/></svg></button></div>
+        </div>
+        <div class="faixa" style="border-bottom:0;border-top:1px solid var(--row-border)"><span class="sub">Nenhum feriado municipal para Brasília, Anápolis e Palmas.</span></div>
+      </div>
+    </div>
+  </template>
+</section>

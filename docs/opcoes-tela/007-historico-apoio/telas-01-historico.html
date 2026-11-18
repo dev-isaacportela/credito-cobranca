@@ -1,0 +1,608 @@
+
+<section data-tela="historico-cliente" data-grupo="Histórico" data-titulo="Histórico do cliente"
+         data-desc="Para agente, analista, supervisor, gerência e Jurídico: buscar o cliente e ler numa linha do tempo tudo o que foi registrado sobre ele, filtrar por assunto e gerar o PDF.">
+
+  <template data-opcao="A" data-nome="Página única" data-resumo="Resumo de 12 campos no alto, filtro por categoria e linha do tempo corrida abaixo; lê-se de cima para baixo, mas o resumo empurra os registros para depois da primeira rolagem.">
+    <div class="page-header">
+      <div>
+        <div class="module">Histórico e apoio</div>
+        <h3>Histórico do cliente</h3>
+        <div class="desc">Tudo o que foi registrado sobre o cliente, da solicitação de crédito à cobrança. Somente leitura.</div>
+      </div>
+      <div class="row">
+        <button class="btn btn-secondary">Imprimir</button>
+        <button class="btn btn-primary">Gerar PDF</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="toolbar">
+        <div class="search"><svg><use href="#i-search"/></svg><input class="input" value="Clínica Vida Plena Home Care" placeholder="Buscar cliente por nome ou CPF/CNPJ"></div>
+        <span class="sub">Busca entre os clientes da sua carteira. Um só resultado abre direto.</span>
+      </div>
+      <div class="corpo-painel">
+        <div class="entre">
+          <div>
+            <div class="titulo-painel">Clínica Vida Plena Home Care Ltda</div>
+            <div class="sub"><span class="code">27.418.906/0001-52</span> · código 10.482 · Goiânia/GO · Privado · Home care</div>
+          </div>
+          <span class="badge badge-attention">Risco em alerta</span>
+        </div>
+        <dl class="ficha">
+          <div><dt>Etapa de crédito</dt><dd>Gestão de crédito</dd></div>
+          <div><dt>Etapa de cobrança</dt><dd>D+30 · Cobrança extrajudicial</dd></div>
+          <div><dt>Agente e supervisor</dt><dd>Marina Tavares · Rogério Almeida</dd></div>
+          <div><dt>Risco, farol, rating e score</dt><dd>Alerta · amarelo · C · 512</dd></div>
+          <div><dt>Limite</dt><dd>R$ 80.000,00</dd></div>
+          <div><dt>Utilizado</dt><dd>R$ 55.000,00 (69%)</dd></div>
+          <div><dt>Vencido e dias de atraso</dt><dd>R$ 12.500,00 · 37 dias</dd></div>
+          <div><dt>A vencer</dt><dd>R$ 20.000,00</dd></div>
+          <div><dt>Fonte pagadora</dt><dd>Convênios (Unimed Goiânia, Ipasgo)</dd></div>
+          <div><dt>Recuperado</dt><dd>R$ 6.100,00</dd></div>
+          <div><dt>Contatos e promessas</dt><dd>3 contatos · 1 promessa em aberto</dd></div>
+          <div><dt>Documentos</dt><dd>2 anexados</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="faixa entre">
+        <div><span class="titulo-painel">Linha do tempo</span> <span class="sub">24 registros · 2 agendados</span></div>
+        <span class="sub">Agendados primeiro; depois do mais recente ao mais antigo</span>
+      </div>
+      <div class="ha-pills" role="group" aria-label="Filtrar por categoria">
+        <button class="ha-pill" aria-pressed="true">Todas <b>24</b></button>
+        <button class="ha-pill"><span class="ha-cat ha-c1"><i></i>Análise de crédito</span> <b>5</b></button>
+        <button class="ha-pill"><span class="ha-cat ha-c2"><i></i>Ficha de contatos</span> <b>1</b></button>
+        <button class="ha-pill"><span class="ha-cat ha-c3"><i></i>Documento</span> <b>2</b></button>
+        <button class="ha-pill"><span class="ha-cat ha-c4"><i></i>Pedido acima do limite</span> <b>2</b></button>
+        <button class="ha-pill"><span class="ha-cat ha-c5"><i></i>Cobrança</span> <b>4</b></button>
+        <button class="ha-pill"><span class="ha-cat ha-c6"><i></i>Contato de cobrança</span> <b>3</b></button>
+        <button class="ha-pill"><span class="ha-cat ha-c7"><i></i>Promessa</span> <b>1</b></button>
+        <button class="ha-pill"><span class="ha-cat ha-c8"><i></i>Acordo</span> <b>3</b></button>
+        <button class="ha-pill"><span class="ha-cat ha-c1 ha-oco"><i></i>Recuperação</span> <b>1</b></button>
+        <button class="ha-pill"><span class="ha-cat ha-c3 ha-oco"><i></i>E-mail enviado</span> <b>1</b></button>
+        <button class="ha-pill"><span class="ha-cat ha-c8 ha-oco"><i></i>Alteração auditada</span> <b>1</b></button>
+        <button class="ha-pill" disabled title="Sem registros"><span class="ha-cat ha-c2 ha-oco"><i></i>Baixa como perda</span></button>
+        <button class="ha-pill" disabled title="Sem registros"><span class="ha-cat ha-c4 ha-oco"><i></i>Nota fiscal</span></button>
+        <button class="ha-pill" disabled title="Sem registros"><span class="ha-cat ha-c7 ha-oco"><i></i>Processo jurídico</span></button>
+      </div>
+      <div class="corpo-painel">
+        <div class="linha-tempo">
+          <div class="evento ha-ev ha-c5 ha-futuro"><i></i><div class="ha-reg">
+            <div class="ha-reg-topo"><span>17/11/2026 09:00</span><b>Cobrança</b><span class="badge badge-outline">Agendado</span></div>
+            <div class="row-title">Próxima ação: confirmar o pagamento da NF 48.217</div>
+            <p>Ligar para Helena Prado (financeiro) e confirmar a quitação prometida para 16/11.</p>
+            <div class="sub">por Marina Tavares</div>
+          </div></div>
+          <div class="evento ha-ev ha-c8 ha-futuro"><i></i><div class="ha-reg">
+            <div class="ha-reg-topo"><span>05/12/2026</span><b>Acordo</b><span class="badge badge-outline">Agendado</span></div>
+            <div class="row-title">Parcela 2 de 3 do acordo vence</div>
+            <p>R$ 6.100,00 por boleto. Atraso de 5 dias quebra o acordo.</p>
+            <div class="sub">por sistema (acordo de 22/10/2026)</div>
+          </div></div>
+          <div class="evento ha-ev ha-c7"><i></i><div class="ha-reg">
+            <div class="ha-reg-topo"><span>13/11/2026 16:45</span><b>Promessa</b></div>
+            <div class="row-title">Promessa de pagamento: R$ 12.500,00 até 16/11/2026</div>
+            <p>Referente à NF 48.217, vencida em 08/10/2026.</p>
+            <div class="sub">por Marina Tavares</div>
+          </div></div>
+          <div class="evento ha-ev ha-c6"><i></i><div class="ha-reg">
+            <div class="ha-reg-topo"><span>13/11/2026 16:42</span><b>Contato de cobrança</b></div>
+            <div class="row-title">Ligação atendida pelo financeiro</div>
+            <p>Falou com Helena Prado, pelo telefone (62) 3555-0142. Retorno: promessa de pagamento.</p>
+            <p class="ha-feedback">Feedback: aguardam o repasse da Unimed Goiânia, previsto para 16/11.</p>
+            <div class="sub">por Marina Tavares</div>
+          </div></div>
+          <div class="evento ha-ev ha-c3 ha-oco"><i></i><div class="ha-reg">
+            <div class="ha-reg-topo"><span>10/11/2026 10:05</span><b>E-mail enviado</b></div>
+            <div class="row-title">[Crédito e Cobrança] Título em cobrança extrajudicial: NF 48.217</div>
+            <p>Para financeiro@vidaplenahomecare.com.br · Resultado: enviado</p>
+            <details class="ha-det"><summary>Ver o e-mail completo</summary>
+              <div class="rebaixado">Prezados, a nota fiscal 48.217, de R$ 12.500,00, venceu em 08/10/2026 e segue em aberto. O título foi encaminhado à cobrança extrajudicial. Para regularizar, entrem em contato com Marina Tavares, do Núcleo Financeiro da Benenutri.</div>
+            </details>
+            <div class="sub">por sistema (régua, D+30)</div>
+          </div></div>
+          <div class="evento ha-ev ha-c5"><i></i><div class="ha-reg">
+            <div class="ha-reg-topo"><span>07/11/2026 08:00</span><b>Cobrança</b></div>
+            <div class="row-title">Etapa da régua: D+30, cobrança extrajudicial</div>
+            <p>NF 48.217 (R$ 12.500,00) encaminhada à assessoria de cobrança. Etapa anterior: D+20, negociação pós-protesto.</p>
+            <div class="sub">por sistema (régua)</div>
+          </div></div>
+          <div class="evento ha-ev ha-c1 ha-oco"><i></i><div class="ha-reg">
+            <div class="ha-reg-topo"><span>05/11/2026 14:20</span><b>Recuperação</b></div>
+            <div class="row-title">Parcela 1 de 3 do acordo paga: R$ 6.100,00</div>
+            <p>Baixa identificada no Winthor; boleto pago no vencimento.</p>
+            <div class="sub">por sistema (Winthor)</div>
+          </div></div>
+          <div class="evento ha-ev ha-c8 ha-oco"><i></i><div class="ha-reg">
+            <div class="ha-reg-topo"><span>04/11/2026 11:12</span><b>Alteração auditada</b></div>
+            <div class="row-title">Limite de crédito alterado</div>
+            <p>De R$ 100.000,00 para R$ 80.000,00. Motivo: título vencido há mais de 15 dias.</p>
+            <div class="sub">por Rogério Almeida (Supervisor)</div>
+          </div></div>
+          <div class="evento ha-ev ha-c4"><i></i><div class="ha-reg">
+            <div class="ha-reg-topo"><span>30/10/2026 09:30</span><b>Pedido acima do limite</b></div>
+            <div class="row-title">Pedido 771.204 negado pelo Gerente</div>
+            <p>Pedido de R$ 9.800,00 excedia o limite disponível em R$ 4.300,00, e o cliente tinha título vencido há 22 dias.</p>
+            <p class="ha-feedback">Feedback: liberar só depois da quitação da NF 48.217.</p>
+            <div class="sub">por Cláudia Menezes (Gerente financeiro)</div>
+          </div></div>
+          <div class="evento ha-ev ha-c5"><i></i><div class="ha-reg">
+            <div class="ha-reg-topo"><span>28/10/2026 08:00</span><b>Cobrança</b></div>
+            <div class="row-title">Etapa da régua: D+20, negociação pós-protesto</div>
+            <p>Oferta de parcelamento; carta de anuência depois da quitação.</p>
+            <div class="sub">por sistema (régua)</div>
+          </div></div>
+        </div>
+      </div>
+      <div class="pagination"><span aria-live="polite">Página 1 de 3 · 24 registros</span><span class="btns"><button class="btn btn-secondary btn-sm" disabled>Anterior</button><button class="btn btn-secondary btn-sm">Próxima</button></span></div>
+    </div>
+  </template>
+
+  <template data-opcao="B" data-nome="Resumo ao lado" data-resumo="Cliente, 12 campos e categorias numa coluna fixa à esquerda; registros em tabela densa à direita. Cabe mais registro por tela e o resumo nunca some, mas o texto de cada registro fica mais apertado.">
+    <div class="page-header">
+      <div>
+        <div class="module">Histórico e apoio</div>
+        <h3>Histórico do cliente</h3>
+        <div class="meta"><span><span class="stat">24</span> registros</span><span class="dot">·</span><span><span class="stat">2</span> agendados</span><span class="dot">·</span><span>somente leitura</span></div>
+      </div>
+      <div class="row">
+        <button class="btn btn-secondary">Imprimir</button>
+        <button class="btn btn-primary">Gerar PDF</button>
+      </div>
+    </div>
+
+    <div class="lado estreito">
+      <div class="pilha-v">
+        <div class="panel">
+          <div class="corpo-painel">
+            <div class="search"><svg><use href="#i-search"/></svg><input class="input" value="27418906000152" placeholder="Nome ou CPF/CNPJ"></div>
+            <div>
+              <div class="titulo-painel">Clínica Vida Plena Home Care Ltda</div>
+              <div class="sub"><span class="code">27.418.906/0001-52</span> · código 10.482</div>
+              <div class="sub">Goiânia/GO · Privado · Home care</div>
+            </div>
+          </div>
+          <dl class="ha-pares">
+            <div><dt>Etapa de crédito</dt><dd>Gestão de crédito</dd></div>
+            <div><dt>Etapa de cobrança</dt><dd>D+30 · extrajudicial</dd></div>
+            <div><dt>Agente e supervisor</dt><dd>Marina Tavares<br><span class="sub">sup. Rogério Almeida</span></dd></div>
+            <div><dt>Risco, farol, rating e score</dt><dd><span class="status status-attention"><i></i>Alerta</span><br><span class="sub">amarelo · C · 512</span></dd></div>
+            <div><dt>Limite</dt><dd>R$ 80.000,00</dd></div>
+            <div><dt>Utilizado</dt><dd>R$ 55.000,00</dd></div>
+            <div><dt>Vencido e dias de atraso</dt><dd>R$ 12.500,00<br><span class="sub">37 dias</span></dd></div>
+            <div><dt>A vencer</dt><dd>R$ 20.000,00</dd></div>
+            <div><dt>Fonte pagadora</dt><dd>Convênios</dd></div>
+            <div><dt>Recuperado</dt><dd>R$ 6.100,00</dd></div>
+            <div><dt>Contatos e promessas</dt><dd>3 · 1 em aberto</dd></div>
+            <div><dt>Documentos</dt><dd>2</dd></div>
+          </dl>
+        </div>
+
+        <div class="panel">
+          <div class="faixa"><span class="titulo-painel">Categorias</span></div>
+          <div role="group" aria-label="Filtrar por categoria">
+            <button class="ha-fl" aria-pressed="true"><span>Todas</span><b>24</b></button>
+            <button class="ha-fl"><span class="ha-cat ha-c1"><i></i>Análise de crédito</span><b>5</b></button>
+            <button class="ha-fl"><span class="ha-cat ha-c2"><i></i>Ficha de contatos</span><b>1</b></button>
+            <button class="ha-fl"><span class="ha-cat ha-c3"><i></i>Documento</span><b>2</b></button>
+            <button class="ha-fl"><span class="ha-cat ha-c4"><i></i>Pedido acima do limite</span><b>2</b></button>
+            <button class="ha-fl"><span class="ha-cat ha-c5"><i></i>Cobrança</span><b>4</b></button>
+            <button class="ha-fl"><span class="ha-cat ha-c6"><i></i>Contato de cobrança</span><b>3</b></button>
+            <button class="ha-fl"><span class="ha-cat ha-c7"><i></i>Promessa</span><b>1</b></button>
+            <button class="ha-fl"><span class="ha-cat ha-c8"><i></i>Acordo</span><b>3</b></button>
+            <button class="ha-fl"><span class="ha-cat ha-c1 ha-oco"><i></i>Recuperação</span><b>1</b></button>
+            <button class="ha-fl" disabled><span class="ha-cat ha-c2 ha-oco"><i></i>Baixa como perda</span><span class="dash">—</span></button>
+            <button class="ha-fl"><span class="ha-cat ha-c3 ha-oco"><i></i>E-mail enviado</span><b>1</b></button>
+            <button class="ha-fl" disabled><span class="ha-cat ha-c4 ha-oco"><i></i>Nota fiscal</span><span class="dash">—</span></button>
+            <button class="ha-fl" disabled><span class="ha-cat ha-c7 ha-oco"><i></i>Processo jurídico</span><span class="dash">—</span></button>
+            <button class="ha-fl"><span class="ha-cat ha-c8 ha-oco"><i></i>Alteração auditada</span><b>1</b></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="tabela-wrap">
+          <table>
+            <thead><tr><th>Quando</th><th>Categoria</th><th>Registro</th><th>Por</th></tr></thead>
+            <tbody>
+              <tr><td>17/11/2026 09:00<div class="row-meta">Agendado</div></td><td><span class="ha-cat ha-c5"><i></i>Cobrança</span></td><td><div class="row-title">Próxima ação: confirmar o pagamento da NF 48.217</div><div class="row-meta">Ligar para Helena Prado (financeiro) e confirmar a quitação prometida para 16/11.</div></td><td>Marina Tavares</td></tr>
+              <tr><td>05/12/2026<div class="row-meta">Agendado</div></td><td><span class="ha-cat ha-c8"><i></i>Acordo</span></td><td><div class="row-title">Parcela 2 de 3 do acordo vence</div><div class="row-meta">R$ 6.100,00 por boleto. Atraso de 5 dias quebra o acordo.</div></td><td>Sistema</td></tr>
+              <tr><td>13/11/2026 16:45</td><td><span class="ha-cat ha-c7"><i></i>Promessa</span></td><td><div class="row-title">Promessa de pagamento: R$ 12.500,00 até 16/11/2026</div><div class="row-meta">Referente à NF 48.217, vencida em 08/10/2026.</div></td><td>Marina Tavares</td></tr>
+              <tr><td>13/11/2026 16:42</td><td><span class="ha-cat ha-c6"><i></i>Contato de cobrança</span></td><td><div class="row-title">Ligação atendida pelo financeiro</div><div class="row-meta">Falou com Helena Prado, (62) 3555-0142. Retorno: promessa de pagamento.</div><div class="row-meta ha-feedback">Feedback: aguardam o repasse da Unimed Goiânia, previsto para 16/11.</div></td><td>Marina Tavares</td></tr>
+              <tr><td>10/11/2026 10:05</td><td><span class="ha-cat ha-c3 ha-oco"><i></i>E-mail enviado</span></td><td><div class="row-title">[Crédito e Cobrança] Título em cobrança extrajudicial: NF 48.217</div><div class="row-meta">Para financeiro@vidaplenahomecare.com.br · Resultado: enviado</div><details class="ha-det"><summary>Ver o e-mail completo</summary><div class="rebaixado">Prezados, a nota fiscal 48.217, de R$ 12.500,00, venceu em 08/10/2026 e segue em aberto. O título foi encaminhado à cobrança extrajudicial. Para regularizar, entrem em contato com Marina Tavares, do Núcleo Financeiro da Benenutri.</div></details></td><td>Sistema</td></tr>
+              <tr><td>07/11/2026 08:00</td><td><span class="ha-cat ha-c5"><i></i>Cobrança</span></td><td><div class="row-title">Etapa da régua: D+30, cobrança extrajudicial</div><div class="row-meta">NF 48.217 (R$ 12.500,00) encaminhada à assessoria de cobrança.</div></td><td>Sistema</td></tr>
+              <tr><td>05/11/2026 14:20</td><td><span class="ha-cat ha-c1 ha-oco"><i></i>Recuperação</span></td><td><div class="row-title">Parcela 1 de 3 do acordo paga: R$ 6.100,00</div><div class="row-meta">Baixa identificada no Winthor; boleto pago no vencimento.</div></td><td>Sistema</td></tr>
+              <tr><td>04/11/2026 11:12</td><td><span class="ha-cat ha-c8 ha-oco"><i></i>Alteração auditada</span></td><td><div class="row-title">Limite de crédito alterado</div><div class="row-meta">De R$ 100.000,00 para R$ 80.000,00. Motivo: título vencido há mais de 15 dias.</div></td><td>Rogério Almeida</td></tr>
+              <tr><td>30/10/2026 09:30</td><td><span class="ha-cat ha-c4"><i></i>Pedido acima do limite</span></td><td><div class="row-title">Pedido 771.204 negado pelo Gerente</div><div class="row-meta">R$ 9.800,00 excedia o limite disponível em R$ 4.300,00; título vencido há 22 dias.</div><div class="row-meta ha-feedback">Feedback: liberar só depois da quitação da NF 48.217.</div></td><td>Cláudia Menezes</td></tr>
+              <tr><td>28/10/2026 08:00</td><td><span class="ha-cat ha-c5"><i></i>Cobrança</span></td><td><div class="row-title">Etapa da régua: D+20, negociação pós-protesto</div><div class="row-meta">Oferta de parcelamento; carta de anuência depois da quitação.</div></td><td>Sistema</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination"><span aria-live="polite">Página 1 de 3 · 24 registros</span><span class="btns"><button class="btn btn-secondary btn-sm" disabled>Anterior</button><button class="btn btn-secondary btn-sm">Próxima</button></span></div>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="C" data-nome="Por assunto, em abas" data-resumo="Quatro números do cliente no alto e os registros separados em abas de assunto (crédito, cobrança, comunicação, auditoria), agrupados por dia. Responde rápido a “o que foi combinado na cobrança”, mas os 12 campos e a categoria exata ficam a um clique.">
+    <div class="page-header">
+      <div>
+        <div class="module">Histórico e apoio</div>
+        <h3>Clínica Vida Plena Home Care Ltda</h3>
+        <div class="desc"><span class="code">27.418.906/0001-52</span> · código 10.482 · Goiânia/GO · Privado · agente Marina Tavares, supervisor Rogério Almeida</div>
+      </div>
+      <div class="row">
+        <div class="search ha-busca-cab"><svg><use href="#i-search"/></svg><input class="input" placeholder="Trocar de cliente: nome ou CPF/CNPJ"></div>
+        <button class="btn btn-secondary">Imprimir</button>
+        <button class="btn btn-primary">Gerar PDF</button>
+      </div>
+    </div>
+
+    <div class="kpis ha-sem-margem">
+      <div class="kpi"><div class="rot">Limite</div><div class="valor">R$ 80.000,00</div><div class="hint">utilizado R$ 55.000,00 (69%)</div></div>
+      <div class="kpi"><div class="rot">Vencido</div><div class="valor">R$ 12.500,00</div><div class="hint">há 37 dias · D+30, cobrança extrajudicial</div></div>
+      <div class="kpi"><div class="rot">A vencer</div><div class="valor">R$ 20.000,00</div><div class="hint">crédito em Gestão de crédito</div></div>
+      <div class="kpi"><div class="rot">Recuperado</div><div class="valor">R$ 6.100,00</div><div class="hint">3 contatos · 1 promessa em aberto</div></div>
+    </div>
+
+    <details class="panel ha-secao">
+      <summary>Resumo completo <span class="sub">12 campos · risco em alerta, rating C, score 512</span></summary>
+      <div class="corpo-painel">
+        <dl class="ficha">
+          <div><dt>Etapa de crédito</dt><dd>Gestão de crédito</dd></div>
+          <div><dt>Etapa de cobrança</dt><dd>D+30 · Cobrança extrajudicial</dd></div>
+          <div><dt>Agente e supervisor</dt><dd>Marina Tavares · Rogério Almeida</dd></div>
+          <div><dt>Risco, farol, rating e score</dt><dd>Alerta · amarelo · C · 512</dd></div>
+          <div><dt>Limite</dt><dd>R$ 80.000,00</dd></div>
+          <div><dt>Utilizado</dt><dd>R$ 55.000,00 (69%)</dd></div>
+          <div><dt>Vencido e dias de atraso</dt><dd>R$ 12.500,00 · 37 dias</dd></div>
+          <div><dt>A vencer</dt><dd>R$ 20.000,00</dd></div>
+          <div><dt>Fonte pagadora</dt><dd>Convênios (Unimed Goiânia, Ipasgo)</dd></div>
+          <div><dt>Recuperado</dt><dd>R$ 6.100,00</dd></div>
+          <div><dt>Contatos e promessas</dt><dd>3 contatos · 1 promessa em aberto</dd></div>
+          <div><dt>Documentos</dt><dd>2 anexados</dd></div>
+        </dl>
+      </div>
+    </details>
+
+    <div class="panel com-abas">
+      <div class="abas" role="tablist">
+        <button data-aba="tudo" aria-selected="true">Tudo <span class="sub">24</span></button>
+        <button data-aba="credito" aria-selected="false">Crédito <span class="sub">10</span></button>
+        <button data-aba="cobranca" aria-selected="false">Cobrança e acordos <span class="sub">12</span></button>
+        <button data-aba="comunicacao" aria-selected="false">Comunicação e notas fiscais <span class="sub">1</span></button>
+        <button data-aba="auditoria" aria-selected="false">Jurídico e auditoria <span class="sub">1</span></button>
+      </div>
+
+      <div data-painel="tudo">
+        <div class="ha-dia ha-dia-futuro"><h4>Agendado<small>2 registros</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">17/11</span><span class="ha-cat ha-c5"><i></i>Cobrança</span><div class="ha-reg"><div class="row-title">Próxima ação: confirmar o pagamento da NF 48.217</div><p>Ligar para Helena Prado (financeiro) às 09:00 e confirmar a quitação prometida para 16/11.</p><div class="sub">por Marina Tavares</div></div></div>
+          <div class="ha-item"><span class="ha-hora">05/12</span><span class="ha-cat ha-c8"><i></i>Acordo</span><div class="ha-reg"><div class="row-title">Parcela 2 de 3 do acordo vence</div><p>R$ 6.100,00 por boleto. Atraso de 5 dias quebra o acordo.</p><div class="sub">por sistema (acordo de 22/10/2026)</div></div></div>
+        </div></div>
+        <div class="ha-dia"><h4>13/11/2026<small>sexta-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">16:45</span><span class="ha-cat ha-c7"><i></i>Promessa</span><div class="ha-reg"><div class="row-title">Promessa de pagamento: R$ 12.500,00 até 16/11/2026</div><p>Referente à NF 48.217, vencida em 08/10/2026.</p><div class="sub">por Marina Tavares</div></div></div>
+          <div class="ha-item"><span class="ha-hora">16:42</span><span class="ha-cat ha-c6"><i></i>Contato de cobrança</span><div class="ha-reg"><div class="row-title">Ligação atendida pelo financeiro</div><p>Falou com Helena Prado, (62) 3555-0142. Retorno: promessa de pagamento.</p><p class="ha-feedback">Feedback: aguardam o repasse da Unimed Goiânia, previsto para 16/11.</p><div class="sub">por Marina Tavares</div></div></div>
+        </div></div>
+        <div class="ha-dia"><h4>10/11/2026<small>terça-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">10:05</span><span class="ha-cat ha-c3 ha-oco"><i></i>E-mail enviado</span><div class="ha-reg"><div class="row-title">[Crédito e Cobrança] Título em cobrança extrajudicial: NF 48.217</div><p>Para financeiro@vidaplenahomecare.com.br · Resultado: enviado</p><details class="ha-det"><summary>Ver o e-mail completo</summary><div class="rebaixado">Prezados, a nota fiscal 48.217, de R$ 12.500,00, venceu em 08/10/2026 e segue em aberto. O título foi encaminhado à cobrança extrajudicial. Para regularizar, entrem em contato com Marina Tavares, do Núcleo Financeiro da Benenutri.</div></details><div class="sub">por sistema (régua, D+30)</div></div></div>
+        </div></div>
+        <div class="ha-dia"><h4>07/11/2026<small>sábado</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">08:00</span><span class="ha-cat ha-c5"><i></i>Cobrança</span><div class="ha-reg"><div class="row-title">Etapa da régua: D+30, cobrança extrajudicial</div><p>NF 48.217 (R$ 12.500,00) encaminhada à assessoria de cobrança.</p><div class="sub">por sistema (régua)</div></div></div>
+        </div></div>
+        <div class="ha-dia"><h4>05/11/2026<small>quinta-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">14:20</span><span class="ha-cat ha-c1 ha-oco"><i></i>Recuperação</span><div class="ha-reg"><div class="row-title">Parcela 1 de 3 do acordo paga: R$ 6.100,00</div><p>Baixa identificada no Winthor; boleto pago no vencimento.</p><div class="sub">por sistema (Winthor)</div></div></div>
+        </div></div>
+        <div class="ha-dia"><h4>04/11/2026<small>quarta-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">11:12</span><span class="ha-cat ha-c8 ha-oco"><i></i>Alteração auditada</span><div class="ha-reg"><div class="row-title">Limite de crédito alterado</div><p>De R$ 100.000,00 para R$ 80.000,00. Motivo: título vencido há mais de 15 dias.</p><div class="sub">por Rogério Almeida (Supervisor)</div></div></div>
+        </div></div>
+        <div class="ha-dia"><h4>30/10/2026<small>sexta-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">09:30</span><span class="ha-cat ha-c4"><i></i>Pedido acima do limite</span><div class="ha-reg"><div class="row-title">Pedido 771.204 negado pelo Gerente</div><p>R$ 9.800,00 excedia o limite disponível em R$ 4.300,00; título vencido há 22 dias.</p><p class="ha-feedback">Feedback: liberar só depois da quitação da NF 48.217.</p><div class="sub">por Cláudia Menezes (Gerente financeiro)</div></div></div>
+        </div></div>
+        <div class="ha-dia"><h4>28/10/2026<small>quarta-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">08:00</span><span class="ha-cat ha-c5"><i></i>Cobrança</span><div class="ha-reg"><div class="row-title">Etapa da régua: D+20, negociação pós-protesto</div><p>Oferta de parcelamento; carta de anuência depois da quitação.</p><div class="sub">por sistema (régua)</div></div></div>
+        </div></div>
+        <div class="pagination"><span>Página 1 de 3 · 24 registros</span><span class="btns"><button class="btn btn-secondary btn-sm" disabled>Anterior</button><button class="btn btn-secondary btn-sm">Próxima</button></span></div>
+      </div>
+
+      <div data-painel="credito" hidden>
+        <div class="ha-pills" role="group" aria-label="Categorias de crédito">
+          <button class="ha-pill" aria-pressed="true">Todas de crédito <b>10</b></button>
+          <button class="ha-pill"><span class="ha-cat ha-c1"><i></i>Análise de crédito</span> <b>5</b></button>
+          <button class="ha-pill"><span class="ha-cat ha-c2"><i></i>Ficha de contatos</span> <b>1</b></button>
+          <button class="ha-pill"><span class="ha-cat ha-c3"><i></i>Documento</span> <b>2</b></button>
+          <button class="ha-pill"><span class="ha-cat ha-c4"><i></i>Pedido acima do limite</span> <b>2</b></button>
+        </div>
+        <div class="ha-dia"><h4>30/10/2026<small>sexta-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">09:30</span><span class="ha-cat ha-c4"><i></i>Pedido acima do limite</span><div class="ha-reg"><div class="row-title">Pedido 771.204 negado pelo Gerente</div><p>R$ 9.800,00 excedia o limite disponível em R$ 4.300,00; título vencido há 22 dias.</p><div class="sub">por Cláudia Menezes (Gerente financeiro)</div></div></div>
+        </div></div>
+        <div class="ha-dia"><h4>29/10/2026<small>quinta-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">15:48</span><span class="ha-cat ha-c4"><i></i>Pedido acima do limite</span><div class="ha-reg"><div class="row-title">Pedido 771.204 retido por limite</div><p>Dieta enteral e materiais de enfermagem, R$ 9.800,00. Alçada: Gerente (excesso de até 25% do limite).</p><div class="sub">por sistema (Winthor)</div></div></div>
+        </div></div>
+        <div class="ha-dia"><h4>02/09/2026<small>quarta-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">10:20</span><span class="ha-cat ha-c2"><i></i>Ficha de contatos</span><div class="ha-reg"><div class="row-title">Ficha de contatos atualizada</div><p>Financeiro: Helena Prado. Compras: Paulo Mendes. Validade da ficha: 180 dias.</p><div class="sub">por Marina Tavares</div></div></div>
+        </div></div>
+        <div class="ha-dia"><h4>18/08/2026<small>terça-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">17:05</span><span class="ha-cat ha-c1"><i></i>Análise de crédito</span><div class="ha-reg"><div class="row-title">Etapa alterada para Gestão de crédito</div><p>Limite cadastrado e ativo no Winthor.</p><div class="sub">por Bruno Siqueira (Analista de crédito)</div></div></div>
+          <div class="ha-item"><span class="ha-hora">16:30</span><span class="ha-cat ha-c1"><i></i>Análise de crédito</span><div class="ha-reg"><div class="row-title">Limite liberado: R$ 100.000,00</div><p>Validade do crédito até 18/08/2027.</p><div class="sub">por Cláudia Menezes (Gerente financeiro)</div></div></div>
+        </div></div>
+        <div class="ha-dia"><h4>17/08/2026<small>segunda-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">11:40</span><span class="ha-cat ha-c1"><i></i>Análise de crédito</span><div class="ha-reg"><div class="row-title">Decisão de crédito: aprovado com limite de R$ 100.000,00</div><p>Alçada do Gerente (acima de R$ 50.000,00). Rating C, score interno 512.</p><p class="ha-feedback">Feedback: reavaliar em 6 meses pela concentração em convênios.</p><div class="sub">por Cláudia Menezes (Gerente financeiro)</div></div></div>
+        </div></div>
+        <div class="ha-dia"><h4>12/08/2026<small>quarta-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">14:15</span><span class="ha-cat ha-c3"><i></i>Documento</span><div class="ha-reg"><div class="row-title">Documento anexado: faturamento dos últimos 12 meses</div><p>PDF, 1,2 MB. Exigido para limite acima de R$ 100.000,00 até R$ 500.000,00.</p><div class="sub">por Bruno Siqueira</div></div></div>
+          <div class="ha-item"><span class="ha-hora">14:02</span><span class="ha-cat ha-c3"><i></i>Documento</span><div class="ha-reg"><div class="row-title">Documento anexado: relatório Serasa Experian</div><p>PDF, 640 KB. Consulta válida por 30 dias.</p><div class="sub">por Bruno Siqueira</div></div></div>
+          <div class="ha-item"><span class="ha-hora">13:50</span><span class="ha-cat ha-c1"><i></i>Análise de crédito</span><div class="ha-reg"><div class="row-title">Consultas registradas: CNPJ, Sintegra, protestos e Serasa</div><p>Sem protestos. Score Serasa 540. CNPJ ativo desde 2014.</p><div class="sub">por Bruno Siqueira</div></div></div>
+        </div></div>
+        <div class="ha-dia"><h4>10/08/2026<small>segunda-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">09:12</span><span class="ha-cat ha-c1"><i></i>Análise de crédito</span><div class="ha-reg"><div class="row-title">Solicitação de crédito aberta: R$ 100.000,00</div><p>Pedido do comercial para ampliar a compra de dietas enterais.</p><div class="sub">por Tiago Lacerda (Comercial)</div></div></div>
+        </div></div>
+        <div class="pagination"><span>Página 1 de 1 · 10 registros</span><span class="btns"><button class="btn btn-secondary btn-sm" disabled>Anterior</button><button class="btn btn-secondary btn-sm" disabled>Próxima</button></span></div>
+      </div>
+
+      <div data-painel="cobranca" hidden>
+        <div class="ha-pills" role="group" aria-label="Categorias de cobrança">
+          <button class="ha-pill" aria-pressed="true">Todas de cobrança <b>12</b></button>
+          <button class="ha-pill"><span class="ha-cat ha-c5"><i></i>Cobrança</span> <b>4</b></button>
+          <button class="ha-pill"><span class="ha-cat ha-c6"><i></i>Contato de cobrança</span> <b>3</b></button>
+          <button class="ha-pill"><span class="ha-cat ha-c7"><i></i>Promessa</span> <b>1</b></button>
+          <button class="ha-pill"><span class="ha-cat ha-c8"><i></i>Acordo</span> <b>3</b></button>
+          <button class="ha-pill"><span class="ha-cat ha-c1 ha-oco"><i></i>Recuperação</span> <b>1</b></button>
+          <button class="ha-pill" disabled title="Sem registros"><span class="ha-cat ha-c2 ha-oco"><i></i>Baixa como perda</span></button>
+        </div>
+        <div class="ha-dia ha-dia-futuro"><h4>Agendado<small>2 registros</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">17/11</span><span class="ha-cat ha-c5"><i></i>Cobrança</span><div class="ha-reg"><div class="row-title">Próxima ação: confirmar o pagamento da NF 48.217</div><p>Ligar para Helena Prado (financeiro) às 09:00.</p><div class="sub">por Marina Tavares</div></div></div>
+          <div class="ha-item"><span class="ha-hora">05/12</span><span class="ha-cat ha-c8"><i></i>Acordo</span><div class="ha-reg"><div class="row-title">Parcela 2 de 3 do acordo vence</div><p>R$ 6.100,00 por boleto.</p><div class="sub">por sistema</div></div></div>
+        </div></div>
+        <div class="ha-dia"><h4>13/11/2026<small>sexta-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">16:45</span><span class="ha-cat ha-c7"><i></i>Promessa</span><div class="ha-reg"><div class="row-title">Promessa de pagamento: R$ 12.500,00 até 16/11/2026</div><div class="sub">por Marina Tavares</div></div></div>
+          <div class="ha-item"><span class="ha-hora">16:42</span><span class="ha-cat ha-c6"><i></i>Contato de cobrança</span><div class="ha-reg"><div class="row-title">Ligação atendida pelo financeiro</div><p class="ha-feedback">Feedback: aguardam o repasse da Unimed Goiânia, previsto para 16/11.</p><div class="sub">por Marina Tavares</div></div></div>
+        </div></div>
+        <div class="ha-dia"><h4>07/11/2026<small>sábado</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">08:00</span><span class="ha-cat ha-c5"><i></i>Cobrança</span><div class="ha-reg"><div class="row-title">Etapa da régua: D+30, cobrança extrajudicial</div><div class="sub">por sistema (régua)</div></div></div>
+        </div></div>
+        <div class="ha-dia"><h4>05/11/2026<small>quinta-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">14:20</span><span class="ha-cat ha-c1 ha-oco"><i></i>Recuperação</span><div class="ha-reg"><div class="row-title">Parcela 1 de 3 do acordo paga: R$ 6.100,00</div><div class="sub">por sistema (Winthor)</div></div></div>
+        </div></div>
+        <div class="ha-dia"><h4>28/10/2026<small>quarta-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">08:00</span><span class="ha-cat ha-c5"><i></i>Cobrança</span><div class="ha-reg"><div class="row-title">Etapa da régua: D+20, negociação pós-protesto</div><div class="sub">por sistema (régua)</div></div></div>
+        </div></div>
+        <div class="ha-dia"><h4>22/10/2026<small>quinta-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">15:10</span><span class="ha-cat ha-c8"><i></i>Acordo</span><div class="ha-reg"><div class="row-title">Acordo formalizado: R$ 18.300,00 em 3 parcelas de R$ 6.100,00</div><p>Títulos de setembro (NF 47.102 e 47.388). Vencimentos em 05/11, 05/12 e 05/01.</p><div class="sub">por Marina Tavares, aprovado por Rogério Almeida</div></div></div>
+        </div></div>
+        <div class="ha-dia"><h4>20/10/2026<small>terça-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">11:30</span><span class="ha-cat ha-c8"><i></i>Acordo</span><div class="ha-reg"><div class="row-title">Proposta de acordo enviada ao cliente</div><p>Parcelamento em 3 vezes, sem desconto, com encargos até a data.</p><div class="sub">por Marina Tavares</div></div></div>
+          <div class="ha-item"><span class="ha-hora">11:05</span><span class="ha-cat ha-c6"><i></i>Contato de cobrança</span><div class="ha-reg"><div class="row-title">Ligação: cliente pediu parcelamento dos títulos de setembro</div><p class="ha-feedback">Feedback: caixa apertado pelo atraso de repasse dos convênios.</p><div class="sub">por Marina Tavares</div></div></div>
+        </div></div>
+        <div class="pagination"><span>Página 1 de 2 · 12 registros</span><span class="btns"><button class="btn btn-secondary btn-sm" disabled>Anterior</button><button class="btn btn-secondary btn-sm">Próxima</button></span></div>
+      </div>
+
+      <div data-painel="comunicacao" hidden>
+        <div class="ha-pills" role="group" aria-label="Categorias de comunicação">
+          <button class="ha-pill" aria-pressed="true"><span class="ha-cat ha-c3 ha-oco"><i></i>E-mail enviado</span> <b>1</b></button>
+          <button class="ha-pill" disabled title="Sem registros"><span class="ha-cat ha-c4 ha-oco"><i></i>Nota fiscal</span></button>
+        </div>
+        <div class="ha-dia"><h4>10/11/2026<small>terça-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">10:05</span><span class="ha-cat ha-c3 ha-oco"><i></i>E-mail enviado</span><div class="ha-reg"><div class="row-title">[Crédito e Cobrança] Título em cobrança extrajudicial: NF 48.217</div><p>Para financeiro@vidaplenahomecare.com.br · Resultado: enviado</p><details class="ha-det"><summary>Ver o e-mail completo</summary><div class="rebaixado">Prezados, a nota fiscal 48.217, de R$ 12.500,00, venceu em 08/10/2026 e segue em aberto. O título foi encaminhado à cobrança extrajudicial.</div></details><div class="sub">por sistema (régua, D+30)</div></div></div>
+        </div></div>
+        <div class="pagination"><span>Página 1 de 1 · 1 registro</span><span class="btns"><button class="btn btn-secondary btn-sm" disabled>Anterior</button><button class="btn btn-secondary btn-sm" disabled>Próxima</button></span></div>
+      </div>
+
+      <div data-painel="auditoria" hidden>
+        <div class="ha-pills" role="group" aria-label="Categorias de jurídico e auditoria">
+          <button class="ha-pill" aria-pressed="true"><span class="ha-cat ha-c8 ha-oco"><i></i>Alteração auditada</span> <b>1</b></button>
+          <button class="ha-pill" disabled title="Sem registros"><span class="ha-cat ha-c7 ha-oco"><i></i>Processo jurídico</span></button>
+        </div>
+        <div class="ha-dia"><h4>04/11/2026<small>quarta-feira</small></h4><div class="ha-itens">
+          <div class="ha-item"><span class="ha-hora">11:12</span><span class="ha-cat ha-c8 ha-oco"><i></i>Alteração auditada</span><div class="ha-reg"><div class="row-title">Limite de crédito alterado</div><p>De R$ 100.000,00 para R$ 80.000,00. Motivo: título vencido há mais de 15 dias.</p><div class="sub">por Rogério Almeida (Supervisor)</div></div></div>
+        </div></div>
+        <div class="pagination"><span>Página 1 de 1 · 1 registro</span><span class="btns"><button class="btn btn-secondary btn-sm" disabled>Anterior</button><button class="btn btn-secondary btn-sm" disabled>Próxima</button></span></div>
+      </div>
+    </div>
+  </template>
+</section>
+
+
+<section data-tela="historico-pdf" data-grupo="Histórico" data-titulo="Histórico · Prévia do PDF"
+         data-desc="O documento que sai de Gerar PDF e de Imprimir: A4 em papel timbrado Benenutri, com cabeçalho, resumo, contatos, linha do tempo do filtro ativo e rodapé com página. Aqui se escolhe como o documento se organiza.">
+
+  <template data-opcao="A" data-nome="Relato corrido" data-resumo="Como no artefato atual: resumo em duas colunas, contatos, observações e os registros um abaixo do outro com o texto inteiro. Fácil de ler em reunião; gasta mais páginas.">
+    <div class="page-header">
+      <div>
+        <div class="module">Histórico do cliente</div>
+        <h3>Prévia do PDF</h3>
+        <div class="desc">Histórico - Clínica Vida Plena Home Care Ltda.pdf · A4 · 4 páginas · todas as categorias (24 registros)</div>
+      </div>
+      <div class="row">
+        <button class="btn btn-ghost">Voltar ao histórico</button>
+        <button class="btn btn-secondary">Imprimir</button>
+        <button class="btn btn-primary">Baixar PDF</button>
+      </div>
+    </div>
+    <div class="alert alert-default"><svg><use href="#i-info"/></svg><b>A emissão fica registrada.</b><p>Quem emitiu, quando, o cliente e o filtro de categoria entram na auditoria. O PDF traz todos os registros do filtro, não só a página visível.</p></div>
+
+    <div class="ha-palco-pdf">
+      <div class="ha-folha">
+        <div class="ha-pdf-cab">
+          <div><h4>Histórico do cliente</h4><div class="sub">Crédito e Cobrança · Núcleo Financeiro · Grupo Benenutri</div><div class="sub">Emitido em 14/11/2026 às 10:32 por Marina Tavares · Todas as categorias</div></div>
+          <div class="ha-logo brand">benenutri</div>
+        </div>
+        <div><b class="ha-pdf-cliente">Clínica Vida Plena Home Care Ltda</b><div class="sub">CNPJ 27.418.906/0001-52 · código 10.482 · Goiânia/GO</div></div>
+        <h5>Resumo</h5>
+        <dl class="ha-pdf-2col">
+          <div><dt>Etapa de crédito</dt><dd>Gestão de crédito</dd></div>
+          <div><dt>Etapa de cobrança</dt><dd>D+30 · Cobrança extrajudicial</dd></div>
+          <div><dt>Agente e supervisor</dt><dd>Marina Tavares · Rogério Almeida</dd></div>
+          <div><dt>Risco, farol, rating e score</dt><dd>Alerta · amarelo · C · 512</dd></div>
+          <div><dt>Limite</dt><dd>R$ 80.000,00</dd></div>
+          <div><dt>Utilizado</dt><dd>R$ 55.000,00</dd></div>
+          <div><dt>Vencido e dias de atraso</dt><dd>R$ 12.500,00 · 37 dias</dd></div>
+          <div><dt>A vencer</dt><dd>R$ 20.000,00</dd></div>
+          <div><dt>Fonte pagadora</dt><dd>Convênios</dd></div>
+          <div><dt>Recuperado</dt><dd>R$ 6.100,00</dd></div>
+          <div><dt>Contatos e promessas</dt><dd>3 contatos · 1 promessa</dd></div>
+          <div><dt>Documentos</dt><dd>2</dd></div>
+        </dl>
+        <h5>Ficha de contatos</h5>
+        <p><b>Financeiro:</b> Helena Prado · (62) 3555-0142 · financeiro@vidaplenahomecare.com.br<br><b>Compras:</b> Paulo Mendes · (62) 3555-0118 · compras@vidaplenahomecare.com.br<br><span class="sub">Ficha atualizada em 02/09/2026</span></p>
+        <h5>Observações</h5>
+        <p>Cliente recebe por repasse de convênios; os pagamentos costumam atrasar na primeira quinzena do mês.</p>
+        <h5>Linha do tempo · 24 registros</h5>
+        <div>
+          <div class="ha-pdf-reg"><span>17/11/2026 09:00</span><div><span class="ha-cat ha-c5"><i></i>Cobrança</span> · <i>agendado</i><br><b>Próxima ação: confirmar o pagamento da NF 48.217</b><br>Ligar para Helena Prado (financeiro) e confirmar a quitação prometida para 16/11.<br><span class="sub">por Marina Tavares</span></div></div>
+          <div class="ha-pdf-reg"><span>05/12/2026</span><div><span class="ha-cat ha-c8"><i></i>Acordo</span> · <i>agendado</i><br><b>Parcela 2 de 3 do acordo vence</b><br>R$ 6.100,00 por boleto. Atraso de 5 dias quebra o acordo.<br><span class="sub">por sistema</span></div></div>
+          <div class="ha-pdf-reg"><span>13/11/2026 16:45</span><div><span class="ha-cat ha-c7"><i></i>Promessa</span><br><b>Promessa de pagamento: R$ 12.500,00 até 16/11/2026</b><br>Referente à NF 48.217, vencida em 08/10/2026.<br><span class="sub">por Marina Tavares</span></div></div>
+          <div class="ha-pdf-reg"><span>13/11/2026 16:42</span><div><span class="ha-cat ha-c6"><i></i>Contato de cobrança</span><br><b>Ligação atendida pelo financeiro</b><br>Falou com Helena Prado, (62) 3555-0142. Retorno: promessa de pagamento.<br><i>Feedback: aguardam o repasse da Unimed Goiânia, previsto para 16/11.</i><br><span class="sub">por Marina Tavares</span></div></div>
+        </div>
+        <div class="ha-pdf-rodape"><span>Clínica Vida Plena Home Care Ltda · 27.418.906/0001-52</span><span>Página 1 de 4</span></div>
+      </div>
+      <div class="sub">Páginas 2 a 4: os outros 20 registros, no mesmo formato.</div>
+    </div>
+  </template>
+
+  <template data-opcao="B" data-nome="Tabela compacta" data-resumo="Resumo em quatro colunas e os registros em tabela (data, categoria, registro, quem). O mesmo histórico cabe em metade das páginas; texto longo e feedback ficam espremidos na coluna.">
+    <div class="page-header">
+      <div>
+        <div class="module">Histórico do cliente</div>
+        <h3>Prévia do PDF</h3>
+        <div class="desc">Histórico - Clínica Vida Plena Home Care Ltda.pdf · A4 · 2 páginas · todas as categorias (24 registros)</div>
+      </div>
+      <div class="row">
+        <button class="btn btn-ghost">Voltar ao histórico</button>
+        <button class="btn btn-secondary">Imprimir</button>
+        <button class="btn btn-primary">Baixar PDF</button>
+      </div>
+    </div>
+    <div class="alert alert-default"><svg><use href="#i-info"/></svg><b>A emissão fica registrada.</b><p>Quem emitiu, quando, o cliente e o filtro de categoria entram na auditoria. O PDF traz todos os registros do filtro, não só a página visível.</p></div>
+
+    <div class="ha-palco-pdf">
+      <div class="ha-folha">
+        <div class="ha-pdf-cab">
+          <div class="ha-logo brand">benenutri</div>
+          <div class="ha-pdf-dir"><h4>Histórico do cliente</h4><div class="sub">Crédito e Cobrança · Núcleo Financeiro · Grupo Benenutri</div><div class="sub">Emitido em 14/11/2026 às 10:32 por Marina Tavares</div></div>
+        </div>
+        <div class="entre"><div><b class="ha-pdf-cliente">Clínica Vida Plena Home Care Ltda</b><div class="sub">CNPJ 27.418.906/0001-52 · código 10.482 · Goiânia/GO</div></div><div class="sub">Filtro: todas as categorias · 24 registros</div></div>
+        <dl class="ha-pdf-4col">
+          <div><dt>Etapa de crédito</dt><dd>Gestão de crédito</dd></div>
+          <div><dt>Etapa de cobrança</dt><dd>D+30 · extrajudicial</dd></div>
+          <div><dt>Agente e supervisor</dt><dd>Marina Tavares · Rogério Almeida</dd></div>
+          <div><dt>Risco, farol, rating, score</dt><dd>Alerta · amarelo · C · 512</dd></div>
+          <div><dt>Limite</dt><dd>R$ 80.000,00</dd></div>
+          <div><dt>Utilizado</dt><dd>R$ 55.000,00</dd></div>
+          <div><dt>Vencido e atraso</dt><dd>R$ 12.500,00 · 37 dias</dd></div>
+          <div><dt>A vencer</dt><dd>R$ 20.000,00</dd></div>
+          <div><dt>Fonte pagadora</dt><dd>Convênios</dd></div>
+          <div><dt>Recuperado</dt><dd>R$ 6.100,00</dd></div>
+          <div><dt>Contatos e promessas</dt><dd>3 · 1 em aberto</dd></div>
+          <div><dt>Documentos</dt><dd>2</dd></div>
+        </dl>
+        <p><b>Contatos:</b> Helena Prado (financeiro), (62) 3555-0142, financeiro@vidaplenahomecare.com.br; Paulo Mendes (compras), (62) 3555-0118. <b>Observações:</b> recebe por repasse de convênios; pagamentos costumam atrasar na primeira quinzena.</p>
+        <table>
+          <thead><tr><th>Data e hora</th><th>Categoria</th><th>Registro</th><th>Por</th></tr></thead>
+          <tbody>
+            <tr><td>17/11/2026 09:00<br><i>agendado</i></td><td><span class="ha-cat ha-c5"><i></i>Cobrança</span></td><td><b>Próxima ação: confirmar o pagamento da NF 48.217.</b> Ligar para Helena Prado (financeiro).</td><td>Marina Tavares</td></tr>
+            <tr><td>05/12/2026<br><i>agendado</i></td><td><span class="ha-cat ha-c8"><i></i>Acordo</span></td><td><b>Parcela 2 de 3 do acordo vence.</b> R$ 6.100,00 por boleto.</td><td>Sistema</td></tr>
+            <tr><td>13/11/2026 16:45</td><td><span class="ha-cat ha-c7"><i></i>Promessa</span></td><td><b>Promessa de pagamento: R$ 12.500,00 até 16/11/2026.</b> NF 48.217, vencida em 08/10/2026.</td><td>Marina Tavares</td></tr>
+            <tr><td>13/11/2026 16:42</td><td><span class="ha-cat ha-c6"><i></i>Contato de cobrança</span></td><td><b>Ligação atendida pelo financeiro.</b> Falou com Helena Prado. <i>Feedback: aguardam o repasse da Unimed Goiânia, previsto para 16/11.</i></td><td>Marina Tavares</td></tr>
+            <tr><td>10/11/2026 10:05</td><td><span class="ha-cat ha-c3 ha-oco"><i></i>E-mail enviado</span></td><td><b>Título em cobrança extrajudicial: NF 48.217.</b> Para financeiro@vidaplenahomecare.com.br; enviado.</td><td>Sistema</td></tr>
+            <tr><td>07/11/2026 08:00</td><td><span class="ha-cat ha-c5"><i></i>Cobrança</span></td><td><b>Etapa da régua: D+30, cobrança extrajudicial.</b> NF 48.217 (R$ 12.500,00) na assessoria.</td><td>Sistema</td></tr>
+            <tr><td>05/11/2026 14:20</td><td><span class="ha-cat ha-c1 ha-oco"><i></i>Recuperação</span></td><td><b>Parcela 1 de 3 do acordo paga: R$ 6.100,00.</b> Baixa identificada no Winthor.</td><td>Sistema</td></tr>
+            <tr><td>04/11/2026 11:12</td><td><span class="ha-cat ha-c8 ha-oco"><i></i>Alteração auditada</span></td><td><b>Limite de crédito alterado.</b> De R$ 100.000,00 para R$ 80.000,00; título vencido há mais de 15 dias.</td><td>Rogério Almeida</td></tr>
+            <tr><td>30/10/2026 09:30</td><td><span class="ha-cat ha-c4"><i></i>Pedido acima do limite</span></td><td><b>Pedido 771.204 negado pelo Gerente.</b> R$ 9.800,00; excedia o limite em R$ 4.300,00.</td><td>Cláudia Menezes</td></tr>
+            <tr><td>29/10/2026 15:48</td><td><span class="ha-cat ha-c4"><i></i>Pedido acima do limite</span></td><td><b>Pedido 771.204 retido por limite.</b> Alçada: Gerente.</td><td>Sistema</td></tr>
+            <tr><td>28/10/2026 08:00</td><td><span class="ha-cat ha-c5"><i></i>Cobrança</span></td><td><b>Etapa da régua: D+20, negociação pós-protesto.</b> Oferta de parcelamento.</td><td>Sistema</td></tr>
+            <tr><td>22/10/2026 15:10</td><td><span class="ha-cat ha-c8"><i></i>Acordo</span></td><td><b>Acordo formalizado: R$ 18.300,00 em 3 parcelas de R$ 6.100,00.</b> NF 47.102 e 47.388.</td><td>Marina Tavares</td></tr>
+          </tbody>
+        </table>
+        <div class="ha-pdf-rodape"><span>Clínica Vida Plena Home Care Ltda · 27.418.906/0001-52</span><span>Página 1 de 2</span></div>
+      </div>
+      <div class="sub">Página 2: os outros 12 registros, na mesma tabela.</div>
+    </div>
+  </template>
+
+  <template data-opcao="C" data-nome="Capa e anexo" data-resumo="A primeira página é uma capa para comitê e Jurídico: situação, números em destaque, contatos e contagem por categoria. A linha do tempo vem como anexo, agrupada por mês. Custa uma página a mais.">
+    <div class="page-header">
+      <div>
+        <div class="module">Histórico do cliente</div>
+        <h3>Prévia do PDF</h3>
+        <div class="desc">Histórico - Clínica Vida Plena Home Care Ltda.pdf · A4 · 3 páginas · todas as categorias (24 registros)</div>
+      </div>
+      <div class="row">
+        <button class="btn btn-ghost">Voltar ao histórico</button>
+        <button class="btn btn-secondary">Imprimir</button>
+        <button class="btn btn-primary">Baixar PDF</button>
+      </div>
+    </div>
+    <div class="alert alert-default"><svg><use href="#i-info"/></svg><b>A emissão fica registrada.</b><p>Quem emitiu, quando, o cliente e o filtro de categoria entram na auditoria. O PDF traz todos os registros do filtro, não só a página visível.</p></div>
+
+    <div class="ha-palco-pdf">
+      <div class="ha-folha">
+        <div class="ha-pdf-cab">
+          <div class="ha-logo brand">benenutri</div>
+          <div class="ha-pdf-dir"><div class="sub">Crédito e Cobrança · Núcleo Financeiro · Grupo Benenutri</div><div class="sub">Emitido em 14/11/2026 às 10:32 por Marina Tavares</div></div>
+        </div>
+        <div><div class="sub">Histórico do cliente</div><h4 class="ha-pdf-titulo">Clínica Vida Plena Home Care Ltda</h4><div class="sub">CNPJ 27.418.906/0001-52 · código 10.482 · Goiânia/GO · Privado · Home care</div></div>
+        <div class="ha-pdf-nums">
+          <div><span>Limite</span><b>R$ 80.000,00</b><small>utilizado R$ 55.000,00</small></div>
+          <div><span>Vencido</span><b>R$ 12.500,00</b><small>há 37 dias</small></div>
+          <div><span>A vencer</span><b>R$ 20.000,00</b><small>fonte pagadora: convênios</small></div>
+          <div><span>Recuperado</span><b>R$ 6.100,00</b><small>1 parcela de acordo</small></div>
+        </div>
+        <h5>Situação</h5>
+        <dl class="ha-pdf-2col">
+          <div><dt>Etapa de crédito</dt><dd>Gestão de crédito</dd></div>
+          <div><dt>Etapa de cobrança</dt><dd>D+30 · Cobrança extrajudicial</dd></div>
+          <div><dt>Agente e supervisor</dt><dd>Marina Tavares · Rogério Almeida</dd></div>
+          <div><dt>Risco, farol, rating e score</dt><dd>Alerta · amarelo · C · 512</dd></div>
+          <div><dt>Contatos e promessas</dt><dd>3 contatos · 1 promessa em aberto</dd></div>
+          <div><dt>Documentos</dt><dd>2</dd></div>
+        </dl>
+        <h5>Ficha de contatos e observações</h5>
+        <p><b>Financeiro:</b> Helena Prado · (62) 3555-0142 · financeiro@vidaplenahomecare.com.br<br><b>Compras:</b> Paulo Mendes · (62) 3555-0118 · compras@vidaplenahomecare.com.br<br>Cliente recebe por repasse de convênios; os pagamentos costumam atrasar na primeira quinzena do mês.</p>
+        <h5>Registros por categoria · 24</h5>
+        <dl class="ha-pdf-4col ha-pdf-cont">
+          <div><dt><span class="ha-cat ha-c1"><i></i>Análise de crédito</span></dt><dd>5</dd></div>
+          <div><dt><span class="ha-cat ha-c5"><i></i>Cobrança</span></dt><dd>4</dd></div>
+          <div><dt><span class="ha-cat ha-c6"><i></i>Contato de cobrança</span></dt><dd>3</dd></div>
+          <div><dt><span class="ha-cat ha-c8"><i></i>Acordo</span></dt><dd>3</dd></div>
+          <div><dt><span class="ha-cat ha-c3"><i></i>Documento</span></dt><dd>2</dd></div>
+          <div><dt><span class="ha-cat ha-c4"><i></i>Pedido acima do limite</span></dt><dd>2</dd></div>
+          <div><dt><span class="ha-cat ha-c2"><i></i>Ficha de contatos</span></dt><dd>1</dd></div>
+          <div><dt><span class="ha-cat ha-c7"><i></i>Promessa</span></dt><dd>1</dd></div>
+          <div><dt><span class="ha-cat ha-c1 ha-oco"><i></i>Recuperação</span></dt><dd>1</dd></div>
+          <div><dt><span class="ha-cat ha-c3 ha-oco"><i></i>E-mail enviado</span></dt><dd>1</dd></div>
+          <div><dt><span class="ha-cat ha-c8 ha-oco"><i></i>Alteração auditada</span></dt><dd>1</dd></div>
+        </dl>
+        <h5>Agendado</h5>
+        <div>
+          <div class="ha-pdf-reg"><span>17/11/2026 09:00</span><div><span class="ha-cat ha-c5"><i></i>Cobrança</span> · <b>Próxima ação: confirmar o pagamento da NF 48.217</b> · por Marina Tavares</div></div>
+          <div class="ha-pdf-reg"><span>05/12/2026</span><div><span class="ha-cat ha-c8"><i></i>Acordo</span> · <b>Parcela 2 de 3 do acordo vence</b> (R$ 6.100,00)</div></div>
+        </div>
+        <div class="ha-pdf-rodape"><span>Clínica Vida Plena Home Care Ltda · 27.418.906/0001-52</span><span>Página 1 de 3</span></div>
+      </div>
+
+      <div class="ha-folha">
+        <div class="ha-pdf-cab">
+          <div class="ha-logo brand">benenutri</div>
+          <div class="ha-pdf-dir"><h4>Anexo: linha do tempo</h4><div class="sub">22 registros passados, do mais recente ao mais antigo</div></div>
+        </div>
+        <h5>Novembro de 2026 · 6 registros</h5>
+        <div>
+          <div class="ha-pdf-reg"><span>13/11 16:45</span><div><span class="ha-cat ha-c7"><i></i>Promessa</span><br><b>Promessa de pagamento: R$ 12.500,00 até 16/11/2026</b><br>Referente à NF 48.217, vencida em 08/10/2026. <span class="sub">por Marina Tavares</span></div></div>
+          <div class="ha-pdf-reg"><span>13/11 16:42</span><div><span class="ha-cat ha-c6"><i></i>Contato de cobrança</span><br><b>Ligação atendida pelo financeiro</b><br>Falou com Helena Prado. <i>Feedback: aguardam o repasse da Unimed Goiânia, previsto para 16/11.</i> <span class="sub">por Marina Tavares</span></div></div>
+          <div class="ha-pdf-reg"><span>10/11 10:05</span><div><span class="ha-cat ha-c3 ha-oco"><i></i>E-mail enviado</span><br><b>Título em cobrança extrajudicial: NF 48.217</b><br>Para financeiro@vidaplenahomecare.com.br; enviado. <span class="sub">por sistema</span></div></div>
+          <div class="ha-pdf-reg"><span>07/11 08:00</span><div><span class="ha-cat ha-c5"><i></i>Cobrança</span><br><b>Etapa da régua: D+30, cobrança extrajudicial</b><br>NF 48.217 (R$ 12.500,00) encaminhada à assessoria de cobrança. <span class="sub">por sistema</span></div></div>
+          <div class="ha-pdf-reg"><span>05/11 14:20</span><div><span class="ha-cat ha-c1 ha-oco"><i></i>Recuperação</span><br><b>Parcela 1 de 3 do acordo paga: R$ 6.100,00</b><br>Baixa identificada no Winthor. <span class="sub">por sistema</span></div></div>
+          <div class="ha-pdf-reg"><span>04/11 11:12</span><div><span class="ha-cat ha-c8 ha-oco"><i></i>Alteração auditada</span><br><b>Limite de crédito alterado</b><br>De R$ 100.000,00 para R$ 80.000,00. <span class="sub">por Rogério Almeida (Supervisor)</span></div></div>
+        </div>
+        <h5>Outubro de 2026 · 9 registros</h5>
+        <div>
+          <div class="ha-pdf-reg"><span>30/10 09:30</span><div><span class="ha-cat ha-c4"><i></i>Pedido acima do limite</span><br><b>Pedido 771.204 negado pelo Gerente</b><br>R$ 9.800,00 excedia o limite disponível em R$ 4.300,00. <span class="sub">por Cláudia Menezes</span></div></div>
+          <div class="ha-pdf-reg"><span>28/10 08:00</span><div><span class="ha-cat ha-c5"><i></i>Cobrança</span><br><b>Etapa da régua: D+20, negociação pós-protesto</b> <span class="sub">por sistema</span></div></div>
+          <div class="ha-pdf-reg"><span>22/10 15:10</span><div><span class="ha-cat ha-c8"><i></i>Acordo</span><br><b>Acordo formalizado: R$ 18.300,00 em 3 parcelas de R$ 6.100,00</b> <span class="sub">por Marina Tavares</span></div></div>
+        </div>
+        <div class="ha-pdf-rodape"><span>Clínica Vida Plena Home Care Ltda · 27.418.906/0001-52</span><span>Página 2 de 3</span></div>
+      </div>
+    </div>
+  </template>
+</section>

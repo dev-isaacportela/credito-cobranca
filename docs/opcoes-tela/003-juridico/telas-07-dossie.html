@@ -1,0 +1,182 @@
+<section data-tela="juridico-dossie" data-grupo="Dossiê e documentos"
+         data-titulo="Dossiê para envio ao Jurídico"
+         data-desc="Para o agente, o supervisor e o gerente financeiro: montar o dossiê de um cliente (checklist do catálogo de 17 documentos: 10 obrigatórios no setor privado, 11 no público), anexar, salvar rascunho e, quando completo, enviar ao Jurídico.">
+
+  <template data-opcao="A" data-nome="Checklist em lista" data-resumo="Os 11 documentos do setor numa lista única, cada linha com situação, observação e anexos, e o resumo do cliente com as ações ao lado; privilegia ver o dossiê inteiro, ao custo de linhas apertadas.">
+    <div class="page-header">
+      <div>
+        <div class="module">Jurídico · Dossiê de cobrança jurídica</div>
+        <h3>Ômega Drogarias</h3>
+        <div class="desc">Cód. 1006 · CNPJ 22.333.444/0001-55 · setor privado · aberto em 02/11/2026 por Ana Ribeiro</div>
+        <div class="meta"><span><span class="stat">7 de 10</span> obrigatórios</span><span class="dot">·</span><span><span class="stat">R$ 30.000,00</span> vencidos há 38 dias</span><span class="dot">·</span><span>processo em <span class="stat">01 · Dossiê em montagem</span></span></div>
+      </div>
+      <div class="entre"><button class="btn btn-secondary">Salvar rascunho</button><button class="btn btn-primary" disabled title="Faltam 2 documentos obrigatórios">Enviar ao Jurídico</button></div>
+    </div>
+    <div class="alert alert-warn"><svg><use href="#i-alert"/></svg><b>Ainda não dá para enviar</b><p>Faltam 2 documentos obrigatórios: Notificação extrajudicial e Cadastro do devedor. A aprovação do encaminhamento é cumprida pelo próprio envio, que exige Gerente financeiro ou acima.</p></div>
+    <div class="lado">
+      <div class="panel">
+        <div class="faixa"><span class="titulo-painel">Checklist do setor privado</span><span class="sub">11 documentos · 10 obrigatórios · 1 se houver</span><div class="progresso atencao jur-cresce"><i style="width:70%"></i></div></div>
+        <div class="tabela-wrap"><table class="jur-dossie">
+          <thead><tr><th>Documento</th><th>Situação</th><th>Observação e anexos</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><div class="row-title">Notas fiscais (DANFE e XML) das faturas em aberto</div><div class="row-meta">obrigatório</div></td><td><span class="select jur-curto"><span>Conferido</span><svg><use href="#i-chevron"/></svg></span></td><td>nf-51920.pdf · nf-52104.pdf</td><td><button class="btn btn-ghost btn-sm">Anexar</button></td></tr>
+            <tr><td><div class="row-title">Comprovantes de entrega assinados (canhoto, CT-e ou recibo)</div><div class="row-meta">obrigatório</div></td><td><span class="select jur-curto"><span>Conferido</span><svg><use href="#i-chevron"/></svg></span></td><td>canhotos-omega.pdf</td><td><button class="btn btn-ghost btn-sm">Anexar</button></td></tr>
+            <tr><td><div class="row-title">Pedido de compra, proposta comercial ou contrato</div><div class="row-meta">obrigatório</div></td><td><span class="select jur-curto"><span>Conferido</span><svg><use href="#i-chevron"/></svg></span></td><td>pedido-8841.pdf</td><td><button class="btn btn-ghost btn-sm">Anexar</button></td></tr>
+            <tr><td><div class="row-title">Boletos ou duplicatas e posição dos títulos no Winthor</div><div class="row-meta">obrigatório</div></td><td><span class="select jur-curto"><span>Conferido</span><svg><use href="#i-chevron"/></svg></span></td><td>posicao-titulos.pdf · 2 títulos</td><td><button class="btn btn-ghost btn-sm">Anexar</button></td></tr>
+            <tr><td><div class="row-title">Instrumento de protesto e comprovante de negativação</div><div class="row-meta">obrigatório · sugestão automática</div></td><td><span class="select jur-curto"><span>Conferido</span><svg><use href="#i-chevron"/></svg></span></td><td>Título protestado pela régua</td><td><button class="btn btn-ghost btn-sm">Anexar</button></td></tr>
+            <tr><td><div class="row-title">Notificação extrajudicial e comprovante de recebimento</div><div class="row-meta">obrigatório</div></td><td><span class="select jur-curto"><span>Pendente</span><svg><use href="#i-chevron"/></svg></span></td><td><span class="status status-attention"><i></i>Notificação ainda não gerada</span></td><td><button class="btn btn-secondary btn-sm">Gerar notificação</button></td></tr>
+            <tr><td><div class="row-title">Demonstrativo atualizado do débito</div><div class="row-meta">obrigatório · sugestão automática</div></td><td><span class="select jur-curto"><span>Conferido</span><svg><use href="#i-chevron"/></svg></span></td><td>Gerado pelo sistema · R$ 31.132,08</td><td><button class="btn btn-ghost btn-sm">Ver demonstrativo</button></td></tr>
+            <tr><td><div class="row-title">Histórico de cobrança (régua, contatos, promessas e propostas)</div><div class="row-meta">obrigatório · sugestão automática</div></td><td><span class="select jur-curto"><span>Conferido</span><svg><use href="#i-chevron"/></svg></span></td><td>Histórico do cliente no sistema</td><td><button class="btn btn-ghost btn-sm">Anexar</button></td></tr>
+            <tr><td><div class="row-title">Cadastro do devedor: cartão CNPJ, contrato social, sócios, endereço</div><div class="row-meta">obrigatório · sugestão automática</div></td><td><span class="select jur-curto"><span>Pendente</span><svg><use href="#i-chevron"/></svg></span></td><td><span class="status status-attention"><i></i>CNPJ e endereço no cadastro; anexar contrato social e QSA</span></td><td><button class="btn btn-secondary btn-sm">Anexar</button></td></tr>
+            <tr><td><div class="row-title">Aprovação do encaminhamento ao Jurídico</div><div class="row-meta">obrigatório · cumprida pelo envio</div></td><td><span class="status status-off"><i></i>No envio</span></td><td>Fica conferida com o nome de quem enviar e a data</td><td></td></tr>
+            <tr><td><div class="row-title">Garantias e confissões: aval, fiança ou termo de acordo anterior</div><div class="row-meta">se houver</div></td><td><span class="select jur-curto"><span>Pendente</span><svg><use href="#i-chevron"/></svg></span></td><td><span class="dash">—</span></td><td><button class="btn btn-ghost btn-sm">Anexar</button></td></tr>
+          </tbody>
+        </table></div>
+        <div class="pagination"><span>"Não se aplica" exige o motivo na observação. Anexar um arquivo (PDF, PNG ou JPG até 20 MB) marca o documento como conferido.</span></div>
+      </div>
+      <div class="pilha-v">
+        <div class="panel"><div class="corpo-painel">
+          <span class="titulo-painel">Débito na cobrança</span>
+          <dl class="ficha">
+            <div><dt>Saldo vencido</dt><dd>R$ 30.000,00</dd></div>
+            <div><dt>Valor atualizado</dt><dd>R$ 31.132,08</dd></div>
+            <div><dt>Dias de atraso</dt><dd>38</dd></div>
+            <div><dt>Títulos</dt><dd>R$ 18.000,00 e R$ 12.000,00</dd></div>
+            <div><dt>Etapa da cobrança</dt><dd>D+30 · notificação</dd></div>
+            <div><dt>Agente</dt><dd>Ana Ribeiro</dd></div>
+          </dl>
+          <div class="field"><label>Filial credora</label><span class="select jur-largo"><span>BNDF · Benenutri Comercial Ltda</span><svg><use href="#i-chevron"/></svg></span></div>
+          <div class="field"><label>Observações para o Jurídico</label><textarea class="input">Cliente prometeu pagamento em 28/10 e não cumpriu. Sócio único.</textarea></div>
+        </div></div>
+        <div class="panel"><div class="corpo-painel">
+          <span class="titulo-painel">Documentos gerados pelo sistema</span>
+          <button class="btn btn-secondary">Gerar notificação extrajudicial</button>
+          <button class="btn btn-secondary">Gerar demonstrativo do débito</button>
+          <p class="sub">Salvar rascunho mantém o processo em Dossiê em montagem e não mexe no caso de cobrança. Enviar leva o processo a Recebido, com prazo de 5 dias úteis, e o caso de cobrança à etapa Jurídico.</p>
+        </div></div>
+        <details class="panel jur-recolhe"><summary class="faixa"><span class="titulo-painel">Catálogo de 17 documentos</span><span class="sub">o que muda no setor público</span></summary>
+          <div class="corpo-painel"><p class="sub">No setor público o checklist tem 13 documentos, 11 obrigatórios: saem pedido, títulos, protesto e notificação extrajudicial; entram contrato administrativo ou ata, nota de empenho, protocolo da NF e atesto, ofícios e requerimento administrativo, certidões da Benenutri e, se houver, a resposta à LAI.</p></div>
+        </details>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="B" data-nome="Pendências primeiro" data-resumo="Abre com o que falta para enviar, cada pendência num cartão com a orientação e a ação certa; os conferidos ficam recolhidos. Privilegia fechar o dossiê rápido, ao custo de não mostrar todos os documentos de uma vez.">
+    <div class="page-header">
+      <div>
+        <div class="module">Jurídico · Dossiê de cobrança jurídica</div>
+        <h3>Ômega Drogarias</h3>
+        <div class="desc">Cód. 1006 · CNPJ 22.333.444/0001-55 · setor privado · R$ 30.000,00 vencidos há 38 dias · filial credora BNDF</div>
+      </div>
+      <div class="entre"><button class="btn btn-secondary">Salvar rascunho</button><button class="btn btn-primary" disabled title="Faltam 2 documentos obrigatórios">Enviar ao Jurídico</button></div>
+    </div>
+    <div class="panel"><div class="corpo-painel">
+      <div class="entre"><span class="titulo-painel">7 de 10 obrigatórios conferidos</span><span class="sub">aberto há 17 dias · o alerta de dossiê parado começa aos 10 dias</span></div>
+      <div class="jur-segmentos"><i class="ok"></i><i class="ok"></i><i class="ok"></i><i class="ok"></i><i class="ok"></i><i class="ok"></i><i class="ok"></i><i></i><i></i><i class="envio"></i></div>
+      <div class="legenda-graf"><span><i class="cor-ok"></i>conferido</span><span><i class="jur-vazio-cor"></i>falta</span><span><i class="cor-off"></i>cumprido pelo envio</span></div>
+    </div></div>
+
+    <div class="entre"><span class="titulo-painel">Falta para enviar</span><span class="sub">2 documentos e a aprovação</span></div>
+    <div class="grade-3">
+      <div class="panel"><div class="corpo-painel">
+        <div class="entre"><span class="status status-attention"><i></i>Pendente</span><span class="badge badge-outline">obrigatório</span></div>
+        <span class="forte">Notificação extrajudicial e comprovante de recebimento</span>
+        <p class="sub">A notificação ainda não foi gerada. Gere o documento, envie ao cliente e anexe aqui o comprovante de recebimento. O prazo dado ao cliente é de 15 dias corridos.</p>
+        <button class="btn btn-secondary">Gerar notificação extrajudicial</button>
+        <button class="btn btn-ghost btn-sm">Anexar comprovante</button>
+        <button class="btn btn-ghost btn-sm">Marcar como não se aplica (pede o motivo)</button>
+      </div></div>
+      <div class="panel"><div class="corpo-painel">
+        <div class="entre"><span class="status status-attention"><i></i>Pendente</span><span class="badge badge-outline">obrigatório</span></div>
+        <span class="forte">Cadastro do devedor: cartão CNPJ, contrato social, sócios, endereço</span>
+        <p class="sub">Sugestão automática: CNPJ e endereço já estão no cadastro; anexar contrato social e QSA.</p>
+        <button class="btn btn-secondary">Anexar contrato social e QSA</button>
+        <button class="btn btn-ghost btn-sm">Marcar como conferido</button>
+        <button class="btn btn-ghost btn-sm">Marcar como não se aplica (pede o motivo)</button>
+      </div></div>
+      <div class="panel"><div class="corpo-painel">
+        <div class="entre"><span class="status status-off"><i></i>No envio</span><span class="badge badge-outline">obrigatório</span></div>
+        <span class="forte">Aprovação do encaminhamento ao Jurídico</span>
+        <p class="sub">É cumprida pelo próprio envio: fica conferida com o nome de quem enviar e a data. O envio exige Gerente financeiro ou acima; agente e supervisor montam e salvam rascunho.</p>
+      </div></div>
+    </div>
+
+    <details class="panel jur-recolhe">
+      <summary class="faixa"><span class="titulo-painel">Conferidos</span><span class="sub">7 documentos · mostrar</span></summary>
+      <div class="lista-itens">
+        <div class="item"><span class="check feito"><i></i></span><div class="jur-cresce"><div class="row-title">Notas fiscais (DANFE e XML) das faturas em aberto</div><div class="row-meta">nf-51920.pdf · nf-52104.pdf</div></div><button class="btn btn-ghost btn-sm">Rever</button></div>
+        <div class="item"><span class="check feito"><i></i></span><div class="jur-cresce"><div class="row-title">Comprovantes de entrega assinados</div><div class="row-meta">canhotos-omega.pdf</div></div><button class="btn btn-ghost btn-sm">Rever</button></div>
+        <div class="item"><span class="check feito"><i></i></span><div class="jur-cresce"><div class="row-title">Pedido de compra, proposta comercial ou contrato</div><div class="row-meta">pedido-8841.pdf</div></div><button class="btn btn-ghost btn-sm">Rever</button></div>
+        <div class="item"><span class="check feito"><i></i></span><div class="jur-cresce"><div class="row-title">Boletos ou duplicatas e posição dos títulos no Winthor</div><div class="row-meta">posicao-titulos.pdf · 2 títulos</div></div><button class="btn btn-ghost btn-sm">Rever</button></div>
+        <div class="item"><span class="check feito"><i></i></span><div class="jur-cresce"><div class="row-title">Instrumento de protesto e comprovante de negativação</div><div class="row-meta">sugestão automática · título protestado pela régua</div></div><button class="btn btn-ghost btn-sm">Rever</button></div>
+        <div class="item"><span class="check feito"><i></i></span><div class="jur-cresce"><div class="row-title">Demonstrativo atualizado do débito</div><div class="row-meta">sugestão automática · gerado pelo sistema · R$ 31.132,08</div></div><button class="btn btn-ghost btn-sm">Ver demonstrativo</button></div>
+        <div class="item"><span class="check feito"><i></i></span><div class="jur-cresce"><div class="row-title">Histórico de cobrança (régua, contatos, promessas e propostas)</div><div class="row-meta">sugestão automática · histórico do cliente no sistema</div></div><button class="btn btn-ghost btn-sm">Rever</button></div>
+      </div>
+    </details>
+    <details class="panel jur-recolhe">
+      <summary class="faixa"><span class="titulo-painel">Se houver</span><span class="sub">1 documento, não conta no progresso</span></summary>
+      <div class="lista-itens">
+        <div class="item"><span class="check"><i></i></span><div class="jur-cresce"><div class="row-title">Garantias e confissões: aval, fiança ou termo de acordo anterior</div></div><button class="btn btn-ghost btn-sm">Anexar</button></div>
+      </div>
+    </details>
+    <div class="panel"><div class="corpo-painel">
+      <div class="form-grade">
+        <div class="field"><label>Filial credora</label><span class="select"><span>BNDF · Benenutri Comercial Ltda</span><svg><use href="#i-chevron"/></svg></span></div>
+        <div class="field"><label>Observações para o Jurídico</label><input class="input" value="Cliente prometeu pagamento em 28/10 e não cumpriu. Sócio único."></div>
+      </div>
+      <div class="entre"><span class="sub">Débito: R$ 30.000,00 em 2 títulos (R$ 18.000,00 e R$ 12.000,00), atualizado para R$ 31.132,08. Cobrança em D+30. No setor público o checklist tem 13 documentos (11 obrigatórios) e não há notificação extrajudicial.</span><button class="btn btn-secondary btn-sm">Gerar demonstrativo do débito</button></div>
+    </div></div>
+  </template>
+
+  <template data-opcao="C" data-nome="Documento a documento" data-resumo="Lista dos 11 documentos à esquerda e, à direita, o documento escolhido com orientação, situação, observação e anexos em espaço folgado; privilegia a conferência cuidadosa de cada item, ao custo de um clique por documento.">
+    <div class="page-header">
+      <div>
+        <div class="module">Jurídico · Dossiê de cobrança jurídica</div>
+        <h3>Ômega Drogarias</h3>
+        <div class="desc">Cód. 1006 · CNPJ 22.333.444/0001-55 · setor privado · R$ 30.000,00 vencidos há 38 dias (atualizado: R$ 31.132,08)</div>
+        <div class="meta"><span><span class="stat">7 de 10</span> obrigatórios</span><span class="dot">·</span><span>filial credora <span class="stat">BNDF</span></span><span class="dot">·</span><span>aberto há <span class="stat">17 dias</span></span></div>
+      </div>
+      <div class="entre"><button class="btn btn-secondary">Salvar rascunho</button><button class="btn btn-primary" disabled title="Faltam 2 documentos obrigatórios">Enviar ao Jurídico</button></div>
+    </div>
+    <div class="lado estreito">
+      <div class="panel">
+        <div class="faixa"><span class="titulo-painel">Documentos</span><div class="progresso atencao jur-cresce"><i style="width:70%"></i></div></div>
+        <div class="lista-itens">
+          <div class="item"><span class="status status-live"><i></i></span><span class="jur-cresce">Notas fiscais</span><span class="sub">2 anexos</span></div>
+          <div class="item"><span class="status status-live"><i></i></span><span class="jur-cresce">Comprovantes de entrega</span><span class="sub">1 anexo</span></div>
+          <div class="item"><span class="status status-live"><i></i></span><span class="jur-cresce">Pedido ou contrato</span><span class="sub">1 anexo</span></div>
+          <div class="item"><span class="status status-live"><i></i></span><span class="jur-cresce">Boletos e posição dos títulos</span><span class="sub">1 anexo</span></div>
+          <div class="item"><span class="status status-live"><i></i></span><span class="jur-cresce">Protesto e negativação</span><span class="sub">automático</span></div>
+          <div class="item"><span class="status status-attention"><i></i></span><span class="jur-cresce">Notificação extrajudicial</span><span class="sub">pendente</span></div>
+          <div class="item"><span class="status status-live"><i></i></span><span class="jur-cresce">Demonstrativo do débito</span><span class="sub">automático</span></div>
+          <div class="item"><span class="status status-live"><i></i></span><span class="jur-cresce">Histórico de cobrança</span><span class="sub">automático</span></div>
+          <div class="item ativo"><span class="status status-attention"><i></i></span><span class="jur-cresce forte">Cadastro do devedor</span><span class="sub">pendente</span></div>
+          <div class="item"><span class="status status-off"><i></i></span><span class="jur-cresce">Aprovação do encaminhamento</span><span class="sub">no envio</span></div>
+          <div class="item"><span class="status status-off"><i></i></span><span class="jur-cresce">Garantias e confissões</span><span class="sub">se houver</span></div>
+        </div>
+        <div class="corpo-painel">
+          <div class="field"><label>Filial credora</label><span class="select jur-largo"><span>BNDF</span><svg><use href="#i-chevron"/></svg></span></div>
+          <button class="btn btn-secondary btn-sm">Gerar notificação extrajudicial</button>
+          <button class="btn btn-secondary btn-sm">Gerar demonstrativo do débito</button>
+          <p class="sub">Setor privado: 11 dos 17 documentos do catálogo. No público são 13 (11 obrigatórios), sem notificação extrajudicial.</p>
+        </div>
+      </div>
+      <div class="panel"><div class="corpo-painel">
+        <div class="entre"><div><span class="sub">Documento 9 de 11 · obrigatório</span><h3 class="jur-h">Cadastro do devedor: cartão CNPJ/CPF, contrato social, sócios, endereço</h3></div><div class="entre"><button class="btn btn-ghost btn-sm">Anterior</button><button class="btn btn-ghost btn-sm">Próximo pendente</button></div></div>
+        <div class="alert alert-default"><svg><use href="#i-info"/></svg><b>Sugestão automática</b><p>CNPJ e endereço no cadastro; anexar contrato social e QSA.</p></div>
+        <div class="field"><label>Situação</label><div class="segment" role="group" aria-label="Situação"><button type="button" aria-pressed="true">Pendente</button><button type="button" aria-pressed="false">Conferido</button><button type="button" aria-pressed="false">Não se aplica</button></div></div>
+        <div class="field"><label>Observação (obrigatória para "não se aplica")</label><textarea class="input" placeholder="Ex.: cadastro já arquivado no processo anterior"></textarea></div>
+        <div class="field"><label>Anexos</label>
+          <div class="rebaixado jur-solta"><span>Solte arquivos aqui ou <button class="textlink">escolha no computador</button></span><span class="sub">PDF, PNG ou JPG até 20 MB · anexar marca o documento como conferido</span></div>
+        </div>
+        <p class="sub">Nenhum anexo neste documento ainda.</p>
+        <dl class="ficha">
+          <div><dt>No cadastro</dt><dd>CNPJ 22.333.444/0001-55</dd></div>
+          <div><dt>Endereço</dt><dd>Av. Central 1200, Taguatinga, Brasília/DF</dd></div>
+          <div><dt>Contato financeiro</dt><dd>Marta Souza · (61) 3555-0142</dd></div>
+        </dl>
+        <p class="sub">Para enviar faltam este documento e a Notificação extrajudicial. A aprovação do encaminhamento é cumprida pelo envio, por Gerente financeiro ou acima.</p>
+      </div></div>
+    </div>
+  </template>
+</section>

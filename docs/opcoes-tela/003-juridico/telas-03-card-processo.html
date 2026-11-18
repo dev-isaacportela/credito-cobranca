@@ -1,0 +1,506 @@
+<section data-tela="juridico-card-processo" data-grupo="Jurídico"
+         data-titulo="Jurídico · Card do processo"
+         data-desc="Para o Jurídico: o processo aberto (card da lib mitra-kanban, em três colunas). Aqui se escolhe o que aparece em Nesta fase, quais abas do sistema existem (dossiê, andamentos e prazos, custos, acordo, cobrança de origem) e quais ações ficam ao lado de Mover para.">
+
+  <template data-opcao="A" data-nome="Uma aba por assunto" data-resumo="Nesta fase mostra só o que a etapa pede; dossiê, andamentos, custos, acordo e cobrança de origem têm cada um a sua aba. Privilegia telas curtas e previsíveis, ao custo de dez abas e mais cliques.">
+    <div class="gaveta">
+      <header>
+        <div>
+          <div class="entre jur-esq"><h3 class="jur-h">Farmácia Alfa</h3><span class="badge badge-outline">05 · Citação</span><span class="status status-alert"><i></i>Prazo vencido há 9 dias</span></div>
+          <div class="sub"><span class="code">0712345-11.2024.8.07.0001</span> · TJDFT · 3ª Vara Cível de Brasília · R$ 40.000,00 · Salvo às 14:32</div>
+        </div>
+        <span class="iconbtn" title="Fechar" aria-label="Fechar"><svg><use href="#i-x"/></svg></span>
+      </header>
+      <div class="jur-card">
+        <aside class="jur-col">
+          <div class="jur-rot">Responsáveis</div>
+          <div class="entre jur-esq"><span class="avatar">JP</span><span>Juliana Prado</span><span class="iconbtn" title="Adicionar responsável" aria-label="Adicionar responsável"><svg><use href="#i-plus"/></svg></span></div>
+          <div class="jur-rot">Prazo</div>
+          <div><input class="input" type="date" value="2026-11-10"><div class="row-meta">Publicação do edital de citação</div></div>
+          <div class="jur-rot">Ficha do processo</div>
+          <dl class="ficha jur-ficha-1">
+            <div><dt>Cliente</dt><dd>Farmácia Alfa Ltda · cód. 1001</dd></div>
+            <div><dt>CNPJ</dt><dd>11.222.333/0001-81</dd></div>
+            <div><dt>Setor e BU</dt><dd>Privado · Medicamentos</dd></div>
+            <div><dt>Filial credora</dt><dd>BNDF</dd></div>
+            <div><dt>Valor em cobrança</dt><dd>R$ 40.000,00</dd></div>
+            <div><dt>Valor atualizado no envio</dt><dd>R$ 41.980,00</dd></div>
+            <div><dt>Linha</dt><dd>Demais linhas</dd></div>
+            <div><dt>Nº dos autos</dt><dd>0712345-11.2024.8.07.0001</dd></div>
+            <div><dt>Tribunal</dt><dd>TJDFT</dd></div>
+          </dl>
+          <div class="jur-rot">Histórico por passagem</div>
+          <div class="linha-tempo">
+            <div class="evento"><i></i><div><b>05 · Citação</b><div class="row-meta">desde 09/10/2026 · 41 dias</div></div></div>
+            <div class="evento off"><i></i><div>04 · Custas e protocolo<div class="row-meta">14 dias · nº dos autos registrado</div></div></div>
+            <div class="evento off"><i></i><div>03 · Petição inicial<div class="row-meta">35 dias</div></div></div>
+            <div class="evento off"><i></i><div>02 · Recebido · contato amigável<div class="row-meta">20 dias</div></div></div>
+            <div class="evento off"><i></i><div>01 · Dossiê em montagem<div class="row-meta">12 dias · enviado por Gabriel Nunes</div></div></div>
+          </div>
+        </aside>
+
+        <div class="jur-col jur-meio com-abas">
+          <div class="abas" role="tablist" aria-label="Abas do card">
+            <button type="button" data-aba="fase" aria-selected="true">Nesta fase</button>
+            <button type="button" data-aba="chat" aria-selected="false">Chat <span class="badge badge-accent">2</span></button>
+            <button type="button" data-aba="tarefas" aria-selected="false">Tarefas <span class="badge badge-neutral">1</span></button>
+            <button type="button" data-aba="anexos" aria-selected="false">Anexos <span class="badge badge-neutral">12</span></button>
+            <button type="button" data-aba="alteracoes" aria-selected="false">Alterações</button>
+            <button type="button" data-aba="dossie" aria-selected="false">Dossiê <span class="badge badge-neutral">10/10</span></button>
+            <button type="button" data-aba="andamentos" aria-selected="false">Andamentos e prazos <span class="badge badge-neutral">6</span></button>
+            <button type="button" data-aba="custos" aria-selected="false">Custos <span class="badge badge-neutral">2</span></button>
+            <button type="button" data-aba="acordo" aria-selected="false">Acordo judicial</button>
+            <button type="button" data-aba="origem" aria-selected="false">Cobrança de origem</button>
+          </div>
+
+          <div data-painel="fase" class="corpo-painel">
+            <div class="entre"><span><b>Citação</b> · busca de endereço, carta, mandado, oficial de justiça ou edital</span><span class="status status-attention"><i></i>41 d de 30 d na fase</span></div>
+            <div class="form-grade">
+              <div class="field"><label>Forma de citação</label><span class="select"><span>Edital</span><svg><use href="#i-chevron"/></svg></span></div>
+              <div class="field"><label>Data da citação</label><input class="input" type="date"></div>
+              <div class="field"><label>Substabelecimento pendente</label><span class="select"><span>Não</span><svg><use href="#i-chevron"/></svg></span></div>
+            </div>
+            <div class="rebaixado pilha-v">
+              <div class="entre"><span class="forte">O que esta etapa pede agora</span><button class="btn btn-primary btn-sm">Registrar andamento</button></div>
+              <p>Prazo de <b>10/11/2026</b> vencido há 9 dias: publicação do edital de citação. Último andamento em 09/11: "Citação por edital deferida; aguardando publicação no DJe."</p>
+              <p class="sub">Saída da etapa: réu citado ou curador especial nomeado.</p>
+            </div>
+            <div class="pilha-v">
+              <span class="jur-rot">Condições das próximas fases</span>
+              <div class="check feito"><i></i><span>06 Defesa e instrução: nº dos autos registrado</span></div>
+              <div class="check"><i></i><span>09 Acordo judicial: registrar o acordo na aba Acordo judicial</span></div>
+              <div class="check"><i></i><span>Encerrado: informar o motivo (quitado, acordo cumprido, baixa como perda, extinto sem recuperação, outro)</span></div>
+            </div>
+          </div>
+
+          <div data-painel="chat" class="corpo-painel" hidden>
+            <div class="lista-itens jur-borda">
+              <div class="item"><span class="avatar">GN</span><div class="jur-cresce"><b>Gabriel Nunes</b> <span class="sub">18/11 16:10</span><div>@Juliana o edital já saiu? O prazo venceu no dia 10.</div></div></div>
+              <div class="item"><span class="avatar">AR</span><div class="jur-cresce"><b>Ana Ribeiro</b> <span class="sub">19/11 09:02</span><div>O cliente ligou perguntando do processo. Sem proposta de pagamento.</div></div></div>
+            </div>
+            <div class="entre"><input class="input jur-cresce" placeholder="Escreva uma mensagem; use @ para mencionar"><button class="btn btn-secondary">Enviar</button></div>
+          </div>
+          <div data-painel="tarefas" class="corpo-painel" hidden>
+            <div class="check"><i></i><span>Conferir publicação do edital no DJe · Juliana Prado · até 21/11</span></div>
+            <div class="check feito"><i></i><span>Pedir pesquisa de endereço (INFOJUD) · concluída em 15/10</span></div>
+            <button class="btn btn-secondary btn-sm jur-auto"><svg><use href="#i-plus"/></svg>Nova tarefa</button>
+          </div>
+          <div data-painel="anexos" class="corpo-painel" hidden>
+            <p class="sub">12 arquivos do card: os documentos do dossiê, a guia e o comprovante das custas e a decisão do edital.</p>
+            <div class="lista-itens jur-borda">
+              <div class="item"><span class="jur-cresce">decisao-edital-09-11.pdf</span><span class="sub">Juliana Prado · 09/11</span></div>
+              <div class="item"><span class="jur-cresce">guia-custas-iniciais.pdf</span><span class="sub">pela aba Custos · 03/11</span></div>
+              <div class="item"><span class="jur-cresce">nf-48213.pdf</span><span class="sub">pelo dossiê · item Notas fiscais</span></div>
+            </div>
+          </div>
+          <div data-painel="alteracoes" class="corpo-painel" hidden>
+            <p><b>09/11</b> · Juliana Prado mudou Forma de citação de "Mandado" para "Edital" e o prazo de 30/10 para 10/11.</p>
+            <p><b>09/10</b> · Juliana Prado moveu de Custas e protocolo para Citação.</p>
+            <p><b>25/09</b> · Juliana Prado preencheu Nº dos autos: 0712345-11.2024.8.07.0001.</p>
+          </div>
+
+          <div data-painel="dossie" class="corpo-painel" hidden>
+            <div class="entre"><span><b>Dossiê completo</b> · 10 de 10 obrigatórios · enviado por Gabriel Nunes</span><button class="btn btn-secondary btn-sm">Abrir dossiê</button></div>
+            <div class="progresso"><i style="width:100%"></i></div>
+            <div class="tabela-wrap"><table>
+              <thead><tr><th>Documento</th><th>Situação</th><th>Observação e anexos</th></tr></thead>
+              <tbody>
+                <tr><td>Notas fiscais (DANFE e XML)</td><td><span class="status status-live"><i></i>Conferido</span></td><td>nf-48213.pdf, nf-48377.pdf</td></tr>
+                <tr><td>Comprovantes de entrega assinados</td><td><span class="status status-live"><i></i>Conferido</span></td><td>canhotos.pdf</td></tr>
+                <tr><td>Protesto e negativação</td><td><span class="status status-live"><i></i>Conferido</span></td><td>Título protestado pela régua</td></tr>
+                <tr><td>Notificação extrajudicial e recebimento</td><td><span class="status status-live"><i></i>Conferido</span></td><td>ar-notificacao.pdf</td></tr>
+                <tr><td>Garantias e confissões (se houver)</td><td><span class="status status-off"><i></i>Não se aplica</span></td><td>Sem garantia no contrato</td></tr>
+              </tbody>
+            </table></div>
+            <p class="sub">Mostrando 5 dos 11 documentos do setor privado.</p>
+          </div>
+
+          <div data-painel="andamentos" class="corpo-painel" hidden>
+            <div class="rebaixado pilha-v">
+              <div class="field"><label>Novo andamento</label><textarea class="input" placeholder="O que aconteceu no processo"></textarea></div>
+              <div class="form-grade"><div class="field"><label>Próximo prazo</label><input class="input" type="date"></div><div class="field"><label>Descrição do prazo</label><input class="input" placeholder="Ex.: publicação do edital"></div></div>
+              <button class="btn btn-secondary btn-sm jur-auto">Registrar andamento</button>
+            </div>
+            <div class="linha-tempo">
+              <div class="evento"><i></i><div><b>09/11/2026 · Juliana Prado</b><div>Citação por edital deferida; aguardando publicação no DJe.</div></div></div>
+              <div class="evento off"><i></i><div><b>03/11/2026 · sistema</b><div>Custo lançado: Custas iniciais · R$ 1.200,00 (pago).</div></div></div>
+              <div class="evento"><i></i><div><b>20/10/2026 · Juliana Prado</b><div>Mandado devolvido negativo: réu não localizado no endereço do cadastro.</div></div></div>
+              <div class="evento off"><i></i><div><b>20/10/2026 · sistema</b><div>Custo lançado: Diligência e oficial de justiça · R$ 300,00 (a pagar).</div></div></div>
+              <div class="evento off"><i></i><div><b>09/10/2026 · sistema</b><div>Etapa: Custas e protocolo → Citação.</div></div></div>
+              <div class="evento"><i></i><div><b>25/09/2026 · Juliana Prado</b><div>Ação de cobrança protocolada. Nº dos autos registrado.</div></div></div>
+            </div>
+            <p class="sub">Andamento não se edita nem se apaga; correção é um andamento novo.</p>
+          </div>
+
+          <div data-painel="custos" class="corpo-painel" hidden>
+            <div class="entre"><span><b>R$ 1.500,00</b> · 3,8% do valor · meta até 10%</span><button class="btn btn-secondary btn-sm"><svg><use href="#i-plus"/></svg>Lançar custo</button></div>
+            <div class="tabela-wrap"><table>
+              <thead><tr><th>Tipo</th><th>Grupo</th><th>Data</th><th class="num">Valor</th><th>Situação</th><th>Guia</th><th>Comprovante</th><th></th></tr></thead>
+              <tbody>
+                <tr><td>Custas iniciais</td><td>Custas processuais</td><td>03/11/2026</td><td class="num">R$ 1.200,00</td><td><span class="status status-live"><i></i>Pago</span></td><td>guia.pdf</td><td>comprovante.pdf</td><td><span class="acoes"><span class="iconbtn danger" title="Remover" aria-label="Remover"><svg><use href="#i-trash"/></svg></span></span></td></tr>
+                <tr><td>Diligência e oficial de justiça</td><td>Diligências e pesquisas</td><td>20/10/2026</td><td class="num">R$ 300,00</td><td><span class="status status-attention"><i></i>A pagar há 30 dias</span></td><td><button class="btn btn-ghost btn-sm">Anexar</button></td><td><button class="btn btn-ghost btn-sm">Anexar</button></td><td><span class="acoes"><span class="iconbtn danger" title="Remover" aria-label="Remover"><svg><use href="#i-trash"/></svg></span></span></td></tr>
+              </tbody>
+            </table></div>
+            <p class="sub">Anexar o comprovante marca o custo como pago.</p>
+          </div>
+
+          <div data-painel="acordo" class="corpo-painel" hidden>
+            <p>Este processo ainda não tem acordo judicial.</p>
+            <div class="form-grade">
+              <div class="field"><label>Valor do acordo</label><input class="input" placeholder="R$ 0,00"></div>
+              <div class="field"><label>Entrada</label><input class="input" placeholder="mínimo de 20%"></div>
+              <div class="field"><label>Parcelas após a entrada</label><input class="input" value="5"></div>
+              <div class="field"><label>Vencimento da entrada</label><input class="input" type="date" value="2026-11-19"></div>
+            </div>
+            <div class="alert alert-default"><svg><use href="#i-info"/></svg><b>Política de acordo</b><p>Entrada mínima de 20%, até 5 parcelas, honorários de 10%. Acima de R$ 50.000,00 ou fora da política, o acordo nasce aguardando aprovação do Gerente financeiro ou acima.</p></div>
+            <button class="btn btn-secondary jur-auto">Registrar acordo</button>
+          </div>
+
+          <div data-painel="origem" class="corpo-painel" hidden>
+            <dl class="ficha">
+              <div><dt>Caso de cobrança</dt><dd>Etapa Jurídico desde 14/01/2026</dd></div>
+              <div><dt>Saldo vencido hoje</dt><dd>R$ 40.000,00</dd></div>
+              <div><dt>Dias de atraso</dt><dd>338</dd></div>
+              <div><dt>Títulos vencidos</dt><dd>2</dd></div>
+              <div><dt>Agente da carteira</dt><dd>Ana Ribeiro</dd></div>
+              <div><dt>Último contato</dt><dd>19/11 · ligação do cliente, sem proposta</dd></div>
+            </dl>
+            <button class="btn btn-secondary btn-sm jur-auto">Abrir caso de cobrança</button>
+          </div>
+        </div>
+
+        <aside class="jur-col">
+          <div class="jur-rot">Mover para</div>
+          <button class="btn btn-secondary jur-largo">06 · Defesa e instrução</button>
+          <button class="btn btn-secondary jur-largo">07 · Sentença e recursos</button>
+          <button class="btn btn-secondary jur-largo">08 · Cumprimento e execução</button>
+          <button class="btn btn-secondary jur-largo" disabled title="Registre o acordo antes">09 · Acordo judicial</button>
+          <button class="btn btn-secondary jur-largo">10 · Suspenso · RJ</button>
+          <button class="btn btn-secondary jur-largo">Encerrado</button>
+          <button class="btn btn-ghost jur-largo">Voltar para 04 · Custas</button>
+          <div class="jur-rot">Documentos</div>
+          <button class="btn btn-secondary jur-largo">Gerar notificação extrajudicial</button>
+          <button class="btn btn-secondary jur-largo">Gerar demonstrativo do débito</button>
+          <div class="jur-rot">Card</div>
+          <button class="btn btn-ghost jur-largo jur-perigo"><svg><use href="#i-trash"/></svg>Excluir</button>
+        </aside>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="B" data-nome="Tudo em Nesta fase" data-resumo="Nesta fase vira o resumo do processo em blocos que abrem e fecham (prazo, andamentos, custos, acordo, dossiê) e sobram só duas abas do sistema; as ações de lançar ficam todas na coluna direita. Privilegia resolver sem trocar de aba, ao custo de uma aba inicial longa.">
+    <div class="gaveta">
+      <header>
+        <div>
+          <div class="entre jur-esq"><h3 class="jur-h">Farmácia Alfa</h3><span class="badge badge-outline">05 · Citação</span><span class="status status-alert"><i></i>Prazo vencido há 9 dias</span></div>
+          <div class="sub"><span class="code">0712345-11.2024.8.07.0001</span> · TJDFT · 3ª Vara Cível de Brasília · R$ 40.000,00 · Salvo às 14:32</div>
+        </div>
+        <span class="iconbtn" title="Fechar" aria-label="Fechar"><svg><use href="#i-x"/></svg></span>
+      </header>
+      <div class="jur-card">
+        <aside class="jur-col">
+          <div class="jur-rot">Responsáveis</div>
+          <div class="entre jur-esq"><span class="avatar">JP</span><span>Juliana Prado</span><span class="iconbtn" title="Adicionar responsável" aria-label="Adicionar responsável"><svg><use href="#i-plus"/></svg></span></div>
+          <div class="jur-rot">Prazo</div>
+          <div><input class="input" type="date" value="2026-11-10"><div class="row-meta">Publicação do edital de citação</div></div>
+          <div class="jur-rot">Ficha do processo</div>
+          <dl class="ficha jur-ficha-1">
+            <div><dt>Cliente</dt><dd>Farmácia Alfa Ltda · cód. 1001</dd></div>
+            <div><dt>CNPJ</dt><dd>11.222.333/0001-81</dd></div>
+            <div><dt>Setor e BU</dt><dd>Privado · Medicamentos</dd></div>
+            <div><dt>Filial credora</dt><dd>BNDF</dd></div>
+            <div><dt>Valor em cobrança</dt><dd>R$ 40.000,00</dd></div>
+            <div><dt>Linha</dt><dd>Demais linhas</dd></div>
+            <div><dt>Nº dos autos</dt><dd>0712345-11.2024.8.07.0001</dd></div>
+            <div><dt>Tribunal</dt><dd>TJDFT</dd></div>
+          </dl>
+          <div class="jur-rot">Histórico por passagem</div>
+          <div class="linha-tempo">
+            <div class="evento"><i></i><div><b>05 · Citação</b><div class="row-meta">desde 09/10/2026 · 41 dias</div></div></div>
+            <div class="evento off"><i></i><div>04 · Custas e protocolo<div class="row-meta">14 dias</div></div></div>
+            <div class="evento off"><i></i><div>03 · Petição inicial<div class="row-meta">35 dias</div></div></div>
+            <div class="evento off"><i></i><div>02 · Recebido<div class="row-meta">20 dias</div></div></div>
+            <div class="evento off"><i></i><div>01 · Dossiê em montagem<div class="row-meta">12 dias</div></div></div>
+          </div>
+        </aside>
+
+        <div class="jur-col jur-meio com-abas">
+          <div class="abas" role="tablist" aria-label="Abas do card">
+            <button type="button" data-aba="fase" aria-selected="true">Nesta fase</button>
+            <button type="button" data-aba="chat" aria-selected="false">Chat <span class="badge badge-accent">2</span></button>
+            <button type="button" data-aba="tarefas" aria-selected="false">Tarefas <span class="badge badge-neutral">1</span></button>
+            <button type="button" data-aba="anexos" aria-selected="false">Anexos <span class="badge badge-neutral">12</span></button>
+            <button type="button" data-aba="alteracoes" aria-selected="false">Alterações</button>
+            <button type="button" data-aba="completo" aria-selected="false">Processo completo</button>
+            <button type="button" data-aba="origem" aria-selected="false">Cobrança de origem</button>
+          </div>
+
+          <div data-painel="fase" class="corpo-painel">
+            <div class="entre"><span><b>Citação</b> · busca de endereço, carta, mandado, oficial de justiça ou edital</span><span class="status status-attention"><i></i>41 d de 30 d na fase</span></div>
+            <div class="form-grade">
+              <div class="field"><label>Forma de citação</label><span class="select"><span>Edital</span><svg><use href="#i-chevron"/></svg></span></div>
+              <div class="field"><label>Data da citação</label><input class="input" type="date"></div>
+              <div class="field"><label>Substabelecimento pendente</label><span class="select"><span>Não</span><svg><use href="#i-chevron"/></svg></span></div>
+            </div>
+            <details class="jur-bloco-card" open>
+              <summary><span class="forte">Prazo e situação atual</span><span class="status status-alert"><i></i>Vencido há 9 dias</span></summary>
+              <p>Prazo de <b>10/11/2026</b>: publicação do edital de citação. Situação: "Citação por edital deferida; aguardando publicação no DJe."</p>
+            </details>
+            <details class="jur-bloco-card" open>
+              <summary><span class="forte">Andamentos</span><span class="sub">6 no total · último há 10 dias</span></summary>
+              <div class="linha-tempo">
+                <div class="evento"><i></i><div><b>09/11/2026 · Juliana Prado</b><div>Citação por edital deferida; aguardando publicação no DJe.</div></div></div>
+                <div class="evento off"><i></i><div><b>03/11/2026 · sistema</b><div>Custo lançado: Custas iniciais · R$ 1.200,00 (pago).</div></div></div>
+                <div class="evento"><i></i><div><b>20/10/2026 · Juliana Prado</b><div>Mandado devolvido negativo: réu não localizado no endereço do cadastro.</div></div></div>
+              </div>
+            </details>
+            <details class="jur-bloco-card" open>
+              <summary><span class="forte">Custos</span><span class="sub">R$ 1.500,00 · 3,8% do valor · 1 a pagar há 30 dias</span></summary>
+              <div class="jur-prog"><div class="entre"><span>Custo ÷ valor contra a meta de 10%</span><span>3,8%</span></div><div class="progresso"><i style="width:38%"></i></div></div>
+              <div class="entre"><span>Custas iniciais · 03/11 · <span class="status status-live"><i></i>Pago</span></span><b>R$ 1.200,00</b></div>
+              <div class="entre"><span>Diligência e oficial de justiça · 20/10 · <span class="status status-attention"><i></i>A pagar, sem guia</span></span><b>R$ 300,00</b></div>
+            </details>
+            <details class="jur-bloco-card">
+              <summary><span class="forte">Acordo judicial</span><span class="sub">sem acordo · política: entrada de 20%, até 5 parcelas, honorários de 10%</span></summary>
+              <p>Use "Registrar acordo", na coluna à direita. Acima de R$ 50.000,00 ou fora da política, o acordo nasce aguardando aprovação.</p>
+            </details>
+            <details class="jur-bloco-card">
+              <summary><span class="forte">Dossiê</span><span class="status status-live"><i></i>10 de 10 · enviado por Gabriel Nunes</span></summary>
+              <p>11 documentos do setor privado, 10 obrigatórios conferidos e 1 "não se aplica" (garantias). Abra "Processo completo" para ver cada item.</p>
+            </details>
+            <div class="pilha-v">
+              <span class="jur-rot">Condições das próximas fases</span>
+              <div class="check feito"><i></i><span>06 Defesa e instrução: nº dos autos registrado</span></div>
+              <div class="check"><i></i><span>Encerrado: informar o motivo</span></div>
+            </div>
+          </div>
+
+          <div data-painel="chat" class="corpo-painel" hidden>
+            <div class="lista-itens jur-borda">
+              <div class="item"><span class="avatar">GN</span><div class="jur-cresce"><b>Gabriel Nunes</b> <span class="sub">18/11 16:10</span><div>@Juliana o edital já saiu? O prazo venceu no dia 10.</div></div></div>
+              <div class="item"><span class="avatar">AR</span><div class="jur-cresce"><b>Ana Ribeiro</b> <span class="sub">19/11 09:02</span><div>O cliente ligou perguntando do processo. Sem proposta de pagamento.</div></div></div>
+            </div>
+            <div class="entre"><input class="input jur-cresce" placeholder="Escreva uma mensagem; use @ para mencionar"><button class="btn btn-secondary">Enviar</button></div>
+          </div>
+          <div data-painel="tarefas" class="corpo-painel" hidden>
+            <div class="check"><i></i><span>Conferir publicação do edital no DJe · Juliana Prado · até 21/11</span></div>
+            <div class="check feito"><i></i><span>Pedir pesquisa de endereço (INFOJUD) · concluída em 15/10</span></div>
+          </div>
+          <div data-painel="anexos" class="corpo-painel" hidden>
+            <p class="sub">12 arquivos do card: documentos do dossiê, guia e comprovante das custas e a decisão do edital.</p>
+          </div>
+          <div data-painel="alteracoes" class="corpo-painel" hidden>
+            <p><b>09/11</b> · Juliana Prado mudou Forma de citação de "Mandado" para "Edital" e o prazo de 30/10 para 10/11.</p>
+            <p><b>09/10</b> · Juliana Prado moveu de Custas e protocolo para Citação.</p>
+          </div>
+
+          <div data-painel="completo" class="corpo-painel" hidden>
+            <span class="titulo-painel">Todos os andamentos</span>
+            <div class="linha-tempo">
+              <div class="evento"><i></i><div><b>09/11/2026 · Juliana Prado</b><div>Citação por edital deferida; aguardando publicação no DJe.</div></div></div>
+              <div class="evento off"><i></i><div><b>03/11/2026 · sistema</b><div>Custo lançado: Custas iniciais · R$ 1.200,00 (pago).</div></div></div>
+              <div class="evento"><i></i><div><b>20/10/2026 · Juliana Prado</b><div>Mandado devolvido negativo: réu não localizado.</div></div></div>
+              <div class="evento off"><i></i><div><b>20/10/2026 · sistema</b><div>Custo lançado: Diligência e oficial de justiça · R$ 300,00 (a pagar).</div></div></div>
+              <div class="evento off"><i></i><div><b>09/10/2026 · sistema</b><div>Etapa: Custas e protocolo → Citação.</div></div></div>
+              <div class="evento"><i></i><div><b>25/09/2026 · Juliana Prado</b><div>Ação de cobrança protocolada. Nº dos autos registrado.</div></div></div>
+            </div>
+            <span class="titulo-painel">Custos</span>
+            <div class="tabela-wrap"><table>
+              <thead><tr><th>Tipo</th><th>Data</th><th class="num">Valor</th><th>Situação</th><th>Guia</th><th>Comprovante</th></tr></thead>
+              <tbody>
+                <tr><td>Custas iniciais</td><td>03/11/2026</td><td class="num">R$ 1.200,00</td><td><span class="status status-live"><i></i>Pago</span></td><td>guia.pdf</td><td>comprovante.pdf</td></tr>
+                <tr><td>Diligência e oficial de justiça</td><td>20/10/2026</td><td class="num">R$ 300,00</td><td><span class="status status-attention"><i></i>A pagar</span></td><td><span class="dash">—</span></td><td><span class="dash">—</span></td></tr>
+              </tbody>
+            </table></div>
+            <span class="titulo-painel">Dossiê · 10 de 10</span>
+            <p class="sub">Notas fiscais, comprovantes de entrega, pedido, boletos e posição dos títulos, protesto, notificação extrajudicial, demonstrativo, histórico de cobrança, cadastro do devedor e aprovação do encaminhamento: conferidos. Garantias: não se aplica.</p>
+          </div>
+
+          <div data-painel="origem" class="corpo-painel" hidden>
+            <dl class="ficha">
+              <div><dt>Caso de cobrança</dt><dd>Etapa Jurídico desde 14/01/2026</dd></div>
+              <div><dt>Saldo vencido hoje</dt><dd>R$ 40.000,00</dd></div>
+              <div><dt>Dias de atraso</dt><dd>338</dd></div>
+              <div><dt>Títulos vencidos</dt><dd>2</dd></div>
+              <div><dt>Agente da carteira</dt><dd>Ana Ribeiro</dd></div>
+              <div><dt>Último contato</dt><dd>19/11 · ligação do cliente, sem proposta</dd></div>
+            </dl>
+            <button class="btn btn-secondary btn-sm jur-auto">Abrir caso de cobrança</button>
+          </div>
+        </div>
+
+        <aside class="jur-col">
+          <div class="jur-rot">Lançar</div>
+          <button class="btn btn-primary jur-largo">Registrar andamento</button>
+          <button class="btn btn-secondary jur-largo">Lançar custo</button>
+          <button class="btn btn-secondary jur-largo">Registrar acordo</button>
+          <div class="jur-rot">Mover para</div>
+          <button class="btn btn-secondary jur-largo">06 · Defesa e instrução</button>
+          <button class="btn btn-secondary jur-largo">07 · Sentença e recursos</button>
+          <button class="btn btn-secondary jur-largo">08 · Cumprimento e execução</button>
+          <button class="btn btn-secondary jur-largo" disabled title="Registre o acordo antes">09 · Acordo judicial</button>
+          <button class="btn btn-secondary jur-largo">10 · Suspenso · RJ</button>
+          <button class="btn btn-secondary jur-largo">Encerrado</button>
+          <button class="btn btn-ghost jur-largo">Voltar para 04 · Custas</button>
+          <div class="jur-rot">Documentos</div>
+          <button class="btn btn-secondary jur-largo">Gerar notificação extrajudicial</button>
+          <button class="btn btn-secondary jur-largo">Gerar demonstrativo do débito</button>
+          <div class="jur-rot">Card</div>
+          <button class="btn btn-ghost jur-largo jur-perigo"><svg><use href="#i-trash"/></svg>Excluir</button>
+        </aside>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="C" data-nome="Andamentos no centro" data-resumo="Nesta fase abre com o campo de novo andamento e a linha do tempo; custos e acordo dividem a aba Financeiro, dossiê e cobrança dividem outra. Privilegia o lançamento diário de andamento e prazo, ao custo de juntar assuntos em abas duplas.">
+    <div class="gaveta">
+      <header>
+        <div>
+          <div class="entre jur-esq"><h3 class="jur-h">Farmácia Alfa</h3><span class="badge badge-outline">05 · Citação</span><span class="status status-alert"><i></i>Prazo vencido há 9 dias</span></div>
+          <div class="sub"><span class="code">0712345-11.2024.8.07.0001</span> · TJDFT · 3ª Vara Cível de Brasília · R$ 40.000,00 · Salvo às 14:32</div>
+        </div>
+        <span class="iconbtn" title="Fechar" aria-label="Fechar"><svg><use href="#i-x"/></svg></span>
+      </header>
+      <div class="jur-card">
+        <aside class="jur-col">
+          <div class="jur-rot">Responsáveis</div>
+          <div class="entre jur-esq"><span class="avatar">JP</span><span>Juliana Prado</span><span class="iconbtn" title="Adicionar responsável" aria-label="Adicionar responsável"><svg><use href="#i-plus"/></svg></span></div>
+          <div class="jur-rot">Prazo</div>
+          <div><input class="input" type="date" value="2026-11-10"><div class="row-meta">Publicação do edital de citação</div></div>
+          <div class="jur-rot">Ficha do processo</div>
+          <dl class="ficha jur-ficha-1">
+            <div><dt>Cliente</dt><dd>Farmácia Alfa Ltda · cód. 1001</dd></div>
+            <div><dt>CNPJ</dt><dd>11.222.333/0001-81</dd></div>
+            <div><dt>Setor e BU</dt><dd>Privado · Medicamentos</dd></div>
+            <div><dt>Filial credora</dt><dd>BNDF</dd></div>
+            <div><dt>Valor em cobrança</dt><dd>R$ 40.000,00</dd></div>
+            <div><dt>Linha</dt><dd>Demais linhas</dd></div>
+            <div><dt>Nº dos autos</dt><dd>0712345-11.2024.8.07.0001</dd></div>
+            <div><dt>Tribunal</dt><dd>TJDFT</dd></div>
+          </dl>
+          <div class="jur-rot">Histórico por passagem</div>
+          <div class="linha-tempo">
+            <div class="evento"><i></i><div><b>05 · Citação</b><div class="row-meta">desde 09/10/2026 · 41 dias</div></div></div>
+            <div class="evento off"><i></i><div>04 · Custas e protocolo<div class="row-meta">14 dias</div></div></div>
+            <div class="evento off"><i></i><div>03 · Petição inicial<div class="row-meta">35 dias</div></div></div>
+            <div class="evento off"><i></i><div>02 · Recebido<div class="row-meta">20 dias</div></div></div>
+            <div class="evento off"><i></i><div>01 · Dossiê em montagem<div class="row-meta">12 dias</div></div></div>
+          </div>
+        </aside>
+
+        <div class="jur-col jur-meio com-abas">
+          <div class="abas" role="tablist" aria-label="Abas do card">
+            <button type="button" data-aba="fase" aria-selected="true">Nesta fase</button>
+            <button type="button" data-aba="chat" aria-selected="false">Chat <span class="badge badge-accent">2</span></button>
+            <button type="button" data-aba="tarefas" aria-selected="false">Tarefas <span class="badge badge-neutral">1</span></button>
+            <button type="button" data-aba="anexos" aria-selected="false">Anexos <span class="badge badge-neutral">12</span></button>
+            <button type="button" data-aba="alteracoes" aria-selected="false">Alterações</button>
+            <button type="button" data-aba="financeiro" aria-selected="false">Financeiro <span class="badge badge-neutral">R$ 1.500</span></button>
+            <button type="button" data-aba="dossie" aria-selected="false">Dossiê e cobrança <span class="badge badge-neutral">10/10</span></button>
+          </div>
+
+          <div data-painel="fase" class="corpo-painel">
+            <div class="entre"><span><b>Citação</b> · saída: réu citado ou curador especial nomeado</span><span class="status status-attention"><i></i>41 d de 30 d na fase</span></div>
+            <div class="rebaixado pilha-v">
+              <div class="field"><label>Novo andamento</label><textarea class="input" placeholder="O que aconteceu no processo"></textarea></div>
+              <div class="form-grade">
+                <div class="field"><label>Próximo prazo</label><input class="input" type="date"></div>
+                <div class="field"><label>Descrição do prazo</label><input class="input" placeholder="Ex.: publicação do edital"></div>
+                <div class="field"><label>Forma de citação</label><span class="select"><span>Edital</span><svg><use href="#i-chevron"/></svg></span></div>
+              </div>
+              <div class="entre"><span class="sub">O prazo atual (10/11, publicação do edital) está vencido há 9 dias.</span><button class="btn btn-primary btn-sm">Registrar andamento</button></div>
+            </div>
+            <div class="entre"><span class="jur-rot">Linha do tempo</span><span class="sub">6 andamentos · sistema e pessoas</span></div>
+            <div class="linha-tempo">
+              <div class="evento"><i></i><div><b>09/11/2026 · Juliana Prado</b><div>Citação por edital deferida; aguardando publicação no DJe.</div><div class="row-meta">Prazo definido: 10/11/2026</div></div></div>
+              <div class="evento off"><i></i><div><b>03/11/2026 · sistema</b><div>Custo lançado: Custas iniciais · R$ 1.200,00 (pago).</div></div></div>
+              <div class="evento"><i></i><div><b>20/10/2026 · Juliana Prado</b><div>Mandado devolvido negativo: réu não localizado no endereço do cadastro.</div></div></div>
+              <div class="evento off"><i></i><div><b>20/10/2026 · sistema</b><div>Custo lançado: Diligência e oficial de justiça · R$ 300,00 (a pagar).</div></div></div>
+              <div class="evento off"><i></i><div><b>09/10/2026 · sistema</b><div>Etapa: Custas e protocolo → Citação.</div></div></div>
+              <div class="evento"><i></i><div><b>25/09/2026 · Juliana Prado</b><div>Ação de cobrança protocolada. Nº dos autos registrado.</div></div></div>
+            </div>
+            <div class="pilha-v">
+              <span class="jur-rot">Condições das próximas fases</span>
+              <div class="check feito"><i></i><span>06 Defesa e instrução: nº dos autos registrado</span></div>
+              <div class="check"><i></i><span>Encerrado: informar o motivo</span></div>
+            </div>
+          </div>
+
+          <div data-painel="chat" class="corpo-painel" hidden>
+            <div class="lista-itens jur-borda">
+              <div class="item"><span class="avatar">GN</span><div class="jur-cresce"><b>Gabriel Nunes</b> <span class="sub">18/11 16:10</span><div>@Juliana o edital já saiu? O prazo venceu no dia 10.</div></div></div>
+              <div class="item"><span class="avatar">AR</span><div class="jur-cresce"><b>Ana Ribeiro</b> <span class="sub">19/11 09:02</span><div>O cliente ligou perguntando do processo. Sem proposta de pagamento.</div></div></div>
+            </div>
+            <div class="entre"><input class="input jur-cresce" placeholder="Escreva uma mensagem; use @ para mencionar"><button class="btn btn-secondary">Enviar</button></div>
+          </div>
+          <div data-painel="tarefas" class="corpo-painel" hidden>
+            <div class="check"><i></i><span>Conferir publicação do edital no DJe · Juliana Prado · até 21/11</span></div>
+            <div class="check feito"><i></i><span>Pedir pesquisa de endereço (INFOJUD) · concluída em 15/10</span></div>
+          </div>
+          <div data-painel="anexos" class="corpo-painel" hidden>
+            <p class="sub">12 arquivos do card: documentos do dossiê, guia e comprovante das custas e a decisão do edital.</p>
+          </div>
+          <div data-painel="alteracoes" class="corpo-painel" hidden>
+            <p><b>09/11</b> · Juliana Prado mudou Forma de citação de "Mandado" para "Edital" e o prazo de 30/10 para 10/11.</p>
+            <p><b>09/10</b> · Juliana Prado moveu de Custas e protocolo para Citação.</p>
+          </div>
+
+          <div data-painel="financeiro" class="corpo-painel" hidden>
+            <div class="grade-3">
+              <div class="resumo"><span class="jur-rot">Valor em cobrança</span><b>R$ 40.000,00</b><span class="sub">atualizado no envio: R$ 41.980,00</span></div>
+              <div class="resumo"><span class="jur-rot">Custo</span><b>R$ 1.500,00 · 3,8%</b><span class="sub">meta até 10% · R$ 300,00 a pagar</span></div>
+              <div class="resumo"><span class="jur-rot">Recuperado</span><b><span class="dash">—</span></b><span class="sub">sem acordo e sem valor informado</span></div>
+            </div>
+            <div class="entre"><span class="titulo-painel">Custos</span><button class="btn btn-secondary btn-sm"><svg><use href="#i-plus"/></svg>Lançar custo</button></div>
+            <div class="tabela-wrap"><table>
+              <thead><tr><th>Tipo</th><th>Data</th><th class="num">Valor</th><th>Situação</th><th>Guia</th><th>Comprovante</th></tr></thead>
+              <tbody>
+                <tr><td>Custas iniciais<div class="row-meta">Custas processuais</div></td><td>03/11/2026</td><td class="num">R$ 1.200,00</td><td><span class="status status-live"><i></i>Pago</span></td><td>guia.pdf</td><td>comprovante.pdf</td></tr>
+                <tr><td>Diligência e oficial de justiça<div class="row-meta">Diligências e pesquisas</div></td><td>20/10/2026</td><td class="num">R$ 300,00</td><td><span class="status status-attention"><i></i>A pagar há 30 dias</span></td><td><button class="btn btn-ghost btn-sm">Anexar</button></td><td><button class="btn btn-ghost btn-sm">Anexar</button></td></tr>
+              </tbody>
+            </table></div>
+            <div class="entre"><span class="titulo-painel">Acordo judicial</span><button class="btn btn-secondary btn-sm">Registrar acordo</button></div>
+            <p class="sub">Sem acordo. Política: entrada mínima de 20%, até 5 parcelas, honorários de 10%; acima de R$ 50.000,00 ou fora da política, aguarda aprovação do Gerente financeiro ou acima.</p>
+          </div>
+
+          <div data-painel="dossie" class="corpo-painel" hidden>
+            <div class="grade-2">
+              <div class="pilha-v">
+                <div class="entre"><span class="titulo-painel">Dossiê</span><span class="status status-live"><i></i>10 de 10</span></div>
+                <div class="progresso"><i style="width:100%"></i></div>
+                <p class="sub">11 documentos do setor privado; enviado por Gabriel Nunes. Garantias: não se aplica.</p>
+                <button class="btn btn-secondary btn-sm jur-auto">Abrir dossiê</button>
+              </div>
+              <div class="pilha-v">
+                <span class="titulo-painel">Cobrança de origem</span>
+                <dl class="ficha jur-ficha-1">
+                  <div><dt>Caso de cobrança</dt><dd>Etapa Jurídico desde 14/01/2026</dd></div>
+                  <div><dt>Saldo vencido hoje</dt><dd>R$ 40.000,00 · 2 títulos · 338 dias</dd></div>
+                  <div><dt>Agente da carteira</dt><dd>Ana Ribeiro</dd></div>
+                  <div><dt>Último contato</dt><dd>19/11 · ligação do cliente, sem proposta</dd></div>
+                </dl>
+                <button class="btn btn-secondary btn-sm jur-auto">Abrir caso de cobrança</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="jur-col">
+          <div class="jur-rot">Mover para</div>
+          <button class="btn btn-secondary jur-largo">06 · Defesa e instrução</button>
+          <button class="btn btn-secondary jur-largo">07 · Sentença e recursos</button>
+          <button class="btn btn-secondary jur-largo">08 · Cumprimento e execução</button>
+          <button class="btn btn-secondary jur-largo" disabled title="Registre o acordo antes">09 · Acordo judicial</button>
+          <button class="btn btn-secondary jur-largo">10 · Suspenso · RJ</button>
+          <button class="btn btn-secondary jur-largo">Encerrado</button>
+          <button class="btn btn-ghost jur-largo">Voltar para 04 · Custas</button>
+          <div class="jur-rot">Gerar documento</div>
+          <span class="select jur-largo"><span>Escolher documento</span><svg><use href="#i-chevron"/></svg></span>
+          <div class="sub">Notificação extrajudicial ou demonstrativo do débito, com prévia em tela antes do PDF.</div>
+          <div class="jur-rot">Card</div>
+          <button class="btn btn-ghost jur-largo jur-perigo"><svg><use href="#i-trash"/></svg>Excluir</button>
+        </aside>
+      </div>
+    </div>
+  </template>
+</section>

@@ -1,0 +1,127 @@
+<style>
+/* Módulo 006 · Painel consolidado. Classes .pc-* usadas por todos os arquivos do módulo; só tokens. */
+.kpis.pc, .bi.pc { margin-top: 0; }
+.pc-filtros { border-bottom: 0; }
+.pc-fonte { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted-foreground); }
+.pc-fonte svg { width: 14px; height: 14px; flex: none; }
+.pc-gruda { position: sticky; top: 0; z-index: 2; }
+.pc-ancoras { display: flex; flex-wrap: wrap; gap: 2px; align-items: center; padding: 6px 16px; }
+.pc-ancoras .sub { margin-right: 6px; }
+.pc-ancoras [aria-current="true"] { background: var(--accent); color: var(--accent-foreground); }
+.pc-junto { gap: 8px; }
+
+/* Par Gráfico/Tabela e seletores em segmento (a casca alterna aria-selected) */
+.pc-seg { display: inline-flex; flex: none; flex-wrap: wrap; min-height: 32px; padding: 3px; border-radius: .75rem; background: var(--muted); gap: 2px; }
+.pc-seg button { border: 0; background: transparent; color: var(--muted-foreground); padding: 4px 10px; border-radius: .5rem; font-weight: 600; font-size: 12px; cursor: pointer; white-space: nowrap; }
+.pc-seg button[aria-selected="true"], .pc-seg button[aria-pressed="true"] { background: var(--card); color: var(--primary); box-shadow: 0 0 0 1px var(--border); }
+.pc-gp { display: grid; gap: 12px; }
+.pc-det summary { cursor: pointer; font-size: 12px; font-weight: 600; color: var(--primary); }
+.pc-det[open] summary { margin-bottom: 8px; }
+
+/* Área de desenho: marcas em SVG que esticam com o painel, textos em HTML por cima */
+.pc-plot, .painel-graf .pc-plot { position: relative; margin: 16px 16px 24px 46px; }
+.pc-plot.pc-x2 { margin-bottom: 38px; }
+.pc-plot.pc-semy { margin-left: 6px; }
+.pc-plot > svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.pc-plot > span { position: absolute; font-size: 10.5px; line-height: 1; white-space: nowrap; color: var(--muted-foreground); }
+.pc-plot .y { left: -46px; width: 40px; text-align: right; transform: translateY(50%); }
+.pc-plot .x { top: 100%; margin-top: 7px; transform: translateX(-50%); text-align: center; line-height: 1.15; }
+.pc-plot .x2 { margin-top: 21px; font-size: 10px; }
+.pc-plot .x2g { top: 100%; margin-top: 22px; padding-top: 3px; overflow: hidden; border-top: 1px solid var(--border); font-size: 10px; text-align: center; }
+.pc-plot .v { transform: translate(-50%, -4px); color: var(--foreground); font-weight: 600; }
+.pc-plot .v.nd { color: var(--muted-foreground); font-weight: 400; }
+.pc-plot .pt { width: 9px; height: 9px; border-radius: 999px; border: 2px solid var(--card); transform: translate(-50%, 50%); }
+.pc-plot .pt + .v { transform: translate(-50%, -9px); }
+.pc-plot .pt + .v.ab { transform: translate(-50%, 18px); }
+.pc-plot.pc-meta { margin-right: 66px; }
+.pc-plot .m { left: 100%; margin-left: 6px; transform: translateY(50%); color: var(--foreground); font-weight: 600; }
+.legenda-graf i.pc-tracejada { width: 14px; height: 0; border-top: 2px dashed var(--foreground); border-radius: 0; background: transparent; vertical-align: 3px; }
+.pc-neutro { background: var(--ink-muted); }
+.pc-spark { display: inline-block; width: 72px; height: 20px; color: var(--data-1); vertical-align: middle; }
+.pc-minicols { display: block; width: 100%; height: 40px; }
+
+/* Barras horizontais, empilhadas e medidor */
+.pc-trilho { position: relative; }
+.pc-trilho b { position: absolute; top: 0; bottom: 0; width: 2px; margin-left: -1px; background: var(--foreground); }
+.barras.pc-larga .barra { grid-template-columns: minmax(150px, 280px) 1fr minmax(64px, auto); }
+.barras.pc-curta .barra { grid-template-columns: minmax(80px, 120px) 1fr minmax(64px, auto); }
+.barras .barra > span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pc-emp i + i { box-shadow: inset 2px 0 0 var(--card); }
+.pc-emp.alta { height: 24px; border-radius: 6px; }
+.pc-emp.alta span { display: block; padding: 0 7px; overflow: hidden; font-size: 11px; font-style: normal; font-weight: 600; line-height: 24px; white-space: nowrap; color: var(--card); }
+.pc-bullet { position: relative; display: block; height: 8px; min-width: 96px; border-radius: 4px; background: var(--muted); }
+.pc-bullet i { display: block; height: 100%; border-radius: 4px; background: var(--data-seq-3); }
+.pc-bullet b { position: absolute; top: -4px; bottom: -4px; width: 2px; margin-left: -1px; border-radius: 1px; background: var(--foreground); }
+.pc-bullet em { position: absolute; top: -3px; bottom: -3px; border: 1.5px solid var(--foreground); border-radius: 3px; }
+
+/* Tabelas */
+tr.pc-grupo td, tr.pc-grupo:hover td { padding: 7px 16px; font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted-foreground); background: var(--muted); }
+tr.pc-total td { font-weight: 600; }
+table.pc-densa th, table.pc-densa td { padding: 8px 10px; }
+table.pc-densa th:first-child, table.pc-densa td:first-child { padding-left: 16px; }
+td .pc-emp { min-width: 120px; margin-top: 3px; }
+.pc-cel { display: inline-flex; align-items: center; justify-content: flex-end; gap: 5px; }
+.pc-cel::before { content: ""; flex: none; width: 6px; height: 6px; border-radius: 999px; background: var(--ink-muted); }
+.pc-cel.ok::before { background: var(--primary); }
+.pc-cel.fora::before { background: var(--destructive); }
+.pc-n1 { padding-left: 22px; } .pc-n2 { padding-left: 44px; } .pc-n3 { padding-left: 66px; }
+
+/* Miniaturas, números e cartões */
+.pc-mini { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 12px 24px; align-items: center; padding: 14px 16px; }
+.pc-bloco-aba { border: 1px solid var(--row-border); border-radius: .75rem; padding: 12px 0 0; }
+.pc-bloco-aba > .entre { padding: 0 16px; }
+.pc-nums { display: flex; flex-wrap: wrap; gap: 8px 28px; }
+.pc-nums div { display: grid; gap: 1px; }
+.pc-nums small { font-size: 11px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--muted-foreground); }
+.pc-nums b, .pc-num { font-family: var(--font-title); font-size: 18px; font-weight: 800; }
+.pc-num.g { font-size: 26px; }
+.pc-assunto { align-content: start; gap: 6px; }
+.pc-calor-n { justify-content: flex-end; padding-right: 8px; font-weight: 500; }
+.calor .cel small { font-weight: 400; margin-left: 4px; opacity: .85; }
+@media (max-width: 900px) { .pc-mini { grid-template-columns: 1fr; } }
+
+/* Evolução e fechamento manual */
+.pc-fech > summary { padding: 12px 16px; cursor: pointer; font-family: var(--font-title); font-size: 14px; font-weight: 700; }
+.pc-fech > summary .sub { margin-left: 8px; font-family: var(--font-sans); font-weight: 400; }
+.pc-fech[open] > summary { border-bottom: 1px solid var(--row-border); }
+.pc-sem-borda { border-bottom: 0; }
+.form-grade.pc-uma { grid-template-columns: 1fr; }
+.pc-evo { gap: 8px; padding: 14px; }
+.lista-itens > .item.pc-ind { display: grid; gap: 6px; }
+.pc-sinais { justify-content: flex-start; }
+
+/* Aging, roll rate e concentração */
+td.num { white-space: nowrap; }
+th { white-space: normal; vertical-align: bottom; }
+.pilha-v { grid-template-columns: minmax(0, 1fr); }
+.barras.pc-so { min-width: 110px; }
+.barras.pc-so .barra { grid-template-columns: 1fr; }
+.barras.pc-so .barra > span { display: none; }
+.barras.pc-val-larga .barra { grid-template-columns: minmax(70px, 90px) 1fr minmax(150px, auto); }
+.barra .trilho i.pc-neutro { background: var(--ink-muted); }
+.pc-ponto { display: inline-block; width: 9px; height: 9px; margin-right: 6px; border-radius: 2px; }
+.calor.pc-calor-aging { grid-template-columns: minmax(110px, 160px) repeat(5, minmax(0, 1fr)) repeat(4, minmax(64px, 92px)); }
+.calor.pc-calor-roll { grid-template-columns: minmax(110px, 150px) minmax(84px, 120px) repeat(4, minmax(0, 1fr)) minmax(96px, 130px); }
+.calor .rot.pc-c { text-align: center; }
+.calor .rot.pc-d { text-align: right; padding-right: 8px; }
+.calor .rot.forte { color: var(--foreground); }
+.pc-calor-g { grid-column: 1 / -1; padding-top: 8px; font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted-foreground); }
+.pc-rr { display: grid; grid-template-columns: minmax(90px, 130px) 1fr minmax(60px, auto); gap: 12px; align-items: center; }
+.pc-rr .valor { text-align: right; font-weight: 600; }
+.lista-itens > .item.pc-rolagem { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 20px; align-items: center; }
+@media (max-width: 900px) { .lista-itens > .item.pc-rolagem { grid-template-columns: 1fr; } }
+
+/* Agentes, crédito, jurídico, público e equipe */
+.pc-folga { gap: 24px; }
+.pc-topo { border-top: 1px solid var(--row-border); }
+.ficha.pc-ficha2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.ficha.pc-ficha3 { grid-template-columns: repeat(3, auto); gap: 4px 14px; justify-content: start; }
+.pc-colado { gap: 0; }
+.pc-colado > div + div { border-left: 1px solid var(--row-border); }
+.barras.pc-val-media .barra { grid-template-columns: minmax(150px, 210px) 1fr minmax(120px, auto); }
+.pc-pessoa { display: flex; align-items: center; gap: 8px; }
+.organograma .no.pc-no { display: grid; gap: 8px; flex: 1 1 250px; min-width: 0; max-width: 340px; text-align: left; align-content: start; }
+.organograma .nivel { width: 100%; }
+@media (max-width: 900px) { .pc-colado > div + div { border-left: 0; border-top: 1px solid var(--row-border); } }
+td:first-child > b, td .textlink { white-space: nowrap; }
+</style>

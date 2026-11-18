@@ -1,0 +1,257 @@
+<section data-tela="juridico-carga-inicial" data-grupo="Administração"
+         data-titulo="Carga inicial da planilha do escritório"
+         data-desc="Para o Administrador, uma única vez: carregar a planilha de cinco abas do escritório, ver a prévia antes de gravar, confirmar o vínculo com o cliente (o nome só sugere; vale o código ou o CNPJ), tratar as pendências e concluir a carga.">
+
+  <template data-opcao="A" data-nome="Prévia em tabela" data-resumo="Contadores no topo e uma tabela com os processos lidos, o vínculo e a pendência de cada um na própria linha; privilegia conferir tudo antes de aplicar, ao custo de a pendência virar mais uma coluna.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração · Jurídico</div>
+        <h3>Carga inicial da planilha do escritório</h3>
+        <div class="desc">Leitura única. Depois de concluída, o sistema passa a ser a fonte dos processos.</div>
+        <div class="meta"><span>arquivo <span class="stat">acompanhamento-juridico.xlsx</span></span><span class="dot">·</span><span><span class="stat">5</span> abas lidas</span><span class="dot">·</span><span><span class="stat">1</span> linha ignorada (aguardando documentação)</span></div>
+      </div>
+      <div class="entre"><button class="btn btn-secondary">Trocar arquivo</button><button class="btn btn-primary">Aplicar carga</button></div>
+    </div>
+    <div class="kpis jur-sem-margem">
+      <div class="kpi"><div class="rot">Processos lidos</div><div class="linha"><span class="valor">5</span></div><div class="hint">5 novos · nenhum já gravado</div></div>
+      <div class="kpi"><div class="rot">Vinculados pelo código</div><div class="linha"><span class="valor">3</span></div><div class="hint">código encontrado no cadastro</div></div>
+      <div class="kpi"><div class="rot">Sugestão pelo nome</div><div class="linha"><span class="valor">1</span><span class="status status-attention"><i></i>A confirmar</span></div><div class="hint">o nome nunca vincula sozinho</div></div>
+      <div class="kpi"><div class="rot">Sem cliente</div><div class="linha"><span class="valor">1</span><span class="status status-attention"><i></i>Pendência</span></div><div class="hint">código 2003 não existe no cadastro</div></div>
+      <div class="kpi"><div class="rot">Divergência entre abas</div><div class="linha"><span class="valor">1</span><span class="status status-attention"><i></i>Pendência</span></div><div class="hint">nº dos autos diferente</div></div>
+      <div class="kpi"><div class="rot">Parcela a confirmar</div><div class="linha"><span class="valor">1</span><span class="status status-attention"><i></i>Pendência</span></div><div class="hint">cor fora da legenda</div></div>
+    </div>
+    <div class="panel">
+      <div class="faixa"><span class="titulo-painel">Prévia: nada foi gravado ainda</span><span class="sub">Etapas sugeridas pelo texto da situação: 1 em citação · 2 em petição inicial · 1 em acordo · 1 encerrado</span></div>
+      <div class="tabela-wrap"><table>
+        <thead><tr><th>Devedor na planilha</th><th>Cliente no cadastro</th><th>Vínculo</th><th class="num">Valor</th><th>Nº dos autos</th><th>Etapa sugerida</th><th>Abas</th><th>Pendência</th><th></th></tr></thead>
+        <tbody>
+          <tr><td><div class="row-title">Nu Hospitalar</div><div class="row-meta">cód. 2001 · 4 andamentos · substabelecer</div></td><td>Nu Hospitalar Ltda</td><td><span class="status status-live"><i></i>Pelo código</span></td><td class="num">R$ 48.000,00</td><td><span class="code">0709911-22.2025.8.07.0001</span></td><td>05 Citação<div class="row-meta">"AR devolvido, pesquisar endereço"</div></td><td>Acompanhamento, Processos</td><td><span class="status status-attention"><i></i>Nº dos autos diferente entre as abas</span><div class="row-meta">Processos traz 0709911-22.2025.8.07.0015</div></td><td><button class="btn btn-ghost btn-sm">Escolher</button></td></tr>
+          <tr><td><div class="row-title">Xi Distribuidra</div><div class="row-meta">sem código</div></td><td>XI DISTRIBUIDORA LTDA · cód. 2002<div class="row-meta">nome parecido (semelhança 1,00)</div></td><td><span class="status status-attention"><i></i>Sugestão a confirmar</span></td><td class="num">R$ 7.250,30</td><td><span class="dash">—</span></td><td>03 Petição inicial<div class="row-meta">"Novo"</div></td><td>Processos</td><td><span class="status status-attention"><i></i>Confirmar o cliente sugerido</span></td><td><button class="btn btn-secondary btn-sm">Confirmar</button></td></tr>
+          <tr><td><div class="row-title">Ômicron Farma</div><div class="row-meta">cód. 2003</div></td><td><span class="dash">—</span></td><td><span class="status status-alert"><i></i>Sem cliente</span></td><td class="num">R$ 22.400,00</td><td><span class="dash">—</span></td><td>03 Petição inicial<div class="row-meta">"Verificar"</div></td><td>Processos, Extrajudicial</td><td><span class="status status-attention"><i></i>Código não encontrado no cadastro</span></td><td><button class="btn btn-secondary btn-sm">Vincular</button></td></tr>
+          <tr><td><div class="row-title">Pi Clínica</div><div class="row-meta">cód. 2004 · acordo de 3 parcelas</div></td><td>Pi Clínica Médica Ltda</td><td><span class="status status-live"><i></i>Pelo código</span></td><td class="num">R$ 18.000,00</td><td><span class="code">5031188-40.2024.8.09.0051</span></td><td>09 Acordo judicial<div class="row-meta">"Acordo homologado"</div></td><td>Acompanhamento, ACORDOS</td><td><span class="status status-attention"><i></i>Parcela 2 com cor fora da legenda</span><div class="row-meta">entra como "a confirmar"</div></td><td><button class="btn btn-ghost btn-sm">Definir</button></td></tr>
+          <tr><td><div class="row-title">Rô Medicamentos</div><div class="row-meta">cód. 2005</div></td><td>Rô Medicamentos Ltda</td><td><span class="status status-live"><i></i>Pelo código</span></td><td class="num">R$ 9.800,00</td><td><span class="code">5007712-09.2023.8.21.0001</span></td><td>Encerrado<div class="row-meta">"Quitado"</div></td><td>Acompanhamento</td><td><span class="dash">—</span></td><td></td></tr>
+        </tbody>
+      </table></div>
+      <div class="pagination"><span>Aplicar grava os 5 processos com andamentos e o acordo. Aplicar a mesma planilha de novo não cria nem altera processo.</span><span class="btns"><button class="btn btn-secondary btn-sm">Baixar relatório de pendências</button><button class="btn btn-secondary btn-sm" disabled title="Aplique a carga antes">Concluir carga</button></span></div>
+    </div>
+    <div class="alert alert-default"><svg><use href="#i-info"/></svg><b>Concluir a carga é definitivo</b><p>Depois de concluída, nenhuma nova carga é aceita. As pendências que restarem continuam na ficha de cada processo e no alerta "Divergência na carga" até alguém marcar como conferidas.</p></div>
+  </template>
+
+  <template data-opcao="B" data-nome="Pendências para resolver" data-resumo="Depois do resumo, a tela são as quatro pendências, cada uma num cartão com a decisão no lugar (confirmar cliente, vincular, escolher autos, situar parcela); os processos sem pendência ficam recolhidos. Privilegia sair da carga sem pendência, ao custo de não ver a planilha inteira.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração · Jurídico</div>
+        <h3>Carga inicial da planilha do escritório</h3>
+        <div class="desc">acompanhamento-juridico.xlsx · 5 abas · 5 processos lidos · nada gravado ainda</div>
+        <div class="meta"><span><span class="stat">4</span> pendências</span><span class="dot">·</span><span><span class="stat">3</span> vinculados pelo código</span><span class="dot">·</span><span>etapas: <span class="stat">1</span> citação, <span class="stat">2</span> petição inicial, <span class="stat">1</span> acordo, <span class="stat">1</span> encerrado</span></div>
+      </div>
+      <div class="entre"><button class="btn btn-secondary">Trocar arquivo</button><button class="btn btn-primary">Aplicar carga</button></div>
+    </div>
+    <div class="alert alert-warn"><svg><use href="#i-alert"/></svg><b>4 pendências</b><p>Você pode resolver agora ou aplicar a carga assim: o que ficar aberto entra no relatório de pendências e no alerta "Divergência na carga".</p></div>
+    <div class="grade-2">
+      <div class="panel"><div class="corpo-painel">
+        <div class="entre"><span class="status status-attention"><i></i>Sugestão a confirmar</span><span class="sub">aba Processos</span></div>
+        <span class="forte">Xi Distribuidra · R$ 7.250,30 · sem código</span>
+        <div class="grade-2">
+          <div class="resumo"><span class="jur-rot">Na planilha</span><b>Xi Distribuidra</b><span class="sub">situação "Novo" · 03 Petição inicial</span></div>
+          <div class="resumo"><span class="jur-rot">No cadastro</span><b>XI DISTRIBUIDORA LTDA</b><span class="sub">cód. 2002 · CNPJ 44.555.666/0001-77 · semelhança 1,00</span></div>
+        </div>
+        <p class="sub">O nome parecido só sugere. O vínculo passa a valer quando alguém confirma.</p>
+        <div class="entre jur-esq"><button class="btn btn-secondary btn-sm">Confirmar este cliente</button><button class="btn btn-ghost btn-sm">Vincular outro por código ou CNPJ</button></div>
+      </div></div>
+      <div class="panel"><div class="corpo-painel">
+        <div class="entre"><span class="status status-alert"><i></i>Sem cliente</span><span class="sub">abas Processos e Extrajudicial</span></div>
+        <span class="forte">Ômicron Farma · R$ 22.400,00 · cód. 2003</span>
+        <p class="sub">O código 2003 não existe no cadastro e nenhum nome parecido foi encontrado. O processo entra sem cliente e só aparece para quem vê todos os processos.</p>
+        <div class="entre"><div class="search jur-cresce"><svg><use href="#i-search"/></svg><input class="input" placeholder="Código do cliente ou CNPJ/CPF"></div><button class="btn btn-secondary btn-sm">Vincular</button></div>
+      </div></div>
+      <div class="panel"><div class="corpo-painel">
+        <div class="entre"><span class="status status-attention"><i></i>Divergência entre abas</span><span class="sub">Acompanhamento × Processos</span></div>
+        <span class="forte">Nu Hospitalar · R$ 48.000,00 · cód. 2001</span>
+        <div class="grade-2">
+          <div class="resumo"><span class="jur-rot">Acompanhamento - Jurídico</span><span class="code">0709911-22.2025.8.07.0001</span><button class="btn btn-secondary btn-sm jur-auto">Usar este</button></div>
+          <div class="resumo"><span class="jur-rot">Processos</span><span class="code">0709911-22.2025.8.07.0015</span><button class="btn btn-ghost btn-sm jur-auto">Usar este</button></div>
+        </div>
+        <p class="sub">Entra com o nº da aba de acompanhamento até alguém conferir. 4 andamentos e substabelecimento pendente vêm junto.</p>
+      </div></div>
+      <div class="panel"><div class="corpo-painel">
+        <div class="entre"><span class="status status-attention"><i></i>Parcela a confirmar</span><span class="sub">aba ACORDOS</span></div>
+        <span class="forte">Pi Clínica · acordo de R$ 18.000,00 em 3 parcelas</span>
+        <div class="jur-parcelas">
+          <div class="jur-parcela"><span class="jur-rot">Entrada</span><b>R$ 6.000,00</b><span class="status status-live"><i></i>Paga</span><span class="sub">cor de "quitado"</span></div>
+          <div class="jur-parcela"><span class="jur-rot">Parcela 1</span><b>R$ 6.000,00</b><span class="status status-off"><i></i>Aberta</span><span class="sub">cor de "pendente"</span></div>
+          <div class="jur-parcela vencida"><span class="jur-rot">Parcela 2</span><b>R$ 6.000,00</b><span class="status status-attention"><i></i>A confirmar</span><span class="sub">cor fora da legenda</span></div>
+        </div>
+        <div class="entre jur-esq"><span class="sub">Parcela 2:</span><button class="btn btn-secondary btn-sm">Aberta</button><button class="btn btn-ghost btn-sm">Paga, com data</button></div>
+      </div></div>
+    </div>
+    <details class="panel jur-recolhe">
+      <summary class="faixa"><span class="titulo-painel">Processos lidos</span><span class="sub">5 · 1 sem pendência · mostrar</span></summary>
+      <div class="tabela-wrap"><table>
+        <thead><tr><th>Devedor</th><th>Vínculo</th><th class="num">Valor</th><th>Nº dos autos</th><th>Etapa sugerida</th><th>Abas</th></tr></thead>
+        <tbody>
+          <tr><td class="row-title">Nu Hospitalar</td><td><span class="status status-live"><i></i>Pelo código 2001</span></td><td class="num">R$ 48.000,00</td><td><span class="code">0709911-22.2025.8.07.0001</span></td><td>05 Citação</td><td>Acompanhamento, Processos</td></tr>
+          <tr><td class="row-title">Xi Distribuidra</td><td><span class="status status-attention"><i></i>Sugestão: cód. 2002</span></td><td class="num">R$ 7.250,30</td><td><span class="dash">—</span></td><td>03 Petição inicial</td><td>Processos</td></tr>
+          <tr><td class="row-title">Ômicron Farma</td><td><span class="status status-alert"><i></i>Sem cliente</span></td><td class="num">R$ 22.400,00</td><td><span class="dash">—</span></td><td>03 Petição inicial</td><td>Processos, Extrajudicial</td></tr>
+          <tr><td class="row-title">Pi Clínica</td><td><span class="status status-live"><i></i>Pelo código 2004</span></td><td class="num">R$ 18.000,00</td><td><span class="code">5031188-40.2024.8.09.0051</span></td><td>09 Acordo judicial</td><td>Acompanhamento, ACORDOS</td></tr>
+          <tr><td class="row-title">Rô Medicamentos</td><td><span class="status status-live"><i></i>Pelo código 2005</span></td><td class="num">R$ 9.800,00</td><td><span class="code">5007712-09.2023.8.21.0001</span></td><td>Encerrado</td><td>Acompanhamento</td></tr>
+        </tbody>
+      </table></div>
+    </details>
+    <div class="entre"><span class="sub">Aplicar de novo a mesma planilha não cria nem altera processo. Concluir a carga é definitivo: depois dela, nenhuma nova carga é aceita.</span><button class="btn btn-secondary" disabled title="Aplique a carga antes">Concluir carga</button></div>
+  </template>
+
+  <template data-opcao="C" data-nome="Passo a passo" data-resumo="Cinco passos (arquivo, leitura por aba, vínculo com clientes, pendências, aplicar e concluir), um assunto por tela, aqui no passo do vínculo; privilegia guiar quem faz a carga uma única vez, ao custo de não ter uma visão única da prévia.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração · Jurídico</div>
+        <h3>Carga inicial da planilha do escritório</h3>
+        <div class="desc">Leitura única da planilha de cinco abas. Nada é gravado antes do último passo.</div>
+      </div>
+      <button class="btn btn-secondary">Trocar arquivo</button>
+    </div>
+    <div class="jur-passos">
+      <div class="jur-passo feito"><i>1</i><span>Arquivo<small>acompanhamento-juridico.xlsx</small></span></div>
+      <div class="jur-passo feito"><i>2</i><span>Leitura por aba<small>5 abas · 5 processos</small></span></div>
+      <div class="jur-passo ativo"><i>3</i><span>Vínculo com clientes<small>3 pelo código · 2 a decidir</small></span></div>
+      <div class="jur-passo"><i>4</i><span>Pendências<small>4 no relatório</small></span></div>
+      <div class="jur-passo"><i>5</i><span>Aplicar e concluir<small>grava e encerra a carga</small></span></div>
+    </div>
+    <div class="lado">
+      <div class="panel">
+        <div class="faixa"><span class="titulo-painel">3 · Vínculo com clientes</span><span class="sub">vale o código do cliente ou o CNPJ/CPF; o nome só sugere</span></div>
+        <div class="tabela-wrap"><table>
+          <thead><tr><th>Na planilha</th><th>No cadastro</th><th>Como</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><div class="row-title">Xi Distribuidra</div><div class="row-meta">sem código · R$ 7.250,30</div></td><td><div class="row-title">XI DISTRIBUIDORA LTDA</div><div class="row-meta">cód. 2002 · CNPJ 44.555.666/0001-77 · semelhança 1,00</div></td><td><span class="status status-attention"><i></i>Sugestão a confirmar</span></td><td><span class="acoes"><button class="btn btn-secondary btn-sm">Confirmar</button><button class="btn btn-ghost btn-sm">Outro</button></span></td></tr>
+            <tr><td><div class="row-title">Ômicron Farma</div><div class="row-meta">cód. 2003 · R$ 22.400,00</div></td><td><div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Código do cliente ou CNPJ/CPF"></div><div class="row-meta">código 2003 não encontrado; sem nome parecido</div></td><td><span class="status status-alert"><i></i>Sem cliente</span></td><td><button class="btn btn-secondary btn-sm">Vincular</button></td></tr>
+            <tr><td><div class="row-title">Nu Hospitalar</div><div class="row-meta">cód. 2001 · R$ 48.000,00</div></td><td>Nu Hospitalar Ltda</td><td><span class="status status-live"><i></i>Pelo código</span></td><td></td></tr>
+            <tr><td><div class="row-title">Pi Clínica</div><div class="row-meta">cód. 2004 · R$ 18.000,00</div></td><td>Pi Clínica Médica Ltda</td><td><span class="status status-live"><i></i>Pelo código</span></td><td></td></tr>
+            <tr><td><div class="row-title">Rô Medicamentos</div><div class="row-meta">cód. 2005 · R$ 9.800,00</div></td><td>Rô Medicamentos Ltda</td><td><span class="status status-live"><i></i>Pelo código</span></td><td></td></tr>
+          </tbody>
+        </table></div>
+        <div class="pagination"><span>Quem ficar sem cliente entra como pendência e só aparece para quem vê todos os processos.</span><span class="btns"><button class="btn btn-secondary btn-sm">Voltar</button><button class="btn btn-primary btn-sm">Continuar para pendências</button></span></div>
+      </div>
+      <div class="pilha-v">
+        <div class="panel">
+          <div class="faixa"><span class="titulo-painel">2 · Leitura por aba</span></div>
+          <div class="tabela-wrap"><table>
+            <thead><tr><th>Aba</th><th class="num">Linhas</th><th>Resultado</th></tr></thead>
+            <tbody>
+              <tr><td>Acompanhamento - Jurídico</td><td class="num">3</td><td>3 processos</td></tr>
+              <tr><td>Acompanhar - Específicos</td><td class="num">1</td><td>completa 1</td></tr>
+              <tr><td>Acompanhamento - Extrajudicial</td><td class="num">2</td><td>completa 1 · 1 ignorada</td></tr>
+              <tr><td>Processos</td><td class="num">4</td><td>2 novos · completa 2</td></tr>
+              <tr><td>ACORDOS</td><td class="num">1</td><td>1 acordo, 3 parcelas</td></tr>
+            </tbody>
+          </table></div>
+          <div class="corpo-painel"><p class="sub">Etapas sugeridas: 1 em citação, 2 em petição inicial, 1 em acordo, 1 encerrado.</p></div>
+        </div>
+        <div class="panel">
+          <div class="faixa"><span class="titulo-painel">4 · Pendências que virão</span><span class="badge badge-attention">4</span></div>
+          <div class="lista-itens">
+            <div class="item"><span class="jur-cresce">Xi Distribuidra: sugestão de cliente a confirmar</span></div>
+            <div class="item"><span class="jur-cresce">Ômicron Farma: sem cliente</span></div>
+            <div class="item"><span class="jur-cresce">Nu Hospitalar: nº dos autos diferente entre as abas</span></div>
+            <div class="item"><span class="jur-cresce">Pi Clínica: parcela 2 com cor fora da legenda, entra "a confirmar"</span></div>
+          </div>
+        </div>
+        <div class="alert alert-default"><svg><use href="#i-info"/></svg><b>5 · Aplicar e concluir</b><p>Aplicar grava os 5 processos com andamentos e o acordo; repetir não duplica. Concluir é definitivo: nenhuma nova carga é aceita depois.</p></div>
+      </div>
+    </div>
+  </template>
+</section>
+<style>
+/* Jurídico (prefixo jur-): só tokens. */
+.jur-h { font-size: 18px; font-weight: 700; }
+.jur-sem-margem, .jur-bloco .kpis { margin-top: 0; }
+.jur-sem-margem .linha, .jur-bloco .linha { flex-wrap: wrap; align-items: center; }
+.jur-sem-margem .valor, .jur-bloco .valor { white-space: nowrap; }
+.jur-bloco { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 12px; align-items: start; }
+.jur-bloco-t { font-family: var(--font-title); font-weight: 700; font-size: 14px; padding-top: 12px; display: grid; gap: 2px; }
+.jur-bloco-t span { font-family: "Work Sans", sans-serif; font-weight: 400; font-size: 12px; color: var(--muted-foreground); }
+@media (max-width: 900px) { .jur-bloco { grid-template-columns: 1fr; } }
+.jur-recolhe > summary { cursor: pointer; list-style: none; }
+.jur-recolhe > summary::-webkit-details-marker { display: none; }
+.jur-recolhe > summary::after { content: "+"; margin-left: auto; font-weight: 700; color: var(--muted-foreground); }
+.jur-recolhe[open] > summary::after { content: "\2212"; }
+.jur-recolhe:not([open]) > summary.faixa { border-bottom: 0; }
+.jur-curto { min-width: 130px; }
+.jur-largo { width: 100%; }
+.btn.jur-largo { justify-content: center; white-space: normal; height: auto; min-height: 36px; padding-block: 6px; line-height: 1.25; text-align: center; }
+/* Painel de aba escondido: .corpo-painel tem display próprio e venceria o atributo hidden */
+.com-abas [data-painel][hidden] { display: none; }
+.jur-auto { justify-self: start; }
+.jur-perigo { color: var(--destructive); }
+.jur-cresce { flex: 1; min-width: 0; }
+.jur-esq { justify-content: flex-start; }
+.jur-dir { display: grid; justify-items: end; gap: 2px; text-align: right; }
+.jur-borda { border: 1px solid var(--row-border); border-radius: .75rem; }
+.jur-rot { font-size: 11px; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; color: var(--ink-muted); }
+.jur-ativo { background: var(--accent); color: var(--primary); border-color: var(--primary); }
+.jur-seg button[aria-selected="true"] { background: var(--card); color: var(--primary); box-shadow: 0 1px 2px color-mix(in srgb, var(--foreground) 12%, transparent); }
+.jur-grupo td { background: var(--muted); font-weight: 600; }
+/* Quadro da lib: barra e faixa na cor da fase, selo de etiqueta, progresso e os três tempos */
+.jur-fase { border-top: 3px solid var(--cor, var(--data-1)); }
+.jur-fase .cartao { border-left: 3px solid var(--cor, var(--data-1)); }
+.jur-fase-sub { flex-shrink: 0; padding: 0 6px; font-size: 11.5px; color: var(--muted-foreground); }
+.jur-vazio { padding: 8px 6px; }
+.jur-selos { display: flex; flex-wrap: wrap; gap: 4px; }
+.jur-selo { display: inline-flex; padding: 1px 8px; border-radius: .5rem; font-size: 11px; font-weight: 600; background: color-mix(in srgb, var(--cor, var(--data-1)) 55%, var(--foreground)); color: var(--background); }
+.jur-prog { display: grid; gap: 4px; font-size: 12px; color: var(--muted-foreground); }
+.jur-tempos { display: flex; flex-wrap: wrap; gap: 4px 12px; padding-top: 6px; border-top: 1px solid var(--row-border); font-size: 11px; color: var(--muted-foreground); }
+.jur-tempos svg { width: 11px; height: 11px; margin-right: 3px; vertical-align: -1px; }
+.jur-tempos .passou { color: var(--attention); font-weight: 600; }
+.jur-atalhos { gap: 8px; }
+.jur-atalho { display: inline-flex; align-items: baseline; gap: 6px; padding: 6px 12px; border: 1px solid var(--border); border-radius: .75rem; background: var(--card); cursor: pointer; font-size: 12px; color: var(--muted-foreground); }
+.jur-atalho b { font-family: var(--font-title); font-size: 15px; color: var(--foreground); }
+.jur-atalho:hover { background: var(--accent); }
+/* Card aberto da lib: três colunas */
+.jur-card { display: grid; grid-template-columns: 260px minmax(0, 1fr) 230px; }
+.jur-col { padding: 16px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.jur-col + .jur-col { border-left: 1px solid var(--row-border); }
+.jur-meio { padding: 0; gap: 0; }
+.jur-ficha-1 { grid-template-columns: 1fr; gap: 8px; }
+.jur-bloco-card { border: 1px solid var(--row-border); border-radius: .75rem; padding: 10px 12px; }
+.jur-bloco-card > summary { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 12px; cursor: pointer; }
+.jur-bloco-card > * + * { margin-top: 8px; }
+@media (max-width: 1000px) { .jur-card { grid-template-columns: 1fr; } .jur-col + .jur-col { border-left: 0; border-top: 1px solid var(--row-border); } }
+/* Sublinha de tabela, parcelas, colunas mensais, meta */
+.jur-sub > td, .jur-sub:hover > td { background: var(--muted); padding: 10px 16px 14px 32px; }
+.jur-sub table { background: var(--card); border: 1px solid var(--row-border); border-radius: .75rem; margin-top: 6px; }
+.jur-parcelas { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; }
+.jur-parcela { border: 1px solid var(--row-border); border-radius: .75rem; padding: 10px; display: grid; gap: 4px; font-size: 12px; align-content: start; background: var(--card); }
+.jur-parcela.vencida { border-color: var(--attention); background: var(--attention-bg); }
+.jur-colunas { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 6px; height: 190px; }
+.jur-coluna { display: flex; flex-direction: column; gap: 4px; height: 100%; min-width: 0; text-align: center; font-size: 11px; color: var(--muted-foreground); }
+.jur-pilha { flex: 1; min-height: 0; display: flex; flex-direction: column-reverse; padding-top: 18px; border-bottom: 1px solid var(--border); }
+.jur-pilha i { display: block; flex: none; width: 100%; border-radius: 3px 3px 0 0; }
+.jur-pilha b { font-size: 10.5px; font-weight: 600; color: var(--foreground); white-space: nowrap; }
+.jur-meta { position: relative; min-width: 140px; }
+.jur-marca { position: absolute; left: 66.7%; top: -3px; bottom: -3px; width: 2px; background: var(--foreground); }
+.jur-segmentos { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; }
+.jur-segmentos i { height: 10px; border-radius: 3px; background: var(--muted); border: 1px solid var(--border); }
+.jur-segmentos i.ok { background: var(--primary); border-color: var(--primary); }
+.jur-segmentos i.envio { background: var(--ink-muted); border-color: var(--ink-muted); }
+.jur-vazio-cor { background: var(--muted); border: 1px solid var(--border); }
+.jur-dossie td:first-child { min-width: 280px; }
+.jur-dossie .status { white-space: normal; }
+.jur-solta { display: grid; gap: 4px; justify-items: center; text-align: center; padding: 20px; border: 1px dashed var(--border); }
+/* Documento em papel e passos */
+.jur-papel { background: var(--card); color: var(--foreground); border: 1px solid var(--border); max-width: 720px; margin: 0 auto; padding: 36px 44px; display: grid; gap: 12px; font-family: Georgia, "Times New Roman", serif; font-size: 13.5px; line-height: 1.55; box-shadow: 0 6px 18px color-mix(in srgb, var(--foreground) 10%, transparent); }
+.jur-papel h4 { font-family: inherit; font-size: 15px; }
+.jur-papel p { text-align: justify; }
+.jur-papel table { font-family: "Work Sans", sans-serif; border: 1px solid var(--row-border); }
+.jur-timbre { font-family: var(--font-title); font-weight: 800; font-size: 18px; text-align: right; }
+.jur-papel .jur-centro { text-align: center; }
+.jur-papel .jur-direita { text-align: right; }
+.jur-campo { background: var(--accent); border-bottom: 1px dashed var(--primary); border-radius: 3px; padding: 0 3px; cursor: text; }
+.jur-passos { display: flex; flex-wrap: wrap; gap: 8px; }
+.jur-passo { flex: 1; min-width: 170px; display: flex; gap: 10px; align-items: center; padding: 10px 12px; border: 1px solid var(--row-border); border-radius: .75rem; background: var(--card); color: var(--muted-foreground); }
+.jur-passo i { flex: none; width: 24px; height: 24px; border-radius: 999px; display: grid; place-items: center; font-style: normal; font-weight: 700; font-size: 12px; background: var(--muted); }
+.jur-passo span { display: grid; font-weight: 600; }
+.jur-passo small { font-weight: 400; font-size: 11.5px; }
+.jur-passo.feito i { background: var(--accent); color: var(--primary); }
+.jur-passo.ativo { border-color: var(--primary); color: var(--foreground); }
+.jur-passo.ativo i { background: var(--primary); color: var(--primary-foreground); }
+</style>

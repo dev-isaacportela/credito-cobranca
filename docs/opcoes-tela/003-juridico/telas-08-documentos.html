@@ -1,0 +1,322 @@
+<section data-tela="juridico-previa-documentos" data-grupo="Dossiê e documentos"
+         data-titulo="Prévia da notificação e do demonstrativo"
+         data-desc="Para o Jurídico e o Financeiro: conferir em tela a notificação extrajudicial (só setor privado) e o demonstrativo atualizado do débito, ajustar o que for editável e só então gerar o PDF e registrar a emissão.">
+
+  <template data-opcao="A" data-nome="Formulário e papel" data-resumo="Campos à esquerda e o documento em papel à direita, atualizando junto; privilegia editar com segurança vendo o resultado, ao custo de o papel ficar estreito.">
+    <div class="page-header">
+      <div>
+        <div class="module">Jurídico · Documentos</div>
+        <h3>Gerar documento</h3>
+        <div class="desc">Os valores vêm do cálculo de encargos da cobrança na data de hoje, 19/11/2026. Confira antes de gerar o PDF.</div>
+      </div>
+      <div class="entre"><button class="btn btn-secondary">Cancelar</button><button class="btn btn-primary">Gerar PDF e registrar a emissão</button></div>
+    </div>
+    <div class="panel com-abas">
+      <div class="abas" role="tablist" aria-label="Documento">
+        <button type="button" data-aba="notif" aria-selected="true">Notificação extrajudicial · Ômega Drogarias</button>
+        <button type="button" data-aba="demo" aria-selected="false">Demonstrativo do débito · Iota Farma</button>
+      </div>
+      <div data-painel="notif" class="corpo-painel">
+        <div class="lado invertido">
+          <div class="pilha-v">
+            <div class="alert alert-success"><svg><use href="#i-check"/></svg><b>Pode ser emitida</b><p>Modelo validado pelo Jurídico (versão 3, 05/11/2026) e filial credora BNDF com razão social e CNPJ.</p></div>
+            <span class="jur-rot">Notificante</span>
+            <div class="field"><label>Filial credora</label><span class="select jur-largo"><span>BNDF</span><svg><use href="#i-chevron"/></svg></span></div>
+            <div class="field"><label>Razão social</label><input class="input" value="BENENUTRI COMERCIAL LTDA"></div>
+            <div class="form-grade"><div class="field"><label>CNPJ</label><input class="input" value="20.720.905/0001-43"></div><div class="field"><label>Cidade/UF da assinatura</label><input class="input" value="Brasília/DF"></div></div>
+            <span class="jur-rot">Notificada</span>
+            <div class="field"><label>Nome ou razão social</label><input class="input" value="ÔMEGA DROGARIAS LTDA"></div>
+            <div class="form-grade"><div class="field"><label>CNPJ</label><input class="input" value="22.333.444/0001-55"></div><div class="field"><label>Código do cliente</label><input class="input" value="1006"></div></div>
+            <div class="field"><label>Endereço completo</label><input class="input" value="Av. Central 1200, Taguatinga, Brasília/DF"></div>
+            <span class="jur-rot">Débito</span>
+            <div class="field"><label>Títulos (número ; emissão ; vencimento ; valor)</label><textarea class="input">51920 ; 12/09/2026 ; 12/10/2026 ; 18.000,00
+52104 ; 20/09/2026 ; 20/10/2026 ; 12.000,00</textarea></div>
+            <div class="form-grade">
+              <div class="field"><label>Principal</label><input class="input" value="30.000,00"></div>
+              <div class="field"><label>Multa</label><input class="input" value="600,00"></div>
+              <div class="field"><label>Juros de mora</label><input class="input" value="380,00"></div>
+              <div class="field"><label>Correção</label><input class="input" value="152,08"></div>
+            </div>
+            <div class="entre rebaixado"><span>Total da notificação</span><b>R$ 31.132,08</b></div>
+            <span class="jur-rot">Pagamento, contato e assinatura</span>
+            <div class="form-grade"><div class="field"><label>Data</label><input class="input" type="date" value="2026-11-19"></div><div class="field"><label>Prazo (dias corridos)</label><input class="input" value="15" disabled></div></div>
+            <div class="form-grade"><div class="field"><label>Representante</label><input class="input" value="Gabriel Nunes"></div><div class="field"><label>Cargo</label><input class="input" value="Gerente financeiro"></div></div>
+            <p class="sub">A emissão fica registrada com prazo até 04/12/2026 e entra como andamento no processo da Ômega.</p>
+          </div>
+          <div class="rebaixado">
+            <div class="jur-papel">
+              <div class="jur-timbre brand">Benenutri</div>
+              <h4 class="jur-centro">NOTIFICAÇÃO EXTRAJUDICIAL DE COBRANÇA</h4>
+              <p><b>NOTIFICANTE:</b> BENENUTRI COMERCIAL LTDA, pessoa jurídica de direito privado, inscrita no CNPJ sob o nº 20.720.905/0001-43, com sede em Setor SAAN, Quadra 03, Lote 750/760, Zona Industrial, Brasília/DF, CEP 70.632-320.</p>
+              <p><b>NOTIFICADA:</b> ÔMEGA DROGARIAS LTDA, inscrita no CNPJ sob o nº 22.333.444/0001-55, com endereço em Av. Central 1200, Taguatinga, Brasília/DF.</p>
+              <p><b>ASSUNTO:</b> Cobrança de débito vencido e constituição em mora.</p>
+              <p><b>REFERÊNCIA:</b> Cliente nº 1006 · Filial credora BNDF.</p>
+              <p>Prezado(a) Senhor(a),</p>
+              <p><b>1. Do débito.</b> A Notificada é devedora dos títulos abaixo, vencidos e não pagos:</p>
+              <table>
+                <thead><tr><th>Nota fiscal</th><th>Emissão</th><th>Vencimento</th><th class="num">Valor original</th></tr></thead>
+                <tbody>
+                  <tr><td>51920</td><td>12/09/2026</td><td>12/10/2026</td><td class="num">R$ 18.000,00</td></tr>
+                  <tr><td>52104</td><td>20/09/2026</td><td>20/10/2026</td><td class="num">R$ 12.000,00</td></tr>
+                  <tr><td class="forte">Total</td><td></td><td></td><td class="num forte">R$ 30.000,00</td></tr>
+                </tbody>
+              </table>
+              <p>Atualizado até 19/11/2026, o débito soma <b>R$ 31.132,08</b>, assim composto: valor principal de R$ 30.000,00, multa de R$ 600,00, juros de mora de R$ 380,00 e correção monetária de R$ 152,08, conforme o demonstrativo anexo.</p>
+              <p><b>2. Da constituição em mora e do prazo.</b> Fica a Notificada constituída em mora (arts. 389, 394 e 397 do Código Civil), com o prazo improrrogável de 15 (quinze) dias corridos, contados do recebimento, para o pagamento integral.</p>
+              <p><b>3. Da forma de pagamento e do contato.</b> O pagamento pode ser feito pelo boleto anexo ou por PIX; o comprovante ou a proposta devem ser enviados ao Financeiro. A proposta não suspende o prazo.</p>
+              <p><b>4. Das medidas judiciais.</b> Vencido o prazo, a Notificante adotará as medidas judiciais cabíveis, sem nova comunicação e sem prejuízo do protesto.</p>
+              <p><b>5. Da solução amigável.</b> A Notificante permanece à disposição para a solução amigável. Desconsiderar se o débito já foi pago.</p>
+              <p>Anexos: I. cópia das notas fiscais; II. boleto bancário; III. demonstrativo atualizado do débito.</p>
+              <p class="jur-direita">Brasília/DF, 19 de novembro de 2026.</p>
+              <p class="jur-centro">BENENUTRI COMERCIAL LTDA · CNPJ 20.720.905/0001-43<br>Gabriel Nunes · Gerente financeiro</p>
+              <p class="sub">Recebimento (somente para entrega em mãos): nome, documento, data e assinatura.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-painel="demo" class="corpo-painel" hidden>
+        <div class="lado invertido">
+          <div class="pilha-v">
+            <div class="alert alert-default"><svg><use href="#i-info"/></svg><b>Sem campos para editar</b><p>O demonstrativo usa o cálculo de encargos da cobrança na data da emissão; este módulo não recalcula.</p></div>
+            <dl class="ficha">
+              <div><dt>Cliente</dt><dd>Iota Farma · cód. 1010</dd></div>
+              <div><dt>CNPJ</dt><dd>33.444.555/0001-66</dd></div>
+              <div><dt>Segmento</dt><dd>Cobrança privada</dd></div>
+              <div><dt>Posição em</dt><dd>19/11/2026</dd></div>
+              <div><dt>Dias de atraso</dt><dd>52</dd></div>
+              <div><dt>Títulos</dt><dd>2</dd></div>
+            </dl>
+            <div class="entre rebaixado"><span>Total atualizado</span><b>R$ 34.461,14</b></div>
+            <p class="sub">Os mesmos valores aparecem na cobrança da Iota na mesma data.</p>
+          </div>
+          <div class="rebaixado">
+            <div class="jur-papel">
+              <div class="jur-timbre brand">Benenutri</div>
+              <h4>Demonstrativo atualizado do débito</h4>
+              <p class="sub">Iota Farma · CNPJ 33.444.555/0001-66 · cobrança privada · posição em 19/11/2026</p>
+              <table>
+                <thead><tr><th>Título</th><th>Emissão</th><th>Vencimento</th><th class="num">Valor em aberto</th></tr></thead>
+                <tbody>
+                  <tr><td>49877</td><td>29/08/2026</td><td>28/09/2026</td><td class="num">R$ 20.000,00</td></tr>
+                  <tr><td>49902</td><td>29/08/2026</td><td>28/09/2026</td><td class="num">R$ 13.000,00</td></tr>
+                </tbody>
+              </table>
+              <table>
+                <tbody>
+                  <tr><td>Valor principal</td><td class="num">R$ 33.000,00</td></tr>
+                  <tr><td>Multa (2%)</td><td class="num">R$ 660,00</td></tr>
+                  <tr><td>Juros de mora (1% ao mês, 52 dias)</td><td class="num">R$ 572,00</td></tr>
+                  <tr><td>Correção monetária (0,4% ao mês)</td><td class="num">R$ 229,14</td></tr>
+                  <tr><td class="forte">Total atualizado</td><td class="num forte">R$ 34.461,14</td></tr>
+                </tbody>
+              </table>
+              <p class="sub">Critérios: multa e juros conforme as condições comerciais e as regras de cobrança; juros simples pro rata die sobre o principal vencido. Valores sujeitos a conferência pelo Jurídico na data do ajuizamento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="B" data-nome="Documento editável" data-resumo="O papel ocupa a tela e os trechos editáveis são marcados no próprio texto; ao lado ficam as checagens e o que a emissão registra. Privilegia ler o documento como ele sai, ao custo de os campos ficarem espalhados pelo texto.">
+    <div class="page-header">
+      <div>
+        <div class="module">Jurídico · Documentos</div>
+        <h3>Gerar documento</h3>
+        <div class="desc">Clique num trecho marcado para alterar. O restante é o modelo validado pelo Jurídico.</div>
+      </div>
+      <div class="entre"><button class="btn btn-secondary">Cancelar</button><button class="btn btn-primary">Gerar PDF e registrar a emissão</button></div>
+    </div>
+    <div class="panel com-abas">
+      <div class="abas" role="tablist" aria-label="Documento">
+        <button type="button" data-aba="notif" aria-selected="true">Notificação extrajudicial · Ômega Drogarias</button>
+        <button type="button" data-aba="demo" aria-selected="false">Demonstrativo do débito · Iota Farma</button>
+      </div>
+      <div data-painel="notif" class="corpo-painel">
+        <div class="lado">
+          <div class="rebaixado">
+            <div class="jur-papel">
+              <div class="jur-timbre brand">Benenutri</div>
+              <h4 class="jur-centro">NOTIFICAÇÃO EXTRAJUDICIAL DE COBRANÇA</h4>
+              <p><b>NOTIFICANTE:</b> <span class="jur-campo">BENENUTRI COMERCIAL LTDA</span>, pessoa jurídica de direito privado, inscrita no CNPJ sob o nº <span class="jur-campo">20.720.905/0001-43</span>, com sede em <span class="jur-campo">Setor SAAN, Quadra 03, Lote 750/760, Zona Industrial, Brasília/DF, CEP 70.632-320</span>.</p>
+              <p><b>NOTIFICADA:</b> <span class="jur-campo">ÔMEGA DROGARIAS LTDA</span>, inscrita no CNPJ sob o nº <span class="jur-campo">22.333.444/0001-55</span>, com endereço em <span class="jur-campo">Av. Central 1200, Taguatinga, Brasília/DF</span>.</p>
+              <p><b>ASSUNTO:</b> Cobrança de débito vencido e constituição em mora.</p>
+              <p><b>REFERÊNCIA:</b> Cliente nº <span class="jur-campo">1006</span> · Filial credora <span class="jur-campo">BNDF</span>.</p>
+              <p>Prezado(a) Senhor(a),</p>
+              <p><b>1. Do débito.</b> A Notificada é devedora dos títulos abaixo, vencidos e não pagos:</p>
+              <table>
+                <thead><tr><th>Nota fiscal</th><th>Emissão</th><th>Vencimento</th><th class="num">Valor original</th></tr></thead>
+                <tbody>
+                  <tr><td><span class="jur-campo">51920</span></td><td><span class="jur-campo">12/09/2026</span></td><td><span class="jur-campo">12/10/2026</span></td><td class="num"><span class="jur-campo">R$ 18.000,00</span></td></tr>
+                  <tr><td><span class="jur-campo">52104</span></td><td><span class="jur-campo">20/09/2026</span></td><td><span class="jur-campo">20/10/2026</span></td><td class="num"><span class="jur-campo">R$ 12.000,00</span></td></tr>
+                  <tr><td class="forte">Total</td><td></td><td></td><td class="num forte">R$ 30.000,00</td></tr>
+                </tbody>
+              </table>
+              <p>Atualizado até <span class="jur-campo">19/11/2026</span>, o débito soma <b>R$ 31.132,08</b>, assim composto: valor principal de <span class="jur-campo">R$ 30.000,00</span>, multa de <span class="jur-campo">R$ 600,00</span>, juros de mora de <span class="jur-campo">R$ 380,00</span> e correção monetária de <span class="jur-campo">R$ 152,08</span>, conforme o demonstrativo anexo.</p>
+              <p><b>2. Da constituição em mora e do prazo.</b> Fica a Notificada constituída em mora (arts. 389, 394 e 397 do Código Civil), com o prazo improrrogável de 15 (quinze) dias corridos, contados do recebimento, para o pagamento integral.</p>
+              <p><b>3. Da forma de pagamento e do contato.</b> O pagamento pode ser feito pelo boleto anexo ou por PIX; o comprovante ou a proposta devem ser enviados ao Financeiro. A proposta não suspende o prazo.</p>
+              <p><b>4. Das medidas judiciais.</b> Vencido o prazo, a Notificante adotará as medidas judiciais cabíveis, sem nova comunicação e sem prejuízo do protesto.</p>
+              <p><b>5. Da solução amigável.</b> A Notificante permanece à disposição para a solução amigável. Desconsiderar se o débito já foi pago.</p>
+              <p>Anexos: I. cópia das notas fiscais; II. boleto bancário; III. demonstrativo atualizado do débito.</p>
+              <p class="jur-direita"><span class="jur-campo">Brasília/DF</span>, <span class="jur-campo">19 de novembro de 2026</span>.</p>
+              <p class="jur-centro">BENENUTRI COMERCIAL LTDA · CNPJ 20.720.905/0001-43<br><span class="jur-campo">Gabriel Nunes</span> · <span class="jur-campo">Gerente financeiro</span></p>
+              <p class="sub">Recebimento (somente para entrega em mãos): nome, documento, data e assinatura.</p>
+            </div>
+          </div>
+          <div class="pilha-v">
+            <div class="panel"><div class="corpo-painel">
+              <span class="titulo-painel">Checagens</span>
+              <div class="check feito"><i></i><span>Cliente do setor privado</span></div>
+              <div class="check feito"><i></i><span>Modelo validado pelo Jurídico: versão 3, 05/11/2026</span></div>
+              <div class="check feito"><i></i><span>Filial credora BNDF com razão social e CNPJ</span></div>
+              <div class="check feito"><i></i><span>Total confere: R$ 30.000,00 + 600,00 + 380,00 + 152,08</span></div>
+            </div></div>
+            <div class="panel"><div class="corpo-painel">
+              <span class="titulo-painel">O que a emissão registra</span>
+              <dl class="ficha jur-ficha-1">
+                <div><dt>Total</dt><dd>R$ 31.132,08</dd></div>
+                <div><dt>Emissão</dt><dd>19/11/2026</dd></div>
+                <div><dt>Prazo até</dt><dd>04/12/2026 (15 dias corridos)</dd></div>
+                <div><dt>Andamento</dt><dd>entra no processo da Ômega Drogarias</dd></div>
+              </dl>
+              <p class="sub">O sistema gera o documento; o envio (e-mail, carta com AR ou cartório) é feito fora.</p>
+            </div></div>
+            <div class="panel"><div class="corpo-painel">
+              <span class="titulo-painel">Trechos marcados</span>
+              <p class="sub"><span class="jur-campo">assim</span> é editável: partes, títulos, encargos, local, data e assinatura. As 5 cláusulas e o prazo de 15 dias vêm do modelo e do parâmetro.</p>
+              <button class="btn btn-ghost btn-sm">Restaurar valores da cobrança</button>
+            </div></div>
+          </div>
+        </div>
+      </div>
+      <div data-painel="demo" class="corpo-painel" hidden>
+        <div class="lado">
+          <div class="rebaixado">
+            <div class="jur-papel">
+              <div class="jur-timbre brand">Benenutri</div>
+              <h4>Demonstrativo atualizado do débito</h4>
+              <p class="sub">Iota Farma · CNPJ 33.444.555/0001-66 · cobrança privada · posição em 19/11/2026</p>
+              <table>
+                <thead><tr><th>Título</th><th>Emissão</th><th>Vencimento</th><th class="num">Valor em aberto</th></tr></thead>
+                <tbody>
+                  <tr><td>49877</td><td>29/08/2026</td><td>28/09/2026</td><td class="num">R$ 20.000,00</td></tr>
+                  <tr><td>49902</td><td>29/08/2026</td><td>28/09/2026</td><td class="num">R$ 13.000,00</td></tr>
+                </tbody>
+              </table>
+              <table>
+                <tbody>
+                  <tr><td>Valor principal</td><td class="num">R$ 33.000,00</td></tr>
+                  <tr><td>Multa (2%)</td><td class="num">R$ 660,00</td></tr>
+                  <tr><td>Juros de mora (1% ao mês, 52 dias)</td><td class="num">R$ 572,00</td></tr>
+                  <tr><td>Correção monetária (0,4% ao mês)</td><td class="num">R$ 229,14</td></tr>
+                  <tr><td class="forte">Total atualizado</td><td class="num forte">R$ 34.461,14</td></tr>
+                </tbody>
+              </table>
+              <p class="sub">Critérios: multa e juros conforme as condições comerciais e as regras de cobrança; juros simples pro rata die sobre o principal vencido. Valores sujeitos a conferência pelo Jurídico na data do ajuizamento.</p>
+            </div>
+          </div>
+          <div class="pilha-v">
+            <div class="panel"><div class="corpo-painel">
+              <span class="titulo-painel">Checagens</span>
+              <div class="check feito"><i></i><span>Valores iguais aos da cobrança da Iota em 19/11/2026</span></div>
+              <div class="check feito"><i></i><span>2 títulos vencidos, 52 dias de atraso</span></div>
+              <p class="sub">Nenhum trecho é editável: o demonstrativo só reproduz o cálculo de encargos da cobrança.</p>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="C" data-nome="Conferência em passos" data-resumo="Quatro passos (partes, débito, pagamento e assinatura, prévia) com uma conferência por vez e o papel só no último; privilegia não deixar campo sem olhar, ao custo de mais cliques até o PDF.">
+    <div class="page-header">
+      <div>
+        <div class="module">Jurídico · Documentos</div>
+        <h3>Gerar documento</h3>
+        <div class="desc">Confira um bloco por vez; a prévia do papel fecha o processo.</div>
+      </div>
+      <button class="btn btn-secondary">Cancelar</button>
+    </div>
+    <div class="panel com-abas">
+      <div class="abas" role="tablist" aria-label="Documento">
+        <button type="button" data-aba="notif" aria-selected="true">Notificação extrajudicial · Ômega Drogarias</button>
+        <button type="button" data-aba="demo" aria-selected="false">Demonstrativo do débito · Iota Farma</button>
+      </div>
+      <div data-painel="notif" class="corpo-painel">
+        <div class="jur-passos">
+          <div class="jur-passo feito"><i>1</i><span>Partes<small>BNDF notifica Ômega Drogarias</small></span></div>
+          <div class="jur-passo feito"><i>2</i><span>Débito<small>2 títulos · R$ 31.132,08</small></span></div>
+          <div class="jur-passo feito"><i>3</i><span>Pagamento e assinatura<small>Gabriel Nunes · Gerente financeiro</small></span></div>
+          <div class="jur-passo ativo"><i>4</i><span>Prévia e emissão<small>prazo até 04/12/2026</small></span></div>
+        </div>
+        <div class="lado">
+          <div class="rebaixado">
+            <div class="jur-papel">
+              <div class="jur-timbre brand">Benenutri</div>
+              <h4 class="jur-centro">NOTIFICAÇÃO EXTRAJUDICIAL DE COBRANÇA</h4>
+              <p><b>NOTIFICANTE:</b> BENENUTRI COMERCIAL LTDA, inscrita no CNPJ sob o nº 20.720.905/0001-43, com sede em Setor SAAN, Quadra 03, Lote 750/760, Zona Industrial, Brasília/DF, CEP 70.632-320.</p>
+              <p><b>NOTIFICADA:</b> ÔMEGA DROGARIAS LTDA, inscrita no CNPJ sob o nº 22.333.444/0001-55, com endereço em Av. Central 1200, Taguatinga, Brasília/DF.</p>
+              <p><b>ASSUNTO:</b> Cobrança de débito vencido e constituição em mora. <b>REFERÊNCIA:</b> Cliente nº 1006 · Filial credora BNDF.</p>
+              <p><b>1. Do débito.</b> Notas fiscais 51920 (R$ 18.000,00, vencida em 12/10/2026) e 52104 (R$ 12.000,00, vencida em 20/10/2026). Atualizado até 19/11/2026, o débito soma <b>R$ 31.132,08</b>: principal de R$ 30.000,00, multa de R$ 600,00, juros de mora de R$ 380,00 e correção monetária de R$ 152,08.</p>
+              <p><b>2. Da constituição em mora e do prazo.</b> Prazo improrrogável de 15 (quinze) dias corridos, contados do recebimento.</p>
+              <p><b>3. Da forma de pagamento e do contato.</b> Boleto anexo ou PIX; comprovante ou proposta ao Financeiro.</p>
+              <p><b>4. Das medidas judiciais.</b> Vencido o prazo, medidas judiciais cabíveis, sem nova comunicação.</p>
+              <p><b>5. Da solução amigável.</b> Desconsiderar se o débito já foi pago.</p>
+              <p class="jur-direita">Brasília/DF, 19 de novembro de 2026.</p>
+              <p class="jur-centro">BENENUTRI COMERCIAL LTDA · Gabriel Nunes · Gerente financeiro</p>
+            </div>
+          </div>
+          <div class="pilha-v">
+            <div class="panel">
+              <div class="faixa"><span class="titulo-painel">Conferido nos passos anteriores</span></div>
+              <div class="lista-itens">
+                <div class="item"><span class="check feito"><i></i></span><div class="jur-cresce"><div class="row-title">1 · Partes</div><div class="row-meta">Notificante BNDF (Benenutri Comercial Ltda, CNPJ 20.720.905/0001-43); notificada Ômega Drogarias Ltda, CNPJ 22.333.444/0001-55</div></div><button class="btn btn-ghost btn-sm">Editar</button></div>
+                <div class="item"><span class="check feito"><i></i></span><div class="jur-cresce"><div class="row-title">2 · Débito</div><div class="row-meta">Principal R$ 30.000,00 · multa R$ 600,00 · juros R$ 380,00 · correção R$ 152,08 · total R$ 31.132,08</div></div><button class="btn btn-ghost btn-sm">Editar</button></div>
+                <div class="item"><span class="check feito"><i></i></span><div class="jur-cresce"><div class="row-title">3 · Pagamento e assinatura</div><div class="row-meta">Boleto ou PIX · e-mail e telefone do Financeiro · Brasília/DF, 19/11/2026</div></div><button class="btn btn-ghost btn-sm">Editar</button></div>
+              </div>
+            </div>
+            <div class="alert alert-success"><svg><use href="#i-check"/></svg><b>Pode ser emitida</b><p>Modelo validado pelo Jurídico (versão 3, 05/11/2026), filial com razão social e CNPJ, cliente do setor privado.</p></div>
+            <p class="sub">A emissão fica registrada com prazo até 04/12/2026 e entra como andamento no processo da Ômega.</p>
+          </div>
+        </div>
+      </div>
+      <div data-painel="demo" class="corpo-painel" hidden>
+        <div class="jur-passos">
+          <div class="jur-passo feito"><i>1</i><span>Cliente e data<small>Iota Farma · 19/11/2026</small></span></div>
+          <div class="jur-passo ativo"><i>2</i><span>Prévia e emissão<small>R$ 34.461,14</small></span></div>
+        </div>
+        <div class="lado">
+          <div class="rebaixado">
+            <div class="jur-papel">
+              <div class="jur-timbre brand">Benenutri</div>
+              <h4>Demonstrativo atualizado do débito</h4>
+              <p class="sub">Iota Farma · CNPJ 33.444.555/0001-66 · cobrança privada · posição em 19/11/2026</p>
+              <table>
+                <thead><tr><th>Título</th><th>Emissão</th><th>Vencimento</th><th class="num">Valor em aberto</th></tr></thead>
+                <tbody>
+                  <tr><td>49877</td><td>29/08/2026</td><td>28/09/2026</td><td class="num">R$ 20.000,00</td></tr>
+                  <tr><td>49902</td><td>29/08/2026</td><td>28/09/2026</td><td class="num">R$ 13.000,00</td></tr>
+                </tbody>
+              </table>
+              <table>
+                <tbody>
+                  <tr><td>Valor principal</td><td class="num">R$ 33.000,00</td></tr>
+                  <tr><td>Multa (2%)</td><td class="num">R$ 660,00</td></tr>
+                  <tr><td>Juros de mora (1% ao mês, 52 dias)</td><td class="num">R$ 572,00</td></tr>
+                  <tr><td>Correção monetária (0,4% ao mês)</td><td class="num">R$ 229,14</td></tr>
+                  <tr><td class="forte">Total atualizado</td><td class="num forte">R$ 34.461,14</td></tr>
+                </tbody>
+              </table>
+              <p class="sub">Critérios: juros simples pro rata die sobre o principal vencido. Valores sujeitos a conferência pelo Jurídico na data do ajuizamento.</p>
+            </div>
+          </div>
+          <div class="pilha-v">
+            <div class="alert alert-default"><svg><use href="#i-info"/></svg><b>Mesmo cálculo da cobrança</b><p>Os cinco valores são os que a cobrança calcula para a Iota em 19/11/2026.</p></div>
+            <p class="sub">O demonstrativo não tem campo editável: são só dois passos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="pagination"><span>Último passo: o PDF sai em papel timbrado e a emissão fica registrada.</span><span class="btns"><button class="btn btn-secondary btn-sm">Voltar</button><button class="btn btn-primary btn-sm">Gerar PDF e registrar a emissão</button></span></div>
+    </div>
+  </template>
+</section>

@@ -1,0 +1,633 @@
+<section data-tela="juridico-processos" data-grupo="Jurídico"
+         data-titulo="Jurídico · Processos"
+         data-desc="Para o Jurídico e a gerência: o quadro das 11 etapas, de Dossiê em montagem a Encerrado, e a lista em três grupos (em andamento, a ajuizar, encerrados). O quadro é o da lib mitra-kanban; aqui se escolhe a capa do cartão, os filtros e a visão Lista.">
+
+  <template data-opcao="A" data-nome="Capa enxuta" data-resumo="Cartão só com cliente, autos, valor e prazo; os seis números em faixa acima do quadro e os quatro filtros de campo abertos na barra. Privilegia ver muitas etapas de relance, ao custo de abrir o card para saber a situação.">
+    <div class="abas" role="tablist" aria-label="Abas do Jurídico">
+      <span class="aba">Visão gerencial</span>
+      <span class="aba" aria-selected="true">Processos <span class="badge badge-alert" title="Prazos vencidos">1</span></span>
+      <span class="aba">Acordos judiciais <span class="badge badge-alert" title="Acordos com parcela vencida">1</span></span>
+      <span class="aba">Custos dos processos <span class="badge badge-attention" title="Custas sem lançamento">1</span></span>
+      <span class="aba">Alertas de desvios <span class="badge badge-alert" title="Desvios críticos">4</span></span>
+    </div>
+    <div class="entre">
+      <div class="entre"><h3 class="jur-h">Processos jurídicos</h3><span class="sub"><b>9</b> ativos · <b>3</b> encerrados</span><span class="iconbtn" title="Sobre o quadro" aria-label="Sobre o quadro"><svg><use href="#i-info"/></svg></span></div>
+      <div class="entre"><button class="btn btn-secondary btn-sm">Exportar CSV</button><button class="btn btn-primary btn-sm"><svg><use href="#i-plus"/></svg>Novo processo</button></div>
+    </div>
+    <div class="kpis jur-sem-margem">
+      <div class="kpi"><div class="rot">Em andamento</div><div class="linha"><span class="valor">5</span></div><div class="hint">R$ 320.000,00</div></div>
+      <div class="kpi"><div class="rot">A ajuizar</div><div class="linha"><span class="valor">4</span></div><div class="hint">R$ 175.000,00 · 1 cliente sem dossiê</div></div>
+      <div class="kpi"><div class="rot">Em citação</div><div class="linha"><span class="valor">1</span></div><div class="hint">R$ 40.000,00</div></div>
+      <div class="kpi"><div class="rot">Cumprimento e execução</div><div class="linha"><span class="valor">1</span></div><div class="hint">R$ 25.000,00</div></div>
+      <div class="kpi"><div class="rot">Acordos a receber</div><div class="linha"><span class="valor">R$ 60.000,00</span></div><div class="hint">1 acordo · 1 parcela vencida</div></div>
+      <div class="kpi"><div class="rot">Prazos vencidos ou em 7 dias</div><div class="linha"><span class="valor">2</span></div><div class="hint">1 vencido · 1 em 5 dias</div></div>
+    </div>
+    <div class="panel com-abas">
+      <div class="toolbar">
+        <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar cliente, nº dos autos, código, situação, tribunal"></div>
+        <span class="select"><span>Todos os responsáveis</span><svg><use href="#i-chevron"/></svg></span>
+        <button class="btn btn-secondary btn-sm">Meus cards</button>
+        <button class="btn btn-secondary btn-sm">Atrasados</button>
+        <span class="select jur-curto"><span>Ordenar: prazo</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select jur-curto"><span>Etiquetas</span><svg><use href="#i-chevron"/></svg></span>
+        <div class="segment jur-seg direita" role="group" aria-label="Visão"><button type="button" data-aba="quadro" aria-selected="true">Quadro</button><button type="button" data-aba="lista" aria-selected="false">Lista</button></div>
+      </div>
+      <div class="toolbar">
+        <span class="sub">Filtros de campo</span>
+        <span class="select jur-curto"><span>Todas as BUs</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select jur-curto"><span>Privado e público</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select jur-curto"><span>Todas as linhas</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select jur-curto"><span>Todas as filiais</span><svg><use href="#i-chevron"/></svg></span>
+      </div>
+
+      <div data-painel="quadro">
+        <div class="quadro largo">
+          <section class="fase jur-fase" style="--cor:var(--data-1)">
+            <header><span>01 · Dossiê em montagem</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 30.000,00 · sai com o dossiê enviado</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="row-title">Ômega Drogarias</div>
+                <div class="row-meta">Sem nº dos autos</div>
+                <div class="entre"><span class="forte">R$ 30.000,00</span><span class="avatar" title="Ana Ribeiro">AR</span></div>
+                <div class="jur-prog"><div class="entre"><span>Dossiê</span><span>7 de 10 (70%)</span></div><div class="progresso atencao"><i style="width:70%"></i></div></div>
+                <div class="jur-tempos"><span title="Criado há"><svg><use href="#i-plus"/></svg>17 d</span><span class="passou" title="Na fase, contra o prazo da fase"><svg><use href="#i-cal"/></svg>17 d / 10 d</span><span title="Alterado há"><svg><use href="#i-pencil"/></svg>6 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-2)">
+            <header><span>02 · Recebido · contato amigável</span><span>2</span></header>
+            <div class="jur-fase-sub">R$ 65.000,00 · sai com acordo ou decisão de ajuizar</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="jur-selos"><span class="jur-selo" style="--cor:var(--data-1)">Público</span></div>
+                <div class="row-title">Secretaria de Saúde de Mu</div>
+                <div class="row-meta">Sem nº dos autos</div>
+                <div class="entre"><span class="forte">R$ 50.000,00</span><span class="avatar" title="Juliana Prado">JP</span></div>
+                <div class="linha"><span class="status status-attention"><i></i>Prazo em 5 dias</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>9 d</span><span><svg><use href="#i-cal"/></svg>1 d / 7 d</span><span><svg><use href="#i-pencil"/></svg>1 d</span></div>
+              </article>
+              <article class="cartao">
+                <div class="row-title">Teta Nutrição</div>
+                <div class="row-meta">Sem nº dos autos</div>
+                <div class="entre"><span class="forte">R$ 15.000,00</span><span class="avatar" title="Juliana Prado">JP</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>5 d</span><span><svg><use href="#i-cal"/></svg>5 d / 7 d</span><span><svg><use href="#i-pencil"/></svg>5 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-3)">
+            <header><span>03 · Petição inicial</span><span>0</span></header>
+            <div class="jur-fase-sub">sai com a inicial pronta e a guia emitida</div>
+            <div class="pilha"><p class="sub jur-vazio">Nenhum processo nesta etapa.</p></div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-4)">
+            <header><span>04 · Custas e protocolo</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 80.000,00 · sai com o nº dos autos</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="row-title">Hospital Delta</div>
+                <div class="row-meta">Sem nº dos autos</div>
+                <div class="entre"><span class="forte">R$ 80.000,00</span><span class="avatar" title="Juliana Prado">JP</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>34 d</span><span><svg><use href="#i-cal"/></svg>3 d / 5 d</span><span><svg><use href="#i-pencil"/></svg>3 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-5)">
+            <header><span>05 · Citação</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 40.000,00 · sai com o réu citado</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="row-title">Farmácia Alfa</div>
+                <div class="row-meta"><span class="code">0712345-11.2024.8.07.0001</span> · TJDFT</div>
+                <div class="entre"><span class="forte">R$ 40.000,00</span><span class="avatar" title="Juliana Prado">JP</span></div>
+                <div class="linha"><span class="status status-alert"><i></i>Prazo vencido há 9 dias</span><span class="badge badge-outline" title="Mensagens novas">2 novas</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>290 d</span><span class="passou"><svg><use href="#i-cal"/></svg>41 d / 30 d</span><span><svg><use href="#i-pencil"/></svg>10 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-6)">
+            <header><span>06 · Defesa e instrução</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 45.000,00 · sai com a sentença</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="row-title">Eta Saúde</div>
+                <div class="row-meta"><span class="code">0745678-33.2024.8.07.0001</span> · TJDFT</div>
+                <div class="entre"><span class="forte">R$ 45.000,00</span><span class="avatar" title="Juliana Prado">JP</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>212 d</span><span><svg><use href="#i-cal"/></svg>58 d / 90 d</span><span><svg><use href="#i-pencil"/></svg>2 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-7)">
+            <header><span>07 · Sentença e recursos</span><span>0</span></header>
+            <div class="jur-fase-sub">sai com o trânsito em julgado</div>
+            <div class="pilha"><p class="sub jur-vazio">Nenhum processo nesta etapa.</p></div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-8)">
+            <header><span>08 · Cumprimento e execução</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 25.000,00 · sai com o valor levantado</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="row-title">Distribuidora Gama</div>
+                <div class="row-meta"><span class="code">5009876-45.2022.8.21.0001</span> · TJRS</div>
+                <div class="entre"><span class="forte">R$ 25.000,00</span><span class="avatar" title="Marcos Teles">MT</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>2 a</span><span><svg><use href="#i-cal"/></svg>101 d / 180 d</span><span><svg><use href="#i-pencil"/></svg>50 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-1)">
+            <header><span>09 · Acordo judicial</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 60.000,00 · sai com as parcelas pagas</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="jur-selos"><span class="jur-selo" style="--cor:var(--data-5)">Galderma</span></div>
+                <div class="row-title">Clínica Beta</div>
+                <div class="row-meta"><span class="code">5123456-78.2023.8.09.0051</span> · TJGO</div>
+                <div class="entre"><span class="forte">R$ 60.000,00</span><span class="avatar" title="Marcos Teles">MT</span></div>
+                <div class="jur-prog"><div class="entre"><span>Parcelas pagas</span><span>0 de 5 · 1 vencida</span></div><div class="progresso alerta"><i style="width:3%"></i></div></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>1 a</span><span><svg><use href="#i-cal"/></svg>7 d</span><span><svg><use href="#i-pencil"/></svg>7 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-2)">
+            <header><span>10 · Suspenso · RJ · arquivado</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 150.000,00 · sai com o crédito habilitado</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="row-title">Épsilon Comércio</div>
+                <div class="row-meta"><span class="code">5234567-12.2021.8.09.0051</span> · TJGO</div>
+                <div class="entre"><span class="forte">R$ 150.000,00</span><span class="avatar" title="Marcos Teles">MT</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>5 a</span><span><svg><use href="#i-cal"/></svg>171 d</span><span><svg><use href="#i-pencil"/></svg>171 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--ink-muted)">
+            <header><span>Encerrado</span><span>3</span></header>
+            <div class="jur-fase-sub">R$ 42.000,00 · quitado, acordo cumprido ou baixa</div>
+            <div class="pilha">
+              <article class="cartao"><div class="row-title">Zeta Hospitalar</div><div class="row-meta">Quitado · 15/10/2026</div><div class="entre"><span class="sub forte">R$ 20.000,00</span><span class="avatar">JP</span></div></article>
+              <article class="cartao"><div class="row-title">Lambda Médica</div><div class="row-meta">Baixa como perda · 01/08/2026</div><div class="entre"><span class="sub forte">R$ 12.000,00</span><span class="avatar">MT</span></div></article>
+              <article class="cartao"><div class="row-title">Kappa Clínica</div><div class="row-meta">Acordo cumprido · 01/09/2026</div><div class="entre"><span class="sub forte">R$ 10.000,00</span><span class="avatar">MT</span></div></article>
+            </div>
+          </section>
+        </div>
+        <div class="pagination"><span>Cartão só para leitura: a etapa muda em "Mover para", dentro do card aberto.</span><span>Ordenado por prazo e depois por valor</span></div>
+      </div>
+
+      <div data-painel="lista" hidden>
+        <div class="faixa"><span class="titulo-painel">Em andamento</span><span class="sub">5 processos com nº dos autos · R$ 320.000,00</span></div>
+        <div class="tabela-wrap"><table>
+          <thead><tr><th>Cliente</th><th>BU e setor</th><th>Filial</th><th>Nº dos autos</th><th>Tribunal</th><th class="num">Valor</th><th class="num">Custo</th><th>Etapa</th><th>Último andamento</th><th>Prazo</th></tr></thead>
+          <tbody>
+            <tr><td class="row-title">Farmácia Alfa</td><td>Medicamentos · privado</td><td>BNDF</td><td><span class="code">0712345-11.2024.8.07.0001</span></td><td>TJDFT</td><td class="num">R$ 40.000,00</td><td class="num">R$ 1.500,00</td><td>05 Citação</td><td>09/11 · Citação por edital deferida</td><td><span class="status status-alert"><i></i>Vencido há 9 dias</span></td></tr>
+            <tr><td class="row-title">Eta Saúde</td><td>Nutrição clínica · privado</td><td>BNEXDF</td><td><span class="code">0745678-33.2024.8.07.0001</span></td><td>TJDFT</td><td class="num">R$ 45.000,00</td><td class="num"><span class="dash">—</span></td><td>06 Defesa e instrução</td><td>17/11 · Contestação apresentada</td><td><span class="dash">—</span></td></tr>
+            <tr><td class="row-title">Distribuidora Gama</td><td>Medicamentos · privado</td><td>BNRS</td><td><span class="code">5009876-45.2022.8.21.0001</span></td><td>TJRS</td><td class="num">R$ 25.000,00</td><td class="num">R$ 3.000,00</td><td>08 Cumprimento e execução</td><td>30/09 · Aguardando SISBAJUD</td><td><span class="dash">—</span></td></tr>
+            <tr><td class="row-title">Clínica Beta</td><td>Estética · privado · Galderma</td><td>BNGO</td><td><span class="code">5123456-78.2023.8.09.0051</span></td><td>TJGO</td><td class="num">R$ 60.000,00</td><td class="num"><span class="dash">—</span></td><td>09 Acordo judicial</td><td>12/11 · Acordo homologado</td><td><span class="dash">—</span></td></tr>
+            <tr><td class="row-title">Épsilon Comércio</td><td>Medicamentos · privado</td><td>BNGO</td><td><span class="code">5234567-12.2021.8.09.0051</span></td><td>TJGO</td><td class="num">R$ 150.000,00</td><td class="num"><span class="dash">—</span></td><td>10 Suspenso · RJ</td><td>01/06 · Recuperação judicial</td><td><span class="dash">—</span></td></tr>
+          </tbody>
+        </table></div>
+        <div class="faixa"><span class="titulo-painel">A ajuizar</span><span class="sub">4 processos sem nº dos autos · R$ 175.000,00</span></div>
+        <div class="tabela-wrap"><table>
+          <thead><tr><th>Cliente</th><th>BU e setor</th><th>Filial</th><th>Nº dos autos</th><th>Tribunal</th><th class="num">Valor</th><th class="num">Custo</th><th>Etapa</th><th>Último andamento</th><th>Prazo</th></tr></thead>
+          <tbody>
+            <tr><td class="row-title">Secretaria de Saúde de Mu</td><td>Nutrição clínica · público</td><td>BNDF</td><td><span class="dash">—</span></td><td><span class="dash">—</span></td><td class="num">R$ 50.000,00</td><td class="num"><span class="dash">—</span></td><td>02 Recebido</td><td>18/11 · Requerimento protocolado</td><td><span class="status status-attention"><i></i>Em 5 dias</span></td></tr>
+            <tr><td class="row-title">Hospital Delta</td><td>Nutrição clínica · privado</td><td>BNDF</td><td><span class="dash">—</span></td><td><span class="dash">—</span></td><td class="num">R$ 80.000,00</td><td class="num"><span class="dash">—</span></td><td>04 Custas e protocolo</td><td>16/11 · Guia de custas emitida</td><td><span class="dash">—</span></td></tr>
+            <tr><td class="row-title">Ômega Drogarias</td><td>Medicamentos · privado</td><td>BNDF</td><td><span class="dash">—</span></td><td><span class="dash">—</span></td><td class="num">R$ 30.000,00</td><td class="num"><span class="dash">—</span></td><td>01 Dossiê em montagem</td><td>02/11 · Dossiê aberto, 7 de 10</td><td><span class="dash">—</span></td></tr>
+            <tr><td class="row-title">Teta Nutrição</td><td>Nutrição clínica · privado</td><td>BNGO</td><td><span class="dash">—</span></td><td><span class="dash">—</span></td><td class="num">R$ 15.000,00</td><td class="num"><span class="dash">—</span></td><td>02 Recebido</td><td>14/11 · Carga inicial</td><td><span class="dash">—</span></td></tr>
+          </tbody>
+        </table></div>
+        <details class="jur-recolhe">
+          <summary class="faixa"><span class="titulo-painel">Encerrados</span><span class="sub">3 processos · R$ 42.000,00 · mostrar</span></summary>
+          <div class="tabela-wrap"><table>
+            <thead><tr><th>Cliente</th><th>Filial</th><th>Nº dos autos</th><th>Tribunal</th><th class="num">Valor</th><th>Motivo</th><th>Encerrado em</th></tr></thead>
+            <tbody>
+              <tr><td class="row-title">Zeta Hospitalar</td><td>BNDF</td><td><span class="code">0723456-90.2023.8.07.0001</span></td><td>TJDFT</td><td class="num">R$ 20.000,00</td><td><span class="status status-off"><i></i>Quitado</span></td><td>15/10/2026</td></tr>
+              <tr><td class="row-title">Lambda Médica</td><td>BNEXTO</td><td><span class="code">0001234-56.2020.8.27.2729</span></td><td>TJTO</td><td class="num">R$ 12.000,00</td><td><span class="status status-off"><i></i>Baixa como perda</span></td><td>01/08/2026</td></tr>
+              <tr><td class="row-title">Kappa Clínica</td><td>BNRS</td><td><span class="code">5011223-67.2022.8.21.0001</span></td><td>TJRS</td><td class="num">R$ 10.000,00</td><td><span class="status status-off"><i></i>Acordo cumprido</span></td><td>01/09/2026</td></tr>
+            </tbody>
+          </table></div>
+        </details>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="B" data-nome="Capa completa por fase" data-resumo="O cartão traz situação atual e os sinais da etapa (dossiê, acordo, custo, substabelecer, carga, cobrança); BU em fichas com contagem e os demais filtros em Mais filtros; números na linha do cabeçalho. Privilegia decidir sem abrir o card, ao custo de cartões altos.">
+    <div class="abas" role="tablist" aria-label="Abas do Jurídico">
+      <span class="aba">Visão gerencial</span>
+      <span class="aba" aria-selected="true">Processos <span class="badge badge-alert" title="Prazos vencidos">1</span></span>
+      <span class="aba">Acordos judiciais <span class="badge badge-alert" title="Acordos com parcela vencida">1</span></span>
+      <span class="aba">Custos dos processos <span class="badge badge-attention" title="Custas sem lançamento">1</span></span>
+      <span class="aba">Alertas de desvios <span class="badge badge-alert" title="Desvios críticos">4</span></span>
+    </div>
+    <div class="entre">
+      <div class="entre"><h3 class="jur-h">Processos jurídicos</h3>
+        <span class="sub"><b>5</b> em andamento · R$ 320 mil</span><span class="sub"><b>4</b> a ajuizar · R$ 175 mil (1 sem dossiê)</span><span class="sub"><b>1</b> em citação</span><span class="sub"><b>1</b> em execução</span><span class="sub">acordos a receber <b>R$ 60 mil</b> (1 vencida)</span><span class="sub"><b>2</b> prazos vencidos ou em 7 dias</span></div>
+      <div class="entre"><button class="btn btn-secondary btn-sm">Exportar CSV</button><button class="btn btn-primary btn-sm"><svg><use href="#i-plus"/></svg>Novo processo</button></div>
+    </div>
+    <div class="panel com-abas">
+      <div class="toolbar">
+        <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar cliente, nº dos autos, código, situação, tribunal"></div>
+        <span class="select"><span>Todos os responsáveis</span><svg><use href="#i-chevron"/></svg></span>
+        <button class="btn btn-secondary btn-sm">Meus cards</button>
+        <button class="btn btn-secondary btn-sm">Atrasados</button>
+        <span class="select jur-curto"><span>Ordenar: prazo</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select jur-curto"><span>Etiquetas</span><svg><use href="#i-chevron"/></svg></span>
+        <button class="btn btn-secondary btn-sm"><svg><use href="#i-sliders"/></svg>Mais filtros</button>
+        <div class="segment jur-seg direita" role="group" aria-label="Visão"><button type="button" data-aba="quadro" aria-selected="true">Quadro</button><button type="button" data-aba="lista" aria-selected="false">Lista</button></div>
+      </div>
+      <div class="chips">
+        <span class="sub">BU</span>
+        <button class="btn btn-secondary btn-sm jur-ativo">Todas 9</button>
+        <button class="btn btn-secondary btn-sm">Medicamentos 4</button>
+        <button class="btn btn-secondary btn-sm">Nutrição clínica 4</button>
+        <button class="btn btn-secondary btn-sm">Estética 1</button>
+        <button class="btn btn-secondary btn-sm">Enfermagem</button>
+        <span class="sub direita">Em Mais filtros: setor, linha (Galderma × demais) e filial</span>
+      </div>
+
+      <div data-painel="quadro">
+        <div class="quadro largo alto">
+          <section class="fase jur-fase" style="--cor:var(--data-1)">
+            <header><span>01 · Dossiê em montagem</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 30.000,00 · o Financeiro reúne os documentos</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="row-title">Ômega Drogarias</div>
+                <div class="row-meta">Sem nº dos autos · Medicamentos · BNDF</div>
+                <div class="entre"><span class="forte">R$ 30.000,00</span><span class="avatar" title="Ana Ribeiro">AR</span></div>
+                <div class="sub">Dossiê em montagem pelo Financeiro</div>
+                <div class="jur-prog"><div class="entre"><span>Dossiê</span><span>7 de 10 (70%)</span></div><div class="progresso atencao"><i style="width:70%"></i></div></div>
+                <div class="linha"><span class="status status-attention"><i></i>Aberto há 17 dias</span><span class="status status-live"><i></i>Na cobrança: D+30</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>17 d</span><span class="passou"><svg><use href="#i-cal"/></svg>17 d / 10 d</span><span><svg><use href="#i-pencil"/></svg>6 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-2)">
+            <header><span>02 · Recebido · contato amigável</span><span>2</span></header>
+            <div class="jur-fase-sub">R$ 65.000,00 · conferência e notificação</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="jur-selos"><span class="jur-selo" style="--cor:var(--data-1)">Público</span></div>
+                <div class="row-title">Secretaria de Saúde de Mu</div>
+                <div class="row-meta">Sem nº dos autos · Nutrição clínica · BNDF</div>
+                <div class="entre"><span class="forte">R$ 50.000,00</span><span class="avatar" title="Juliana Prado">JP</span></div>
+                <div class="sub">Requerimento administrativo protocolado; aguardando resposta</div>
+                <div class="jur-prog"><div class="entre"><span>Dossiê</span><span>11 de 11 (100%)</span></div><div class="progresso"><i style="width:100%"></i></div></div>
+                <div class="linha"><span class="status status-attention"><i></i>Prazo em 5 dias</span><span class="status status-live"><i></i>Na cobrança</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>9 d</span><span><svg><use href="#i-cal"/></svg>1 d / 7 d</span><span><svg><use href="#i-pencil"/></svg>1 d</span></div>
+              </article>
+              <article class="cartao">
+                <div class="row-title">Teta Nutrição</div>
+                <div class="row-meta">Sem nº dos autos · Nutrição clínica · BNGO</div>
+                <div class="entre"><span class="forte">R$ 15.000,00</span><span class="avatar" title="Juliana Prado">JP</span></div>
+                <div class="sub">Dossiê recebido pelo Jurídico: conferência e contato amigável</div>
+                <div class="linha"><span class="status status-attention"><i></i>Conferir dados da carga</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>5 d</span><span><svg><use href="#i-cal"/></svg>5 d / 7 d</span><span><svg><use href="#i-pencil"/></svg>5 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-3)">
+            <header><span>03 · Petição inicial</span><span>0</span></header>
+            <div class="jur-fase-sub">execução, monitória ou cobrança</div>
+            <div class="pilha"><p class="sub jur-vazio">Nenhum processo nesta etapa.</p></div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-4)">
+            <header><span>04 · Custas e protocolo</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 80.000,00 · guia paga e ação protocolada</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="row-title">Hospital Delta</div>
+                <div class="row-meta">Sem nº dos autos · Nutrição clínica · BNDF</div>
+                <div class="entre"><span class="forte">R$ 80.000,00</span><span class="avatar" title="Juliana Prado">JP</span></div>
+                <div class="sub">Guia de custas emitida; aguardando pagamento e protocolo</div>
+                <div class="linha"><span class="status status-attention"><i></i>Custas sem lançamento</span><span class="status status-attention"><i></i>Substabelecer</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>34 d</span><span><svg><use href="#i-cal"/></svg>3 d / 5 d</span><span><svg><use href="#i-pencil"/></svg>3 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-5)">
+            <header><span>05 · Citação</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 40.000,00 · carta, mandado ou edital</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="row-title">Farmácia Alfa</div>
+                <div class="row-meta"><span class="code">0712345-11.2024.8.07.0001</span> · TJDFT · Medicamentos · BNDF</div>
+                <div class="entre"><span class="forte">R$ 40.000,00</span><span class="avatar" title="Juliana Prado">JP</span></div>
+                <div class="sub">Citação por edital deferida; aguardando publicação</div>
+                <div class="jur-prog"><div class="entre"><span>Custo ÷ valor</span><span>R$ 1.500,00 (3,8%)</span></div><div class="progresso"><i style="width:38%"></i></div></div>
+                <div class="linha"><span class="status status-alert"><i></i>Prazo vencido há 9 dias</span><span>Citação: edital</span><span class="badge badge-outline" title="Mensagens novas">2 novas</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>290 d</span><span class="passou"><svg><use href="#i-cal"/></svg>41 d / 30 d</span><span><svg><use href="#i-pencil"/></svg>10 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-6)">
+            <header><span>06 · Defesa e instrução</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 45.000,00 · embargos, provas, conclusos</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="row-title">Eta Saúde</div>
+                <div class="row-meta"><span class="code">0745678-33.2024.8.07.0001</span> · TJDFT · Nutrição clínica · BNEXDF</div>
+                <div class="entre"><span class="forte">R$ 45.000,00</span><span class="avatar" title="Juliana Prado">JP</span></div>
+                <div class="sub">Contestação apresentada; réplica em elaboração</div>
+                <div class="linha"><span class="status status-attention"><i></i>Cliente regularizado na cobrança</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>212 d</span><span><svg><use href="#i-cal"/></svg>58 d / 90 d</span><span><svg><use href="#i-pencil"/></svg>2 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-7)">
+            <header><span>07 · Sentença e recursos</span><span>0</span></header>
+            <div class="jur-fase-sub">sentença, apelação, trânsito em julgado</div>
+            <div class="pilha"><p class="sub jur-vazio">Nenhum processo nesta etapa.</p></div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-8)">
+            <header><span>08 · Cumprimento e execução</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 25.000,00 · penhora, RPV ou precatório</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="row-title">Distribuidora Gama</div>
+                <div class="row-meta"><span class="code">5009876-45.2022.8.21.0001</span> · TJRS · Medicamentos · BNRS</div>
+                <div class="entre"><span class="forte">R$ 25.000,00</span><span class="avatar" title="Marcos Teles">MT</span></div>
+                <div class="sub">Cumprimento de sentença: aguardando SISBAJUD</div>
+                <div class="jur-prog"><div class="entre"><span>Custo ÷ valor</span><span>R$ 3.000,00 (12,0%)</span></div><div class="progresso alerta"><i style="width:100%"></i></div></div>
+                <div class="linha"><span class="status status-attention"><i></i>50 dias sem andamento</span><span>Sentença favorável</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>2 a</span><span><svg><use href="#i-cal"/></svg>101 d / 180 d</span><span><svg><use href="#i-pencil"/></svg>50 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-1)">
+            <header><span>09 · Acordo judicial</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 60.000,00 · parcelas em acompanhamento</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="jur-selos"><span class="jur-selo" style="--cor:var(--data-5)">Galderma</span></div>
+                <div class="row-title">Clínica Beta</div>
+                <div class="row-meta"><span class="code">5123456-78.2023.8.09.0051</span> · TJGO · Estética · BNGO</div>
+                <div class="entre"><span class="forte">R$ 60.000,00</span><span class="avatar" title="Marcos Teles">MT</span></div>
+                <div class="sub">Acordo homologado; entrada em aberto</div>
+                <div class="jur-prog"><div class="entre"><span>Acordo</span><span>0 de 5 pagas · 1 vencida</span></div><div class="progresso alerta"><i style="width:3%"></i></div></div>
+                <div class="linha"><span class="status status-alert"><i></i>Aguardando aprovação</span><span>A receber R$ 60.000,00</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>1 a</span><span><svg><use href="#i-cal"/></svg>7 d</span><span><svg><use href="#i-pencil"/></svg>7 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-2)">
+            <header><span>10 · Suspenso · RJ · arquivado</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 150.000,00 · RJ, falência ou arquivo</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="row-title">Épsilon Comércio</div>
+                <div class="row-meta"><span class="code">5234567-12.2021.8.09.0051</span> · TJGO · Medicamentos · BNGO</div>
+                <div class="entre"><span class="forte">R$ 150.000,00</span><span class="avatar" title="Marcos Teles">MT</span></div>
+                <div class="sub">Recuperação judicial do devedor; crédito a habilitar</div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>5 a</span><span><svg><use href="#i-cal"/></svg>171 d</span><span><svg><use href="#i-pencil"/></svg>171 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--ink-muted)">
+            <header><span>Encerrado</span><span>3</span></header>
+            <div class="jur-fase-sub">R$ 42.000,00 · recuperado R$ 30.000,00</div>
+            <div class="pilha">
+              <article class="cartao"><div class="row-title">Zeta Hospitalar</div><div class="row-meta">Quitado · 15/10/2026 · BNDF</div><div class="entre"><span class="sub forte">R$ 20.000,00</span><span class="avatar">JP</span></div><div class="linha"><span class="status status-attention"><i></i>Saldo de R$ 5.000,00 na cobrança</span></div></article>
+              <article class="cartao"><div class="row-title">Lambda Médica</div><div class="row-meta">Baixa como perda · 01/08/2026 · BNEXTO</div><div class="entre"><span class="sub forte">R$ 12.000,00</span><span class="avatar">MT</span></div></article>
+              <article class="cartao"><div class="row-title">Kappa Clínica</div><div class="row-meta">Acordo cumprido · 01/09/2026 · BNRS</div><div class="entre"><span class="sub forte">R$ 10.000,00</span><span class="avatar">MT</span></div><div class="linha"><span>Acordo 3 de 3 pagas</span></div></article>
+            </div>
+          </section>
+        </div>
+        <div class="pagination"><span>Cartão só para leitura: a etapa muda em "Mover para", dentro do card aberto.</span><span>Ordenado por prazo e depois por valor</span></div>
+      </div>
+
+      <div data-painel="lista" hidden>
+        <div class="tabela-wrap"><table>
+          <thead><tr><th>Cliente</th><th>BU e setor</th><th>Filial</th><th>Nº dos autos · tribunal</th><th class="num">Valor</th><th class="num">Custo</th><th>Etapa</th><th>Último andamento</th><th>Prazo</th><th>Sinais</th></tr></thead>
+          <tbody>
+            <tr class="jur-grupo"><td colspan="4">Em andamento · 5 processos com nº dos autos</td><td class="num">R$ 320.000,00</td><td class="num">R$ 4.500,00</td><td colspan="4"></td></tr>
+            <tr><td class="row-title">Farmácia Alfa</td><td>Medicamentos · privado</td><td>BNDF</td><td><span class="code">0712345-11.2024.8.07.0001</span> · TJDFT</td><td class="num">R$ 40.000,00</td><td class="num">R$ 1.500,00</td><td>05 Citação</td><td>09/11 · Citação por edital deferida</td><td><span class="status status-alert"><i></i>Vencido há 9 dias</span></td><td>Dossiê 10/10</td></tr>
+            <tr><td class="row-title">Eta Saúde</td><td>Nutrição clínica · privado</td><td>BNEXDF</td><td><span class="code">0745678-33.2024.8.07.0001</span> · TJDFT</td><td class="num">R$ 45.000,00</td><td class="num"><span class="dash">—</span></td><td>06 Defesa e instrução</td><td>17/11 · Contestação apresentada</td><td><span class="dash">—</span></td><td>Cliente regularizado</td></tr>
+            <tr><td class="row-title">Distribuidora Gama</td><td>Medicamentos · privado</td><td>BNRS</td><td><span class="code">5009876-45.2022.8.21.0001</span> · TJRS</td><td class="num">R$ 25.000,00</td><td class="num">R$ 3.000,00</td><td>08 Cumprimento e execução</td><td>30/09 · Aguardando SISBAJUD</td><td><span class="dash">—</span></td><td>Custo 12,0% · 50 dias parado</td></tr>
+            <tr><td class="row-title">Clínica Beta</td><td>Estética · privado · Galderma</td><td>BNGO</td><td><span class="code">5123456-78.2023.8.09.0051</span> · TJGO</td><td class="num">R$ 60.000,00</td><td class="num"><span class="dash">—</span></td><td>09 Acordo judicial</td><td>12/11 · Acordo homologado</td><td><span class="dash">—</span></td><td>Acordo 0/5 · 1 vencida</td></tr>
+            <tr><td class="row-title">Épsilon Comércio</td><td>Medicamentos · privado</td><td>BNGO</td><td><span class="code">5234567-12.2021.8.09.0051</span> · TJGO</td><td class="num">R$ 150.000,00</td><td class="num"><span class="dash">—</span></td><td>10 Suspenso · RJ</td><td>01/06 · Recuperação judicial</td><td><span class="dash">—</span></td><td><span class="dash">—</span></td></tr>
+            <tr class="jur-grupo"><td colspan="4">A ajuizar · 4 processos sem nº dos autos</td><td class="num">R$ 175.000,00</td><td class="num"><span class="dash">—</span></td><td colspan="4"></td></tr>
+            <tr><td class="row-title">Secretaria de Saúde de Mu</td><td>Nutrição clínica · público</td><td>BNDF</td><td><span class="dash">—</span></td><td class="num">R$ 50.000,00</td><td class="num"><span class="dash">—</span></td><td>02 Recebido</td><td>18/11 · Requerimento protocolado</td><td><span class="status status-attention"><i></i>Em 5 dias</span></td><td>Dossiê 11/11</td></tr>
+            <tr><td class="row-title">Hospital Delta</td><td>Nutrição clínica · privado</td><td>BNDF</td><td><span class="dash">—</span></td><td class="num">R$ 80.000,00</td><td class="num"><span class="dash">—</span></td><td>04 Custas e protocolo</td><td>16/11 · Guia de custas emitida</td><td><span class="dash">—</span></td><td>Substabelecer · custas sem lançamento</td></tr>
+            <tr><td class="row-title">Ômega Drogarias</td><td>Medicamentos · privado</td><td>BNDF</td><td><span class="dash">—</span></td><td class="num">R$ 30.000,00</td><td class="num"><span class="dash">—</span></td><td>01 Dossiê em montagem</td><td>02/11 · Dossiê aberto</td><td><span class="dash">—</span></td><td>Dossiê 7/10</td></tr>
+            <tr><td class="row-title">Teta Nutrição</td><td>Nutrição clínica · privado</td><td>BNGO</td><td><span class="dash">—</span></td><td class="num">R$ 15.000,00</td><td class="num"><span class="dash">—</span></td><td>02 Recebido</td><td>14/11 · Carga inicial</td><td><span class="dash">—</span></td><td>Conferir carga</td></tr>
+            <tr class="jur-grupo"><td colspan="4">Encerrados · 3 processos</td><td class="num">R$ 42.000,00</td><td class="num"><span class="dash">—</span></td><td colspan="4"></td></tr>
+            <tr><td class="row-title">Zeta Hospitalar</td><td>Enfermagem · privado</td><td>BNDF</td><td><span class="code">0723456-90.2023.8.07.0001</span> · TJDFT</td><td class="num">R$ 20.000,00</td><td class="num"><span class="dash">—</span></td><td><span class="status status-off"><i></i>Quitado</span></td><td>15/10</td><td><span class="dash">—</span></td><td>Saldo na cobrança</td></tr>
+            <tr><td class="row-title">Lambda Médica</td><td>Enfermagem · privado</td><td>BNEXTO</td><td><span class="code">0001234-56.2020.8.27.2729</span> · TJTO</td><td class="num">R$ 12.000,00</td><td class="num"><span class="dash">—</span></td><td><span class="status status-off"><i></i>Baixa como perda</span></td><td>01/08</td><td><span class="dash">—</span></td><td><span class="dash">—</span></td></tr>
+            <tr><td class="row-title">Kappa Clínica</td><td>Enfermagem · privado</td><td>BNRS</td><td><span class="code">5011223-67.2022.8.21.0001</span> · TJRS</td><td class="num">R$ 10.000,00</td><td class="num"><span class="dash">—</span></td><td><span class="status status-off"><i></i>Acordo cumprido</span></td><td>01/09</td><td><span class="dash">—</span></td><td>Acordo 3/3</td></tr>
+          </tbody>
+        </table></div>
+        <div class="pagination"><span>12 processos em uma tabela só, agrupados; os encerrados entram com a caixa "Mostrar encerrados".</span><span class="check feito"><i></i><span>Mostrar encerrados</span></span></div>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="C" data-nome="Prazo em primeiro plano" data-resumo="O cartão abre pelo prazo e pelos dias sem andamento; os seis números viram botões que filtram o quadro e os filtros de campo ficam num único botão. Privilegia a rotina de quem cumpre prazo, ao custo de BU e filial fora da capa.">
+    <div class="abas" role="tablist" aria-label="Abas do Jurídico">
+      <span class="aba">Visão gerencial</span>
+      <span class="aba" aria-selected="true">Processos <span class="badge badge-alert" title="Prazos vencidos">1</span></span>
+      <span class="aba">Acordos judiciais <span class="badge badge-alert" title="Acordos com parcela vencida">1</span></span>
+      <span class="aba">Custos dos processos <span class="badge badge-attention" title="Custas sem lançamento">1</span></span>
+      <span class="aba">Alertas de desvios <span class="badge badge-alert" title="Desvios críticos">4</span></span>
+    </div>
+    <div class="entre">
+      <div class="entre"><h3 class="jur-h">Processos jurídicos</h3><span class="sub"><b>9</b> ativos · <b>3</b> encerrados</span><span class="iconbtn" title="Sobre o quadro" aria-label="Sobre o quadro"><svg><use href="#i-info"/></svg></span></div>
+      <div class="entre"><button class="btn btn-secondary btn-sm">Exportar CSV</button><button class="btn btn-primary btn-sm"><svg><use href="#i-plus"/></svg>Novo processo</button></div>
+    </div>
+    <div class="panel com-abas">
+      <div class="toolbar">
+        <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar cliente, nº dos autos, código, situação, tribunal"></div>
+        <span class="select"><span>Todos os responsáveis</span><svg><use href="#i-chevron"/></svg></span>
+        <button class="btn btn-secondary btn-sm">Meus cards</button>
+        <button class="btn btn-secondary btn-sm">Atrasados</button>
+        <span class="select jur-curto"><span>Ordenar: prazo</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select jur-curto"><span>Etiquetas</span><svg><use href="#i-chevron"/></svg></span>
+        <button class="btn btn-secondary btn-sm"><svg><use href="#i-sliders"/></svg>BU, setor, linha e filial</button>
+        <div class="segment jur-seg direita" role="group" aria-label="Visão"><button type="button" data-aba="quadro" aria-selected="true">Quadro</button><button type="button" data-aba="lista" aria-selected="false">Lista</button></div>
+      </div>
+      <div class="chips jur-atalhos">
+        <button class="jur-atalho" type="button"><b>2</b><span>prazos vencidos ou em 7 dias</span></button>
+        <button class="jur-atalho" type="button"><b>5</b><span>em andamento · R$ 320 mil</span></button>
+        <button class="jur-atalho" type="button"><b>4</b><span>a ajuizar · R$ 175 mil · 1 sem dossiê</span></button>
+        <button class="jur-atalho" type="button"><b>1</b><span>em citação</span></button>
+        <button class="jur-atalho" type="button"><b>1</b><span>em cumprimento e execução</span></button>
+        <button class="jur-atalho" type="button"><b>R$ 60 mil</b><span>acordos a receber · 1 vencida</span></button>
+      </div>
+
+      <div data-painel="quadro">
+        <div class="quadro largo">
+          <section class="fase jur-fase" style="--cor:var(--data-1)">
+            <header><span>01 · Dossiê em montagem</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 30.000,00</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="linha"><span class="status status-attention"><i></i>Dossiê parado há 17 dias</span></div>
+                <div class="row-title">Ômega Drogarias</div>
+                <div class="sub">Faltam 3 de 10 documentos: notificação, cadastro e aprovação</div>
+                <div class="entre"><span class="forte">R$ 30.000,00</span><span class="avatar" title="Ana Ribeiro">AR</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>17 d</span><span class="passou"><svg><use href="#i-cal"/></svg>17 d / 10 d</span><span><svg><use href="#i-pencil"/></svg>6 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-2)">
+            <header><span>02 · Recebido · contato amigável</span><span>2</span></header>
+            <div class="jur-fase-sub">R$ 65.000,00</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="linha"><span class="status status-attention"><i></i>Prazo em 5 dias · 24/11</span></div>
+                <div class="jur-selos"><span class="jur-selo" style="--cor:var(--data-1)">Público</span></div>
+                <div class="row-title">Secretaria de Saúde de Mu</div>
+                <div class="sub">Responder ao requerimento administrativo · andamento há 1 dia</div>
+                <div class="entre"><span class="forte">R$ 50.000,00</span><span class="avatar" title="Juliana Prado">JP</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>9 d</span><span><svg><use href="#i-cal"/></svg>1 d / 7 d</span><span><svg><use href="#i-pencil"/></svg>1 d</span></div>
+              </article>
+              <article class="cartao">
+                <div class="linha"><span class="status status-off"><i></i>Sem prazo definido</span></div>
+                <div class="row-title">Teta Nutrição</div>
+                <div class="sub">Conferir dados da carga · andamento há 5 dias</div>
+                <div class="entre"><span class="forte">R$ 15.000,00</span><span class="avatar" title="Juliana Prado">JP</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>5 d</span><span><svg><use href="#i-cal"/></svg>5 d / 7 d</span><span><svg><use href="#i-pencil"/></svg>5 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-3)">
+            <header><span>03 · Petição inicial</span><span>0</span></header>
+            <div class="jur-fase-sub">sem processos</div>
+            <div class="pilha"><p class="sub jur-vazio">Nenhum processo nesta etapa.</p></div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-4)">
+            <header><span>04 · Custas e protocolo</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 80.000,00</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="linha"><span class="status status-off"><i></i>Sem prazo definido</span></div>
+                <div class="row-title">Hospital Delta</div>
+                <div class="sub">Pagar a guia e protocolar; substabelecimento pendente · andamento há 3 dias</div>
+                <div class="entre"><span class="forte">R$ 80.000,00</span><span class="avatar" title="Juliana Prado">JP</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>34 d</span><span><svg><use href="#i-cal"/></svg>3 d / 5 d</span><span><svg><use href="#i-pencil"/></svg>3 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-5)">
+            <header><span>05 · Citação</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 40.000,00</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="linha"><span class="status status-alert"><i></i>Prazo vencido há 9 dias · 10/11</span></div>
+                <div class="row-title">Farmácia Alfa</div>
+                <div class="sub">Publicar o edital de citação · andamento há 10 dias</div>
+                <div class="entre"><span class="forte">R$ 40.000,00</span><span class="avatar" title="Juliana Prado">JP</span></div>
+                <div class="linha"><span class="code">0712345-11.2024.8.07.0001</span><span class="badge badge-outline" title="Mensagens novas">2 novas</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>290 d</span><span class="passou"><svg><use href="#i-cal"/></svg>41 d / 30 d</span><span><svg><use href="#i-pencil"/></svg>10 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-6)">
+            <header><span>06 · Defesa e instrução</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 45.000,00</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="linha"><span class="status status-off"><i></i>Sem prazo definido</span></div>
+                <div class="row-title">Eta Saúde</div>
+                <div class="sub">Réplica em elaboração · andamento há 2 dias</div>
+                <div class="entre"><span class="forte">R$ 45.000,00</span><span class="avatar" title="Juliana Prado">JP</span></div>
+                <div class="linha"><span class="code">0745678-33.2024.8.07.0001</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>212 d</span><span><svg><use href="#i-cal"/></svg>58 d / 90 d</span><span><svg><use href="#i-pencil"/></svg>2 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-7)">
+            <header><span>07 · Sentença e recursos</span><span>0</span></header>
+            <div class="jur-fase-sub">sem processos</div>
+            <div class="pilha"><p class="sub jur-vazio">Nenhum processo nesta etapa.</p></div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-8)">
+            <header><span>08 · Cumprimento e execução</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 25.000,00</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="linha"><span class="status status-attention"><i></i>50 dias sem andamento</span></div>
+                <div class="row-title">Distribuidora Gama</div>
+                <div class="sub">Aguardando SISBAJUD · sem prazo definido</div>
+                <div class="entre"><span class="forte">R$ 25.000,00</span><span class="avatar" title="Marcos Teles">MT</span></div>
+                <div class="linha"><span class="code">5009876-45.2022.8.21.0001</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>2 a</span><span><svg><use href="#i-cal"/></svg>101 d / 180 d</span><span><svg><use href="#i-pencil"/></svg>50 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-1)">
+            <header><span>09 · Acordo judicial</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 60.000,00</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="linha"><span class="status status-alert"><i></i>Parcela vencida há 14 dias · 05/11</span></div>
+                <div class="jur-selos"><span class="jur-selo" style="--cor:var(--data-5)">Galderma</span></div>
+                <div class="row-title">Clínica Beta</div>
+                <div class="sub">Cobrar a entrada de R$ 12.000,00; acordo aguardando aprovação</div>
+                <div class="entre"><span class="forte">R$ 60.000,00</span><span class="avatar" title="Marcos Teles">MT</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>1 a</span><span><svg><use href="#i-cal"/></svg>7 d</span><span><svg><use href="#i-pencil"/></svg>7 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--data-2)">
+            <header><span>10 · Suspenso · RJ · arquivado</span><span>1</span></header>
+            <div class="jur-fase-sub">R$ 150.000,00</div>
+            <div class="pilha">
+              <article class="cartao">
+                <div class="linha"><span class="status status-off"><i></i>Suspenso há 171 dias</span></div>
+                <div class="row-title">Épsilon Comércio</div>
+                <div class="sub">Recuperação judicial; avaliar habilitação do crédito</div>
+                <div class="entre"><span class="forte">R$ 150.000,00</span><span class="avatar" title="Marcos Teles">MT</span></div>
+                <div class="jur-tempos"><span><svg><use href="#i-plus"/></svg>5 a</span><span><svg><use href="#i-cal"/></svg>171 d</span><span><svg><use href="#i-pencil"/></svg>171 d</span></div>
+              </article>
+            </div>
+          </section>
+          <section class="fase jur-fase" style="--cor:var(--ink-muted)">
+            <header><span>Encerrado</span><span>3</span></header>
+            <div class="jur-fase-sub">R$ 42.000,00</div>
+            <div class="pilha">
+              <article class="cartao"><div class="row-title">Zeta Hospitalar</div><div class="row-meta">Quitado · 15/10/2026</div><div class="entre"><span class="sub forte">R$ 20.000,00</span><span class="avatar">JP</span></div></article>
+              <article class="cartao"><div class="row-title">Lambda Médica</div><div class="row-meta">Baixa como perda · 01/08/2026</div><div class="entre"><span class="sub forte">R$ 12.000,00</span><span class="avatar">MT</span></div></article>
+              <article class="cartao"><div class="row-title">Kappa Clínica</div><div class="row-meta">Acordo cumprido · 01/09/2026</div><div class="entre"><span class="sub forte">R$ 10.000,00</span><span class="avatar">MT</span></div></article>
+            </div>
+          </section>
+        </div>
+        <div class="pagination"><span>Cartão só para leitura: a etapa muda em "Mover para", dentro do card aberto.</span><span>Ordenado por prazo e depois por valor</span></div>
+      </div>
+
+      <div data-painel="lista" hidden>
+        <div class="corpo-painel">
+          <div class="grade-2">
+            <div class="pilha-v">
+              <div class="entre"><span class="titulo-painel">Em andamento</span><span class="sub">5 · R$ 320.000,00</span></div>
+              <div class="lista-itens jur-borda">
+                <div class="item"><div class="jur-cresce"><div class="row-title">Farmácia Alfa</div><div class="row-meta"><span class="code">0712345-11.2024.8.07.0001</span> · TJDFT · BNDF · 05 Citação</div><div class="row-meta">09/11 · Citação por edital deferida · custo R$ 1.500,00</div></div><div class="jur-dir"><b>R$ 40.000,00</b><span class="status status-alert"><i></i>Vencido há 9 dias</span></div></div>
+                <div class="item"><div class="jur-cresce"><div class="row-title">Clínica Beta</div><div class="row-meta"><span class="code">5123456-78.2023.8.09.0051</span> · TJGO · BNGO · 09 Acordo judicial · Galderma</div><div class="row-meta">12/11 · Acordo homologado; entrada em aberto</div></div><div class="jur-dir"><b>R$ 60.000,00</b><span class="status status-alert"><i></i>Parcela vencida</span></div></div>
+                <div class="item"><div class="jur-cresce"><div class="row-title">Distribuidora Gama</div><div class="row-meta"><span class="code">5009876-45.2022.8.21.0001</span> · TJRS · BNRS · 08 Cumprimento</div><div class="row-meta">30/09 · Aguardando SISBAJUD · custo R$ 3.000,00</div></div><div class="jur-dir"><b>R$ 25.000,00</b><span class="status status-attention"><i></i>50 dias parado</span></div></div>
+                <div class="item"><div class="jur-cresce"><div class="row-title">Eta Saúde</div><div class="row-meta"><span class="code">0745678-33.2024.8.07.0001</span> · TJDFT · BNEXDF · 06 Defesa</div><div class="row-meta">17/11 · Contestação apresentada</div></div><div class="jur-dir"><b>R$ 45.000,00</b><span class="status status-off"><i></i>Sem prazo</span></div></div>
+                <div class="item"><div class="jur-cresce"><div class="row-title">Épsilon Comércio</div><div class="row-meta"><span class="code">5234567-12.2021.8.09.0051</span> · TJGO · BNGO · 10 Suspenso</div><div class="row-meta">01/06 · Recuperação judicial</div></div><div class="jur-dir"><b>R$ 150.000,00</b><span class="status status-off"><i></i>Suspenso</span></div></div>
+              </div>
+            </div>
+            <div class="pilha-v">
+              <div class="entre"><span class="titulo-painel">A ajuizar</span><span class="sub">4 · R$ 175.000,00 · 1 cliente da cobrança sem dossiê</span></div>
+              <div class="lista-itens jur-borda">
+                <div class="item"><div class="jur-cresce"><div class="row-title">Secretaria de Saúde de Mu</div><div class="row-meta">Sem nº dos autos · BNDF · 02 Recebido · público</div><div class="row-meta">18/11 · Requerimento administrativo protocolado</div></div><div class="jur-dir"><b>R$ 50.000,00</b><span class="status status-attention"><i></i>Em 5 dias</span></div></div>
+                <div class="item"><div class="jur-cresce"><div class="row-title">Ômega Drogarias</div><div class="row-meta">Sem nº dos autos · BNDF · 01 Dossiê em montagem</div><div class="row-meta">02/11 · Dossiê 7 de 10</div></div><div class="jur-dir"><b>R$ 30.000,00</b><span class="status status-attention"><i></i>Dossiê há 17 dias</span></div></div>
+                <div class="item"><div class="jur-cresce"><div class="row-title">Hospital Delta</div><div class="row-meta">Sem nº dos autos · BNDF · 04 Custas e protocolo</div><div class="row-meta">16/11 · Guia de custas emitida</div></div><div class="jur-dir"><b>R$ 80.000,00</b><span class="status status-off"><i></i>Sem prazo</span></div></div>
+                <div class="item"><div class="jur-cresce"><div class="row-title">Teta Nutrição</div><div class="row-meta">Sem nº dos autos · BNGO · 02 Recebido</div><div class="row-meta">14/11 · Carga inicial; dados a conferir</div></div><div class="jur-dir"><b>R$ 15.000,00</b><span class="status status-off"><i></i>Sem prazo</span></div></div>
+                <div class="item"><div class="jur-cresce"><div class="row-title">Iota Farma</div><div class="row-meta">Cliente na etapa Jurídico da cobrança, ainda sem dossiê</div></div><div class="jur-dir"><b>R$ 33.000,00</b><button class="btn btn-secondary btn-sm">Montar dossiê</button></div></div>
+              </div>
+            </div>
+          </div>
+          <details class="jur-recolhe">
+            <summary class="entre"><span class="titulo-painel">Encerrados</span><span class="sub">3 · R$ 42.000,00 · mostrar</span></summary>
+            <div class="lista-itens jur-borda">
+              <div class="item"><div class="jur-cresce"><div class="row-title">Zeta Hospitalar</div><div class="row-meta"><span class="code">0723456-90.2023.8.07.0001</span> · TJDFT · quitado em 15/10/2026</div></div><div class="jur-dir"><b>R$ 20.000,00</b></div></div>
+              <div class="item"><div class="jur-cresce"><div class="row-title">Lambda Médica</div><div class="row-meta"><span class="code">0001234-56.2020.8.27.2729</span> · TJTO · baixa como perda em 01/08/2026</div></div><div class="jur-dir"><b>R$ 12.000,00</b></div></div>
+              <div class="item"><div class="jur-cresce"><div class="row-title">Kappa Clínica</div><div class="row-meta"><span class="code">5011223-67.2022.8.21.0001</span> · TJRS · acordo cumprido em 01/09/2026</div></div><div class="jur-dir"><b>R$ 10.000,00</b></div></div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </template>
+</section>

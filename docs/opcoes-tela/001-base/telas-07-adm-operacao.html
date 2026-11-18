@@ -1,0 +1,448 @@
+<section data-tela="adm-modelos" data-grupo="Administração" data-titulo="Modelos de mensagem"
+         data-desc="Onde o Administrador mantém os textos padrão dos e-mails: código, assunto, corpo com campos entre colchetes, versão que sobe a cada edição e, nos modelos com efeito legal, a validação sem a qual o modelo não pode ser enviado. Exemplo: a notificação formal, editada em 10/11 e aguardando nova validação.">
+
+  <template data-opcao="A" data-nome="Lista com editor" data-resumo="Os modelos à esquerda e o editor do modelo marcado ao lado, com os campos disponíveis logo abaixo do texto. Tudo numa tela; a pré-visualização com um cliente abre à parte, num clique.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração</div>
+        <h3>Modelos de mensagem</h3>
+        <div class="desc">Os campos entre colchetes são preenchidos com os dados do cliente na hora do envio. O conteúdo de cada modelo é definido pelo módulo que o usa.</div>
+        <div class="meta"><span><span class="stat">6</span> modelos</span><span class="dot">·</span><span><span class="stat">2</span> com efeito legal</span><span class="dot">·</span><span><span class="stat">1</span> aguardando validação</span></div>
+      </div>
+    </div>
+    <div class="lado invertido">
+      <div class="panel">
+        <div class="toolbar"><div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar modelo"></div><button class="btn btn-secondary"><svg><use href="#i-plus"/></svg>Novo</button></div>
+        <div class="lista-itens">
+          <div class="item"><div style="flex:1;min-width:0"><div class="row-title">Aviso preventivo, 5 dias antes</div><div class="row-meta"><span class="code">COB-PREV-5</span> · versão 1</div></div></div>
+          <div class="item"><div style="flex:1;min-width:0"><div class="row-title">Aviso de título vencido</div><div class="row-meta"><span class="code">COB-D4</span> · versão 2</div></div></div>
+          <div class="item ativo"><div style="flex:1;min-width:0"><div class="row-title">Notificação formal com aviso de protesto</div><div class="row-meta"><span class="code">COB-D7</span> · versão 3 · efeito legal</div></div><span class="status status-attention"><i></i>Aguardando validação</span></div>
+          <div class="item"><div style="flex:1;min-width:0"><div class="row-title">Comunicado de protesto e negativação</div><div class="row-meta"><span class="code">COB-D10</span> · versão 2 · efeito legal</div></div><span class="status status-live"><i></i>Validado</span></div>
+          <div class="item"><div style="flex:1;min-width:0"><div class="row-title">Liquidação vencida: e-mail ao órgão</div><div class="row-meta"><span class="code">PUB-LIQ-1</span> · versão 1</div></div></div>
+          <div class="item"><div style="flex:1;min-width:0"><div class="row-title">Posição financeira do cliente</div><div class="row-meta"><span class="code">GER-POSICAO</span> · versão 1</div></div></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="faixa entre"><div><div class="titulo-painel">Notificação formal com aviso de protesto</div><div class="sub">Versão 3 · editada por Nara Duarte em 10/11/2026 · salvar cria a versão 4</div></div><span class="row"><button class="btn btn-secondary">Pré-visualizar</button><button class="btn btn-primary">Salvar</button></span></div>
+        <div class="corpo-painel">
+          <div class="alert alert-warn"><svg><use href="#i-alert"/></svg><b>Aguardando validação: este modelo não pode ser enviado</b><p>A última validação é da versão 2 (Júlia Farias, 12/08/2026). A versão 3 precisa ser validada.</p></div>
+          <div class="form-grade">
+            <div class="field"><label>Código</label><input class="input" value="COB-D7"></div>
+            <div class="field"><label>Nome</label><input class="input" value="Notificação formal com aviso de protesto"></div>
+          </div>
+          <div class="field"><label>Assunto</label><input class="input" value="Notificação de débito em aberto: [RAZAO_SOCIAL]"></div>
+          <div class="field"><label>Corpo</label><textarea class="input" rows="6">Prezado(a) [CLIENTE], consta em aberto o valor de [VALOR_VENCIDO], vencido desde [VENCIMENTO_MAIS_ANTIGO] ([DIAS_ATRASO] dias). Não havendo pagamento até [DATA_LIMITE], o título será encaminhado a protesto.
+
+Dúvidas: [TELEFONE_CONTATO] ou [EMAIL_CONTATO].
+[ASSINATURA]</textarea></div>
+          <div class="field"><label>Campos disponíveis (clique para inserir)</label>
+            <div class="row"><span class="badge badge-outline">[CLIENTE]</span><span class="badge badge-outline">[RAZAO_SOCIAL]</span><span class="badge badge-outline">[CNPJ]</span><span class="badge badge-outline">[CODIGO_CLIENTE]</span><span class="badge badge-outline">[VALOR_VENCIDO]</span><span class="badge badge-outline">[DIAS_ATRASO]</span><span class="badge badge-outline">[VENCIMENTO_MAIS_ANTIGO]</span><span class="badge badge-outline">[VALOR_A_VENCER]</span><span class="badge badge-outline">[PROXIMO_VENCIMENTO]</span><span class="badge badge-outline">[VALOR_PROXIMO_VENCIMENTO]</span><span class="badge badge-outline">[DATA_HOJE]</span><span class="badge badge-outline">[AGENTE]</span><span class="badge badge-outline">[TELEFONE_CONTATO]</span><span class="badge badge-outline">[EMAIL_CONTATO]</span><span class="badge badge-outline">[ASSINATURA]</span></div>
+          </div>
+          <div class="form-grade">
+            <div class="field"><label>Campos extras deste modelo</label><div class="row"><span class="chip">[DATA_LIMITE]<button type="button" aria-label="Remover campo"><svg><use href="#i-x"/></svg></button></span><button class="btn btn-ghost btn-sm"><svg><use href="#i-plus"/></svg>Campo</button></div></div>
+            <div class="field"><label>Efeito legal</label><label class="check feito"><i></i><span>Com efeito legal: só envia depois de validado</span></label></div>
+          </div>
+          <div class="entre"><span class="sub">Campo que não está na lista nem nos extras é recusado ao salvar, citando o campo.</span><button class="btn btn-secondary">Registrar validação da versão 3</button></div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="B" data-nome="Editor com prévia" data-resumo="O texto à esquerda e, à direita, a mensagem já preenchida com os dados de um cliente escolhido: o que se escreve é o que o cliente vai ler. Custa a lista de modelos virar um seletor no topo.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração</div>
+        <h3>Modelos de mensagem</h3>
+        <div class="desc">Os campos entre colchetes são preenchidos com os dados do cliente na hora do envio.</div>
+        <div class="meta"><span><span class="stat">6</span> modelos</span><span class="dot">·</span><span><span class="stat">2</span> com efeito legal</span><span class="dot">·</span><span><span class="stat">1</span> aguardando validação</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="toolbar">
+        <span class="select" style="min-width:340px"><span>COB-D7 · Notificação formal com aviso de protesto</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="status status-attention"><i></i>Versão 3 aguardando validação</span>
+        <span class="direita row"><button class="btn btn-secondary"><svg><use href="#i-plus"/></svg>Novo modelo</button><button class="btn btn-secondary">Registrar validação</button><button class="btn btn-primary">Salvar como versão 4</button></span>
+      </div>
+      <div class="grade-2" style="gap:0">
+        <div class="corpo-painel" style="border-right:1px solid var(--row-border)">
+          <span class="sub forte">Texto do modelo</span>
+          <div class="form-grade">
+            <div class="field"><label>Código</label><input class="input" value="COB-D7"></div>
+            <div class="field"><label>Nome</label><input class="input" value="Notificação formal com aviso de protesto"></div>
+          </div>
+          <div class="field"><label>Assunto</label><input class="input" value="Notificação de débito em aberto: [RAZAO_SOCIAL]"></div>
+          <div class="field"><label>Corpo</label><textarea class="input" rows="8">Prezado(a) [CLIENTE], consta em aberto o valor de [VALOR_VENCIDO], vencido desde [VENCIMENTO_MAIS_ANTIGO] ([DIAS_ATRASO] dias). Não havendo pagamento até [DATA_LIMITE], o título será encaminhado a protesto.
+
+Dúvidas: [TELEFONE_CONTATO] ou [EMAIL_CONTATO].
+[ASSINATURA]</textarea></div>
+          <div class="field"><label>Inserir campo</label>
+            <div class="row"><span class="badge badge-outline">[CLIENTE]</span><span class="badge badge-outline">[RAZAO_SOCIAL]</span><span class="badge badge-outline">[CNPJ]</span><span class="badge badge-outline">[CODIGO_CLIENTE]</span><span class="badge badge-outline">[VALOR_VENCIDO]</span><span class="badge badge-outline">[DIAS_ATRASO]</span><span class="badge badge-outline">[VENCIMENTO_MAIS_ANTIGO]</span><span class="badge badge-outline">[VALOR_A_VENCER]</span><span class="badge badge-outline">[PROXIMO_VENCIMENTO]</span><span class="badge badge-outline">[VALOR_PROXIMO_VENCIMENTO]</span><span class="badge badge-outline">[DATA_HOJE]</span><span class="badge badge-outline">[AGENTE]</span><span class="badge badge-outline">[TELEFONE_CONTATO]</span><span class="badge badge-outline">[EMAIL_CONTATO]</span><span class="badge badge-outline">[ASSINATURA]</span><span class="chip">[DATA_LIMITE] · extra<button type="button" aria-label="Remover campo"><svg><use href="#i-x"/></svg></button></span></div>
+          </div>
+          <label class="check feito"><i></i><span>Com efeito legal: só envia depois de validado</span></label>
+        </div>
+        <div class="corpo-painel">
+          <div class="entre"><span class="sub forte">Como o cliente recebe</span><span class="select"><span>1001 · Hospital São Lucas</span><svg><use href="#i-chevron"/></svg></span></div>
+          <div class="bas-previa">
+            <div class="sub">Para: marta@hsl.com.br (contato principal)</div>
+            <div class="forte">Notificação de débito em aberto: HOSPITAL SAO LUCAS LTDA</div>
+            <div class="bas-corpo"><p>Prezado(a) Marta, consta em aberto o valor de R$ 1.500,00, vencido desde 02/11/2026 (12 dias). Não havendo pagamento até <span class="badge badge-attention">[DATA_LIMITE]</span>, o título será encaminhado a protesto.</p><p style="margin-top:12px">Dúvidas: (61) 3033-3116 ou cobranca@benenutri.com.<br>Equipe de Crédito e Cobrança – Grupo Benenutri</p></div>
+          </div>
+          <div class="form-grade"><div class="field"><label>Valor de [DATA_LIMITE] para a prévia</label><input class="input" type="date"></div></div>
+          <div class="alert alert-warn"><svg><use href="#i-alert"/></svg><b>Aguardando validação: este modelo não pode ser enviado</b><p>A última validação é da versão 2 (Júlia Farias, 12/08/2026). Campo extra sem valor também recusa o envio.</p></div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="C" data-nome="Tabela e abas" data-resumo="Uma tabela de governança (versão, efeito legal, validação, última edição) e, abaixo, o modelo aberto em abas: Texto, Pré-visualização, Versões e validação. É a que mais mostra o controle de versão; custa um clique entre escrever e ver a prévia.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração</div>
+        <h3>Modelos de mensagem</h3>
+        <div class="desc">Os campos entre colchetes são preenchidos com os dados do cliente na hora do envio.</div>
+      </div>
+      <button class="btn btn-secondary"><svg><use href="#i-plus"/></svg>Novo modelo</button>
+    </div>
+    <div class="panel">
+      <div class="tabela-wrap"><table class="bas-t">
+        <thead><tr><th>Modelo</th><th class="num">Versão</th><th>Efeito legal</th><th>Validação</th><th>Última edição</th></tr></thead>
+        <tbody>
+          <tr><td><div class="row-title">Aviso preventivo, 5 dias antes</div><div class="row-meta"><span class="code">COB-PREV-5</span></div></td><td class="num">1</td><td>Não</td><td><span class="dash">—</span></td><td>01/09/2026 · Nara Duarte</td></tr>
+          <tr><td><div class="row-title">Aviso de título vencido</div><div class="row-meta"><span class="code">COB-D4</span></div></td><td class="num">2</td><td>Não</td><td><span class="dash">—</span></td><td>22/09/2026 · Nara Duarte</td></tr>
+          <tr style="background:var(--accent)"><td><div class="row-title">Notificação formal com aviso de protesto</div><div class="row-meta"><span class="code">COB-D7</span></div></td><td class="num">3</td><td>Sim</td><td><span class="status status-attention"><i></i>Aguardando validação da versão 3</span></td><td>10/11/2026 · Nara Duarte</td></tr>
+          <tr><td><div class="row-title">Comunicado de protesto e negativação</div><div class="row-meta"><span class="code">COB-D10</span></div></td><td class="num">2</td><td>Sim</td><td><span class="status status-live"><i></i>Versão 2 validada até 12/08/2027</span></td><td>05/08/2026 · Nara Duarte</td></tr>
+          <tr><td><div class="row-title">Liquidação vencida: e-mail ao órgão</div><div class="row-meta"><span class="code">PUB-LIQ-1</span></div></td><td class="num">1</td><td>Não</td><td><span class="dash">—</span></td><td>01/09/2026 · Nara Duarte</td></tr>
+          <tr><td><div class="row-title">Posição financeira do cliente</div><div class="row-meta"><span class="code">GER-POSICAO</span></div></td><td class="num">1</td><td>Não</td><td><span class="dash">—</span></td><td>01/09/2026 · Nara Duarte</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="panel com-abas">
+      <div class="faixa entre" style="border-bottom:0"><div><div class="titulo-painel">Notificação formal com aviso de protesto</div><div class="sub"><span class="code">COB-D7</span> · versão 3 · com efeito legal</div></div></div>
+      <div class="abas" role="tablist">
+        <button data-aba="texto" aria-selected="true" type="button">Texto</button>
+        <button data-aba="previa" aria-selected="false" type="button">Pré-visualização</button>
+        <button data-aba="versoes" aria-selected="false" type="button">Versões e validação <span class="badge badge-attention">1</span></button>
+      </div>
+      <div data-painel="texto">
+        <div class="corpo-painel">
+          <div class="form-grade">
+            <div class="field"><label>Código</label><input class="input" value="COB-D7"></div>
+            <div class="field"><label>Nome</label><input class="input" value="Notificação formal com aviso de protesto"></div>
+            <div class="field"><label>Efeito legal</label><label class="check feito"><i></i><span>Só envia depois de validado</span></label></div>
+          </div>
+          <div class="field"><label>Assunto</label><input class="input" value="Notificação de débito em aberto: [RAZAO_SOCIAL]"></div>
+          <div class="field"><label>Corpo</label><textarea class="input" rows="6">Prezado(a) [CLIENTE], consta em aberto o valor de [VALOR_VENCIDO], vencido desde [VENCIMENTO_MAIS_ANTIGO] ([DIAS_ATRASO] dias). Não havendo pagamento até [DATA_LIMITE], o título será encaminhado a protesto.
+
+Dúvidas: [TELEFONE_CONTATO] ou [EMAIL_CONTATO].
+[ASSINATURA]</textarea></div>
+          <div class="field"><label>Campos disponíveis (clique para inserir)</label>
+            <div class="row"><span class="badge badge-outline">[CLIENTE]</span><span class="badge badge-outline">[RAZAO_SOCIAL]</span><span class="badge badge-outline">[CNPJ]</span><span class="badge badge-outline">[CODIGO_CLIENTE]</span><span class="badge badge-outline">[VALOR_VENCIDO]</span><span class="badge badge-outline">[DIAS_ATRASO]</span><span class="badge badge-outline">[VENCIMENTO_MAIS_ANTIGO]</span><span class="badge badge-outline">[VALOR_A_VENCER]</span><span class="badge badge-outline">[PROXIMO_VENCIMENTO]</span><span class="badge badge-outline">[VALOR_PROXIMO_VENCIMENTO]</span><span class="badge badge-outline">[DATA_HOJE]</span><span class="badge badge-outline">[AGENTE]</span><span class="badge badge-outline">[TELEFONE_CONTATO]</span><span class="badge badge-outline">[EMAIL_CONTATO]</span><span class="badge badge-outline">[ASSINATURA]</span><span class="chip">[DATA_LIMITE] · extra<button type="button" aria-label="Remover campo"><svg><use href="#i-x"/></svg></button></span></div>
+          </div>
+          <div class="entre"><span class="sub">Salvar cria a versão 4 e o modelo volta a aguardar validação.</span><button class="btn btn-primary">Salvar</button></div>
+        </div>
+      </div>
+      <div data-painel="previa" hidden>
+        <div class="corpo-painel">
+          <div class="entre"><span class="sub">Com os dados de</span><span class="select"><span>1001 · Hospital São Lucas</span><svg><use href="#i-chevron"/></svg></span></div>
+          <div class="bas-previa">
+            <div class="sub">Para: marta@hsl.com.br (contato principal)</div>
+            <div class="forte">Notificação de débito em aberto: HOSPITAL SAO LUCAS LTDA</div>
+            <div class="bas-corpo"><p>Prezado(a) Marta, consta em aberto o valor de R$ 1.500,00, vencido desde 02/11/2026 (12 dias). Não havendo pagamento até <span class="badge badge-attention">[DATA_LIMITE]</span>, o título será encaminhado a protesto.</p><p style="margin-top:12px">Dúvidas: (61) 3033-3116 ou cobranca@benenutri.com.<br>Equipe de Crédito e Cobrança – Grupo Benenutri</p></div>
+          </div>
+          <span class="sub">[DATA_LIMITE] é campo extra: quem pede o envio informa o valor.</span>
+        </div>
+      </div>
+      <div data-painel="versoes" hidden>
+        <div class="corpo-painel">
+          <div class="alert alert-warn"><svg><use href="#i-alert"/></svg><b>Aguardando validação: este modelo não pode ser enviado</b><p>A última validação é da versão 2. A validação vale 12 meses e só para a versão validada.</p></div>
+          <div class="linha-tempo">
+            <div class="evento atencao"><i></i><div><span class="forte">Versão 3</span> · editada por Nara Duarte em 10/11/2026 às 15:05<div class="sub">Aguardando validação</div></div></div>
+            <div class="evento"><i></i><div><span class="forte">Versão 2 validada</span> por Júlia Farias em 12/08/2026<div class="sub">Valeria até 12/08/2027; perdeu efeito com a edição de 10/11/2026</div></div></div>
+            <div class="evento off"><i></i><div><span class="forte">Versão 2</span> · editada por Nara Duarte em 05/08/2026</div></div>
+            <div class="evento off"><i></i><div><span class="forte">Versão 1</span> · criada por Nara Duarte em 01/07/2026</div></div>
+          </div>
+          <button class="btn btn-secondary" style="justify-self:start">Registrar validação da versão 3</button>
+        </div>
+      </div>
+    </div>
+  </template>
+</section>
+
+<section data-tela="adm-sincronizacao" data-grupo="Administração" data-titulo="Sincronização com o Winthor"
+         data-desc="Onde o Administrador acompanha a leitura do Winthor, que roda sozinha a cada 15 minutos: se a posição está atual, o que cada leitura trouxe, o que falhou e por quê, e o botão para ler agora. Exemplo: sábado, 14/11/2026, às 10:52, com uma falha às 09:15.">
+
+  <template data-opcao="A" data-nome="Situação e tabela" data-resumo="Quatro números no topo e a tabela de leituras da mais recente para a mais antiga, com todas as contagens. Completa e previsível; a falha das 09:15 é só mais uma linha, que é preciso procurar.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração</div>
+        <h3>Sincronização com o Winthor</h3>
+        <div class="desc">A leitura atualiza clientes, posição e recebimentos. Nada é gravado no Winthor.</div>
+        <div class="meta"><span class="status status-live"><i></i>Posição atual</span><span class="dot">·</span><span>última leitura concluída às 10:46, há 6 minutos</span></div>
+      </div>
+      <button class="btn btn-primary">Ler agora</button>
+    </div>
+    <div class="kpis" style="margin-top:0">
+      <div class="kpi"><span class="rot">Última leitura concluída</span><span class="valor">10:46</span><span class="hint">começou às 10:45 · 1 min 29 s</span></div>
+      <div class="kpi"><span class="rot">Próxima leitura</span><span class="valor">11:00</span><span class="hint">intervalo de 15 minutos</span></div>
+      <div class="kpi"><span class="rot">Leituras hoje</span><span class="valor">43</span><span class="hint">1 com erro, às 09:15</span></div>
+      <div class="kpi"><span class="rot">Clientes na carteira</span><span class="valor">10</span><span class="hint">1 novo hoje</span></div>
+    </div>
+    <div class="panel">
+      <div class="toolbar">
+        <span class="select"><span>Todas as situações</span><svg><use href="#i-chevron"/></svg></span>
+        <div class="field" style="display:flex;align-items:center;gap:8px"><label>Dia</label><input class="input" type="date" value="2026-11-14" style="width:150px"></div>
+      </div>
+      <div class="tabela-wrap"><table class="bas-t">
+        <thead><tr><th>Início</th><th>Fim</th><th>Situação</th><th class="num">Clientes lidos</th><th class="num">Novos</th><th class="num">Recebimentos novos</th><th class="num">Estornados</th><th>Erro</th></tr></thead>
+        <tbody>
+          <tr><td>14/11 10:45:02</td><td>10:46:31</td><td><span class="status status-live"><i></i>Concluída</span></td><td class="num">10</td><td class="num">1</td><td class="num">1</td><td class="num"><span class="dash">—</span></td><td><span class="dash">—</span></td></tr>
+          <tr><td>14/11 10:30:01</td><td>10:31:24</td><td><span class="status status-live"><i></i>Concluída</span></td><td class="num">9</td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td><span class="dash">—</span></td></tr>
+          <tr><td>14/11 10:15:02</td><td>10:16:29</td><td><span class="status status-live"><i></i>Concluída</span></td><td class="num">9</td><td class="num"><span class="dash">—</span></td><td class="num">2</td><td class="num">1</td><td><span class="dash">—</span></td></tr>
+          <tr><td>14/11 10:00:01</td><td>10:01:33</td><td><span class="status status-live"><i></i>Concluída</span></td><td class="num">9</td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td><span class="dash">—</span></td></tr>
+          <tr><td>14/11 09:45:02</td><td>09:46:27</td><td><span class="status status-live"><i></i>Concluída</span></td><td class="num">9</td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td><span class="dash">—</span></td></tr>
+          <tr><td>14/11 09:30:01</td><td>09:31:40</td><td><span class="status status-live"><i></i>Concluída</span></td><td class="num">9</td><td class="num"><span class="dash">—</span></td><td class="num">3</td><td class="num"><span class="dash">—</span></td><td><span class="dash">—</span></td></tr>
+          <tr><td>14/11 09:15:02</td><td>09:15:47</td><td><span class="status status-alert"><i></i>Erro</span></td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td>Tempo esgotado ao conectar ao Winthor (ORA-12170)</td></tr>
+          <tr><td>14/11 09:00:01</td><td>09:01:22</td><td><span class="status status-live"><i></i>Concluída</span></td><td class="num">9</td><td class="num"><span class="dash">—</span></td><td class="num">1</td><td class="num"><span class="dash">—</span></td><td><span class="dash">—</span></td></tr>
+        </tbody>
+      </table></div>
+      <div class="pagination"><span>Página 1 de 6 · 44 leituras em 14/11/2026</span><span class="btns"><button class="btn btn-secondary btn-sm" disabled>Anterior</button><button class="btn btn-secondary btn-sm">Próxima</button></span></div>
+    </div>
+    <p class="nota">"Ler agora" é atendido na verificação seguinte (até 5 minutos) e fica desabilitado enquanto houver um pedido pendente. Com mais de 30 minutos sem leitura concluída, a situação vira "Posição desatualizada" aqui e em toda tela que mostra posição.</p>
+  </template>
+
+  <template data-opcao="B" data-nome="Linha do tempo" data-resumo="O dia vira uma faixa com um traço por leitura, de 15 em 15 minutos: falha e buraco saltam aos olhos, e a leitura marcada abre em detalhe. Ótima para enxergar padrão; as contagens de várias leituras não ficam lado a lado.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração</div>
+        <h3>Sincronização com o Winthor</h3>
+        <div class="desc">A leitura atualiza clientes, posição e recebimentos. Nada é gravado no Winthor.</div>
+        <div class="meta"><span class="status status-live"><i></i>Posição atual</span><span class="dot">·</span><span>última leitura concluída às 10:46, há 6 minutos</span><span class="dot">·</span><span>próxima às 11:00</span></div>
+      </div>
+      <button class="btn btn-primary">Ler agora</button>
+    </div>
+    <div class="panel">
+      <div class="faixa entre"><span class="row"><button class="btn btn-secondary btn-sm">Dia anterior</button><span class="titulo-painel">Sábado, 14/11/2026</span><button class="btn btn-secondary btn-sm" disabled>Dia seguinte</button></span><span class="legenda-graf"><span><i class="cor-ok"></i>Concluída · 43</span><span><i class="cor-alerta"></i>Erro · 1</span><span><i style="box-shadow:inset 0 0 0 1px var(--border)"></i>Ainda não rodou</span></span></div>
+      <div class="corpo-painel">
+        <div class="bas-pulsos" role="img" aria-label="44 leituras hoje: 43 concluídas e 1 com erro às 09:15"><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-alerta"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i class="cor-ok"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="entre sub"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>24:00</span></div>
+      </div>
+    </div>
+    <div class="grade-2">
+      <div class="panel">
+        <div class="faixa entre"><span class="titulo-painel">Leitura das 09:15</span><span class="status status-alert"><i></i>Erro</span></div>
+        <div class="corpo-painel">
+          <dl class="ficha">
+            <div><dt>Início</dt><dd>09:15:02</dd></div>
+            <div><dt>Fim</dt><dd>09:15:47</dd></div>
+            <div><dt>Origem</dt><dd>Automática</dd></div>
+            <div><dt>Clientes lidos</dt><dd><span class="dash">—</span></dd></div>
+          </dl>
+          <div class="alert alert-error"><svg><use href="#i-alert"/></svg><b>Tempo esgotado ao conectar ao Winthor (ORA-12170)</b><p>Nenhuma posição foi alterada: valeu a leitura das 09:00 até a das 09:30 concluir.</p></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="faixa entre"><span class="titulo-painel">Última leitura, 10:45</span><span class="status status-live"><i></i>Concluída</span></div>
+        <div class="corpo-painel">
+          <dl class="ficha">
+            <div><dt>Início</dt><dd>10:45:02</dd></div>
+            <div><dt>Fim</dt><dd>10:46:31</dd></div>
+            <div><dt>Clientes lidos</dt><dd>10</dd></div>
+            <div><dt>Clientes novos</dt><dd>1 · Home Care Brasília (1003)</dd></div>
+            <div><dt>Recebimentos novos</dt><dd>1</dd></div>
+            <div><dt>Estornados</dt><dd><span class="dash">—</span></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <p class="nota">Clique num traço para abrir a leitura. "Ler agora" é atendido na verificação seguinte (até 5 minutos). Com mais de 30 minutos sem leitura concluída, a situação vira "Posição desatualizada" aqui e em toda tela que mostra posição.</p>
+  </template>
+
+  <template data-opcao="C" data-nome="Exceções primeiro" data-resumo="Um aviso diz se a posição está atual; abaixo, só o que deu errado, com a explicação e o efeito; as leituras normais ficam resumidas por dia e abrem sob demanda. Para quem olha uma vez por semana; custa o detalhe de cada leitura estar a um clique.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração</div>
+        <h3>Sincronização com o Winthor</h3>
+        <div class="desc">A leitura atualiza clientes, posição e recebimentos. Nada é gravado no Winthor.</div>
+      </div>
+      <button class="btn btn-primary">Ler agora</button>
+    </div>
+    <div class="alert alert-success"><svg><use href="#i-check"/></svg><b>Posição atual</b><p>Última leitura concluída hoje às 10:46, há 6 minutos. A próxima roda às 11:00 (intervalo de 15 minutos).</p></div>
+    <div class="panel">
+      <div class="faixa entre"><span class="titulo-painel">Falhas nos últimos 7 dias</span><span class="badge badge-alert">2</span></div>
+      <div class="lista-itens">
+        <div class="item"><span class="status status-alert"><i></i>Erro</span><div style="flex:1;min-width:0"><div class="row-title">14/11/2026 às 09:15 · Tempo esgotado ao conectar ao Winthor (ORA-12170)</div><div class="row-meta">Nenhuma posição foi alterada. A leitura seguinte, às 09:30, concluiu: 15 minutos a mais com a posição das 09:00.</div></div></div>
+        <div class="item"><span class="status status-alert"><i></i>Travada</span><div style="flex:1;min-width:0"><div class="row-title">12/11/2026 às 03:00 · Em andamento por mais de 30 minutos, dada como falha</div><div class="row-meta">Nova leitura às 03:45 concluiu. Entre 03:30 e 03:46 as telas avisaram "Posição desatualizada".</div></div></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="faixa"><span class="titulo-painel">Leituras por dia</span></div>
+      <details class="bas-sanfona" open>
+        <summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Hoje, 14/11/2026</span><span class="sub">43 concluídas · 1 erro · 1 cliente novo · 7 recebimentos · 1 estorno</span></summary>
+        <div class="tabela-wrap"><table class="bas-t">
+          <thead><tr><th>Início</th><th>Fim</th><th>Situação</th><th class="num">Clientes lidos</th><th class="num">Novos</th><th class="num">Recebimentos novos</th><th class="num">Estornados</th></tr></thead>
+          <tbody>
+            <tr><td>10:45:02</td><td>10:46:31</td><td><span class="status status-live"><i></i>Concluída</span></td><td class="num">10</td><td class="num">1</td><td class="num">1</td><td class="num"><span class="dash">—</span></td></tr>
+            <tr><td>10:30:01</td><td>10:31:24</td><td><span class="status status-live"><i></i>Concluída</span></td><td class="num">9</td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td></tr>
+            <tr><td>10:15:02</td><td>10:16:29</td><td><span class="status status-live"><i></i>Concluída</span></td><td class="num">9</td><td class="num"><span class="dash">—</span></td><td class="num">2</td><td class="num">1</td></tr>
+          </tbody>
+        </table></div>
+        <div class="pagination"><span>3 de 44 leituras</span><span class="btns"><button class="btn btn-secondary btn-sm">Ver todas</button></span></div>
+      </details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Sexta, 13/11/2026</span><span class="sub">96 concluídas · 19 recebimentos · nenhum estorno</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Quinta, 12/11/2026</span><span class="sub">93 concluídas · 1 travada · 24 recebimentos · nenhum estorno</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Quarta, 11/11/2026</span><span class="sub">96 concluídas · 16 recebimentos · nenhum estorno</span></summary></details>
+    </div>
+    <p class="nota">"Ler agora" é atendido na verificação seguinte (até 5 minutos). Com mais de 30 minutos sem leitura concluída, o aviso do topo fica âmbar: "Posição desatualizada, de 14/11/2026 às 10:46".</p>
+  </template>
+</section>
+
+<section data-tela="adm-auditoria" data-grupo="Administração" data-titulo="Trilha de auditoria"
+         data-desc="Consulta do gerente, da diretoria e do Administrador: quem mudou o quê e quando, com o valor de antes e o de depois, por área, pessoa, cliente, período ou texto. Os registros não podem ser editados nem apagados.">
+
+  <template data-opcao="A" data-nome="Tabela com filtros" data-resumo="Uma linha por registro, com antes e depois em colunas e todos os filtros na barra. A mais direta para responder 'o que Fulano mudou em tal dia'; lê-se como planilha, não como história.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração</div>
+        <h3>Trilha de auditoria</h3>
+        <div class="desc">Quem alterou o quê e quando. Os registros são gerados pelo sistema e não podem ser editados nem apagados.</div>
+        <div class="meta"><span><span class="stat">12</span> registros no período</span><span class="dot">·</span><span>01/11/2026 a 14/11/2026</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="toolbar">
+        <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar cliente, pessoa ou campo"></div>
+        <span class="select"><span>Todas as áreas</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select"><span>Todas as pessoas</span><svg><use href="#i-chevron"/></svg></span>
+        <input class="input" type="date" value="2026-11-01" style="width:150px" aria-label="De">
+        <input class="input" type="date" value="2026-11-14" style="width:150px" aria-label="Até">
+      </div>
+      <div class="tabela-wrap"><table class="bas-t">
+        <thead><tr><th>Quando</th><th>Área</th><th>O que mudou</th><th>Antes</th><th>Depois</th><th>Quem</th></tr></thead>
+        <tbody>
+          <tr><td>14/11/2026 09:31</td><td>Parâmetros</td><td><div class="row-title">Cobrança ativa e bloqueio de novos pedidos</div><div class="row-meta">Estética · valor próprio do segmento</div></td><td><span class="dash">—</span></td><td>D+6</td><td>Nara Duarte</td></tr>
+          <tr><td>14/11/2026 09:25</td><td>Parâmetros</td><td><div class="row-title">Dias de atraso, crítico a partir de</div><div class="row-meta">Geral · restaurar padrão do grupo</div></td><td>35 dias</td><td>30 dias</td><td>Nara Duarte</td></tr>
+          <tr><td>14/11/2026 09:20</td><td>Parâmetros</td><td><div class="row-title">Dias de atraso, crítico a partir de</div><div class="row-meta">Geral</div></td><td>30 dias</td><td>35 dias</td><td>Nara Duarte</td></tr>
+          <tr><td>14/11/2026 09:14</td><td>Parâmetros</td><td><div class="row-title">Cobrança ativa e bloqueio de novos pedidos</div><div class="row-meta">Geral · restaurar padrão</div></td><td>D+5</td><td>D+4</td><td>Nara Duarte</td></tr>
+          <tr><td>14/11/2026 09:12</td><td>Parâmetros</td><td><div class="row-title">Cobrança ativa e bloqueio de novos pedidos</div><div class="row-meta">Geral</div></td><td>D+4</td><td>D+5</td><td>Nara Duarte</td></tr>
+          <tr><td>13/11/2026 11:30</td><td>Anexos</td><td><div class="row-title">Anexo removido</div><div class="row-meta">Cliente <span class="code">1001</span> Hospital São Lucas</div></td><td>Cartão CNPJ.pdf</td><td><span class="dash">—</span></td><td>Ana Costa</td></tr>
+          <tr><td>10/11/2026 15:05</td><td>Modelos</td><td><div class="row-title">Texto do modelo</div><div class="row-meta"><span class="code">COB-D7</span> Notificação formal com aviso de protesto</div></td><td>Versão 2</td><td>Versão 3</td><td>Nara Duarte</td></tr>
+          <tr><td>10/11/2026 10:18</td><td>Feriados</td><td><div class="row-title">Feriado incluído</div><div class="row-meta">Estadual · GO</div></td><td><span class="dash">—</span></td><td>30/11/2026 · Feriado estadual de Goiás</td><td>Nara Duarte</td></tr>
+          <tr><td>03/11/2026 17:10</td><td>Equipe</td><td><div class="row-title">Situação do membro</div><div class="row-meta">Otávio Reis</div></td><td>Ativo</td><td>Inativo</td><td>Nara Duarte</td></tr>
+          <tr><td>03/11/2026 16:02</td><td>Carteira</td><td><div class="row-title">Agente de cobrança</div><div class="row-meta">Cliente <span class="code">1010</span> Spa e Estética Bella Forma</div></td><td>Otávio Reis</td><td>Ana Costa</td><td>Sérgio Tavares</td></tr>
+          <tr><td>03/11/2026 16:02</td><td>Carteira</td><td><div class="row-title">Agente de cobrança</div><div class="row-meta">Cliente <span class="code">1002</span> Clínica Vida Plena Nutrição</div></td><td>Otávio Reis</td><td>Ana Costa</td><td>Sérgio Tavares</td></tr>
+          <tr><td>03/11/2026 15:40</td><td>Contatos</td><td><div class="row-title">Contato incluído</div><div class="row-meta">Cliente <span class="code">1001</span> Hospital São Lucas</div></td><td><span class="dash">—</span></td><td>Marta Ribeiro · Financeiro · principal</td><td>Ana Costa</td></tr>
+        </tbody>
+      </table></div>
+      <div class="pagination"><span>Página 1 de 1 · 12 registros</span><span class="btns"><button class="btn btn-secondary btn-sm" disabled>Anterior</button><button class="btn btn-secondary btn-sm" disabled>Próxima</button></span></div>
+    </div>
+  </template>
+
+  <template data-opcao="B" data-nome="Linha do tempo" data-resumo="Os registros viram frases agrupadas por dia ('Sérgio passou o cliente 1010 de Otávio para Ana'), com os filtros numa coluna ao lado. Lê-se como história e mostra o contexto do dia; pior para comparar muitos valores.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração</div>
+        <h3>Trilha de auditoria</h3>
+        <div class="desc">Quem alterou o quê e quando. Os registros são gerados pelo sistema e não podem ser editados nem apagados.</div>
+        <div class="meta"><span><span class="stat">12</span> registros no período</span><span class="dot">·</span><span>01/11/2026 a 14/11/2026</span></div>
+      </div>
+    </div>
+    <div class="lado estreito">
+      <div class="panel">
+        <div class="corpo-painel">
+          <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Cliente, pessoa ou campo"></div>
+          <div class="field"><label>De</label><input class="input" type="date" value="2026-11-01"></div>
+          <div class="field"><label>Até</label><input class="input" type="date" value="2026-11-14"></div>
+          <div class="field"><label>Pessoa</label><span class="select" style="width:100%"><span>Todas as pessoas</span><svg><use href="#i-chevron"/></svg></span></div>
+          <span class="sub forte">Área</span>
+        </div>
+        <div class="lista-itens" style="border-top:1px solid var(--row-border)">
+          <div class="item ativo"><span style="flex:1" class="forte">Todas</span><span class="sub">12</span></div>
+          <div class="item"><span style="flex:1">Parâmetros</span><span class="sub">5</span></div>
+          <div class="item"><span style="flex:1">Carteira</span><span class="sub">2</span></div>
+          <div class="item"><span style="flex:1">Equipe</span><span class="sub">1</span></div>
+          <div class="item"><span style="flex:1">Contatos</span><span class="sub">1</span></div>
+          <div class="item"><span style="flex:1">Anexos</span><span class="sub">1</span></div>
+          <div class="item"><span style="flex:1">Modelos</span><span class="sub">1</span></div>
+          <div class="item"><span style="flex:1">Feriados</span><span class="sub">1</span></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="faixa rebaixado" style="border-radius:1rem 1rem 0 0"><span class="sub forte">Sábado, 14/11/2026 · 5 registros</span></div>
+        <div class="corpo-painel"><div class="linha-tempo">
+          <div class="evento"><i></i><div><b>Nara Duarte</b> definiu um valor da <b>Estética</b> para <b>Cobrança ativa e bloqueio de novos pedidos</b>: D+6 (o geral segue D+4)<div class="sub">09:31 · Parâmetros · Estética</div></div></div>
+          <div class="evento"><i></i><div><b>Nara Duarte</b> restaurou o padrão de <b>Dias de atraso, crítico a partir de</b>: de 35 para 30 dias<div class="sub">09:25 · Parâmetros · geral</div></div></div>
+          <div class="evento"><i></i><div><b>Nara Duarte</b> mudou <b>Dias de atraso, crítico a partir de</b>: de 30 para 35 dias<div class="sub">09:20 · Parâmetros · geral</div></div></div>
+          <div class="evento"><i></i><div><b>Nara Duarte</b> restaurou o padrão de <b>Cobrança ativa e bloqueio de novos pedidos</b>: de D+5 para D+4<div class="sub">09:14 · Parâmetros · geral</div></div></div>
+          <div class="evento"><i></i><div><b>Nara Duarte</b> mudou <b>Cobrança ativa e bloqueio de novos pedidos</b>: de D+4 para D+5<div class="sub">09:12 · Parâmetros · geral</div></div></div>
+        </div></div>
+        <div class="faixa rebaixado" style="border-radius:0"><span class="sub forte">Sexta, 13/11/2026 · 1 registro</span></div>
+        <div class="corpo-painel"><div class="linha-tempo">
+          <div class="evento"><i></i><div><b>Ana Costa</b> removeu o anexo <b>Cartão CNPJ.pdf</b> do cliente <span class="code">1001</span> Hospital São Lucas<div class="sub">11:30 · Anexos</div></div></div>
+        </div></div>
+        <div class="faixa rebaixado" style="border-radius:0"><span class="sub forte">Terça, 10/11/2026 · 2 registros</span></div>
+        <div class="corpo-painel"><div class="linha-tempo">
+          <div class="evento"><i></i><div><b>Nara Duarte</b> editou o modelo <span class="code">COB-D7</span> <b>Notificação formal com aviso de protesto</b>: da versão 2 para a versão 3<div class="sub">15:05 · Modelos</div></div></div>
+          <div class="evento"><i></i><div><b>Nara Duarte</b> incluiu o feriado <b>30/11/2026 · Feriado estadual de Goiás</b> (estadual, GO)<div class="sub">10:18 · Feriados</div></div></div>
+        </div></div>
+        <div class="faixa rebaixado" style="border-radius:0"><span class="sub forte">Terça, 03/11/2026 · 4 registros</span></div>
+        <div class="corpo-painel"><div class="linha-tempo">
+          <div class="evento"><i></i><div><b>Nara Duarte</b> inativou <b>Otávio Reis</b>: situação de Ativo para Inativo<div class="sub">17:10 · Equipe</div></div></div>
+          <div class="evento"><i></i><div><b>Sérgio Tavares</b> passou o cliente <span class="code">1010</span> Spa e Estética Bella Forma de <b>Otávio Reis</b> para <b>Ana Costa</b><div class="sub">16:02 · Carteira</div></div></div>
+          <div class="evento"><i></i><div><b>Sérgio Tavares</b> passou o cliente <span class="code">1002</span> Clínica Vida Plena Nutrição de <b>Otávio Reis</b> para <b>Ana Costa</b><div class="sub">16:02 · Carteira</div></div></div>
+          <div class="evento"><i></i><div><b>Ana Costa</b> incluiu o contato <b>Marta Ribeiro</b> (Financeiro, principal) no cliente <span class="code">1001</span> Hospital São Lucas<div class="sub">15:40 · Contatos</div></div></div>
+        </div></div>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="C" data-nome="Por item alterado" data-resumo="Os registros se agrupam pelo que foi mexido (um parâmetro, um cliente, uma pessoa), cada grupo com a sua sequência de mudanças. Responde 'o que aconteceu com isto'; perde a ordem geral do dia entre itens diferentes.">
+    <div class="page-header">
+      <div>
+        <div class="module">Administração</div>
+        <h3>Trilha de auditoria</h3>
+        <div class="desc">Quem alterou o quê e quando. Os registros são gerados pelo sistema e não podem ser editados nem apagados.</div>
+        <div class="meta"><span><span class="stat">12</span> registros</span><span class="dot">·</span><span><span class="stat">8</span> itens alterados</span><span class="dot">·</span><span>01/11/2026 a 14/11/2026</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="toolbar">
+        <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar cliente, pessoa ou campo"></div>
+        <span class="select"><span>Todas as áreas</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select"><span>Todas as pessoas</span><svg><use href="#i-chevron"/></svg></span>
+        <input class="input" type="date" value="2026-11-01" style="width:150px" aria-label="De">
+        <input class="input" type="date" value="2026-11-14" style="width:150px" aria-label="Até">
+      </div>
+      <details class="bas-sanfona" open>
+        <summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Parâmetro · Dias de atraso, crítico a partir de</span><span class="sub">2 mudanças · última em 14/11/2026 09:25</span><span class="forte">30 dias</span></summary>
+        <div class="tabela-wrap"><table class="bas-t"><tbody>
+          <tr><td>14/11/2026 09:25</td><td>35 dias → <span class="forte">30 dias</span></td><td>Restaurar padrão do grupo · geral</td><td>Nara Duarte</td></tr>
+          <tr><td>14/11/2026 09:20</td><td>30 dias → <span class="forte">35 dias</span></td><td>Geral</td><td>Nara Duarte</td></tr>
+        </tbody></table></div>
+      </details>
+      <details class="bas-sanfona" open>
+        <summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Parâmetro · Cobrança ativa e bloqueio de novos pedidos</span><span class="sub">3 mudanças · última em 14/11/2026 09:31</span><span class="forte">Geral D+4 · Estética D+6</span></summary>
+        <div class="tabela-wrap"><table class="bas-t"><tbody>
+          <tr><td>14/11/2026 09:31</td><td><span class="dash">—</span> → <span class="forte">D+6</span></td><td>Estética · valor próprio do segmento</td><td>Nara Duarte</td></tr>
+          <tr><td>14/11/2026 09:14</td><td>D+5 → <span class="forte">D+4</span></td><td>Restaurar padrão · geral</td><td>Nara Duarte</td></tr>
+          <tr><td>14/11/2026 09:12</td><td>D+4 → <span class="forte">D+5</span></td><td>Geral</td><td>Nara Duarte</td></tr>
+        </tbody></table></div>
+      </details>
+      <details class="bas-sanfona" open>
+        <summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Cliente <span class="code">1001</span> · Hospital São Lucas</span><span class="sub">2 mudanças · última em 13/11/2026 11:30</span></summary>
+        <div class="tabela-wrap"><table class="bas-t"><tbody>
+          <tr><td>13/11/2026 11:30</td><td>Anexo removido: Cartão CNPJ.pdf → <span class="dash">—</span></td><td>Anexos</td><td>Ana Costa</td></tr>
+          <tr><td>03/11/2026 15:40</td><td>Contato incluído: <span class="dash">—</span> → <span class="forte">Marta Ribeiro · Financeiro · principal</span></td><td>Contatos</td><td>Ana Costa</td></tr>
+        </tbody></table></div>
+      </details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Modelo <span class="code">COB-D7</span> · Notificação formal com aviso de protesto</span><span class="sub">1 mudança · 10/11/2026 15:05 · Nara Duarte</span><span class="forte">Versão 3</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Feriado · 30/11/2026 · Feriado estadual de Goiás</span><span class="sub">1 mudança · 10/11/2026 10:18 · Nara Duarte</span><span class="forte">Incluído</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Membro · Otávio Reis</span><span class="sub">1 mudança · 03/11/2026 17:10 · Nara Duarte</span><span class="forte">Inativo</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Cliente <span class="code">1010</span> · Spa e Estética Bella Forma</span><span class="sub">1 mudança · 03/11/2026 16:02 · Sérgio Tavares</span><span class="forte">Agente: Ana Costa</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1">Cliente <span class="code">1002</span> · Clínica Vida Plena Nutrição</span><span class="sub">1 mudança · 03/11/2026 16:02 · Sérgio Tavares</span><span class="forte">Agente: Ana Costa</span></summary></details>
+    </div>
+  </template>
+</section>
+
+<style>
+.bas-pulsos i:not([class]) { box-shadow: inset 0 0 0 1px var(--border); }
+</style>

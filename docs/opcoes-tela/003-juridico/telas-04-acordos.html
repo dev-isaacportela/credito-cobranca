@@ -1,0 +1,228 @@
+<section data-tela="juridico-acordos" data-grupo="Jurídico"
+         data-titulo="Jurídico · Acordos judiciais"
+         data-desc="Para o Jurídico e a gerência: os acordos judiciais com suas parcelas, o que venceu, o que falta receber, os honorários e a aprovação quando o acordo foge da política (entrada de 20%, até 5 parcelas, honorários de 10%, alçada acima de R$ 50 mil).">
+
+  <template data-opcao="A" data-nome="Tabela de acordos" data-resumo="Uma linha por acordo com as colunas da política e as parcelas abrindo embaixo da linha; privilegia comparar acordos e conferir a aprovação, ao custo de as parcelas ficarem um clique abaixo.">
+    <div class="page-header">
+      <div>
+        <div class="module">Jurídico</div>
+        <h3>Acordos judiciais</h3>
+        <div class="desc">Acordos registrados nos processos, com parcelas, honorários e aprovação. Posição em 19/11/2026.</div>
+        <div class="meta"><span><span class="stat">2</span> acordos</span><span class="dot">·</span><span><span class="stat">1</span> em aberto</span><span class="dot">·</span><span><span class="stat">1</span> quitado</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="abas" role="tablist" aria-label="Abas do Jurídico">
+        <span class="aba">Visão gerencial</span>
+        <span class="aba">Processos <span class="badge badge-alert" title="Prazos vencidos">1</span></span>
+        <span class="aba" aria-selected="true">Acordos judiciais <span class="badge badge-alert" title="Acordos com parcela vencida">1</span></span>
+        <span class="aba">Custos dos processos <span class="badge badge-attention" title="Custas sem lançamento">1</span></span>
+        <span class="aba">Alertas de desvios <span class="badge badge-alert" title="Desvios críticos">4</span></span>
+      </div>
+      <div class="corpo-painel">
+        <div class="kpis jur-sem-margem">
+          <div class="kpi"><div class="rot">A receber</div><div class="linha"><span class="valor">R$ 60.000,00</span></div><div class="hint">1 acordo em aberto</div></div>
+          <div class="kpi"><div class="rot">Parcelas vencidas</div><div class="linha"><span class="valor">1</span><span class="status status-alert"><i></i>R$ 12.000,00</span></div><div class="hint">Clínica Beta, há 14 dias</div></div>
+          <div class="kpi"><div class="rot">Aguardando aprovação</div><div class="linha"><span class="valor">1</span></div><div class="hint">acima de R$ 50.000,00</div></div>
+          <div class="kpi"><div class="rot">Honorários a pagar</div><div class="linha"><span class="valor">R$ 6.000,00</span></div><div class="hint">10% do acordo · R$ 1.000,00 já pagos</div></div>
+        </div>
+      </div>
+      <div class="toolbar">
+        <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar cliente ou nº dos autos"></div>
+        <span class="select"><span>Todas as situações</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select"><span>Todas as filiais</span><svg><use href="#i-chevron"/></svg></span>
+      </div>
+      <div class="tabela-wrap"><table>
+        <thead><tr><th>Cliente e processo</th><th class="num">Valor</th><th class="num">Entrada</th><th class="num">Parcelas pagas</th><th class="num">A receber</th><th class="num">Vencidas</th><th>Próximo vencimento</th><th class="num">Honorários</th><th>Aprovação</th><th></th></tr></thead>
+        <tbody>
+          <tr>
+            <td><div class="row-title">Clínica Beta</div><div class="row-meta"><span class="code">5123456-78.2023.8.09.0051</span> · TJGO · BNGO · Galderma</div></td>
+            <td class="num">R$ 60.000,00</td><td class="num">R$ 12.000,00<div class="row-meta">20%</div></td><td class="num">0 de 5</td><td class="num">R$ 60.000,00</td>
+            <td class="num"><span class="status status-alert"><i></i>1 · R$ 12.000,00</span></td><td>05/11/2026<div class="row-meta">vencida há 14 dias</div></td>
+            <td class="num">R$ 6.000,00<div class="row-meta">a pagar</div></td>
+            <td><span class="status status-attention"><i></i>Aguardando aprovação</span><div class="row-meta">registrado por Juliana Prado em 12/11</div></td>
+            <td><button class="btn btn-secondary btn-sm">Aprovar</button></td>
+          </tr>
+          <tr class="jur-sub"><td colspan="10">
+            <div class="entre"><span class="forte">Parcelas da Clínica Beta</span><span class="sub">a situação de cada parcela é escolhida aqui, com a data do pagamento</span></div>
+            <table>
+              <thead><tr><th>Parcela</th><th>Vencimento</th><th class="num">Valor</th><th>Situação</th><th>Pago em</th><th></th></tr></thead>
+              <tbody>
+                <tr><td>Entrada</td><td>05/11/2026</td><td class="num">R$ 12.000,00</td><td><span class="status status-alert"><i></i>Vencida há 14 dias</span></td><td><span class="dash">—</span></td><td><button class="btn btn-secondary btn-sm">Marcar paga</button></td></tr>
+                <tr><td>1 de 4</td><td>05/12/2026</td><td class="num">R$ 12.000,00</td><td><span class="status status-off"><i></i>Aberta</span></td><td><span class="dash">—</span></td><td><button class="btn btn-ghost btn-sm">Marcar paga</button></td></tr>
+                <tr><td>2 de 4</td><td>05/01/2027</td><td class="num">R$ 12.000,00</td><td><span class="status status-off"><i></i>Aberta</span></td><td><span class="dash">—</span></td><td><button class="btn btn-ghost btn-sm">Marcar paga</button></td></tr>
+                <tr><td>3 de 4</td><td>05/02/2027</td><td class="num">R$ 12.000,00</td><td><span class="status status-off"><i></i>Aberta</span></td><td><span class="dash">—</span></td><td><button class="btn btn-ghost btn-sm">Marcar paga</button></td></tr>
+                <tr><td>4 de 4</td><td>05/03/2027</td><td class="num">R$ 12.000,00</td><td><span class="status status-off"><i></i>Aberta</span></td><td><span class="dash">—</span></td><td><button class="btn btn-ghost btn-sm">Marcar paga</button></td></tr>
+              </tbody>
+            </table>
+          </td></tr>
+          <tr>
+            <td><div class="row-title">Kappa Clínica</div><div class="row-meta"><span class="code">5011223-67.2022.8.21.0001</span> · TJRS · BNRS · processo encerrado</div></td>
+            <td class="num">R$ 10.000,00</td><td class="num">R$ 2.000,00<div class="row-meta">20%</div></td><td class="num">3 de 3</td><td class="num"><span class="dash">—</span></td>
+            <td class="num"><span class="dash">—</span></td><td><span class="dash">—</span><div class="row-meta">quitado em 01/09/2026</div></td>
+            <td class="num">R$ 1.000,00<div class="row-meta">pagos</div></td>
+            <td><span class="status status-off"><i></i>Dentro da política</span></td>
+            <td><button class="btn btn-ghost btn-sm">Ver parcelas</button></td>
+          </tr>
+        </tbody>
+      </table></div>
+      <div class="pagination"><span>2 acordos · novo acordo se registra no card do processo</span><span>Política: entrada mínima de 20% · até 5 parcelas · honorários de 10% · alçada acima de R$ 50.000,00</span></div>
+    </div>
+  </template>
+
+  <template data-opcao="B" data-nome="Parcelas por vencimento" data-resumo="A tela é a agenda das parcelas de todos os acordos, vencidas no topo, com Marcar paga na linha; os acordos ficam resumidos ao lado. Privilegia a cobrança das parcelas, ao custo de o acordo inteiro ficar em segundo plano.">
+    <div class="page-header">
+      <div>
+        <div class="module">Jurídico</div>
+        <h3>Acordos judiciais</h3>
+        <div class="desc">Parcelas de todos os acordos em ordem de vencimento. Posição em 19/11/2026.</div>
+        <div class="meta"><span><span class="stat">1</span> vencida</span><span class="dot">·</span><span><span class="stat">1</span> nos próximos 30 dias</span><span class="dot">·</span><span><span class="stat">R$ 60.000,00</span> a receber</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="abas" role="tablist" aria-label="Abas do Jurídico">
+        <span class="aba">Visão gerencial</span>
+        <span class="aba">Processos <span class="badge badge-alert" title="Prazos vencidos">1</span></span>
+        <span class="aba" aria-selected="true">Acordos judiciais <span class="badge badge-alert" title="Acordos com parcela vencida">1</span></span>
+        <span class="aba">Custos dos processos <span class="badge badge-attention" title="Custas sem lançamento">1</span></span>
+        <span class="aba">Alertas de desvios <span class="badge badge-alert" title="Desvios críticos">4</span></span>
+      </div>
+    </div>
+    <div class="lado">
+      <div class="panel">
+        <div class="toolbar">
+          <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar cliente ou nº dos autos"></div>
+          <span class="select"><span>Abertas e vencidas</span><svg><use href="#i-chevron"/></svg></span>
+        </div>
+        <div class="faixa"><span class="titulo-painel">Vencidas</span><span class="sub">1 parcela · R$ 12.000,00</span></div>
+        <div class="tabela-wrap"><table>
+          <thead><tr><th>Vencimento</th><th>Cliente</th><th>Parcela</th><th class="num">Valor</th><th>Situação</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>05/11/2026</td><td><div class="row-title">Clínica Beta</div><div class="row-meta">acordo de R$ 60.000,00 · aguardando aprovação</div></td><td>Entrada</td><td class="num">R$ 12.000,00</td><td><span class="status status-alert"><i></i>Vencida há 14 dias</span></td><td><button class="btn btn-primary btn-sm">Marcar paga</button></td></tr>
+          </tbody>
+        </table></div>
+        <div class="faixa"><span class="titulo-painel">Próximos 30 dias</span><span class="sub">1 parcela · R$ 12.000,00</span></div>
+        <div class="tabela-wrap"><table>
+          <tbody>
+            <tr><td>05/12/2026</td><td><div class="row-title">Clínica Beta</div><div class="row-meta">em 16 dias</div></td><td>1 de 4</td><td class="num">R$ 12.000,00</td><td><span class="status status-off"><i></i>Aberta</span></td><td><button class="btn btn-ghost btn-sm">Marcar paga</button></td></tr>
+          </tbody>
+        </table></div>
+        <div class="faixa"><span class="titulo-painel">Depois</span><span class="sub">3 parcelas · R$ 36.000,00</span></div>
+        <div class="tabela-wrap"><table>
+          <tbody>
+            <tr><td>05/01/2027</td><td class="row-title">Clínica Beta</td><td>2 de 4</td><td class="num">R$ 12.000,00</td><td><span class="status status-off"><i></i>Aberta</span></td><td><button class="btn btn-ghost btn-sm">Marcar paga</button></td></tr>
+            <tr><td>05/02/2027</td><td class="row-title">Clínica Beta</td><td>3 de 4</td><td class="num">R$ 12.000,00</td><td><span class="status status-off"><i></i>Aberta</span></td><td><button class="btn btn-ghost btn-sm">Marcar paga</button></td></tr>
+            <tr><td>05/03/2027</td><td class="row-title">Clínica Beta</td><td>4 de 4</td><td class="num">R$ 12.000,00</td><td><span class="status status-off"><i></i>Aberta</span></td><td><button class="btn btn-ghost btn-sm">Marcar paga</button></td></tr>
+          </tbody>
+        </table></div>
+        <details class="jur-recolhe">
+          <summary class="faixa"><span class="titulo-painel">Pagas</span><span class="sub">3 parcelas · R$ 10.000,00 · mostrar</span></summary>
+          <div class="tabela-wrap"><table>
+            <tbody>
+              <tr><td>01/09/2026</td><td class="row-title">Kappa Clínica</td><td>2 de 2</td><td class="num">R$ 4.000,00</td><td><span class="status status-live"><i></i>Paga em 01/09/2026</span></td><td></td></tr>
+              <tr><td>01/08/2026</td><td class="row-title">Kappa Clínica</td><td>1 de 2</td><td class="num">R$ 4.000,00</td><td><span class="status status-live"><i></i>Paga em 31/07/2026</span></td><td></td></tr>
+              <tr><td>01/07/2026</td><td class="row-title">Kappa Clínica</td><td>Entrada</td><td class="num">R$ 2.000,00</td><td><span class="status status-live"><i></i>Paga em 01/07/2026</span></td><td></td></tr>
+            </tbody>
+          </table></div>
+        </details>
+      </div>
+      <div class="pilha-v">
+        <div class="panel"><div class="corpo-painel">
+          <div class="entre"><span class="titulo-painel">Clínica Beta</span><span class="status status-attention"><i></i>Aguardando aprovação</span></div>
+          <dl class="ficha">
+            <div><dt>Valor</dt><dd>R$ 60.000,00</dd></div>
+            <div><dt>Entrada</dt><dd>R$ 12.000,00 (20%)</dd></div>
+            <div><dt>Parcelas pagas</dt><dd>0 de 5</dd></div>
+            <div><dt>A receber</dt><dd>R$ 60.000,00</dd></div>
+            <div><dt>Honorários</dt><dd>R$ 6.000,00 · a pagar</dd></div>
+            <div><dt>Registrado por</dt><dd>Juliana Prado · 12/11/2026</dd></div>
+          </dl>
+          <p class="sub">Acima de R$ 50.000,00: aprova o Gerente financeiro ou acima, e não quem registrou.</p>
+          <div class="entre"><button class="btn btn-secondary btn-sm">Aprovar acordo</button><button class="btn btn-ghost btn-sm">Abrir processo</button></div>
+        </div></div>
+        <div class="panel"><div class="corpo-painel">
+          <div class="entre"><span class="titulo-painel">Kappa Clínica</span><span class="status status-off"><i></i>Quitado em 01/09/2026</span></div>
+          <dl class="ficha">
+            <div><dt>Valor</dt><dd>R$ 10.000,00</dd></div>
+            <div><dt>Parcelas pagas</dt><dd>3 de 3</dd></div>
+            <div><dt>Honorários</dt><dd>R$ 1.000,00 · pagos</dd></div>
+          </dl>
+        </div></div>
+        <div class="alert alert-default"><svg><use href="#i-info"/></svg><b>Política de acordo</b><p>Entrada mínima de 20%, até 5 parcelas além da entrada e honorários de 10%. Fora disso, ou acima de R$ 50.000,00, o acordo aguarda aprovação.</p></div>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="C" data-nome="Cartão por acordo" data-resumo="Cada acordo é um cartão com a faixa de parcelas, a conferência da política item a item e o bloco de aprovação; privilegia quem aprova e acompanha poucos acordos, ao custo de ocupar muita tela por acordo.">
+    <div class="page-header">
+      <div>
+        <div class="module">Jurídico</div>
+        <h3>Acordos judiciais</h3>
+        <div class="desc">Um cartão por acordo: parcelas, política e aprovação. Posição em 19/11/2026.</div>
+        <div class="meta"><span><span class="stat">R$ 60.000,00</span> a receber</span><span class="dot">·</span><span><span class="stat">1</span> parcela vencida</span><span class="dot">·</span><span><span class="stat">1</span> aguardando aprovação</span><span class="dot">·</span><span>honorários a pagar <span class="stat">R$ 6.000,00</span></span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="abas" role="tablist" aria-label="Abas do Jurídico">
+        <span class="aba">Visão gerencial</span>
+        <span class="aba">Processos <span class="badge badge-alert" title="Prazos vencidos">1</span></span>
+        <span class="aba" aria-selected="true">Acordos judiciais <span class="badge badge-alert" title="Acordos com parcela vencida">1</span></span>
+        <span class="aba">Custos dos processos <span class="badge badge-attention" title="Custas sem lançamento">1</span></span>
+        <span class="aba">Alertas de desvios <span class="badge badge-alert" title="Desvios críticos">4</span></span>
+      </div>
+      <div class="toolbar">
+        <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar cliente ou nº dos autos"></div>
+        <span class="select"><span>Em aberto primeiro</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="check feito"><i></i><span>Mostrar quitados</span></span>
+      </div>
+    </div>
+    <div class="panel"><div class="corpo-painel">
+      <div class="entre">
+        <div><div class="entre jur-esq"><span class="titulo-painel">Clínica Beta</span><span class="jur-selo" style="--cor:var(--data-5)">Galderma</span><span class="status status-attention"><i></i>Aguardando aprovação</span></div><div class="sub"><span class="code">5123456-78.2023.8.09.0051</span> · TJGO · BNGO · registrado por Juliana Prado em 12/11/2026</div></div>
+        <div class="entre"><button class="btn btn-ghost btn-sm">Abrir processo</button><button class="btn btn-primary btn-sm">Aprovar acordo</button></div>
+      </div>
+      <div class="lado">
+        <div class="pilha-v">
+          <div class="jur-prog"><div class="entre"><span>Recebido</span><span>0 de 5 parcelas · a receber R$ 60.000,00</span></div><div class="progresso alerta"><i style="width:2%"></i></div></div>
+          <div class="jur-parcelas">
+            <div class="jur-parcela vencida"><span class="jur-rot">Entrada</span><b>R$ 12.000,00</b><span>05/11/2026</span><span class="status status-alert"><i></i>Vencida há 14 dias</span><button class="btn btn-secondary btn-sm">Marcar paga</button></div>
+            <div class="jur-parcela"><span class="jur-rot">1 de 4</span><b>R$ 12.000,00</b><span>05/12/2026</span><span class="status status-off"><i></i>Aberta</span></div>
+            <div class="jur-parcela"><span class="jur-rot">2 de 4</span><b>R$ 12.000,00</b><span>05/01/2027</span><span class="status status-off"><i></i>Aberta</span></div>
+            <div class="jur-parcela"><span class="jur-rot">3 de 4</span><b>R$ 12.000,00</b><span>05/02/2027</span><span class="status status-off"><i></i>Aberta</span></div>
+            <div class="jur-parcela"><span class="jur-rot">4 de 4</span><b>R$ 12.000,00</b><span>05/03/2027</span><span class="status status-off"><i></i>Aberta</span></div>
+          </div>
+        </div>
+        <div class="rebaixado pilha-v">
+          <span class="forte">Conferência da política</span>
+          <div class="check feito"><i></i><span>Entrada de 20% (mínimo de 20%)</span></div>
+          <div class="check feito"><i></i><span>4 parcelas além da entrada (até 5)</span></div>
+          <div class="check"><i></i><span><b>R$ 60.000,00 passa da alçada de R$ 50.000,00</b>: aprova o Gerente financeiro ou acima, e não quem registrou</span></div>
+          <div class="entre"><span>Honorários de 10%</span><span><b>R$ 6.000,00</b> · a pagar</span></div>
+        </div>
+      </div>
+    </div></div>
+    <div class="panel"><div class="corpo-painel">
+      <div class="entre">
+        <div><div class="entre jur-esq"><span class="titulo-painel">Kappa Clínica</span><span class="status status-off"><i></i>Quitado em 01/09/2026</span></div><div class="sub"><span class="code">5011223-67.2022.8.21.0001</span> · TJRS · BNRS · processo encerrado por acordo cumprido</div></div>
+        <button class="btn btn-ghost btn-sm">Abrir processo</button>
+      </div>
+      <div class="lado">
+        <div class="pilha-v">
+          <div class="jur-prog"><div class="entre"><span>Recebido</span><span>3 de 3 parcelas · R$ 10.000,00</span></div><div class="progresso"><i style="width:100%"></i></div></div>
+          <div class="jur-parcelas">
+            <div class="jur-parcela"><span class="jur-rot">Entrada</span><b>R$ 2.000,00</b><span>01/07/2026</span><span class="status status-live"><i></i>Paga em 01/07</span></div>
+            <div class="jur-parcela"><span class="jur-rot">1 de 2</span><b>R$ 4.000,00</b><span>01/08/2026</span><span class="status status-live"><i></i>Paga em 31/07</span></div>
+            <div class="jur-parcela"><span class="jur-rot">2 de 2</span><b>R$ 4.000,00</b><span>01/09/2026</span><span class="status status-live"><i></i>Paga em 01/09</span></div>
+          </div>
+        </div>
+        <div class="rebaixado pilha-v">
+          <span class="forte">Conferência da política</span>
+          <div class="check feito"><i></i><span>Entrada de 20% (mínimo de 20%)</span></div>
+          <div class="check feito"><i></i><span>2 parcelas além da entrada (até 5)</span></div>
+          <div class="check feito"><i></i><span>Abaixo da alçada de R$ 50.000,00: não pediu aprovação</span></div>
+          <div class="entre"><span>Honorários de 10%</span><span><b>R$ 1.000,00</b> · pagos</span></div>
+        </div>
+      </div>
+    </div></div>
+  </template>
+</section>

@@ -1,0 +1,198 @@
+<section data-tela="contatos" data-grupo="Contatos" data-titulo="Fichas de contato"
+         data-desc="Consulta e atualização da ficha de contatos de todos os clientes que a pessoa enxerga. A ficha vale 180 dias: depois disso fica vencida até alguém gravar ou marcar que revisou sem alteração. Exemplo: Gustavo revisando a ficha da Clínica Vida Plena, vencida há 1 dia.">
+
+  <template data-opcao="A" data-nome="Lista com editor" data-resumo="Como no painel atual: a lista de clientes à esquerda e, ao tocar num deles, o editor da ficha abre ao lado. Lista e edição sempre juntas; custa uma lista com poucas colunas.">
+    <div class="page-header">
+      <div>
+        <div class="module">Contatos</div>
+        <h3>Fichas de contato</h3>
+        <div class="desc">Toque num cliente para editar ao lado. A ficha vale 180 dias a partir da última revisão.</div>
+        <div class="meta"><span><span class="stat">6</span> em dia</span><span class="dot">·</span><span><span class="stat">1</span> vencida</span><span class="dot">·</span><span><span class="stat">3</span> nunca atualizadas</span></div>
+      </div>
+    </div>
+    <div class="lado">
+      <div class="panel">
+        <div class="toolbar">
+          <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar cliente, CPF/CNPJ ou nome do contato"></div>
+          <span class="select"><span>Privado e público</span><svg><use href="#i-chevron"/></svg></span>
+          <span class="select"><span>Todas as fichas</span><svg><use href="#i-chevron"/></svg></span>
+        </div>
+        <div class="tabela-wrap"><table class="bas-t">
+          <thead><tr><th>Cliente</th><th>Contato principal</th><th class="num">Contatos</th><th>Ficha</th></tr></thead>
+          <tbody>
+            <tr><td><div class="row-title">HOSPITAL SAO LUCAS LTDA</div><div class="row-meta"><span class="code">1001</span> · Ana Costa</div></td><td>Marta Ribeiro<div class="row-meta">(61) 3333-0101 · marta@hsl.com.br</div></td><td class="num">2</td><td><span class="status status-live"><i></i>Em dia</span></td></tr>
+            <tr style="background:var(--accent)"><td><div class="row-title">CLINICA VIDA PLENA NUTRICAO LTDA</div><div class="row-meta"><span class="code">1002</span> · Ana Costa</div></td><td>Paulo Henrique Souza<div class="row-meta">(62) 3222-4410 · compras@vidaplena.com.br</div></td><td class="num">2</td><td><span class="status status-attention"><i></i>Vencida há 1 dia</span></td></tr>
+            <tr><td><div class="row-title">HOME CARE BRASILIA ASSISTENCIA DOMICILIAR LTDA</div><div class="row-meta"><span class="code">1003</span> · sem agente</div></td><td><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td><span class="status status-alert"><i></i>Nunca atualizada</span></td></tr>
+            <tr><td><div class="row-title">DROGARIA SANTA CLARA LTDA</div><div class="row-meta"><span class="code">1004</span> · Bruno Leal</div></td><td><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td><span class="status status-alert"><i></i>Nunca atualizada</span></td></tr>
+            <tr><td><div class="row-title">INSTITUTO DE NEFROLOGIA DO PLANALTO LTDA</div><div class="row-meta"><span class="code">1005</span> · Bruno Leal</div></td><td>Helena Matos<div class="row-meta">(61) 3345-7700 · financeiro@nefroplanalto.com.br</div></td><td class="num">2</td><td><span class="status status-live"><i></i>Em dia</span></td></tr>
+            <tr><td><div class="row-title">CASA DE REPOUSO BOM PASTOR LTDA</div><div class="row-meta"><span class="code">1006</span> · Carlos Nunes</div></td><td>Lúcia Andrade<div class="row-meta">(62) 3251-9090 · adm@bompastor.org.br</div></td><td class="num">1</td><td><span class="status status-live"><i></i>Em dia</span></td></tr>
+            <tr><td><div class="row-title">SECRETARIA MUNICIPAL DE SAUDE DE GOIANIA</div><div class="row-meta"><span class="code">1007</span> · Carlos Nunes · Público</div></td><td>João Batista Teles<div class="row-meta">(62) 3524-1500 · liquidacao.sms@goiania.go.gov.br</div></td><td class="num">3</td><td><span class="status status-live"><i></i>Em dia</span></td></tr>
+            <tr><td><div class="row-title">HOSPITAL SANTA HELENA S/A</div><div class="row-meta"><span class="code">1008</span> · Sérgio Tavares</div></td><td>Renata Queiroz<div class="row-meta">(61) 3215-0000 · contasapagar@santahelena.com.br</div></td><td class="num">4</td><td><span class="status status-live"><i></i>Em dia</span></td></tr>
+            <tr><td><div class="row-title">CLINICA DERMA ESTETICA AVANCADA LTDA</div><div class="row-meta"><span class="code">1009</span> · sem agente</div></td><td><span class="dash">—</span></td><td class="num"><span class="dash">—</span></td><td><span class="status status-alert"><i></i>Nunca atualizada</span></td></tr>
+            <tr><td><div class="row-title">SPA E ESTETICA BELLA FORMA LTDA</div><div class="row-meta"><span class="code">1010</span> · Ana Costa</div></td><td>Camila Freitas<div class="row-meta">(63) 99988-1212 · camila@bellaforma.com.br</div></td><td class="num">1</td><td><span class="status status-live"><i></i>Em dia</span></td></tr>
+          </tbody>
+        </table></div>
+        <div class="pagination"><span>Página 1 de 1 · 10 clientes</span><span class="btns"><button class="btn btn-secondary btn-sm" disabled>Anterior</button><button class="btn btn-secondary btn-sm" disabled>Próxima</button></span></div>
+      </div>
+      <div class="gaveta">
+        <header><div><div class="titulo-painel">CLINICA VIDA PLENA NUTRICAO LTDA</div><div class="sub"><span class="code">1002</span> · <span class="status status-attention"><i></i>Ficha vencida há 1 dia</span> · revisada por Ana Costa em 17/05/2026</div></div><button class="iconbtn" title="Fechar" aria-label="Fechar"><svg><use href="#i-x"/></svg></button></header>
+        <div class="corpo-painel">
+          <div class="resumo">
+            <div class="entre"><b>Contato 1</b><label class="check feito"><i></i><span>Principal</span></label></div>
+            <div class="form-grade">
+              <div class="field"><label>Nome</label><input class="input" value="Paulo Henrique Souza"></div>
+              <div class="field"><label>Área</label><span class="select" style="width:100%"><span>Compras</span><svg><use href="#i-chevron"/></svg></span></div>
+              <div class="field"><label>Função</label><input class="input" value="Comprador"></div>
+              <div class="field"><label>Telefone</label><input class="input" value="(62) 3222-4410"></div>
+              <div class="field"><label>WhatsApp</label><input class="input" value="(62) 98111-4410"></div>
+              <div class="field"><label>E-mail</label><input class="input" value="compras@vidaplena.com.br"></div>
+              <div class="field"><label>Situação</label><span class="select" style="width:100%"><span>Em uso</span><svg><use href="#i-chevron"/></svg></span></div>
+              <div class="field"><label>Observação</label><input class="input" value="Atende até as 16h"></div>
+            </div>
+          </div>
+          <div class="resumo">
+            <div class="entre"><b>Contato 2</b><span class="row"><label class="check"><i></i><span>Principal</span></label><button class="iconbtn danger" title="Remover contato" aria-label="Remover contato"><svg><use href="#i-trash"/></svg></button></span></div>
+            <div class="form-grade">
+              <div class="field"><label>Nome</label><input class="input" value="Recepção"></div>
+              <div class="field"><label>Área</label><span class="select" style="width:100%"><span>Atendimento</span><svg><use href="#i-chevron"/></svg></span></div>
+              <div class="field"><label>Telefone</label><input class="input" value="(62) 3222-4400"></div>
+              <div class="field"><label>E-mail</label><input class="input" placeholder="nome@dominio.com.br"></div>
+            </div>
+          </div>
+          <button class="btn btn-ghost btn-sm" style="justify-self:start"><svg><use href="#i-plus"/></svg>Adicionar contato</button>
+          <span class="sub">Cada contato precisa de telefone, WhatsApp ou e-mail. Só um é o principal.</span>
+        </div>
+        <footer><button class="btn btn-secondary"><svg><use href="#i-check"/></svg>Revisada sem alteração</button><button class="btn btn-primary">Salvar ficha</button></footer>
+      </div>
+    </div>
+  </template>
+
+  <template data-opcao="B" data-nome="Fila de revisão" data-resumo="As fichas aparecem na ordem em que pedem trabalho: nunca atualizadas, vencidas, depois as em dia. A ficha abre na própria linha e 'Revisada sem alteração' é um clique. Zera pendência rápido; custa a visão de tabela para comparar clientes.">
+    <div class="page-header">
+      <div>
+        <div class="module">Contatos</div>
+        <h3>Fichas de contato</h3>
+        <div class="desc">O que revisar primeiro. A ficha vale 180 dias a partir da última revisão.</div>
+      </div>
+    </div>
+    <div class="kpis" style="margin-top:0">
+      <div class="kpi"><span class="rot">Nunca atualizadas</span><span class="valor">3</span><span class="hint">2 delas de clientes sem agente</span></div>
+      <div class="kpi"><span class="rot">Vencidas</span><span class="valor">1</span><span class="hint">há mais de 180 dias sem revisão</span></div>
+      <div class="kpi"><span class="rot">Vencem em 30 dias</span><span class="valor"><span class="dash">—</span></span><span class="hint">nenhuma até 14/12/2026</span></div>
+      <div class="kpi"><span class="rot">Em dia</span><span class="valor">6</span><span class="hint">de 10 clientes</span></div>
+    </div>
+    <div class="panel">
+      <div class="toolbar">
+        <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar cliente, CPF/CNPJ ou nome do contato"></div>
+        <span class="select"><span>Privado e público</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select"><span>Todos os agentes</span><svg><use href="#i-chevron"/></svg></span>
+      </div>
+      <div class="faixa rebaixado" style="border-radius:0"><span class="sub forte">Vencidas · 1</span></div>
+      <details class="bas-sanfona" open>
+        <summary><svg><use href="#i-chevron"/></svg><span style="flex:1;min-width:0">CLINICA VIDA PLENA NUTRICAO LTDA <span class="sub"><span class="code">1002</span> · Ana Costa · Paulo Henrique Souza · (62) 3222-4410</span></span><span class="status status-attention"><i></i>Vencida há 1 dia</span><span class="sub">revisada em 17/05/2026</span></summary>
+        <div class="corpo-painel">
+          <div class="grade-2">
+            <div class="resumo">
+              <div class="entre"><b>Contato 1</b><label class="check feito"><i></i><span>Principal</span></label></div>
+              <div class="form-grade">
+                <div class="field"><label>Nome</label><input class="input" value="Paulo Henrique Souza"></div>
+                <div class="field"><label>Área</label><span class="select" style="width:100%"><span>Compras</span><svg><use href="#i-chevron"/></svg></span></div>
+                <div class="field"><label>Função</label><input class="input" value="Comprador"></div>
+                <div class="field"><label>Telefone</label><input class="input" value="(62) 3222-4410"></div>
+                <div class="field"><label>WhatsApp</label><input class="input" value="(62) 98111-4410"></div>
+                <div class="field"><label>E-mail</label><input class="input" value="compras@vidaplena.com.br"></div>
+                <div class="field"><label>Situação</label><span class="select" style="width:100%"><span>Em uso</span><svg><use href="#i-chevron"/></svg></span></div>
+                <div class="field"><label>Observação</label><input class="input" value="Atende até as 16h"></div>
+              </div>
+            </div>
+            <div class="resumo">
+              <div class="entre"><b>Contato 2</b><span class="row"><label class="check"><i></i><span>Principal</span></label><button class="iconbtn danger" title="Remover contato" aria-label="Remover contato"><svg><use href="#i-trash"/></svg></button></span></div>
+              <div class="form-grade">
+                <div class="field"><label>Nome</label><input class="input" value="Recepção"></div>
+                <div class="field"><label>Área</label><span class="select" style="width:100%"><span>Atendimento</span><svg><use href="#i-chevron"/></svg></span></div>
+                <div class="field"><label>Telefone</label><input class="input" value="(62) 3222-4400"></div>
+                <div class="field"><label>E-mail</label><input class="input" placeholder="nome@dominio.com.br"></div>
+              </div>
+            </div>
+          </div>
+          <div class="entre"><button class="btn btn-ghost btn-sm"><svg><use href="#i-plus"/></svg>Adicionar contato</button><span class="row"><button class="btn btn-secondary"><svg><use href="#i-check"/></svg>Revisada sem alteração</button><button class="btn btn-primary">Salvar ficha</button></span></div>
+        </div>
+      </details>
+      <div class="faixa rebaixado" style="border-radius:0"><span class="sub forte">Nunca atualizadas · 3</span></div>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1;min-width:0">DROGARIA SANTA CLARA LTDA <span class="sub"><span class="code">1004</span> · Bruno Leal · nenhum contato</span></span><span class="status status-alert"><i></i>Nunca atualizada</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1;min-width:0">CLINICA DERMA ESTETICA AVANCADA LTDA <span class="sub"><span class="code">1009</span> · sem agente · nenhum contato</span></span><span class="status status-alert"><i></i>Nunca atualizada</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1;min-width:0">HOME CARE BRASILIA ASSISTENCIA DOMICILIAR LTDA <span class="sub"><span class="code">1003</span> · sem agente · nenhum contato</span></span><span class="status status-alert"><i></i>Nunca atualizada</span></summary></details>
+      <div class="faixa rebaixado" style="border-radius:0"><span class="sub forte">Em dia · 6 (da revisão mais antiga para a mais nova)</span></div>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1;min-width:0">SPA E ESTETICA BELLA FORMA LTDA <span class="sub"><span class="code">1010</span> · Ana Costa · Camila Freitas · (63) 99988-1212</span></span><span class="status status-live"><i></i>Em dia</span><span class="sub">vale até 11/01/2027</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1;min-width:0">CASA DE REPOUSO BOM PASTOR LTDA <span class="sub"><span class="code">1006</span> · Carlos Nunes · Lúcia Andrade · (62) 3251-9090</span></span><span class="status status-live"><i></i>Em dia</span><span class="sub">vale até 06/02/2027</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1;min-width:0">INSTITUTO DE NEFROLOGIA DO PLANALTO LTDA <span class="sub"><span class="code">1005</span> · Bruno Leal · Helena Matos · (61) 3345-7700</span></span><span class="status status-live"><i></i>Em dia</span><span class="sub">vale até 21/03/2027</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1;min-width:0">SECRETARIA MUNICIPAL DE SAUDE DE GOIANIA <span class="sub"><span class="code">1007</span> · Carlos Nunes · João Batista Teles · (62) 3524-1500</span></span><span class="status status-live"><i></i>Em dia</span><span class="sub">vale até 30/03/2027</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1;min-width:0">HOSPITAL SANTA HELENA S/A <span class="sub"><span class="code">1008</span> · Sérgio Tavares · Renata Queiroz · (61) 3215-0000</span></span><span class="status status-live"><i></i>Em dia</span><span class="sub">vale até 26/04/2027</span></summary></details>
+      <details class="bas-sanfona"><summary><svg><use href="#i-chevron"/></svg><span style="flex:1;min-width:0">HOSPITAL SAO LUCAS LTDA <span class="sub"><span class="code">1001</span> · Ana Costa · Marta Ribeiro · (61) 3333-0101</span></span><span class="status status-live"><i></i>Em dia</span><span class="sub">vale até 02/05/2027</span></summary></details>
+    </div>
+  </template>
+
+  <template data-opcao="C" data-nome="Agenda de contatos" data-resumo="Uma linha por pessoa, não por cliente: acha-se rápido um nome, telefone ou e-mail em toda a carteira, e a ficha do cliente abre num diálogo. Custa a situação da ficha ficar em segundo plano e cliente sem contato virar um aviso à parte.">
+    <div class="page-header">
+      <div>
+        <div class="module">Contatos</div>
+        <h3>Contatos dos clientes</h3>
+        <div class="desc">Todas as pessoas e canais das fichas. A ficha de cada cliente vale 180 dias a partir da última revisão.</div>
+        <div class="meta"><span><span class="stat">15</span> contatos</span><span class="dot">·</span><span><span class="stat">7</span> clientes com ficha</span><span class="dot">·</span><span><span class="stat">1</span> ficha vencida</span></div>
+      </div>
+    </div>
+    <div class="alert alert-warn"><svg><use href="#i-alert"/></svg><b>3 clientes sem nenhum contato</b><p>Drogaria Santa Clara (1004), Clínica Derma Estética Avançada (1009) e Home Care Brasília (1003). Sem e-mail na ficha, nenhum e-mail pode ser enviado a eles.</p></div>
+    <div class="panel">
+      <div class="toolbar">
+        <div class="search"><svg><use href="#i-search"/></svg><input class="input" placeholder="Buscar pessoa, telefone, e-mail ou cliente"></div>
+        <span class="select"><span>Todas as áreas</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select"><span>Todas as fichas</span><svg><use href="#i-chevron"/></svg></span>
+        <span class="select"><span>Só principais: não</span><svg><use href="#i-chevron"/></svg></span>
+      </div>
+      <div class="tabela-wrap"><table class="bas-t">
+        <thead><tr><th>Contato</th><th>Cliente</th><th>Telefone · WhatsApp</th><th>E-mail</th><th>Ficha do cliente</th><th></th></tr></thead>
+        <tbody>
+          <tr><td><div class="row-title">Paulo Henrique Souza</div><div class="row-meta">Principal · Compras · Comprador</div></td><td>CLINICA VIDA PLENA NUTRICAO LTDA<div class="row-meta"><span class="code">1002</span> · Ana Costa</div></td><td>(62) 3222-4410 · (62) 98111-4410</td><td>compras@vidaplena.com.br</td><td><span class="status status-attention"><i></i>Vencida há 1 dia</span></td><td><span class="acoes"><button class="iconbtn" title="Editar ficha" aria-label="Editar ficha"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">Recepção</div><div class="row-meta">Atendimento</div></td><td>CLINICA VIDA PLENA NUTRICAO LTDA<div class="row-meta"><span class="code">1002</span> · Ana Costa</div></td><td>(62) 3222-4400</td><td><span class="dash">—</span></td><td><span class="status status-attention"><i></i>Vencida há 1 dia</span></td><td><span class="acoes"><button class="iconbtn" title="Editar ficha" aria-label="Editar ficha"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">Marta Ribeiro</div><div class="row-meta">Principal · Financeiro · Contas a pagar</div></td><td>HOSPITAL SAO LUCAS LTDA<div class="row-meta"><span class="code">1001</span> · Ana Costa</div></td><td>(61) 3333-0101 · (61) 99999-0101</td><td>marta@hsl.com.br</td><td><span class="status status-live"><i></i>Em dia</span></td><td><span class="acoes"><button class="iconbtn" title="Editar ficha" aria-label="Editar ficha"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">Recepção</div><div class="row-meta">Atendimento</div></td><td>HOSPITAL SAO LUCAS LTDA<div class="row-meta"><span class="code">1001</span> · Ana Costa</div></td><td>(61) 3333-0000</td><td><span class="dash">—</span></td><td><span class="status status-live"><i></i>Em dia</span></td><td><span class="acoes"><button class="iconbtn" title="Editar ficha" aria-label="Editar ficha"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">Helena Matos</div><div class="row-meta">Principal · Diretoria administrativa</div></td><td>INSTITUTO DE NEFROLOGIA DO PLANALTO LTDA<div class="row-meta"><span class="code">1005</span> · Bruno Leal</div></td><td>(61) 3345-7700</td><td>financeiro@nefroplanalto.com.br</td><td><span class="status status-live"><i></i>Em dia</span></td><td><span class="acoes"><button class="iconbtn" title="Editar ficha" aria-label="Editar ficha"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">Lúcia Andrade</div><div class="row-meta">Principal · Administração</div></td><td>CASA DE REPOUSO BOM PASTOR LTDA<div class="row-meta"><span class="code">1006</span> · Carlos Nunes</div></td><td>(62) 3251-9090</td><td>adm@bompastor.org.br</td><td><span class="status status-live"><i></i>Em dia</span></td><td><span class="acoes"><button class="iconbtn" title="Editar ficha" aria-label="Editar ficha"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">João Batista Teles</div><div class="row-meta">Principal · Setor de liquidação</div></td><td>SECRETARIA MUNICIPAL DE SAUDE DE GOIANIA<div class="row-meta"><span class="code">1007</span> · Carlos Nunes</div></td><td>(62) 3524-1500</td><td>liquidacao.sms@goiania.go.gov.br</td><td><span class="status status-live"><i></i>Em dia</span></td><td><span class="acoes"><button class="iconbtn" title="Editar ficha" aria-label="Editar ficha"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">Renata Queiroz</div><div class="row-meta">Principal · Contas a pagar</div></td><td>HOSPITAL SANTA HELENA S/A<div class="row-meta"><span class="code">1008</span> · Sérgio Tavares</div></td><td>(61) 3215-0000</td><td>contasapagar@santahelena.com.br</td><td><span class="status status-live"><i></i>Em dia</span></td><td><span class="acoes"><button class="iconbtn" title="Editar ficha" aria-label="Editar ficha"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+          <tr><td><div class="row-title">Camila Freitas</div><div class="row-meta">Principal · Proprietária</div></td><td>SPA E ESTETICA BELLA FORMA LTDA<div class="row-meta"><span class="code">1010</span> · Ana Costa</div></td><td>(63) 99988-1212</td><td>camila@bellaforma.com.br</td><td><span class="status status-live"><i></i>Em dia</span></td><td><span class="acoes"><button class="iconbtn" title="Editar ficha" aria-label="Editar ficha"><svg><use href="#i-pencil"/></svg></button></span></td></tr>
+        </tbody>
+      </table></div>
+      <div class="pagination"><span>Página 1 de 2 · 15 contatos</span><span class="btns"><button class="btn btn-secondary btn-sm" disabled>Anterior</button><button class="btn btn-secondary btn-sm">Próxima</button></span></div>
+    </div>
+    <div class="dialogo">
+      <header><div><div class="titulo-painel">Ficha de contatos · CLINICA VIDA PLENA NUTRICAO LTDA</div><div class="sub"><span class="code">1002</span> · <span class="status status-attention"><i></i>Vencida há 1 dia</span> · revisada por Ana Costa em 17/05/2026</div></div><button class="iconbtn" title="Fechar" aria-label="Fechar"><svg><use href="#i-x"/></svg></button></header>
+      <div class="corpo-painel">
+        <div class="resumo">
+          <div class="entre"><b>Contato 1</b><label class="check feito"><i></i><span>Principal</span></label></div>
+          <div class="form-grade">
+            <div class="field"><label>Nome</label><input class="input" value="Paulo Henrique Souza"></div>
+            <div class="field"><label>Área</label><span class="select" style="width:100%"><span>Compras</span><svg><use href="#i-chevron"/></svg></span></div>
+            <div class="field"><label>Função</label><input class="input" value="Comprador"></div>
+            <div class="field"><label>Telefone</label><input class="input" value="(62) 3222-4410"></div>
+            <div class="field"><label>WhatsApp</label><input class="input" value="(62) 98111-4410"></div>
+            <div class="field"><label>E-mail</label><input class="input" value="compras@vidaplena.com.br"></div>
+            <div class="field"><label>Situação</label><span class="select" style="width:100%"><span>Em uso</span><svg><use href="#i-chevron"/></svg></span></div>
+            <div class="field"><label>Observação</label><input class="input" value="Atende até as 16h"></div>
+          </div>
+        </div>
+        <div class="resumo">
+          <div class="entre"><b>Contato 2</b><span class="row"><label class="check"><i></i><span>Principal</span></label><button class="iconbtn danger" title="Remover contato" aria-label="Remover contato"><svg><use href="#i-trash"/></svg></button></span></div>
+          <div class="form-grade">
+            <div class="field"><label>Nome</label><input class="input" value="Recepção"></div>
+            <div class="field"><label>Área</label><span class="select" style="width:100%"><span>Atendimento</span><svg><use href="#i-chevron"/></svg></span></div>
+            <div class="field"><label>Telefone</label><input class="input" value="(62) 3222-4400"></div>
+            <div class="field"><label>E-mail</label><input class="input" placeholder="nome@dominio.com.br"></div>
+          </div>
+        </div>
+        <button class="btn btn-ghost btn-sm" style="justify-self:start"><svg><use href="#i-plus"/></svg>Adicionar contato</button>
+      </div>
+      <footer><button class="btn btn-ghost">Cancelar</button><button class="btn btn-secondary"><svg><use href="#i-check"/></svg>Revisada sem alteração</button><button class="btn btn-primary">Salvar ficha</button></footer>
+    </div>
+  </template>
+</section>

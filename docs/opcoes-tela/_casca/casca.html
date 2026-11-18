@@ -1,0 +1,225 @@
+<title>Opções de tela · {{MODULO}}</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: casca de escolha (lista de telas à esquerda, palco à direita) sobre o
+   design system Benenutri. Os tokens abaixo são a cópia do kit (design.md §2). */
+{{DS_CSS}}
+{{MOCK_CSS}}
+
+/* ═══ Casca de escolha (prefixo oc-) ═══ */
+html, body { height: 100%; }
+body { display: flex; flex-direction: column; }
+.oc-topo {
+  display: flex; align-items: center; gap: 12px 16px; flex-wrap: wrap;
+  padding-block: 10px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  background: var(--card); border-bottom: 1px solid var(--border);
+}
+.oc-topo img { height: 18px; width: auto; }
+.oc-topo .oc-nome { flex: 1; min-width: 180px; }
+.oc-topo .oc-nome b { font-family: var(--font-title); font-weight: 700; font-size: 15px; display: block; }
+.oc-topo .oc-nome span { color: var(--muted-foreground); font-size: 12px; }
+.oc-progresso { display: grid; gap: 4px; min-width: 150px; font-size: 12px; color: var(--muted-foreground); }
+.oc-progresso .oc-trilho { height: 6px; border-radius: 999px; background: var(--muted); overflow: hidden; }
+.oc-progresso .oc-trilho i { display: block; height: 100%; width: 0; background: var(--primary); transition: width 200ms; }
+.oc-corpo { flex: 1; min-height: 0; display: grid; grid-template-columns: 264px minmax(0, 1fr); }
+.oc-lista { border-right: 1px solid var(--border); background: var(--card); overflow-y: auto; padding: 10px 8px 24px; }
+.oc-lista .oc-grupo { font-size: 10px; text-transform: uppercase; letter-spacing: .16em; font-weight: 600; color: var(--ink-muted); padding: 12px 10px 4px; }
+.oc-lista button {
+  display: flex; align-items: center; gap: 8px; width: 100%; text-align: left;
+  padding: 7px 10px; border: 0; border-radius: .75rem; background: transparent;
+  color: var(--muted-foreground); font-size: 13px; cursor: pointer;
+}
+.oc-lista button:hover { background: var(--accent); }
+.oc-lista button[aria-current="true"] { background: var(--accent); color: var(--primary); font-weight: 600; }
+.oc-lista button span { flex: 1; min-width: 0; }
+.oc-marca {
+  flex: none; width: 20px; height: 20px; border-radius: 6px; display: grid; place-items: center;
+  font-size: 11px; font-weight: 700; border: 1px dashed var(--border); color: var(--ink-muted);
+}
+.oc-marca.oc-feita { border: 0; background: var(--primary); color: var(--primary-foreground); }
+.oc-palco-wrap { min-width: 0; overflow-y: auto; }
+.oc-cab {
+  position: sticky; top: 0; z-index: 5; background: var(--card); border-bottom: 1px solid var(--border);
+  padding-block: 12px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 10px;
+}
+.oc-cab h1 { font-size: 18px; font-weight: 800; }
+.oc-cab .oc-desc { color: var(--muted-foreground); max-width: 80ch; }
+.oc-linha { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
+.oc-opcoes { display: flex; flex-wrap: wrap; gap: 8px; }
+.oc-opcao {
+  display: grid; gap: 2px; text-align: left; min-width: 180px; flex: 1; max-width: 340px;
+  padding: 8px 12px; border-radius: .75rem; border: 1px solid var(--border); background: var(--card); cursor: pointer;
+}
+.oc-opcao b { font-family: var(--font-title); font-size: 13px; display: flex; align-items: center; gap: 6px; }
+.oc-opcao small { color: var(--muted-foreground); font-size: 12px; line-height: 1.35; }
+.oc-opcao[aria-pressed="true"] { border-color: var(--primary); box-shadow: 0 0 0 1px var(--primary); background: var(--accent); }
+.oc-opcao .oc-escolhida { display: none; }
+.oc-opcao.oc-e-escolhida .oc-escolhida { display: inline-flex; }
+.oc-nota { flex: 1; min-width: 220px; }
+.oc-nota .input { height: 36px; }
+.oc-aviso { font-size: 12px; color: var(--attention); }
+.oc-palco { padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.oc-palco > .oc-tela { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.oc-palco > .oc-tela > * { min-width: 0; }
+/* hidden vence qualquer display do kit (aba escondida não aparece). */
+.oc-palco [hidden] { display: none !important; }
+@media (max-width: 860px) {
+  body { display: block; }
+  .oc-corpo { display: block; }
+  .oc-lista { border-right: 0; border-bottom: 1px solid var(--border); display: flex; gap: 4px; overflow-x: auto; padding: 8px 12px; }
+  .oc-lista .oc-grupo { display: none; }
+  .oc-lista button { width: auto; white-space: nowrap; flex: none; }
+  .oc-cab { position: static; }
+  .oc-opcao { min-width: 0; flex: 1 1 100%; max-width: none; }
+}
+</style>
+
+{{ICONES}}
+
+<header class="oc-topo">
+  <img src="{{WORDMARK}}" alt="Benenutri">
+  <div class="oc-nome"><b>Opções de tela · {{MODULO}}</b><span>Crédito e Cobrança. Três opções para cada tela e aba; escolha uma em cada.</span></div>
+  <div class="oc-progresso" aria-live="polite"><span id="ocConta">0 de 0 escolhidas</span><div class="oc-trilho"><i id="ocBarra"></i></div></div>
+</header>
+
+<div class="oc-corpo">
+  <nav class="oc-lista" id="ocLista" aria-label="Telas e abas"></nav>
+  <div class="oc-palco-wrap">
+    <div class="oc-cab">
+      <div>
+        <h1 id="ocTitulo">Carregando</h1>
+        <p class="oc-desc" id="ocDesc"></p>
+      </div>
+      <div class="oc-opcoes" id="ocOpcoes" role="group" aria-label="Opção de layout"></div>
+      <div class="oc-linha">
+        <label class="oc-nota"><input class="input" id="ocNota" placeholder="Observação para esta tela (opcional): o que mudar, o que juntar de outra opção"></label>
+        <button class="btn btn-primary" id="ocEscolher" type="button">Escolher opção A</button>
+        <span class="oc-aviso" id="ocAviso" hidden></span>
+      </div>
+    </div>
+    <div class="oc-palco"><div class="oc-tela" id="ocPalco"></div></div>
+  </div>
+</div>
+
+<div id="ocFonte" hidden>
+{{TELAS}}
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var MODULO = "{{SLUG}}";
+  var fonte = document.getElementById("ocFonte");
+  var telas = Array.prototype.map.call(fonte.querySelectorAll("section[data-tela]"), function (s) {
+    return {
+      id: s.dataset.tela, grupo: s.dataset.grupo || "", titulo: s.dataset.titulo || s.dataset.tela, desc: s.dataset.desc || "",
+      opcoes: Array.prototype.map.call(s.querySelectorAll("template[data-opcao]"), function (t) {
+        return { letra: t.dataset.opcao, nome: t.dataset.nome || "", resumo: t.dataset.resumo || "", html: t.innerHTML };
+      })
+    };
+  });
+  var escolhas = {};          // telaId -> {opcao, nota}
+  var atual = null, letra = "A", db = null, local = false;
+  var $ = function (id) { return document.getElementById(id); };
+
+  function lerLocal() { try { return JSON.parse(localStorage.getItem("oc." + MODULO) || "{}"); } catch (e) { return {}; } }
+  function gravarLocal() { try { localStorage.setItem("oc." + MODULO, JSON.stringify(escolhas)); } catch (e) {} }
+
+  function desenharLista() {
+    var nav = $("ocLista"), g = null; nav.textContent = "";
+    telas.forEach(function (t) {
+      if (t.grupo !== g) { g = t.grupo; var d = document.createElement("div"); d.className = "oc-grupo"; d.textContent = g; nav.appendChild(d); }
+      var b = document.createElement("button"); b.type = "button"; b.dataset.id = t.id;
+      b.setAttribute("aria-current", atual && atual.id === t.id ? "true" : "false");
+      var m = document.createElement("i"); var e = escolhas[t.id];
+      m.className = "oc-marca" + (e ? " oc-feita" : ""); m.style.fontStyle = "normal"; m.textContent = e ? e.opcao : "";
+      var s = document.createElement("span"); s.textContent = t.titulo;
+      b.appendChild(m); b.appendChild(s); nav.appendChild(b);
+    });
+    var n = telas.filter(function (t) { return escolhas[t.id]; }).length;
+    $("ocConta").textContent = n + " de " + telas.length + " escolhidas";
+    $("ocBarra").style.width = (telas.length ? (n / telas.length * 100) : 0) + "%";
+  }
+
+  function desenharTela() {
+    if (!atual) return;
+    $("ocTitulo").textContent = atual.titulo; $("ocDesc").textContent = atual.desc;
+    var e = escolhas[atual.id], box = $("ocOpcoes"); box.textContent = "";
+    atual.opcoes.forEach(function (o) {
+      var b = document.createElement("button"); b.type = "button"; b.className = "oc-opcao" + (e && e.opcao === o.letra ? " oc-e-escolhida" : "");
+      b.dataset.letra = o.letra; b.setAttribute("aria-pressed", o.letra === letra ? "true" : "false");
+      var t = document.createElement("b"); t.textContent = "Opção " + o.letra + " · " + o.nome + " ";
+      var tag = document.createElement("span"); tag.className = "badge badge-accent oc-escolhida"; tag.textContent = "Escolhida"; t.appendChild(tag);
+      var r = document.createElement("small"); r.textContent = o.resumo;
+      b.appendChild(t); b.appendChild(r); box.appendChild(b);
+    });
+    var op = atual.opcoes.filter(function (o) { return o.letra === letra; })[0] || atual.opcoes[0];
+    $("ocPalco").innerHTML = op ? op.html : "";
+    $("ocEscolher").textContent = (e && e.opcao === letra) ? "Opção " + letra + " escolhida" : "Escolher opção " + letra;
+    if (document.activeElement !== $("ocNota")) $("ocNota").value = e ? (e.nota || "") : "";
+  }
+
+  function abrir(id, manterLetra) {
+    atual = telas.filter(function (t) { return t.id === id; })[0] || telas[0];
+    if (!atual) return;
+    if (!manterLetra) { var e = escolhas[atual.id]; letra = e ? e.opcao : (atual.opcoes[0] ? atual.opcoes[0].letra : "A"); }
+    desenharLista(); desenharTela();
+    if (location.hash.slice(1) !== atual.id) { try { history.replaceState(null, "", "#" + atual.id); } catch (e2) { location.hash = atual.id; } }
+    var w = document.querySelector(".oc-palco-wrap"); if (w) w.scrollTop = 0;
+  }
+
+  function avisar(msg) { var a = $("ocAviso"); a.textContent = msg || ""; a.hidden = !msg; }
+
+  function escolher() {
+    if (!atual) return;
+    var dado = { opcao: letra, nota: $("ocNota").value.trim(), tela: atual.titulo, modulo: MODULO, em: new Date().toISOString() };
+    escolhas[atual.id] = dado; desenharLista(); desenharTela();
+    if (db && !local) {
+      db.collection("escolhas").doc(MODULO + "--" + atual.id).set(dado).then(function () { avisar(""); }, function () {
+        avisar("Não deu para gravar a escolha no artefato. Ela ficou guardada só neste navegador."); gravarLocal();
+      });
+    } else { gravarLocal(); }
+  }
+
+  $("ocLista").addEventListener("click", function (ev) { var b = ev.target.closest("button[data-id]"); if (b) abrir(b.dataset.id); });
+  $("ocOpcoes").addEventListener("click", function (ev) { var b = ev.target.closest("button[data-letra]"); if (b) { letra = b.dataset.letra; desenharTela(); } });
+  $("ocEscolher").addEventListener("click", escolher);
+  window.addEventListener("hashchange", function () { var id = location.hash.slice(1); if (id && (!atual || id !== atual.id)) abrir(id); });
+
+  // Abas dentro de um mockup: .abas > [data-aba] alterna [data-painel] no mesmo .com-abas.
+  $("ocPalco").addEventListener("click", function (ev) {
+    var b = ev.target.closest("[data-aba]"); if (!b) return;
+    var c = b.closest(".com-abas"); if (!c) return;
+    c.querySelectorAll("[data-aba]").forEach(function (x) { x.setAttribute("aria-selected", x === b ? "true" : "false"); });
+    c.querySelectorAll("[data-painel]").forEach(function (p) { p.hidden = p.dataset.painel !== b.dataset.aba; });
+  });
+
+  escolhas = lerLocal();
+  abrir(location.hash.slice(1) || (telas[0] && telas[0].id));
+
+  var espera = setTimeout(function () { if (!db) { local = true; avisar("Sem conexão com o artefato: as escolhas ficam guardadas só neste navegador."); } }, 10000);
+  (window.claude && window.claude.use ? window.claude.use("db") : Promise.resolve(null)).then(function (d) {
+    clearTimeout(espera);
+    if (!d) { local = true; avisar("As escolhas ficam guardadas só neste navegador."); return; }
+    db = d; local = false; avisar("");
+    db.collection("escolhas").onSnapshot(function (snap) {
+      var novo = {};
+      snap.docs.forEach(function (doc) {
+        var v = doc.data() || {}; var p = doc.id.split("--");
+        if (p[0] === MODULO && p[1]) novo[p[1]] = { opcao: String(v.opcao || ""), nota: String(v.nota || "") };
+      });
+      escolhas = novo; desenharLista(); desenharTela();
+    }, function () { local = true; avisar("As escolhas ficam guardadas só neste navegador."); });
+  }, function () { clearTimeout(espera); local = true; });
+})();
+</script>
